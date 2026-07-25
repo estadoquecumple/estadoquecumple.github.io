@@ -1,0 +1,18 @@
+<section class="mode-workspace sap-workspace" data-workspace="sap" hidden aria-labelledby="sap-title">
+  <p class="panel-number">SAVIA · EVALUAR</p>
+  <h2 id="sap-title">¿Qué capacidad, escala y viabilidad tiene esta agrupación?</h2>
+  <p>Evalúa sin modificar el escenario oficial. El perfil no constituye una conclusión científica.</p>
+  <div class="weight-controls" data-weights>
+    <label>Capacidad fiscal <output>25</output><input type="range" min="0" max="100" value="25" data-weight="fiscal" /></label>
+    <label>Capacidad administrativa <output>25</output><input type="range" min="0" max="100" value="25" data-weight="administrative" /></label>
+    <label>Accesibilidad y escala <output>25</output><input type="range" min="0" max="100" value="25" data-weight="scale" /></label>
+    <label>Coordinación y sostenibilidad <output>25</output><input type="range" min="0" max="100" value="25" data-weight="coordination" /></label>
+  </div>
+  <p><strong>Fórmula visible:</strong> Σ(valor normalizado × peso) / Σ(pesos). Valores originales CAMS: 25/25/25/25.</p>
+  <button type="button" data-reset-weights>Restablecer pesos CAMS</button>
+  <button type="button" data-evaluate>Evaluar selección</button>
+  <div class="capacity-profile" data-capacity-profile aria-live="polite">
+    <p>Seleccione una o varias unidades para calcular un perfil multidimensional.</p>
+  </div>
+  <p class="method-warning">Bajo estos criterios y pesos, una alternativa puede presentar mayor coherencia en ciertas dimensiones y mayores riesgos en otras. No se determina “el mejor modelo”.</p>
+</section>

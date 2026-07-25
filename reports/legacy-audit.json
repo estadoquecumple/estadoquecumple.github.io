@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-25",
+  "branch": "laboratorio-territorial-v2",
+  "summary": {
+    "scope": "Código, datos públicos, índices, documentos, pruebas y estado local del Laboratorio Territorial",
+    "publicLegacyRemaining": 0
+  },
+  "items": [
+    {
+      "file": "src/components/territorial/TerritoryMap.astro",
+      "reference": "import * as maplibregl y municipalities/11.geojson",
+      "category": "regresión V1",
+      "decision": "reemplazar",
+      "justification": "La importación namespace y el código fijo impiden la carga departamental dinámica y contradicen la V1 funcional."
+    },
+    {
+      "file": "public/data/territorial/manifest.json",
+      "reference": "geography/municipalities/11.geojson",
+      "category": "dato oficial",
+      "decision": "conservar",
+      "justification": "Es una entrada válida dentro de los 33 archivos departamentales; no constituye código fijo de Bogotá."
+    },
+    {
+      "file": "data/scenarios/shared-services.json",
+      "reference": "Tres agrupaciones demostrativas V1",
+      "category": "escenario declarativo anterior",
+      "decision": "migrar",
+      "justification": "Se conserva como escenario de referencia importable, pero deja de ser el editor principal."
+    },
+    {
+      "file": "public/data/territorial/scenarios/shared-services.json",
+      "reference": "Tres agrupaciones demostrativas V1",
+      "category": "duplicado publicado",
+      "decision": "migrar",
+      "justification": "La V2 usa escenarios tipados locales; este JSON permanece como fuente histórica, no como escenario editable activo."
+    },
+    {
+      "file": "src/components/territorial/ComparisonPanel.astro",
+      "reference": "Comparador fijo de tres escenarios",
+      "category": "componente sustituido",
+      "decision": "reemplazar",
+      "justification": "La comparación V2 debe responder al escenario y operaciones del usuario."
+    },
+    {
+      "file": "src/components/territorial/MethodologyDrawer.astro",
+      "reference": "V1 publicada metodológicamente",
+      "category": "texto público anterior",
+      "decision": "migrar",
+      "justification": "Se reemplaza por metodología V2 con operaciones, supuestos, límites e impacto jurídico."
+    },
+    {
+      "file": "src/pages/estado-que-cumple/aplicaciones/index.astro",
+      "reference": "Primera aplicación V1",
+      "category": "entrada pública anterior",
+      "decision": "reemplazar",
+      "justification": "Debe enlazar el modelador V2 sin anunciar una versión anterior."
+    },
+    {
+      "file": "src/pages/observatorio/laboratorio-territorial/index.astro",
+      "reference": "Versión V1",
+      "category": "metadato público anterior",
+      "decision": "reemplazar",
+      "justification": "La portada debe identificar V2 y el carácter exploratorio del modelador."
+    },
+    {
+      "file": "tests/territorial/interface.test.ts",
+      "reference": "Prueba que solo busca maplibre-gl",
+      "category": "prueba insuficiente",
+      "decision": "reemplazar",
+      "justification": "Se requieren contratos funcionales V2 y navegador real."
+    },
+    {
+      "file": "src/components/tools/ExpedienteBuilder.astro",
+      "reference": "localStorage cams-expediente-v1",
+      "category": "estado local ajeno",
+      "decision": "conservar",
+      "justification": "Pertenece a otra herramienta y sus preferencias son compatibles; no contiene escenarios territoriales."
+    },
+    {
+      "file": "docs/CAMS_reestructuracion_detallada_arquitectura_v8.md",
+      "reference": "camscarlosmartinez.github.io-main y Astro como prototipo",
+      "category": "historial técnico",
+      "decision": "conservar",
+      "justification": "Documento interno histórico no expuesto como contenido público ni indexado."
+    },
+    {
+      "file": "docs/PROMPT_CODEX_TRANSFORMACION_TOTAL_CAMS.md",
+      "reference": "https://camscarlosmartinez.github.io",
+      "category": "mandato histórico",
+      "decision": "conservar",
+      "justification": "Referencia documental histórica; las auditorías públicas excluyen docs."
+    },
+    {
+      "file": "reports/seo-report.json",
+      "reference": "fecha de generación anterior",
+      "category": "informe generado",
+      "decision": "reemplazar",
+      "justification": "Se regenera al finalizar V2."
+    },
+    {
+      "file": "src/pages/site-index.json.ts, src/pages/llms.txt.ts y buscador",
+      "reference": "índices derivados",
+      "category": "índices públicos",
+      "decision": "migrar",
+      "justification": "Se actualizan sus descripciones para exponer un único Laboratorio Territorial V2."
+    },
+    {
+      "file": "artifacts/playwright",
+      "reference": "capturas de pruebas",
+      "category": "artefactos",
+      "decision": "conservar",
+      "justification": "No están rastreados por Git y documentan la verificación de navegador."
+    }
+  ]
+}

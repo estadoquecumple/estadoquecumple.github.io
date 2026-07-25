@@ -1,38 +1,340 @@
 ---
-import ModeSelector from './ModeSelector.astro';import ScenarioSelector from './ScenarioSelector.astro';import TerritorySelector from './TerritorySelector.astro';import MetricSelector from './MetricSelector.astro';import LayerControl from './LayerControl.astro';import TerritoryMap from './TerritoryMap.astro';import TerritoryProfile from './TerritoryProfile.astro';import ResultsPanel from './ResultsPanel.astro';import ComparisonPanel from './ComparisonPanel.astro';import MethodologyDrawer from './MethodologyDrawer.astro';import SourcesPanel from './SourcesPanel.astro';import DataStatus from './DataStatus.astro';import UncertaintyNotice from './UncertaintyNotice.astro';import AccessibleDataTable from './AccessibleDataTable.astro';import DownloadPanel from './DownloadPanel.astro';
+import RootsWorkspace from './RootsWorkspace.astro';
+import SapWorkspace from './SapWorkspace.astro';
+import SeedsWorkspace from './SeedsWorkspace.astro';
+import ScenarioOutputs from './ScenarioOutputs.astro';
+import TerritoryMap from './TerritoryMap.astro';
 ---
-<UncertaintyNotice />
-<nav class="mobile-tabs" aria-label="Paneles del laboratorio"><a href="#lab-config">Configurar</a><a href="#lab-map">Mapa</a><a href="#lab-results">Resultados</a></nav>
-<div class="lab-shell">
-  <aside id="lab-config" class="lab-config" aria-label="Configuración del laboratorio"><p class="panel-number">01 · CONFIGURAR</p><ModeSelector/><ScenarioSelector/><TerritorySelector/><MetricSelector/><LayerControl/><DataStatus/></aside>
-  <div id="lab-map" class="lab-map"><TerritoryMap/></div>
-  <aside id="lab-results" class="lab-results" aria-label="Resultados"><p class="panel-number">03 · INTERPRETAR</p><TerritoryProfile/><ResultsPanel/></aside>
+<div class="migration-notice" data-migration-notice hidden role="status">El Laboratorio fue actualizado. Los escenarios incompatibles de la versión anterior no se reutilizaron.</div>
+<nav class="mode-navigation" aria-label="Instrumentos del Laboratorio" data-mode-navigation>
+  <button type="button" data-mode="roots" aria-pressed="true"><strong>RAÍCES</strong><span>Ver</span></button>
+  <button type="button" data-mode="sap" aria-pressed="false"><strong>SAVIA</strong><span>Evaluar</span></button>
+  <button type="button" data-mode="seeds" aria-pressed="false"><strong>SEMILLAS</strong><span>Diseñar</span></button>
+</nav>
+<nav class="mobile-tabs" aria-label="Paneles del laboratorio">
+  <button type="button" data-mobile-panel="controls">Controles</button>
+  <button type="button" data-mobile-panel="map">Mapa</button>
+  <button type="button" data-mobile-panel="results">Resultados</button>
+  <button type="button" data-mobile-panel="method">Método</button>
+</nav>
+<div class="lab-shell-v2">
+  <aside class="lab-context" data-panel="controls" aria-label="Panel contextual">
+    <RootsWorkspace />
+    <SapWorkspace />
+    <SeedsWorkspace />
+  </aside>
+  <main class="lab-map" data-panel="map"><TerritoryMap /></main>
+  <aside class="lab-analysis" data-panel="results"><ScenarioOutputs /></aside>
 </div>
-<ComparisonPanel/><AccessibleDataTable/><div class="lab-below"><MethodologyDrawer/><SourcesPanel/></div><DownloadPanel/>
+<section class="selected-table" aria-labelledby="selected-table-title">
+  <div class="table-toolbar">
+    <div><p class="panel-number">ALTERNATIVA TEXTUAL</p><h2 id="selected-table-title">Tabla territorial y selección</h2></div>
+    <label>Filtrar <input type="search" data-table-filter placeholder="Nombre o DIVIPOLA" /></label>
+  </div>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">Seleccionar</th><th scope="col">Código</th><th scope="col">Nombre</th><th scope="col">Nivel</th><th scope="col">Tipo</th><th scope="col">Fuente</th></tr></thead>
+    <tbody data-territory-table><tr><td colspan="6">Cargando tabla oficial…</td></tr></tbody>
+  </table></div>
+</section>
+<section class="lab-lower" data-panel="method">
+  <details open><summary>Escenario e historial</summary><p data-scenario-summary>Estado actual bloqueado; no contiene operaciones editables.</p></details>
+  <details><summary>Metodología</summary><p>RAÍCES consulta datos observados; SAVIA calcula perfiles condicionados por pesos; SEMILLAS registra hipótesis y operaciones sin alterar cartografía oficial. Las divisiones geométricas no estiman población ni finanzas sin datos granulares.</p></details>
+  <details><summary>Fuentes</summary><ul><li>DANE DIVIPOLA y MGN 2025.</li><li>DNP: indicadores disponibles y adaptadores manual-required.</li><li>Constitución Política, Título XI.</li><li>Ley 1454 de 2011, ordenamiento territorial.</li></ul></details>
+  <details><summary>Descargas e intercambio</summary>
+    <div class="download-actions">
+      <button type="button" data-export-json disabled>Exportar JSON</button>
+      <button type="button" data-export-geojson disabled>Exportar GeoJSON</button>
+      <button type="button" data-export-csv disabled>Exportar CSV</button>
+      <button type="button" data-export-method disabled>Ficha metodológica</button>
+      <button type="button" data-share-link disabled>Generar enlace compartible</button>
+      <button type="button" data-print>Imprimir</button>
+      <label class="button-like">Importar JSON<input type="file" accept="application/json,.json" data-import-json /></label>
+    </div>
+    <p>Los escenarios grandes se descargan como archivo. No se almacenan datos personales.</p>
+  </details>
+  <details><summary>Comparación</summary>
+    <div class="comparison-toolbar"><button type="button" data-compare-current disabled>Actual vs escenario</button><label>Escenario A <select data-compare-a></select></label><label>Escenario B <select data-compare-b></select></label><button type="button" data-compare-scenarios>Comparar</button></div>
+    <div data-comparison-output><p>Cree escenarios para comparar estructura, competencias, gobierno, financiación, riesgos y cobertura.</p></div>
+  </details>
+</section>
+<div class="operation-announcer" data-operation-status role="status" aria-live="polite"></div>
 <script>
-  import { parseLabParams } from '../../data/territorial/lab';
-  const state=parseLabParams(new URLSearchParams(location.search));
-  const scenario=document.querySelector<HTMLSelectElement>('[data-scenario]');const metric=document.querySelector<HTMLSelectElement>('[data-metric]');const year=document.querySelector<HTMLInputElement>('[data-year]');
-  const resizeMap=()=>requestAnimationFrame(()=>window.dispatchEvent(new Event('territorial:resize')));
-  if(scenario)scenario.value=state.scenario;if(metric)metric.value=state.metric;if(year)year.value=String(state.year);
-  document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.value===state.mode)));
-  const update=()=>{
-    const params=new URLSearchParams();
-    const mode=document.querySelector<HTMLButtonElement>('[data-mode-selector] button[aria-pressed="true"]')?.dataset.value||'roots';
-    params.set('mode',mode);params.set('scenario',scenario?.value||'current');params.set('territory',state.territory);params.set('metric',metric?.value||'coverage');params.set('year',year?.value||'2025');
-    history.replaceState(null,'',`${location.pathname}?${params}`);
-    const link=document.querySelector<HTMLAnchorElement>('[data-scenario-download]');if(link)link.href=`/data/territorial/scenarios/${scenario?.value||'current'}.json`;
-    const copy=document.querySelector<HTMLElement>('[data-result-copy]');const type=document.querySelector<HTMLElement>('[data-result-type]');
-    if(copy&&scenario?.value==='regional-exploratory'){copy.textContent='Agrupación exploratoria declarativa en 10 regiones. Los nodos, autoridades y transición son hipótesis con incertidumbre alta.';if(type)type.textContent='Hipótesis';}
-    else if(copy&&scenario?.value==='shared-services'){copy.textContent='Tres agrupaciones demostrativas conservan municipios y exploran servicios compartidos. Requieren validación jurídica y pilotos.';if(type)type.textContent='Hipótesis de piloto';}
-    else if(copy){copy.textContent='La línea base muestra la división político-administrativa oficial DANE MGN 2025. Los indicadores ausentes se presentan como “Sin dato disponible”.';if(type)type.textContent='Dato observado';}
-    resizeMap();
+  import {
+    ScenarioTimeline,
+    addUnit,
+    assignCompetence,
+    changeFinance,
+    changeGovernment,
+    changePlanning,
+    classifyLegalImpact,
+    createLevel,
+    createScenario,
+    duplicateScenario,
+    exportScenario,
+    importScenario,
+    mergeUnits,
+    migrateLocalState,
+    splitByGeometry,
+    splitByMembership,
+    suppressUnit,
+    type TerritorialScenario,
+  } from '../../data/territorial/scenario-v2';
+  import { ScenarioStore } from '../../data/territorial/scenario-store';
+
+  type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; geometry?: unknown };
+  const $ = <T extends Element>(selector: string) => document.querySelector<T>(selector);
+  const $$ = <T extends Element>(selector: string) => [...document.querySelectorAll<T>(selector)];
+  const store = new ScenarioStore();
+  const scenarios = new Map<string, TerritorialScenario>();
+  const selected = new Map<string, Selection>();
+  let timeline: ScenarioTimeline | undefined;
+  let departments: Array<any> = [];
+  let municipalities: Array<any> = [];
+  let mode: 'roots' | 'sap' | 'seeds' = 'roots';
+  let experimentalGeometry: GeoJSON.Polygon | null = null;
+  const announce = (text: string) => { const node = $('[data-operation-status]'); if (node) node.textContent = text; };
+  const download = (name: string, type: string, content: string) => {
+    const url = URL.createObjectURL(new Blob([content], { type }));
+    const anchor = document.createElement('a'); anchor.href = url; anchor.download = name; anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 0);
   };
-  document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-mode-selector] button').forEach(x=>x.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');update()}));
-  [scenario,metric,year].forEach(node=>node?.addEventListener('change',update));update();
-  document.querySelectorAll<HTMLAnchorElement>('.mobile-tabs a').forEach(link=>link.addEventListener('click',()=>setTimeout(resizeMap,0)));
-  const table=document.querySelector<HTMLElement>('[data-territory-table]');let rows:Array<{code:string,name:string}>=[];
-  fetch('/data/territorial/geography/departments.geojson').then(r=>r.json()).then(data=>{rows=data.features.map((f:any)=>f.properties);render(rows)}).catch(()=>{if(table)table.innerHTML='<tr><td colspan="5">Error de carga. <button type="button" onclick="location.reload()">Reintentar</button></td></tr>'});
-  const render=(items:typeof rows)=>{if(!table)return;table.textContent='';for(const row of items){const tr=document.createElement('tr');for(const value of [row.code,row.name,'observed','2025','DANE DIVIPOLA MGN 2025']){const td=document.createElement('td');td.textContent=value;tr.append(td)}table.append(tr)}};
-  document.querySelector<HTMLInputElement>('[data-table-filter]')?.addEventListener('input',event=>{const q=(event.currentTarget as HTMLInputElement).value.toLocaleLowerCase('es');render(rows.filter(x=>`${x.code} ${x.name}`.toLocaleLowerCase('es').includes(q)))});
+  const editable = () => {
+    if (!timeline) { announce('Cree o seleccione un escenario editable.'); return false; }
+    return true;
+  };
+  const enableScenarioActions = (enabled: boolean) => {
+    $$<HTMLButtonElement>('[data-duplicate-scenario],[data-rename-scenario],[data-archive-scenario],[data-delete-scenario],[data-export-json],[data-export-geojson],[data-export-csv],[data-export-method],[data-share-link],[data-compare-current]').forEach((button) => button.disabled = !enabled);
+  };
+  const selectedUnits = () => [...selected.values()];
+  const renderSelection = () => {
+    const summary = $('[data-selection-summary]');
+    if (summary) summary.textContent = selected.size ? selectedUnits().map((item) => `${item.name} (${item.code})`).join(', ') : 'Ninguna';
+    $$<HTMLInputElement>('[data-territory-check]').forEach((input) => input.checked = selected.has(input.value));
+  };
+  const select = (unit: Selection, additive = false) => {
+    if (!additive) selected.clear();
+    selected.set(unit.id, unit);
+    renderSelection();
+    announce(`${unit.name} seleccionada.`);
+  };
+  const renderTable = () => {
+    const table = $('[data-territory-table]');
+    if (!table) return;
+    const query = ($<HTMLInputElement>('[data-table-filter]')?.value ?? '').toLocaleLowerCase('es');
+    const items = [...departments.map((feature) => ({ feature, level: 'department' as const })), ...municipalities.map((feature) => ({ feature, level: 'municipality' as const }))]
+      .filter(({ feature }) => `${feature.properties.code} ${feature.properties.name}`.toLocaleLowerCase('es').includes(query));
+    table.textContent = '';
+    for (const { feature, level } of items) {
+      const row = document.createElement('tr');
+      const cell = document.createElement('td');
+      const input = document.createElement('input'); input.type = 'checkbox'; input.value = `${level}:${feature.properties.code}`; input.dataset.territoryCheck = '';
+      input.setAttribute('aria-label', `Seleccionar ${feature.properties.name}`);
+      input.addEventListener('change', () => {
+        const unit = { id: input.value, code: feature.properties.code, name: feature.properties.name, level, geometry: feature.geometry };
+        if (input.checked) selected.set(input.value, unit); else selected.delete(input.value);
+        renderSelection();
+      });
+      cell.append(input); row.append(cell);
+      for (const value of [feature.properties.code, feature.properties.name, level === 'department' ? 'Departamento' : 'Municipio', 'observed', 'DANE DIVIPOLA MGN 2025']) {
+        const td = document.createElement('td'); td.textContent = value; row.append(td);
+      }
+      table.append(row);
+    }
+    renderSelection();
+  };
+  const renderScenario = async () => {
+    const scenario = timeline?.current;
+    enableScenarioActions(Boolean(scenario));
+    const history = $('[data-scenario-history]');
+    const summary = $('[data-scenario-summary]');
+    const legal = $('[data-legal-impact]');
+    if (!scenario) {
+      if (history) history.innerHTML = '<li>Sin operaciones en el escenario actual.</li>';
+      if (summary) summary.textContent = 'Estado actual bloqueado; no contiene operaciones editables.';
+      return;
+    }
+    const classified = classifyLegalImpact(scenario);
+    if (history) {
+      history.textContent = '';
+      if (!scenario.history.length) history.innerHTML = '<li>Escenario creado; sin operaciones adicionales.</li>';
+      for (const item of scenario.history) { const li = document.createElement('li'); li.textContent = `${item.at} · ${item.summary}`; history.append(li); }
+    }
+    if (summary) summary.textContent = `${scenario.name} · ${scenario.history.length} operaciones · base ${scenario.baseScenarioId} · guardado local`;
+    if (legal) {
+      legal.textContent = '';
+      for (const impact of classified.legalImpacts) { const article = document.createElement('article'); const strong = document.createElement('strong'); strong.textContent = impact.category; const p = document.createElement('p'); p.textContent = `${impact.trigger}: ${impact.rationale} Fuente: ${impact.source}.`; article.append(strong, p); legal.append(article); }
+    }
+    $('[data-save-status]')!.textContent = 'Guardando…';
+    try {
+      await store.save(scenario);
+      scenarios.set(scenario.id, scenario);
+      $('[data-save-status]')!.textContent = 'Guardado local';
+      refreshScenarioLists(scenario.id);
+    } catch (error) {
+      $('[data-save-status]')!.textContent = 'Error de guardado';
+      announce(`IndexedDB: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  };
+  const apply = (next: TerritorialScenario) => { timeline?.apply(next); void renderScenario(); updateUndoRedo(); };
+  const updateUndoRedo = () => {
+    const undo = $<HTMLButtonElement>('[data-undo]'); const redo = $<HTMLButtonElement>('[data-redo]');
+    if (undo) undo.disabled = !timeline; if (redo) redo.disabled = !timeline;
+  };
+  const refreshScenarioLists = (active?: string) => {
+    for (const selector of ['[data-local-scenarios]', '[data-compare-a]', '[data-compare-b]']) {
+      const selectNode = $<HTMLSelectElement>(selector); if (!selectNode) continue;
+      const previous = active ?? selectNode.value; selectNode.textContent = '';
+      if (selector === '[data-local-scenarios]') { const option = new Option('Estado actual · bloqueado', 'current'); selectNode.add(option); }
+      for (const scenario of scenarios.values()) selectNode.add(new Option(`${scenario.name}${scenario.status === 'archived' ? ' · archivado' : ''}`, scenario.id));
+      if ([...selectNode.options].some((option) => option.value === previous)) selectNode.value = previous;
+    }
+  };
+  const setMode = (next: typeof mode) => {
+    mode = next;
+    $$<HTMLElement>('[data-workspace]').forEach((workspace) => workspace.hidden = workspace.dataset.workspace !== mode);
+    $$<HTMLButtonElement>('[data-mode]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
+    document.body.dataset.labMode = mode;
+    const descriptions = {
+      roots: 'RAÍCES muestra el sistema actual y no habilita operaciones de edición.',
+      sap: 'SAVIA evalúa la selección sin modificar el escenario oficial.',
+      seeds: 'SEMILLAS permite editar únicamente escenarios locales exploratorios.',
+    };
+    const result = $('[data-mode-result]'); if (result) result.textContent = descriptions[mode];
+    const legend = $('[data-map-legend]'); if (legend) legend.textContent = `${mode === 'roots' ? 'RAÍCES · consulta oficial' : mode === 'sap' ? 'SAVIA · perfil multidimensional' : 'SEMILLAS · hipótesis editable'}`;
+    const params = new URLSearchParams(location.search); params.set('mode', mode); history.replaceState(null, '', `${location.pathname}?${params}`);
+    window.dispatchEvent(new CustomEvent('territorial:resize'));
+  };
+  $$<HTMLButtonElement>('[data-mode]').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode as typeof mode)));
+  $$<HTMLButtonElement>('[data-mobile-panel]').forEach((button) => button.addEventListener('click', () => {
+    $$<HTMLElement>('[data-panel]').forEach((panel) => panel.dataset.mobileActive = String(panel.dataset.panel === button.dataset.mobilePanel));
+    window.dispatchEvent(new CustomEvent('territorial:resize'));
+  }));
+  document.addEventListener('territorial:departments', ((event: CustomEvent<any>) => {
+    departments = event.detail.features;
+    const selectNode = $<HTMLSelectElement>('[data-department-select]');
+    departments.forEach((feature) => selectNode?.add(new Option(feature.properties.name, feature.properties.code)));
+    renderTable();
+  }) as EventListener);
+  document.addEventListener('territorial:municipalities', ((event: CustomEvent<any>) => {
+    municipalities = event.detail.features;
+    const selectNode = $<HTMLSelectElement>('[data-municipality-select]');
+    if (selectNode) { selectNode.disabled = false; selectNode.textContent = ''; selectNode.add(new Option('Todos los municipios', '')); municipalities.forEach((feature) => selectNode.add(new Option(feature.properties.name, feature.properties.code))); }
+    renderTable();
+  }) as EventListener);
+  document.addEventListener('territorial:select', ((event: CustomEvent<any>) => select({ id: `${event.detail.level}:${event.detail.code}`, ...event.detail }, event.detail.additive)) as EventListener);
+  $<HTMLSelectElement>('[data-department-select]')?.addEventListener('change', (event) => {
+    const code = (event.currentTarget as HTMLSelectElement).value; if (!code) return;
+    const feature = departments.find((item) => item.properties.code === code);
+    if (feature) select({ id: `department:${code}`, code, name: feature.properties.name, level: 'department', geometry: feature.geometry });
+    document.dispatchEvent(new CustomEvent('territorial:load-department', { detail: { code } }));
+  });
+  $<HTMLSelectElement>('[data-municipality-select]')?.addEventListener('change', (event) => {
+    const code = (event.currentTarget as HTMLSelectElement).value;
+    const feature = municipalities.find((item) => item.properties.code === code);
+    if (feature) select({ id: `municipality:${code}`, code, name: feature.properties.name, level: 'municipality', geometry: feature.geometry });
+  });
+  $('[data-table-filter]')?.addEventListener('input', renderTable);
+  $('[data-reset-weights]')?.addEventListener('click', () => $$<HTMLInputElement>('[data-weight]').forEach((input) => { input.value = '25'; input.dispatchEvent(new Event('input')); }));
+  $$<HTMLInputElement>('[data-weight]').forEach((input) => input.addEventListener('input', () => { const output = input.parentElement?.querySelector('output'); if (output) output.value = input.value; }));
+  $('[data-evaluate]')?.addEventListener('click', () => {
+    const profile = $('[data-capacity-profile]'); if (!profile) return;
+    const weights = $$<HTMLInputElement>('[data-weight]').map((input) => Number(input.value));
+    const names = ['Fiscal', 'Administrativa', 'Escala y accesibilidad', 'Coordinación y sostenibilidad'];
+    profile.textContent = '';
+    names.forEach((name, index) => { const p = document.createElement('p'); p.textContent = `${name}: peso ${weights[index]} · evidencia ${selected.size ? 'parcial' : 'insuficiente'} · resultado ${selected.size ? 'calculated' : 'unavailable'}`; profile.append(p); });
+    const conclusion = document.createElement('p'); conclusion.textContent = selected.size ? 'Recomendación condicionada: requerir mayor evidencia y considerar asistencia o coordinación antes de transformar estructuras.' : 'Seleccione unidades para evaluar.'; profile.append(conclusion);
+  });
+  $('[data-create-scenario]')?.addEventListener('click', () => {
+    const scenario = createScenario(`Escenario ${scenarios.size + 1}`); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); refreshScenarioLists(scenario.id); void renderScenario(); announce('Escenario editable creado.');
+  });
+  $('[data-duplicate-scenario]')?.addEventListener('click', () => { if (!timeline) return; const scenario = duplicateScenario(timeline.current); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); void renderScenario(); });
+  $('[data-rename-scenario]')?.addEventListener('click', () => { if (!timeline) return; const name = prompt('Nombre del escenario', timeline.current.name)?.trim(); if (name) apply({ ...timeline.current, name, updatedAt: new Date().toISOString() }); });
+  $('[data-archive-scenario]')?.addEventListener('click', () => { if (timeline) apply({ ...timeline.current, status: 'archived' }); });
+  $('[data-delete-scenario]')?.addEventListener('click', async () => { if (!timeline || !confirm(`Eliminar ${timeline.current.name}? Esta acción no puede deshacerse.`)) return; const id = timeline.current.id; await store.remove(id); scenarios.delete(id); timeline = undefined; refreshScenarioLists(); enableScenarioActions(false); announce('Escenario eliminado.'); });
+  $<HTMLSelectElement>('[data-local-scenarios]')?.addEventListener('change', (event) => {
+    const id = (event.currentTarget as HTMLSelectElement).value; const scenario = scenarios.get(id); timeline = scenario ? new ScenarioTimeline(scenario) : undefined; void renderScenario();
+  });
+  $('[data-clear-selection]')?.addEventListener('click', () => { selected.clear(); renderSelection(); });
+  $('[data-invert-selection]')?.addEventListener('click', () => { const all = [...departments, ...municipalities]; const previous = new Set(selected.keys()); selected.clear(); for (const feature of all) { const level = feature.properties.code.length === 2 ? 'department' : 'municipality'; const id = `${level}:${feature.properties.code}`; if (!previous.has(id)) selected.set(id, { id, code: feature.properties.code, name: feature.properties.name, level, geometry: feature.geometry }); } renderSelection(); });
+  $('[data-select-department]')?.addEventListener('click', () => { municipalities.forEach((feature) => selected.set(`municipality:${feature.properties.code}`, { id: `municipality:${feature.properties.code}`, code: feature.properties.code, name: feature.properties.name, level: 'municipality', geometry: feature.geometry })); renderSelection(); });
+  for (const selector of ['[data-select-neighbours]', '[data-select-contiguous]']) $(selector)?.addEventListener('click', () => announce('Selección de vecindad disponible sobre las unidades cargadas; use la tabla para confirmar.'));
+  $('[data-draw-rectangle]')?.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('territorial:start-draw', { detail: { mode: 'rectangle' } })); announce('Seleccione dos esquinas en el mapa.'); });
+  $('[data-draw-polygon]')?.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('territorial:start-draw', { detail: { mode: 'polygon' } })); announce('Dibuje al menos tres vértices y cierre con doble clic.'); });
+  document.addEventListener('territorial:geometry-drawn', ((event: CustomEvent<{ geometry: GeoJSON.Polygon }>) => {
+    experimentalGeometry = event.detail.geometry;
+    announce('Geometría experimental validada visualmente. Confirme la división para registrarla.');
+  }) as EventListener);
+  $('[data-merge]')?.addEventListener('click', () => {
+    if (!editable()) return; try {
+      let scenario = timeline!.current;
+      for (const item of selectedUnits()) if (!scenario.units.some((unit) => unit.id === item.id)) scenario = addUnit(scenario, { id: item.id, name: item.name, levelId: item.level === 'department' ? 'department' : 'municipality', officialCodes: [item.code], geometry: item.geometry });
+      apply(mergeUnits(scenario, selectedUnits().map((item) => item.id), ($<HTMLInputElement>('[data-unit-name]')?.value || 'Unidad exploratoria'), $<HTMLSelectElement>('[data-unit-nature]')?.value || 'region', ($<HTMLSelectElement>('[data-disposition]')?.value || 'political') as any));
+    } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
+  });
+  $('[data-split-membership]')?.addEventListener('click', () => {
+    if (!editable() || selected.size < 2) return announce('Seleccione al menos dos municipios.');
+    let scenario = timeline!.current;
+    for (const item of selectedUnits()) if (!scenario.units.some((unit) => unit.id === item.id)) scenario = addUnit(scenario, { id: item.id, name: item.name, levelId: 'municipality', officialCodes: [item.code] });
+    const half = Math.ceil(selected.size / 2); const items = selectedUnits();
+    apply(splitByMembership(scenario, scenario.units.find((unit) => unit.memberIds.some((id) => selected.has(id)))?.id ?? items[0].id, [{ name: 'Unidad A', memberIds: items.slice(0, half).map((item) => item.id) }, { name: 'Unidad B', memberIds: items.slice(half).map((item) => item.id) }]));
+  });
+  $('[data-split-geometry]')?.addEventListener('click', () => {
+    if (!editable() || !selected.size) return announce('Seleccione una unidad intersectada.');
+    if (!experimentalGeometry) return announce('Dibuje primero un rectángulo o polígono válido en el mapa.');
+    const worker = new Worker(new URL('../../workers/geometry-v2.worker.ts', import.meta.url), { type: 'module' });
+    worker.onmessage = (event) => {
+      worker.terminate();
+      if (!event.data.ok) return announce(`Error topológico: ${event.data.error}`);
+      apply(splitByGeometry(timeline!.current, selectedUnits()[0].id, experimentalGeometry, selectedUnits().map((item) => item.id)));
+      announce(`División geométrica experimental registrada. Área planar de control: ${event.data.planarArea}. Población y finanzas: sin estimación.`);
+    };
+    worker.onerror = () => { worker.terminate(); announce('El Web Worker geométrico no pudo completar la validación.'); };
+    worker.postMessage({ operation: 'inspect', geometries: [experimentalGeometry] });
+  });
+  $('[data-create-level]')?.addEventListener('click', () => { if (!editable()) return; const name = prompt('Nombre del nuevo nivel', 'Provincia')?.trim(); if (name) apply(createLevel(timeline!.current, name, 2, 'nivel exploratorio')); });
+  $('[data-suppress-department]')?.addEventListener('click', () => {
+    if (!editable() || !confirm('¿Suprimir el nivel departamental dentro de este escenario? Podrá deshacer la operación.')) return;
+    let scenario = timeline!.current; const departmentsInScenario = scenario.units.filter((unit) => unit.levelId === 'department');
+    for (const unit of departmentsInScenario) scenario = suppressUnit(scenario, unit.id);
+    if (!departmentsInScenario.length) scenario = createLevel(scenario, 'Región reemplazante', 1, 'hipótesis que sustituye departamentos');
+    apply(scenario);
+  });
+  $('[data-assign-competence]')?.addEventListener('click', () => { if (!editable()) return; apply(assignCompetence(timeline!.current, $<HTMLSelectElement>('[data-competence-function]')!.value, $<HTMLSelectElement>('[data-competence-level]')!.value, $<HTMLSelectElement>('[data-competence-modality]')!.value as any)); });
+  $('[data-change-government]')?.addEventListener('click', () => { if (!editable()) return; apply(changeGovernment(timeline!.current, { unitId: selectedUnits()[0]?.id ?? 'scenario-wide', authority: $<HTMLSelectElement>('[data-government-authority]')!.value, selection: $<HTMLSelectElement>('[data-government-selection]')!.value, termYears: 4, reelection: 'hipótesis no definida', representativeBody: 'por definir' })); });
+  $('[data-change-finance]')?.addEventListener('click', () => { if (!editable()) return; apply(changeFinance(timeline!.current, { levelId: 'scenario-wide', instruments: $$<HTMLInputElement>('[data-finance]:checked').map((input) => input.dataset.finance!), note: 'No estima recaudos futuros.' })); });
+  $('[data-change-planning]')?.addEventListener('click', () => { if (!editable()) return; apply(changePlanning(timeline!.current, { levelId: 'scenario-wide', horizonYears: Number($<HTMLInputElement>('[data-planning-horizon]')!.value), instruments: ['plan estratégico', 'programas de misión'], review: 'evaluación cuatrienal' })); });
+  $('[data-undo]')?.addEventListener('click', () => { timeline?.undo(); void renderScenario(); });
+  $('[data-redo]')?.addEventListener('click', () => { timeline?.redo(); void renderScenario(); });
+  $('[data-export-json]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.json`, 'application/json', exportScenario(timeline.current)));
+  $('[data-export-geojson]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.geojson`, 'application/geo+json', JSON.stringify({ type: 'FeatureCollection', features: timeline.current.units.filter((unit) => unit.geometry).map((unit) => ({ type: 'Feature', id: unit.id, properties: { name: unit.name, state: unit.state, resultKind: 'assumption' }, geometry: unit.geometry })) }, null, 2)));
+  $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', `id,nombre,estado,tipo\n${timeline.current.units.map((unit) => `${unit.id},"${unit.name}",${unit.state},assumption`).join('\n')}`));
+  $('[data-export-method]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}-metodologia.txt`, 'text/plain', `${timeline.current.name}\nBase: ${timeline.current.baseScenarioId}\nOperaciones: ${timeline.current.history.length}\nTodo resultado se clasifica como observed, calculated, assumption o unavailable.\nNo constituye concepto jurídico.`));
+  $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(JSON.stringify({ id: timeline.current.id, name: timeline.current.name, history: timeline.current.history.slice(-5) })); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) return announce('El escenario es grande: use Exportar JSON.'); const url = `${location.origin}${location.pathname}?mode=seeds&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace compartible copiado.'); });
+  $('[data-print]')?.addEventListener('click', () => window.print());
+  $<HTMLInputElement>('[data-import-json]')?.addEventListener('change', async (event) => {
+    const file = (event.currentTarget as HTMLInputElement).files?.[0]; if (!file) return;
+    try { const scenario = importScenario(JSON.parse(await file.text())); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); await renderScenario(); announce('Escenario importado y validado.'); } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
+  });
+  const comparison = (a: TerritorialScenario | undefined, b: TerritorialScenario | undefined) => {
+    const output = $('[data-comparison-output]'); if (!output || !a) return;
+    const baseline = b ?? createScenario('Estado actual');
+    output.innerHTML = `<table><thead><tr><th>Cambio</th><th>${baseline.name}</th><th>${a.name}</th></tr></thead><tbody>
+      <tr><th>Unidades</th><td>${baseline.units.length}</td><td>${a.units.length}</td></tr>
+      <tr><th>Competencias</th><td>${baseline.competences.length}</td><td>${a.competences.length}</td></tr>
+      <tr><th>Gobiernos</th><td>${baseline.governments.length}</td><td>${a.governments.length}</td></tr>
+      <tr><th>Reglas fiscales</th><td>${baseline.finances.length}</td><td>${a.finances.length}</td></tr>
+      <tr><th>Impacto jurídico</th><td>Referencia vigente</td><td>${classifyLegalImpact(a).legalImpacts.map((item) => item.category).join('; ')}</td></tr>
+      <tr><th>Cobertura</th><td>observed</td><td>${a.assumptions.length ? 'assumption / unavailable' : 'calculated'}</td></tr></tbody></table>`;
+  };
+  $('[data-compare-current]')?.addEventListener('click', () => comparison(timeline?.current, undefined));
+  $('[data-compare-scenarios]')?.addEventListener('click', () => comparison(scenarios.get($<HTMLSelectElement>('[data-compare-a]')!.value), scenarios.get($<HTMLSelectElement>('[data-compare-b]')!.value)));
+  try {
+    const migration = migrateLocalState(localStorage);
+    if (migration.discardedScenarios && !sessionStorage.getItem('cams-v2-migration-notice')) {
+      $('[data-migration-notice]')?.removeAttribute('hidden'); sessionStorage.setItem('cams-v2-migration-notice', 'shown');
+    }
+  } catch { announce('No fue posible revisar preferencias locales antiguas.'); }
+  store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
+  const initialMode = new URLSearchParams(location.search).get('mode');
+  setMode(initialMode === 'sap' || initialMode === 'seeds' ? initialMode : 'roots');
 </script>
