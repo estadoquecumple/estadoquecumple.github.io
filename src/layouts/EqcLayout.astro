@@ -1,5 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';import PageHero from '../components/global/PageHero.astro';import SectionNavigation from '../components/global/SectionNavigation.astro';import {eqcNav} from '../data/navigation';
 const {title,description,eyebrow='Estado que Cumple',lead,currentPath,status}=Astro.props;
+const position=eqcNav.findIndex((item)=>item.href===currentPath);
+const previous=position>0?eqcNav[position-1]:undefined;
+const next=position>=0&&position<eqcNav.length-1?eqcNav[position+1]:undefined;
 ---
-<BaseLayout title={title} description={description} currentPath={currentPath}><PageHero eyebrow={eyebrow} title={title} lead={lead} status={status}/><div class="container page"><SectionNavigation items={eqcNav} currentPath={currentPath}/><slot /></div></BaseLayout>
+<BaseLayout title={title} description={description} currentPath={currentPath}><PageHero eyebrow={eyebrow} title={title} lead={lead} status={status}/><div class="container page"><SectionNavigation items={eqcNav} currentPath={currentPath}/><slot /><nav class="section section-grid" aria-label="Continuar en Estado que Cumple"><div>{previous&&<a href={previous.href}>← {previous.label}</a>}</div><div>{next&&<a href={next.href}>{next.label} →</a>}</div><div><a href="/estado-que-cumple/">Portada de la propuesta</a> · <a href="/estado-que-cumple/documento/">Documento</a> · <a href="/cams/">Autor: Carlos Arturo Martínez Sánchez</a> · <a href="/observatorio/laboratorio-territorial/">Laboratorio Territorial</a></div></nav></div></BaseLayout>

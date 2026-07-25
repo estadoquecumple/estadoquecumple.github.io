@@ -3,4 +3,4 @@ import BrandSeal from './BrandSeal.astro';
 interface Props { context?: string; compact?: boolean; }
 const { context = 'Autoría y responsabilidad editorial', compact = false } = Astro.props;
 ---
-<div class:list={['brand-signature', { 'brand-signature--compact': compact }]}><BrandSeal size="small" decorative /><div><span>{context}</span><strong>Carlos Arturo Martínez Sánchez</strong><small>CAMS · identidad pública personal</small></div></div>
+<div class:list={['brand-signature', { 'brand-signature--compact': compact }]}><BrandSeal size="small" decorative /><div><span>{context}</span><strong><a href="/cams/">Carlos Arturo Martínez Sánchez</a></strong><small>CAMS · identidad pública personal</small></div></div>

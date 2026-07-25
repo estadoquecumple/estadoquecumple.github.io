@@ -8,7 +8,7 @@ const routes=['/','/cams/','/cams/trayectoria/','/cams/metodo/','/cams/criterios
 const htmlFiles=[];const walk=d=>readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=join(d,e.name);e.isDirectory()?walk(p):e.name.endsWith('.html')&&htmlFiles.push(p)});
 const failures=[];const warn=[];
 if(!existsSync(root)) failures.push('No existe dist/. Ejecute npm run build.'); else walk(root);
-if(!astroConfig.includes(`site: '${canonicalOrigin}'`))failures.push('astro.config.mjs: site incorrecto');
+if(!astroConfig.includes(`'${canonicalOrigin}'`)||!astroConfig.includes('site: siteUrl'))failures.push('astro.config.mjs: fuente SITE_URL o valor predeterminado incorrectos');
 if(/^\s*base\s*:/m.test(astroConfig))failures.push('astro.config.mjs: no debe declarar base para un sitio raíz');
 const routeFile=r=>r==='/404.html'?join(root,'404.html'):r==='/'?join(root,'index.html'):join(root,r.slice(1),'index.html');
 routes.push(territorialRoute);

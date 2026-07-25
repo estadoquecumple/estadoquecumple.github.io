@@ -1,0 +1,234 @@
+{
+  "generatedAt": "2026-07-25T17:25:52.254Z",
+  "canonicalOrigin": "https://estadoquecumple.github.io",
+  "indexablePages": 29,
+  "noindexPages": [
+    "/404.html",
+    "/buscar/"
+  ],
+  "sitemaps": [
+    "sitemap-0.xml",
+    "sitemap-index.xml"
+  ],
+  "pages": [
+    {
+      "path": "/404.html",
+      "canonical": "https://estadoquecumple.github.io/404/",
+      "title": "Página no encontrada · Estado que Cumple | CAMS",
+      "indexable": false,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/accesibilidad/",
+      "canonical": "https://estadoquecumple.github.io/accesibilidad/",
+      "title": "Accesibilidad · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/archivo/",
+      "canonical": "https://estadoquecumple.github.io/archivo/",
+      "title": "Archivo · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/bitacora/",
+      "canonical": "https://estadoquecumple.github.io/bitacora/",
+      "title": "Bitácora · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/buscar/",
+      "canonical": "https://estadoquecumple.github.io/buscar/",
+      "title": "Buscar · Estado que Cumple | CAMS",
+      "indexable": false,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/cams/criterios-y-transparencia/",
+      "canonical": "https://estadoquecumple.github.io/cams/criterios-y-transparencia/",
+      "title": "Criterios y transparencia · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/cams/",
+      "canonical": "https://estadoquecumple.github.io/cams/",
+      "title": "CAMS · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/cams/metodo/",
+      "canonical": "https://estadoquecumple.github.io/cams/metodo/",
+      "title": "Método CAMS · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/cams/trayectoria/",
+      "canonical": "https://estadoquecumple.github.io/cams/trayectoria/",
+      "title": "Trayectoria · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/conocimiento/",
+      "canonical": "https://estadoquecumple.github.io/conocimiento/",
+      "title": "Conocimiento · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/documentos/estado-que-cumple-2026-2030/",
+      "canonical": "https://estadoquecumple.github.io/documentos/estado-que-cumple-2026-2030/",
+      "title": "Estado que Cumple 2026–2030 · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/documentos/",
+      "canonical": "https://estadoquecumple.github.io/documentos/",
+      "title": "Documentos · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/activacion/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/activacion/",
+      "title": "Rutas de activación · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/aplicaciones/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/aplicaciones/",
+      "title": "Aplicaciones · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/arquitectura/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/arquitectura/",
+      "title": "Arquitectura institucional · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/documento/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/documento/",
+      "title": "Documento de Estado que Cumple · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/fundamentos/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/fundamentos/",
+      "title": "Fundamentos · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/implementacion/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/implementacion/",
+      "title": "Implementación · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/",
+      "title": "Estado que Cumple · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/metodo/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/metodo/",
+      "title": "Método · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/estado-que-cumple/problema/",
+      "canonical": "https://estadoquecumple.github.io/estado-que-cumple/problema/",
+      "title": "El problema público · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/",
+      "canonical": "https://estadoquecumple.github.io/",
+      "title": "Estado que Cumple | CAMS — Carlos Arturo Martínez Sánchez",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/investigaciones/",
+      "canonical": "https://estadoquecumple.github.io/investigaciones/",
+      "title": "Investigaciones · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/observatorio/",
+      "canonical": "https://estadoquecumple.github.io/observatorio/",
+      "title": "Observatorio de capacidad pública · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/observatorio/laboratorio-territorial/",
+      "canonical": "https://estadoquecumple.github.io/observatorio/laboratorio-territorial/",
+      "title": "Laboratorio Territorial CAMS · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/participar/aportar-fuente/",
+      "canonical": "https://estadoquecumple.github.io/participar/aportar-fuente/",
+      "title": "Aportar una fuente · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/participar/colaborar/",
+      "canonical": "https://estadoquecumple.github.io/participar/colaborar/",
+      "title": "Colaborar · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/participar/correcciones/",
+      "canonical": "https://estadoquecumple.github.io/participar/correcciones/",
+      "title": "Corregir un error · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/participar/",
+      "canonical": "https://estadoquecumple.github.io/participar/",
+      "title": "Participar · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/privacidad-y-datos/",
+      "canonical": "https://estadoquecumple.github.io/privacidad-y-datos/",
+      "title": "Privacidad y datos · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    },
+    {
+      "path": "/propuestas/",
+      "canonical": "https://estadoquecumple.github.io/propuestas/",
+      "title": "Propuestas · Estado que Cumple | CAMS",
+      "indexable": true,
+      "jsonLdBlocks": 1
+    }
+  ],
+  "failures": [],
+  "warnings": []
+}

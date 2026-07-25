@@ -10,11 +10,15 @@
     "preview": "astro preview",
     "check": "astro check",
     "audit": "node tools/audit-dist.mjs",
+    "seo:audit": "node tools/seo-audit.mjs",
+    "seo:report": "node tools/seo-audit.mjs",
+    "indexnow:prepare": "node tools/indexnow.mjs prepare",
+    "indexnow:submit": "node tools/indexnow.mjs submit",
     "data:refresh": "python scripts/territorial/fetch_all.py",
     "data:validate": "python scripts/territorial/validate_sources.py",
     "lab:test": "vitest run tests/territorial",
     "lab:audit": "node tools/audit-territorial.mjs",
-    "validate": "npm run data:validate && npm run lab:test && npm run check && npm run build && npm run audit && npm run lab:audit"
+    "validate": "npm run data:validate && npm run lab:test && npm run check && npm run build && npm run audit && npm run seo:audit && npm run lab:audit"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",

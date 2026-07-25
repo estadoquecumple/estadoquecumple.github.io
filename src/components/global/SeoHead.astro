@@ -1,15 +1,18 @@
 ---
-interface Props { title: string; description: string; canonical: string; type?: string; }
-const { title, description, canonical, type = 'website' } = Astro.props;
-const image = 'https://estadoquecumple.github.io/assets/og-cams-v3.png';
+import { SITE, absoluteUrl } from '../../config/site';
+interface Props { title: string; description: string; canonical: string; site: URL; type?: string; noindex?: boolean; }
+const { title, description, canonical, site, type = 'website', noindex = false } = Astro.props;
+const image = absoluteUrl(SITE.socialImage, site);
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
-<meta name="author" content="Carlos Arturo Martínez Sánchez" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content={SITE.author} />
+<meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
 <link rel="canonical" href={canonical} />
 <meta property="og:title" content={title} /><meta property="og:description" content={description} />
 <meta property="og:type" content={type} /><meta property="og:url" content={canonical} />
-<meta property="og:image" content={image} /><meta property="og:locale" content="es_CO" /><meta property="og:site_name" content="Estado que Cumple" />
+<meta property="og:image" content={image} /><meta property="og:image:width" content={String(SITE.socialImageWidth)} />
+<meta property="og:image:height" content={String(SITE.socialImageHeight)} /><meta property="og:image:type" content={SITE.socialImageType} />
+<meta property="og:locale" content={SITE.locale} /><meta property="og:site_name" content={SITE.name} />
 <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} /><meta name="twitter:image" content={image} />

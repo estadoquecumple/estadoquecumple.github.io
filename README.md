@@ -2,6 +2,8 @@
 
 Sitio público de Estado que Cumple, con CAMS como nombre alternativo e identidad editorial de Carlos Arturo Martínez Sánchez. El repositorio público es `estadoquecumple/estadoquecumple.github.io`.
 
+URL pública y canónica actual: `https://estadoquecumple.github.io/`.
+
 ## Requisitos y uso local
 
 - Node.js 22 LTS o compatible.
@@ -38,7 +40,28 @@ No anuncie una entrada como publicada hasta que exista el texto completo, fuente
 
 ## Despliegue
 
-`astro.config.mjs` usa salida estática, sitio canónico `https://estadoquecumple.github.io` y sitemap. `.github/workflows/deploy.yml` ejecuta comprobación, compila con la acción oficial de Astro y despliega GitHub Pages al actualizar `main`.
+`astro.config.mjs` usa salida estática, `SITE_URL` como fuente del dominio y la integración oficial de sitemap. Si no se define la variable, el valor seguro es `https://estadoquecumple.github.io`. No se usa `base`.
+
+Comandos principales:
+
+```text
+npm install
+npm run dev
+npm run check
+npm run build
+npm run audit
+npm run seo:audit
+npm run seo:report
+npm run validate
+```
+
+`reports/seo-report.json` registra páginas indexables, páginas `noindex`, canonical, JSON-LD y errores encontrados. La búsqueda interna y 404 son las únicas salidas `noindex`.
+
+La preparación de Google Search Console, Bing e IndexNow está en [docs/INDEXACION.md](docs/INDEXACION.md). La lista operativa para migrar en el futuro, sin elegir todavía entre los dos dominios considerados, está en [docs/MIGRACION_DOMINIO.md](docs/MIGRACION_DOMINIO.md). El control editorial previo a cada publicación está en [docs/SEO_CHECKLIST.md](docs/SEO_CHECKLIST.md).
+
+Para cambiar de dominio no se editan componentes: se configura `SITE_URL`, se ajustan GitHub Pages y DNS, y se vuelven a verificar los buscadores. Canonical, sitemap, robots, Open Graph, JSON-LD, `site-index.json` y `llms.txt` se regeneran desde esa fuente.
+
+`.github/workflows/deploy.yml` compila y despliega GitHub Pages al actualizar `main`. `.github/workflows/indexnow.yml` es manual, se ejecuta después del despliegue y requiere el secreto real `INDEXNOW_KEY`.
 
 ## Laboratorio Territorial CAMS
 

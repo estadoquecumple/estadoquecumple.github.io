@@ -1,8 +1,14 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+const siteUrl =
+  process.env.SITE_URL ??
+  'https://estadoquecumple.github.io';
+
 export default defineConfig({
-  site: 'https://estadoquecumple.github.io',
+  site: siteUrl,
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    filter: (page) => !new URL(page).pathname.startsWith('/buscar/'),
+  })],
 });

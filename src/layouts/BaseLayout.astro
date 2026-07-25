@@ -8,17 +8,44 @@ import CommandPalette from '../components/global/CommandPalette.astro';
 import Breadcrumbs from '../components/global/Breadcrumbs.astro';
 import BrandSignature from '../components/brand/BrandSignature.astro';
 import BrandPattern from '../components/brand/BrandPattern.astro';
-interface Props { title: string; description: string; currentPath?: string; type?: string; jsonLd?: Record<string, unknown>; }
-const { title, description, currentPath = Astro.url.pathname, type = 'website', jsonLd } = Astro.props;
+import { SITE, absoluteUrl, routeFor } from '../config/site';
+interface Props { title: string; description: string; currentPath?: string; type?: string; jsonLd?: Record<string, unknown> | Record<string, unknown>[]; noindex?: boolean; }
+const { title, description, currentPath = Astro.url.pathname, type = 'website', jsonLd, noindex = currentPath === '/404.html' || routeFor(currentPath)?.indexable === false } = Astro.props;
 const fullTitle = currentPath === '/' ? 'Estado que Cumple | CAMS — Carlos Arturo Martínez Sánchez' : `${title} · Estado que Cumple | CAMS`;
-const site = Astro.site ?? new URL('https://estadoquecumple.github.io');
+if (!Astro.site) throw new Error('Astro.site es obligatorio para generar URLs públicas.');
+const site = Astro.site;
 const canonical = new URL(Astro.url.pathname, site).toString();
+const isPerson = currentPath === '/cams/';
+const isProposal = currentPath.startsWith('/estado-que-cumple/');
+const schemaType = isPerson ? 'Person' : isProposal ? 'CreativeWork' : (routeFor(currentPath)?.type ?? 'WebPage');
+const defaultJsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': schemaType,
+  '@id': `${canonical}#page`,
+  url: canonical,
+  name: title,
+  description,
+  inLanguage: SITE.language,
+  author: {'@id': absoluteUrl('/#person', site), '@type': 'Person', name: SITE.author, alternateName: SITE.alternateName, url: absoluteUrl('/cams/', site)},
+  isPartOf: {'@id': absoluteUrl('/#website', site)},
+};
+if (isPerson) {
+  defaultJsonLd.name = SITE.author;
+  defaultJsonLd.alternateName = SITE.alternateName;
+  defaultJsonLd.sameAs = SITE.social;
+}
+if (isProposal) {
+  defaultJsonLd.name = 'Estado que Cumple';
+  defaultJsonLd.creativeWorkStatus = 'Propuesta ciudadana no oficial';
+  defaultJsonLd.mainEntityOfPage = canonical;
+}
+const jsonLdBlocks = isPerson ? [defaultJsonLd] : jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [defaultJsonLd];
 const brandedContext = currentPath.startsWith('/cams/') || ['/documentos/', '/archivo/'].includes(currentPath);
 const patternedContext = currentPath.startsWith('/estado-que-cumple/') || ['/documentos/', '/archivo/', '/404.html'].includes(currentPath);
 const signatureLabel = currentPath.startsWith('/cams/criterios-y-transparencia/') ? 'Responsabilidad editorial' : currentPath === '/documentos/' ? 'Biblioteca y autoría' : currentPath === '/archivo/' ? 'Custodia y memoria editorial' : 'Autor y responsable de CAMS';
 ---
 <!doctype html>
-<html lang="es-CO">
+<html lang={SITE.language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -26,8 +53,8 @@ const signatureLabel = currentPath.startsWith('/cams/criterios-y-transparencia/'
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <SeoHead title={fullTitle} description={description} canonical={canonical} type={type} />
-    {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <SeoHead title={fullTitle} description={description} canonical={canonical} site={site} type={type} noindex={noindex} />
+    {jsonLdBlocks.map((block) => <script is:inline type="application/ld+json" set:html={JSON.stringify(block)} />)}
   </head>
   <body>
     <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div>
