@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public" / "data" / "territorial"
 CACHE = ROOT / "data" / "cache"
-USER_AGENT = "CAMS-Laboratorio-Territorial/1.0 (+https://camscarlosmartinez.github.io)"
+USER_AGENT = "CAMS-Laboratorio-Territorial/1.0 (+https://estadoquecumple.github.io)"
 
 def now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")

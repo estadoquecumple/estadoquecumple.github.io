@@ -1,6 +1,6 @@
-# CAMS
+﻿# Estado que Cumple
 
-Sitio público personal de Carlos Arturo Martínez Sánchez. Distingue la identidad CAMS, la propuesta Estado que Cumple, el catálogo de propuestas, el centro de conocimiento y los canales de participación.
+Sitio público de Estado que Cumple, con CAMS como nombre alternativo e identidad editorial de Carlos Arturo Martínez Sánchez. El repositorio público es `estadoquecumple/estadoquecumple.github.io`.
 
 ## Requisitos y uso local
 
@@ -38,7 +38,7 @@ No anuncie una entrada como publicada hasta que exista el texto completo, fuente
 
 ## Despliegue
 
-`astro.config.mjs` usa salida estática, sitio canónico `https://camscarlosmartinez.github.io` y sitemap. `.github/workflows/deploy.yml` ejecuta comprobación, compila con la acción oficial de Astro y despliega GitHub Pages al actualizar `main`.
+`astro.config.mjs` usa salida estática, sitio canónico `https://estadoquecumple.github.io` y sitemap. `.github/workflows/deploy.yml` ejecuta comprobación, compila con la acción oficial de Astro y despliega GitHub Pages al actualizar `main`.
 
 ## Laboratorio Territorial CAMS
 

@@ -1,5 +1,5 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';import PageHero from '../../../components/global/PageHero.astro';
-const issue='https://github.com/camscarlosmartinez/camscarlosmartinez.github.io/issues/new?template=correccion-de-error.yml&title=%5BCorrecci%C3%B3n%5D%20';
+const issue='https://github.com/estadoquecumple/estadoquecumple.github.io/issues/new?template=correccion-de-error.yml&title=%5BCorrecci%C3%B3n%5D%20';
 ---
 <BaseLayout title="Corregir un error" description="Guía y plantilla pública para reportar errores verificables en CAMS." currentPath="/participar/correcciones/"><PageHero eyebrow="Participar" title="Corregir un error" lead="Una corrección útil permite localizar el problema, verificarlo y registrar el cambio."/><div class="container page"><section class="section section-grid"><div><h2>Incluya</h2><ol><li>URL, sección o documento.</li><li>Texto o dato que considera incorrecto.</li><li>Corrección propuesta.</li><li>Fuente verificable y fecha de consulta.</li><li>Si afecta una conclusión o solo la forma.</li></ol><a class="button primary" href={issue}>Crear issue de corrección</a></div><aside class="callout warning"><h2>Canal público</h2><p>No incluya datos personales, sensibles o reservados. La plantilla abre un GitHub Issue visible públicamente.</p></aside></section></div></BaseLayout>
