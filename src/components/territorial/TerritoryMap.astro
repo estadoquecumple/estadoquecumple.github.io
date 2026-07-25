@@ -1,43 +1,230 @@
 ---
 import 'maplibre-gl/dist/maplibre-gl.css';
 ---
-<section class="map-panel" aria-labelledby="map-title"><div class="map-head"><div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div><div class="legend" aria-label="Leyenda"><span><i class="swatch observed"></i>Observado</span><span><i class="swatch assumption"></i>Hipótesis</span><span><i class="swatch missing"></i>Sin dato</span></div></div><div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos de Colombia según DANE DIVIPOLA MGN 2025"><div class="map-loading" data-map-status>Preparando mapa oficial…</div></div><p class="map-help">Use +/− o rueda para zoom, arrastre para mover y pulse un departamento para consultar. La tabla siguiente ofrece la misma información sin mapa.</p></section>
+<section class="map-panel" aria-labelledby="map-title">
+  <div class="map-head">
+    <div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div>
+    <div class="legend" aria-label="Leyenda"><span><i class="swatch observed"></i>Observado</span><span><i class="swatch assumption"></i>Hipótesis</span><span><i class="swatch missing"></i>Sin dato</span></div>
+  </div>
+  <div class="map-stage">
+    <div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos de Colombia según DANE DIVIPOLA MGN 2025"></div>
+    <div class="map-status" data-map-status role="status" aria-live="polite">
+      <span data-map-message>Preparando motor cartográfico</span>
+      <button type="button" data-map-retry hidden>Reintentar mapa</button>
+    </div>
+  </div>
+  <p class="map-help">Use +/− o rueda para zoom, arrastre para mover y pulse un departamento para consultar. La tabla siguiente ofrece la misma información sin mapa.</p>
+</section>
 <script>
-  import * as maplibregl from 'maplibre-gl';
-  const container=document.querySelector<HTMLElement>('#territory-map');
-  const status=container?.querySelector<HTMLElement>('[data-map-status]');
-  if(container){
-    const map=new maplibregl.Map({container,style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#e8e3d8'}}]},center:[-73.5,4.3],zoom:4.2,attributionControl:false});
-    map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
-    map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'DANE DIVIPOLA MGN 2025'}));
-    map.on('load',async()=>{
-      try{
-        const response=await fetch('/data/territorial/geography/departments.geojson');
-        if(!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data=await response.json();
-        map.addSource('departments',{type:'geojson',data});
-        map.addLayer({id:'departments-fill',type:'fill',source:'departments',paint:{'fill-color':'#d8c8a4','fill-opacity':0.72}});
-        map.addLayer({id:'departments-line',type:'line',source:'departments',paint:{'line-color':'#123b5d','line-width':1.2}});
-        map.on('click','departments-fill',(event:any)=>{
-          const p=event.features?.[0]?.properties;if(!p)return;
-          const node=document.querySelector<HTMLElement>('[data-profile-title]');if(node)node.textContent=String(p.name);
-          new maplibregl.Popup().setLngLat(event.lngLat).setText(`${p.name} · DIVIPOLA ${p.code} · dato observado DANE 2025`).addTo(map);
-        });
-        map.on('mouseenter','departments-fill',()=>map.getCanvas().style.cursor='pointer');
-        map.on('mouseleave','departments-fill',()=>map.getCanvas().style.cursor='');
-        status?.remove();
-      }catch(error){if(status){status.textContent='No fue posible cargar el mapa. La tabla permanece disponible.';status.classList.add('error');}}
+  import {
+    AttributionControl,
+    LngLatBounds,
+    Map,
+    NavigationControl,
+    Popup,
+    setWorkerUrl,
+  } from 'maplibre-gl';
+  import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
+  type Position = [number, number];
+  type DepartmentProperties = { code: string; name: string };
+  type DepartmentCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, DepartmentProperties>;
+
+  const container = document.querySelector<HTMLElement>('#territory-map');
+  const status = document.querySelector<HTMLElement>('[data-map-status]');
+  const message = status?.querySelector<HTMLElement>('[data-map-message]');
+  const retry = status?.querySelector<HTMLButtonElement>('[data-map-retry]');
+  let map: Map | undefined;
+  let observer: ResizeObserver | undefined;
+  let selectedDepartment: string | undefined;
+
+  const setStatus = (text: string, kind: 'loading' | 'ready' | 'partial' | 'error' = 'loading') => {
+    if (!status || !message) return;
+    message.textContent = text;
+    status.dataset.state = kind;
+    status.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+    if (retry) retry.hidden = kind !== 'error';
+  };
+
+  const hasWebGL = () => {
+    try {
+      const canvas = document.createElement('canvas');
+      return Boolean(
+        window.WebGL2RenderingContext && canvas.getContext('webgl2', { failIfMajorPerformanceCaveat: false })
+        || window.WebGLRenderingContext && canvas.getContext('webgl', { failIfMajorPerformanceCaveat: false }),
+      );
+    } catch {
+      return false;
+    }
+  };
+
+  const validPosition = (value: unknown): value is Position =>
+    Array.isArray(value) && value.length >= 2
+    && typeof value[0] === 'number' && Number.isFinite(value[0])
+    && typeof value[1] === 'number' && Number.isFinite(value[1]);
+
+  const walkPositions = (value: unknown, visit: (position: Position) => void) => {
+    if (validPosition(value)) return visit(value);
+    if (Array.isArray(value)) value.forEach((item) => walkPositions(item, visit));
+  };
+
+  const validGeometry = (geometry: unknown): geometry is GeoJSON.Geometry => {
+    if (!geometry || typeof geometry !== 'object' || !('type' in geometry)) return false;
+    const candidate = geometry as GeoJSON.Geometry;
+    if (candidate.type === 'GeometryCollection') return candidate.geometries.length > 0 && candidate.geometries.every(validGeometry);
+    let positions = 0;
+    walkPositions(candidate.coordinates, () => positions += 1);
+    return positions > 0;
+  };
+
+  const validateCollection = (value: unknown): DepartmentCollection => {
+    if (!value || typeof value !== 'object') throw new Error('La respuesta cartográfica no es un objeto JSON.');
+    const collection = value as Partial<DepartmentCollection>;
+    if (collection.type !== 'FeatureCollection') throw new Error('La respuesta DANE no es una FeatureCollection.');
+    if (!Array.isArray(collection.features) || collection.features.length === 0) throw new Error('La cartografía DANE no contiene entidades.');
+    collection.features.forEach((feature, index) => {
+      if (feature?.type !== 'Feature' || !validGeometry(feature.geometry)) throw new Error(`Geometría inválida en la entidad ${index + 1}.`);
+      if (!feature.properties || typeof feature.properties.code !== 'string' || typeof feature.properties.name !== 'string') {
+        throw new Error(`La entidad ${index + 1} no contiene code y name válidos.`);
+      }
     });
-    document.querySelectorAll<HTMLInputElement>('[data-layer]').forEach(input=>input.addEventListener('change',async()=>{
-      if(input.dataset.layer==='departments'&&map.getLayer('departments-fill')){
-        const visibility=input.checked?'visible':'none';map.setLayoutProperty('departments-fill','visibility',visibility);map.setLayoutProperty('departments-line','visibility',visibility);
-      }
-      if(input.dataset.layer==='municipalities'){
-        if(input.checked&&!map.getSource('municipalities')){
-          const response=await fetch('/data/territorial/geography/municipalities/11.geojson');const data=await response.json();
-          map.addSource('municipalities',{type:'geojson',data});map.addLayer({id:'municipalities-line',type:'line',source:'municipalities',paint:{'line-color':'#a11f2a','line-width':1.5}});
-        }else if(map.getLayer('municipalities-line')) map.setLayoutProperty('municipalities-line','visibility',input.checked?'visible':'none');
-      }
-    }));
-  }
+    return collection as DepartmentCollection;
+  };
+
+  const fetchCollection = async (url: string) => {
+    const response = await fetch(url, { headers: { Accept: 'application/geo+json, application/json' } });
+    if (!response.ok) throw new Error(`Error HTTP ${response.status} al cargar ${url}.`);
+    const contentType = response.headers.get('content-type')?.toLowerCase() ?? '';
+    if (!contentType.includes('json') && !contentType.includes('geo+json')) throw new Error(`Tipo de contenido inesperado: ${contentType || 'sin Content-Type'}.`);
+    return validateCollection(await response.json());
+  };
+
+  const collectionBounds = (collection: DepartmentCollection) => {
+    const bounds = new LngLatBounds();
+    collection.features.forEach((feature) => {
+      const geometry = feature.geometry;
+      walkPositions(geometry.type === 'GeometryCollection' ? geometry.geometries : geometry.coordinates, (position) => bounds.extend(position));
+    });
+    if (bounds.isEmpty()) throw new Error('No fue posible calcular los límites de Colombia.');
+    return bounds;
+  };
+
+  const removeMunicipalities = () => {
+    if (!map) return;
+    if (map.getLayer('municipalities-line')) map.removeLayer('municipalities-line');
+    if (map.getSource('municipalities')) map.removeSource('municipalities');
+  };
+
+  const loadMunicipalities = async (departmentCode: string) => {
+    if (!map || !/^\d{2}$/.test(departmentCode)) return;
+    const collection = await fetchCollection(`/data/territorial/geography/municipalities/${departmentCode}.geojson`);
+    removeMunicipalities();
+    map.addSource('municipalities', { type: 'geojson', data: collection });
+    map.addLayer({ id: 'municipalities-line', type: 'line', source: 'municipalities', paint: { 'line-color': '#a11f2a', 'line-width': 1.4 } });
+    selectedDepartment = departmentCode;
+    const toggle = document.querySelector<HTMLInputElement>('[data-layer="municipalities"]');
+    if (toggle) toggle.checked = true;
+    setStatus(`Mapa disponible · municipios del departamento ${departmentCode} cargados`, 'ready');
+  };
+
+  const initializeMap = async () => {
+    if (!container) return;
+    try {
+      setStatus('Preparando motor cartográfico');
+      if (!hasWebGL()) throw new Error('Este navegador no ofrece soporte WebGL para el mapa interactivo.');
+      setWorkerUrl(maplibreWorkerUrl);
+      observer?.disconnect();
+      map?.remove();
+      container.replaceChildren();
+
+      map = new Map({
+        container,
+        style: { version: 8, sources: {}, layers: [{ id: 'background', type: 'background', paint: { 'background-color': '#e8e3d8' } }] },
+        center: [-73.5, 4.3],
+        zoom: 4.2,
+        attributionControl: false,
+      });
+      (window as Window & { __territorialMap?: Map }).__territorialMap = map;
+      map!.on('error', (event) => {
+        const detail = event.error instanceof Error ? event.error.message : String(event.error ?? 'Error desconocido de MapLibre');
+        setStatus(`Error: ${detail}`, 'error');
+      });
+      map!.addControl(new NavigationControl({ showCompass: false }), 'top-right');
+      map!.addControl(new AttributionControl({ compact: true, customAttribution: 'DANE DIVIPOLA MGN 2025' }));
+      observer = new ResizeObserver(() => map?.resize());
+      observer.observe(container);
+
+      await new Promise<void>((resolve, reject) => {
+        map?.once('load', () => resolve());
+        map?.once('error', (event) => reject(event.error ?? new Error('MapLibre no pudo cargar el estilo.')));
+      });
+      map!.resize();
+      setStatus('Cargando cartografía DANE');
+      const departments = await fetchCollection('/data/territorial/geography/departments.geojson');
+      map!.addSource('departments', { type: 'geojson', data: departments });
+      map!.addLayer({ id: 'departments-fill', type: 'fill', source: 'departments', paint: { 'fill-color': '#d8c8a4', 'fill-opacity': 0.72 } });
+      map!.addLayer({ id: 'departments-line', type: 'line', source: 'departments', paint: { 'line-color': '#123b5d', 'line-width': 1.2 } });
+      map!.addLayer({ id: 'departments-hover', type: 'line', source: 'departments', paint: { 'line-color': '#a11f2a', 'line-width': 3 }, filter: ['==', ['get', 'code'], ''] });
+      await new Promise<void>((resolve, reject) => {
+        const started = performance.now();
+        const check = () => {
+          if ((map?.querySourceFeatures('departments').length ?? 0) > 0) return resolve();
+          if (performance.now() - started > 15_000) return reject(new Error('MapLibre agotó el tiempo para procesar la source departments.'));
+          window.setTimeout(check, 50);
+        };
+        check();
+      });
+
+      map!.on('mousemove', 'departments-fill', (event) => {
+        const code = event.features?.[0]?.properties?.code;
+        map?.setFilter('departments-hover', ['==', ['get', 'code'], typeof code === 'string' ? code : '']);
+      });
+      map!.on('mouseleave', 'departments-fill', () => {
+        map?.setFilter('departments-hover', ['==', ['get', 'code'], '']);
+        if (map) map.getCanvas().style.cursor = '';
+      });
+      map!.on('mouseenter', 'departments-fill', () => { if (map) map.getCanvas().style.cursor = 'pointer'; });
+      map!.on('click', 'departments-fill', async (event) => {
+        const properties = event.features?.[0]?.properties as DepartmentProperties | undefined;
+        if (!properties?.code || !properties.name || !map) return;
+        const title = document.querySelector<HTMLElement>('[data-profile-title]');
+        if (title) title.textContent = properties.name;
+        new Popup().setLngLat(event.lngLat).setText(`${properties.name} · DIVIPOLA ${properties.code} · dato observado DANE 2025`).addTo(map);
+        try {
+          setStatus(`Cargando municipios de ${properties.name}`);
+          await loadMunicipalities(properties.code);
+        } catch (error) {
+          setStatus(`Datos parciales: ${error instanceof Error ? error.message : String(error)}`, 'partial');
+        }
+      });
+
+      map!.fitBounds(collectionBounds(departments), { padding: 28, duration: 0, maxZoom: 5.2 });
+      map!.resize();
+      await new Promise<void>((resolve) => {
+        map?.once('render', () => resolve());
+        map?.triggerRepaint();
+      });
+      setStatus(departments.features.length === 33 ? 'Mapa disponible · 33 entidades' : `Datos parciales · ${departments.features.length} entidades`, departments.features.length === 33 ? 'ready' : 'partial');
+
+      document.querySelectorAll<HTMLInputElement>('[data-layer]').forEach((input) => input.addEventListener('change', async () => {
+        if (!map) return;
+        if (input.dataset.layer === 'departments') {
+          const visibility = input.checked ? 'visible' : 'none';
+          ['departments-fill', 'departments-line', 'departments-hover'].forEach((id) => { if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', visibility); });
+        }
+        if (input.dataset.layer === 'municipalities') {
+          if (!input.checked) removeMunicipalities();
+          else if (selectedDepartment) await loadMunicipalities(selectedDepartment);
+          else setStatus('Datos parciales · seleccione un departamento para cargar sus municipios', 'partial');
+        }
+      }));
+    } catch (error) {
+      setStatus(`Error: ${error instanceof Error ? error.message : String(error)}. La tabla territorial continúa disponible.`, 'error');
+    }
+  };
+
+  retry?.addEventListener('click', initializeMap);
+  window.addEventListener('territorial:resize', () => requestAnimationFrame(() => map?.resize()));
+  window.addEventListener('beforeunload', () => observer?.disconnect(), { once: true });
+  void initializeMap();
 </script>

@@ -8,6 +8,11 @@ const siteUrl =
 export default defineConfig({
   site: siteUrl,
   output: 'static',
+  vite: {
+    worker: {
+      format: 'es',
+    },
+  },
   integrations: [sitemap({
     filter: (page) => !new URL(page).pathname.startsWith('/buscar/'),
   })],
