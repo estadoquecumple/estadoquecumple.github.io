@@ -7,7 +7,7 @@ const failures = [];
 const warnings = [];
 const pages = [];
 const routeFile = (pathname) => pathname === '/' ? join(root,'index.html') : pathname === '/404.html' ? join(root,'404.html') : join(root,pathname.slice(1),'index.html');
-const walk = (dir) => readdirSync(dir,{withFileTypes:true}).flatMap((item) => item.isDirectory() ? walk(join(dir,item.name)) : item.name.endsWith('.html') ? [join(dir,item.name)] : []);
+const walk = (dir) => readdirSync(dir,{withFileTypes:true}).flatMap((item) => item.isDirectory() ? walk(join(dir,item.name)) : item.name.endsWith('.html') && !/^google[a-zA-Z0-9_-]+\.html$/.test(item.name) ? [join(dir,item.name)] : []);
 const sitemapFiles = existsSync(root) ? readdirSync(root).filter((name)=>/^sitemap.*\.xml$/.test(name)) : [];
 const sitemapXml = sitemapFiles.map((name)=>readFileSync(join(root,name),'utf8')).join('\n');
 const sitemapUrls = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match)=>match[1]).filter((url)=>!url.endsWith('.xml')));

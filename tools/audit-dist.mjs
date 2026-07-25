@@ -15,6 +15,7 @@ routes.push(territorialRoute);
 for(const r of routes)if(!existsSync(routeFile(r)))failures.push(`Falta ruta compilada: ${r}`);
 const ids=new Map();const links=[];
 for(const file of htmlFiles){const html=readFileSync(file,'utf8');const rel=file.slice(root.length).replaceAll('\\','/');
+ if(/^\/google[a-zA-Z0-9_-]+\.html$/.test(rel))continue;
  if(!/<html[^>]+lang="es-CO"/.test(html))failures.push(`${rel}: falta lang es-CO`);
  if(!/<title>[^<]+<\/title>/.test(html))failures.push(`${rel}: falta title`);
  if(!/<meta name="description" content="[^"]+"/.test(html))failures.push(`${rel}: falta description`);
@@ -34,6 +35,7 @@ for(const publicFile of ['robots.txt','llms.txt','site-index.json','site.webmani
 if(existsSync(join(root,'robots.txt'))&&!readFileSync(join(root,'robots.txt'),'utf8').includes(`${canonicalOrigin}/sitemap-index.xml`))failures.push('robots.txt: sitemap incorrecto');
 if(existsSync(join(root,'llms.txt'))&&readFileSync(join(root,'llms.txt'),'utf8').includes('camscarlosmartinez.github.io'))failures.push('llms.txt: dominio anterior');
 if(existsSync(join(root,'site-index.json'))){try{const index=JSON.parse(readFileSync(join(root,'site-index.json'),'utf8'));if(index.url!==`${canonicalOrigin}/`)failures.push('site-index.json: URL incorrecta');for(const item of index.routes)if(!existsSync(routeFile(item.path)))failures.push(`site-index.json: ruta inexistente ${item.path}`)}catch{failures.push('site-index.json: JSON inválido')}}
+for(const googleFile of readdirSync(resolve('public')).filter(name=>/^google[a-zA-Z0-9_-]+\.html$/.test(name))){const source=resolve('public',googleFile),built=join(root,googleFile);if(!existsSync(built)||readFileSync(source).compare(readFileSync(built))!==0)failures.push(`${googleFile}: la verificación de Google no se conservó byte por byte`)}
 for(const sitemap of ['sitemap-index.xml','sitemap-0.xml'])if(existsSync(join(root,sitemap))){const xml=readFileSync(join(root,sitemap),'utf8');if(xml.includes('camscarlosmartinez.github.io')||!xml.includes(canonicalOrigin))failures.push(`${sitemap}: dominio incorrecto`)}
 const home=routeFile('/');if(existsSync(home)){const html=readFileSync(home,'utf8');if(!html.includes('<title>Estado que Cumple | CAMS — Carlos Arturo Martínez Sánchez</title>'))failures.push('Portada: título de identidad incorrecto');if(!html.includes('"@type":"WebSite"')||!html.includes('"@type":"Person"'))failures.push('Portada: falta JSON-LD WebSite o Person')}
 if(warn.length)console.log(warn.map(x=>`AVISO: ${x}`).join('\n'));
