@@ -1,5 +1,5 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';import PageHero from '../../../components/global/PageHero.astro';
-const issue='https://github.com/camscarlosmartinez/camscarlosmartinez.github.io/issues/new?template=aporte-de-fuente.yml&title=%5BFuente%5D%20';
+const issue='https://github.com/estadoquecumple/estadoquecumple.github.io/issues/new?template=aporte-de-fuente.yml&title=%5BFuente%5D%20';
 ---
 <BaseLayout title="Aportar una fuente" description="Guía y plantilla pública para aportar referencias verificables a CAMS." currentPath="/participar/aportar-fuente/"><PageHero eyebrow="Participar" title="Aportar una fuente" lead="Una referencia es útil cuando su origen, alcance y relación con el contenido están claros."/><div class="container page"><section class="section"><h2>Ficha mínima</h2><ul><li>Autor o institución, título, fecha y enlace estable.</li><li>Página, capítulo o conjunto de datos relevante.</li><li>Qué afirmación apoya, matiza o contradice.</li><li>Límites, territorio y periodo de la fuente.</li><li>Licencia o restricciones si son conocidas.</li></ul><a class="button primary" href={issue}>Crear issue de fuente</a><p>La propuesta no implica incorporación automática: la referencia debe revisarse y contextualizarse.</p></section></div></BaseLayout>

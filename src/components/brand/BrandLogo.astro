@@ -2,7 +2,7 @@
 interface Props { compact?: boolean; class?: string; }
 const { compact = false, class: className = '' } = Astro.props;
 ---
-<a class:list={['brand-logo', { 'brand-logo--compact': compact }, className]} href="/" aria-label="CAMS — Carlos Arturo Martínez Sánchez, inicio">
+<a class:list={['brand-logo', { 'brand-logo--compact': compact }, className]} href="/" aria-label="Estado que Cumple, CAMS — Carlos Arturo Martínez Sánchez, inicio">
   <img src="/assets/branding/logo-cams.png" width="1200" height="414" alt="CAMS, Estado que Cumple" decoding="async" />
   <span class="brand-logo__author">Carlos Arturo Martínez Sánchez</span>
 </a>

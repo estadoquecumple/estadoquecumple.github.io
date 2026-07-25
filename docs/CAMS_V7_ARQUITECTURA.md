@@ -1,4 +1,4 @@
-# CAMS v7 — Arquitectura, diseño y plan de migración
+﻿# CAMS v7 — Arquitectura, diseño y plan de migración
 
 ## 1. Decisión de producto
 
@@ -460,7 +460,7 @@ Objetivos:
 - mantener temporalmente los archivos HTML existentes;
 - instalar solo Astro y @astrojs/sitemap;
 - configurar salida estática;
-- configurar la URL https://camscarlosmartinez.github.io;
+- configurar la URL https://estadoquecumple.github.io;
 - crear scripts npm: dev, build, preview y check;
 - crear src/, public/ y una página mínima de prueba;
 - copiar o mover assets de forma segura;

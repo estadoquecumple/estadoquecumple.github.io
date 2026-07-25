@@ -7,18 +7,28 @@ const desc = 'Plataforma personal de Carlos Arturo Martínez Sánchez para inves
 ---
 
 <BaseLayout
-  title="CAMS"
+  title="Estado que Cumple"
   description={desc}
   currentPath="/"
   jsonLd={{
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'CAMS',
-    url: 'https://camscarlosmartinez.github.io',
-    author: {
-      '@type': 'Person',
-      name: 'Carlos Arturo Martínez Sánchez',
-    },
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': 'https://estadoquecumple.github.io/#website',
+        name: 'Estado que Cumple',
+        alternateName: 'CAMS',
+        url: 'https://estadoquecumple.github.io/',
+        inLanguage: 'es-CO',
+        author: {'@id':'https://estadoquecumple.github.io/#person'},
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://estadoquecumple.github.io/#person',
+        name: 'Carlos Arturo Martínez Sánchez',
+        url: 'https://estadoquecumple.github.io/cams/',
+      },
+    ],
   }}
 >
   <section class="home-hero">

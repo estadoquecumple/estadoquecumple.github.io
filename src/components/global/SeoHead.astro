@@ -1,7 +1,7 @@
 ---
 interface Props { title: string; description: string; canonical: string; type?: string; }
 const { title, description, canonical, type = 'website' } = Astro.props;
-const image = 'https://camscarlosmartinez.github.io/assets/og-cams-v3.png';
+const image = 'https://estadoquecumple.github.io/assets/og-cams-v3.png';
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
@@ -10,6 +10,6 @@ const image = 'https://camscarlosmartinez.github.io/assets/og-cams-v3.png';
 <link rel="canonical" href={canonical} />
 <meta property="og:title" content={title} /><meta property="og:description" content={description} />
 <meta property="og:type" content={type} /><meta property="og:url" content={canonical} />
-<meta property="og:image" content={image} /><meta property="og:locale" content="es_CO" /><meta property="og:site_name" content="CAMS" />
+<meta property="og:image" content={image} /><meta property="og:locale" content="es_CO" /><meta property="og:site_name" content="Estado que Cumple" />
 <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} /><meta name="twitter:image" content={image} />

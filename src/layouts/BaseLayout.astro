@@ -10,8 +10,8 @@ import BrandSignature from '../components/brand/BrandSignature.astro';
 import BrandPattern from '../components/brand/BrandPattern.astro';
 interface Props { title: string; description: string; currentPath?: string; type?: string; jsonLd?: Record<string, unknown>; }
 const { title, description, currentPath = Astro.url.pathname, type = 'website', jsonLd } = Astro.props;
-const fullTitle = title === 'CAMS' ? 'CAMS — Carlos Arturo Martínez Sánchez' : `${title} · CAMS`;
-const site = Astro.site ?? new URL('https://camscarlosmartinez.github.io');
+const fullTitle = currentPath === '/' ? 'Estado que Cumple | CAMS — Carlos Arturo Martínez Sánchez' : `${title} · Estado que Cumple | CAMS`;
+const site = Astro.site ?? new URL('https://estadoquecumple.github.io');
 const canonical = new URL(Astro.url.pathname, site).toString();
 const brandedContext = currentPath.startsWith('/cams/') || ['/documentos/', '/archivo/'].includes(currentPath);
 const patternedContext = currentPath.startsWith('/estado-que-cumple/') || ['/documentos/', '/archivo/', '/404.html'].includes(currentPath);
