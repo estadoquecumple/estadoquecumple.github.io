@@ -2,8 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DocumentCard from '../components/global/DocumentCard.astro';
 import BrandEmblem from '../components/brand/BrandEmblem.astro';
+import { SITE, absoluteUrl } from '../config/site';
 
 const desc = 'Plataforma personal de Carlos Arturo Martínez Sánchez para investigación pública, diseño institucional, propuestas, seguimiento y participación.';
+if (!Astro.site) throw new Error('Astro.site es obligatorio.');
+const websiteId = absoluteUrl('/#website', Astro.site);
+const personId = absoluteUrl('/#person', Astro.site);
 ---
 
 <BaseLayout
@@ -15,18 +19,20 @@ const desc = 'Plataforma personal de Carlos Arturo Martínez Sánchez para inves
     '@graph': [
       {
         '@type': 'WebSite',
-        '@id': 'https://estadoquecumple.github.io/#website',
-        name: 'Estado que Cumple',
-        alternateName: 'CAMS',
-        url: 'https://estadoquecumple.github.io/',
-        inLanguage: 'es-CO',
-        author: {'@id':'https://estadoquecumple.github.io/#person'},
+        '@id': websiteId,
+        name: SITE.name,
+        alternateName: SITE.alternateName,
+        url: absoluteUrl('/', Astro.site),
+        inLanguage: SITE.language,
+        author: {'@id':personId},
       },
       {
         '@type': 'Person',
-        '@id': 'https://estadoquecumple.github.io/#person',
-        name: 'Carlos Arturo Martínez Sánchez',
-        url: 'https://estadoquecumple.github.io/cams/',
+        '@id': personId,
+        name: SITE.author,
+        alternateName: SITE.alternateName,
+        url: absoluteUrl('/cams/', Astro.site),
+        sameAs: SITE.social,
       },
     ],
   }}
@@ -40,6 +46,7 @@ const desc = 'Plataforma personal de Carlos Arturo Martínez Sánchez para inves
           Investigación pública, diseño institucional, seguimiento y participación para convertir
           problemas verificables en alternativas discutibles, corregibles y trazables.
         </p>
+        <p>Estado que Cumple es una plataforma pública desarrollada por Carlos Arturo Martínez Sánchez bajo la identidad CAMS.</p>
         <div class="actions home-hero__actions">
           <a class="button primary" href="/estado-que-cumple/">Explorar Estado que Cumple</a>
           <a class="button secondary" href="/cams/">Conocer CAMS</a>
