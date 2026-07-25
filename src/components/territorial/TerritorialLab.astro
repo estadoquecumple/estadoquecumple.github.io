@@ -13,6 +13,7 @@ import ModeSelector from './ModeSelector.astro';import ScenarioSelector from './
   import { parseLabParams } from '../../data/territorial/lab';
   const state=parseLabParams(new URLSearchParams(location.search));
   const scenario=document.querySelector<HTMLSelectElement>('[data-scenario]');const metric=document.querySelector<HTMLSelectElement>('[data-metric]');const year=document.querySelector<HTMLInputElement>('[data-year]');
+  const resizeMap=()=>requestAnimationFrame(()=>window.dispatchEvent(new Event('territorial:resize')));
   if(scenario)scenario.value=state.scenario;if(metric)metric.value=state.metric;if(year)year.value=String(state.year);
   document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.value===state.mode)));
   const update=()=>{
@@ -25,9 +26,11 @@ import ModeSelector from './ModeSelector.astro';import ScenarioSelector from './
     if(copy&&scenario?.value==='regional-exploratory'){copy.textContent='Agrupación exploratoria declarativa en 10 regiones. Los nodos, autoridades y transición son hipótesis con incertidumbre alta.';if(type)type.textContent='Hipótesis';}
     else if(copy&&scenario?.value==='shared-services'){copy.textContent='Tres agrupaciones demostrativas conservan municipios y exploran servicios compartidos. Requieren validación jurídica y pilotos.';if(type)type.textContent='Hipótesis de piloto';}
     else if(copy){copy.textContent='La línea base muestra la división político-administrativa oficial DANE MGN 2025. Los indicadores ausentes se presentan como “Sin dato disponible”.';if(type)type.textContent='Dato observado';}
+    resizeMap();
   };
   document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-mode-selector] button').forEach(x=>x.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');update()}));
   [scenario,metric,year].forEach(node=>node?.addEventListener('change',update));update();
+  document.querySelectorAll<HTMLAnchorElement>('.mobile-tabs a').forEach(link=>link.addEventListener('click',()=>setTimeout(resizeMap,0)));
   const table=document.querySelector<HTMLElement>('[data-territory-table]');let rows:Array<{code:string,name:string}>=[];
   fetch('/data/territorial/geography/departments.geojson').then(r=>r.json()).then(data=>{rows=data.features.map((f:any)=>f.properties);render(rows)}).catch(()=>{if(table)table.innerHTML='<tr><td colspan="5">Error de carga. <button type="button" onclick="location.reload()">Reintentar</button></td></tr>'});
   const render=(items:typeof rows)=>{if(!table)return;table.textContent='';for(const row of items){const tr=document.createElement('tr');for(const value of [row.code,row.name,'observed','2025','DANE DIVIPOLA MGN 2025']){const td=document.createElement('td');td.textContent=value;tr.append(td)}table.append(tr)}};
