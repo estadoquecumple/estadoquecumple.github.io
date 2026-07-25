@@ -11,7 +11,7 @@ export const SITE = {
   socialImageHeight: 630,
   socialImageType: 'image/png',
   editorialIdentity: 'Identidad pública personal e independiente de Carlos Arturo Martínez Sánchez; no es una entidad jurídica ni un organismo público.',
-  social: ['https://github.com/camscarlosmartinez','https://www.instagram.com/cams.carlosmartinez/','https://co.linkedin.com/in/cams0802','https://www.facebook.com/CAMS.CarlosMartinez/'],
+  social: ['https://github.com/estadoquecumple/estadoquecumple.github.io','https://www.instagram.com/cams.carlosmartinez/','https://co.linkedin.com/in/cams0802','https://www.facebook.com/CAMS.CarlosMartinez/'],
 } as const;
 
 export type RouteRecord = { path:string; title:string; description:string; group:string; type:'WebPage'|'CollectionPage'|'ProfilePage'|'DigitalDocument'; editorialStatus:string; indexable:boolean; dateModified?:string };
@@ -40,7 +40,7 @@ export const ROUTES: RouteRecord[] = [
   route('/documentos/estado-que-cumple-2026-2030/','Estado que Cumple 2026–2030','Ficha documental, descarga, versión, autoría, citación e historial de Estado que Cumple.','Documentos','DigitalDocument','Publicado',true,'2026-06-06'),
   route('/bitacora/','Bitácora','Estado y agenda editorial de la Bitácora CAMS, sin artículos ficticios.','Conocimiento','CollectionPage'),
   route('/observatorio/','Observatorio de capacidad pública','Observatorio de capacidad pública y acceso al Laboratorio Territorial CAMS.','Observatorio','CollectionPage'),
-  route('/observatorio/laboratorio-territorial/','Laboratorio Territorial CAMS','Atlas institucional para comparar territorio, capacidad, fuentes y escenarios.','Observatorio'),
+  route('/observatorio/laboratorio-territorial/','Laboratorio Territorial CAMS','RAÍCES consulta el sistema vigente, SAVIA evalúa capacidad y SEMILLAS modela escenarios territoriales e institucionales.','Observatorio'),
   route('/archivo/','Archivo','Versiones del sitio y documentos, repositorio, cambios, correcciones y preservación.','Conocimiento','CollectionPage'),
   route('/participar/','Participar','Acciones reales para corregir, aportar fuentes, comentar y colaborar con CAMS.','Participación'),
   route('/participar/correcciones/','Corregir un error','Guía y plantilla pública para reportar errores verificables en CAMS.','Participación'),

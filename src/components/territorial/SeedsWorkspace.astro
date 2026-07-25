@@ -1,0 +1,61 @@
+<section class="mode-workspace seeds-workspace" data-workspace="seeds" hidden aria-labelledby="seeds-title">
+  <p class="panel-number">SEMILLAS · DISEÑAR</p>
+  <h2 id="seeds-title">¿Qué alternativa institucional puede diseñarse, compararse y pilotarse?</h2>
+  <p>El estado actual permanece bloqueado. Cree o duplique un escenario para editar.</p>
+  <div class="scenario-actions">
+    <button type="button" data-create-scenario>Crear escenario</button>
+    <button type="button" data-duplicate-scenario disabled>Duplicar</button>
+    <button type="button" data-rename-scenario disabled>Renombrar</button>
+    <button type="button" data-archive-scenario disabled>Archivar</button>
+    <button type="button" data-delete-scenario disabled>Eliminar</button>
+  </div>
+  <label>Escenario local <select data-local-scenarios><option value="current">Estado actual · bloqueado</option></select></label>
+  <div class="selection-tools">
+    <button type="button" data-select-department>Seleccionar departamento completo</button>
+    <button type="button" data-select-neighbours>Seleccionar vecinos</button>
+    <button type="button" data-select-contiguous>Seleccionar contiguos</button>
+    <button type="button" data-draw-rectangle>Selección rectangular</button>
+    <button type="button" data-draw-polygon>Selección poligonal</button>
+    <button type="button" data-invert-selection>Invertir</button>
+    <button type="button" data-clear-selection>Limpiar</button>
+  </div>
+  <p><strong>Unidades seleccionadas:</strong> <span data-selection-summary>Ninguna</span></p>
+  <div class="modeler-grid">
+    <fieldset><legend>Estructura territorial</legend>
+      <label>Nombre de nueva unidad <input data-unit-name value="Región exploratoria" /></label>
+      <label>Naturaleza <select data-unit-nature><option>región</option><option>provincia</option><option>distrito funcional</option><option>área metropolitana</option><option>ciudad-región</option><option>mancomunidad</option><option>unidad personalizada</option></select></label>
+      <label>Integrantes <select data-disposition><option value="political">Conservar como entidades políticas</option><option value="administrative">Conservar como subdivisiones administrativas</option><option value="absorbed">Absorber</option><option value="statistical">Solo límites estadísticos</option></select></label>
+      <button type="button" data-merge>Unir selección</button>
+      <button type="button" data-split-membership>Dividir por municipios</button>
+      <button type="button" data-split-geometry>División geométrica experimental</button>
+      <button type="button" data-suppress-department>Suprimir nivel departamental en escenario</button>
+      <button type="button" data-create-level>Crear nuevo nivel</button>
+    </fieldset>
+    <fieldset><legend>Gobierno</legend>
+      <label>Autoridad <select data-government-authority><option>ejecutivo elegido</option><option>ejecutivo colegiado</option><option>administrador profesional</option><option>dirección política y administración separadas</option></select></label>
+      <label>Selección <select data-government-selection><option value="elección directa">Elección directa</option><option value="corporación">Elección por corporación</option><option value="nombramiento">Nombramiento</option><option value="híbrido">Procedimiento híbrido</option></select></label>
+      <button type="button" data-change-government>Aplicar gobierno</button>
+    </fieldset>
+    <fieldset><legend>Competencias</legend>
+      <label>Función <select data-competence-function>{['educación','salud','agua','residuos','transporte','vivienda','ambiente','catastro','tributación','contratación','defensa jurídica','seguridad','infraestructura','planeación','desarrollo productivo','ciencia y tecnología','cultura','cuidado'].map((item) => <option>{item}</option>)}</select></label>
+      <label>Nivel <select data-competence-level><option value="nation">Nación</option><option value="department">Departamento</option><option value="municipality">Municipio</option></select></label>
+      <label>Modalidad <select data-competence-modality><option value="exclusive">Exclusiva</option><option value="concurrent">Concurrente</option><option value="shared">Compartida</option><option value="delegated">Delegada</option><option value="subsidiary">Subsidiaria</option><option value="temporary">Temporal</option></select></label>
+      <button type="button" data-assign-competence>Asignar competencia</button>
+    </fieldset>
+    <fieldset><legend>Financiación y planeación</legend>
+      <label><input type="checkbox" data-finance="impuestos propios" /> Impuestos propios</label>
+      <label><input type="checkbox" data-finance="transferencias" /> Transferencias</label>
+      <label><input type="checkbox" data-finance="igualación" /> Igualación</label>
+      <label><input type="checkbox" data-finance="fondos regionales" /> Fondos regionales</label>
+      <label><input type="checkbox" data-finance="cofinanciación" /> Cofinanciación</label>
+      <button type="button" data-change-finance>Aplicar financiación</button>
+      <label>Horizonte de planeación <input type="number" min="1" max="30" value="12" data-planning-horizon /> años</label>
+      <button type="button" data-change-planning>Aplicar planeación</button>
+    </fieldset>
+  </div>
+  <div class="history-actions">
+    <button type="button" data-undo disabled>Deshacer</button>
+    <button type="button" data-redo disabled>Rehacer</button>
+    <span data-save-status>Sin escenario editable</span>
+  </div>
+</section>

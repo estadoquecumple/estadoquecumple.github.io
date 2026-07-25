@@ -1,4 +1,15 @@
-﻿---
-import BaseLayout from '../../layouts/BaseLayout.astro';import PageHero from '../../components/global/PageHero.astro';
 ---
-<BaseLayout title="Archivo" description="Versiones del sitio y documentos, repositorio, cambios, correcciones, preservación y licencias." currentPath="/archivo/"><PageHero eyebrow="Conocimiento · Memoria" title="Archivo público" lead="Registro verificable de versiones, código, documentos y condiciones de preservación de CAMS."/><div class="container page"><section class="section"><h2>Registro disponible</h2><div class="table-wrap"><table><thead><tr><th>Código</th><th>Recurso</th><th>Versión</th><th>Fecha</th><th>Estado</th><th>Enlace</th></tr></thead><tbody><tr><td>WEB–CAMS</td><td>Sitio y código fuente</td><td>Historial Git</td><td>Continua</td><td>Activo</td><td><a href="https://github.com/estadoquecumple/estadoquecumple.github.io">Repositorio</a></td></tr><tr><td>CAMS–EQC–001</td><td>Estado que Cumple 2026–2030</td><td>Documento público vigente</td><td>6 junio 2026</td><td>Publicado</td><td><a href="/documentos/estado-que-cumple-2026-2030/">Ficha</a></td></tr></tbody></table></div></section><section class="section"><div class="cards"><article class="card"><h2>Cambios y correcciones</h2><p>Git conserva el historial técnico. Las correcciones editoriales sustantivas deben explicar qué cambió y por qué.</p></article><article class="card"><h2>Preservación</h2><p>El repositorio y el PDF son los soportes confirmados. No se presentan Zenodo, OSF o Internet Archive como depósitos activos.</p></article><article class="card"><h2>Licencias</h2><p>El código y los contenidos no declaran aquí una licencia general. Cada recurso debe informar su condición antes de reutilizarse.</p></article></div></section></div></BaseLayout>
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/global/PageHero.astro';
+---
+<BaseLayout title="Archivo" description="Versiones del sitio y documentos, repositorio, cambios, correcciones, preservación y licencias." currentPath="/archivo/">
+  <PageHero eyebrow="Conocimiento · Memoria" title="Archivo público" lead="Registro verificable de versiones, código, documentos y condiciones de preservación de CAMS."/>
+  <div class="container page">
+    <section class="section"><h2>Registro disponible</h2><div class="table-wrap"><table><thead><tr><th>Código</th><th>Recurso</th><th>Versión</th><th>Fecha</th><th>Estado</th><th>Enlace</th></tr></thead><tbody>
+      <tr><td>LAB–TERR–V2</td><td>Laboratorio Territorial V2 — modelador de escenarios</td><td>2.0.0</td><td>25 julio 2026</td><td>Operativo</td><td><a href="/observatorio/laboratorio-territorial/">Aplicación</a></td></tr>
+      <tr><td>WEB–CAMS</td><td>Sitio y código fuente</td><td>Historial Git</td><td>Continua</td><td>Activo</td><td><a href="https://github.com/estadoquecumple/estadoquecumple.github.io">Repositorio</a></td></tr>
+      <tr><td>CAMS–EQC–001</td><td>Estado que Cumple 2026–2030</td><td>Documento público vigente</td><td>6 junio 2026</td><td>Publicado</td><td><a href="/documentos/estado-que-cumple-2026-2030/">Ficha</a></td></tr>
+    </tbody></table></div></section>
+    <section class="section"><div class="cards"><article class="card"><h2>Cambios y correcciones</h2><p>Git conserva el historial técnico. Las correcciones editoriales sustantivas deben explicar qué cambió y por qué.</p></article><article class="card"><h2>Preservación</h2><p>El repositorio y el PDF son los soportes confirmados. No se presentan depósitos inexistentes como activos.</p></article><article class="card"><h2>Licencias</h2><p>Cada recurso debe informar su condición antes de reutilizarse.</p></article></div></section>
+  </div>
+</BaseLayout>

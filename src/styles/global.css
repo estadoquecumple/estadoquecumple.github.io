@@ -1273,6 +1273,36 @@ th {
 @media(max-width:760px){.mobile-tabs{position:sticky;top:4.4rem;z-index:50;display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border:1px solid var(--line)}.mobile-tabs a{text-align:center;padding:.65rem;font-size:.75rem;font-weight:700}.lab-shell,.lab-results,.lab-below,.method-grid,.sources-grid,.comparison-grid{grid-template-columns:1fr}.lab-map,.lab-results{grid-column:auto}.territory-map{height:28rem}.lab-config,.lab-map,.lab-results{scroll-margin-top:8rem}.glossary{grid-template-columns:1fr}}
 @media print{.site-header,.site-footer,.mobile-tabs,.lab-config,.maplibregl-control-container,.download-grid button{display:none!important}.lab-shell{display:block}.territory-map{height:20rem}.lab-below{grid-template-columns:1fr}.method-panel:not([open])>*:not(summary){display:block}}
 
+/* Laboratorio Territorial V2 */
+.mode-navigation{position:sticky;top:0;z-index:45;display:grid;grid-template-columns:repeat(3,1fr);margin:1rem 0;border:1px solid var(--line);background:#fff}
+.mode-navigation button{display:flex;justify-content:center;gap:.6rem;padding:.85rem;border:0;border-right:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}
+.mode-navigation button:last-child{border-right:0}.mode-navigation button[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:inset 0 -4px var(--gold)}
+.mode-navigation span{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.lab-shell-v2{display:grid;grid-template-columns:minmax(18rem,.9fr) minmax(30rem,1.7fr) minmax(18rem,.9fr);gap:1rem;align-items:start}
+.lab-context,.lab-analysis,.selected-table,.lab-lower{border:1px solid var(--line);background:#fff}
+.mode-workspace,.scenario-output{padding:1rem}.mode-workspace h2,.scenario-output h2{font-size:1.35rem}
+.mode-workspace label{display:grid;gap:.25rem;margin:.75rem 0;font-weight:700;font-size:.86rem}
+.mode-workspace input,.mode-workspace select,.comparison-toolbar select{width:100%;padding:.55rem;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.mode-workspace fieldset{margin:1rem 0;padding:.8rem;border:1px solid var(--line)}.mode-workspace fieldset label{display:flex;align-items:center;gap:.45rem;font-weight:500}
+.mode-workspace button,.scenario-actions button,.selection-tools button,.history-actions button,.download-actions button,.comparison-toolbar button,.button-like{padding:.55rem .7rem;border:1px solid var(--navy);background:#fff;color:var(--navy);font-weight:700;cursor:pointer}
+.mode-workspace button:hover,.mode-workspace button:focus-visible,.scenario-actions button:hover,.download-actions button:hover{background:var(--navy);color:#fff}
+.mode-workspace button:disabled,.download-actions button:disabled{opacity:.45;cursor:not-allowed}
+.roots-workspace{border-top:5px solid #123b5d}.sap-workspace{border-top:5px solid #347a55}.seeds-workspace{border-top:5px solid #7b3fb4}
+.scenario-actions,.selection-tools,.history-actions,.download-actions,.comparison-toolbar{display:flex;flex-wrap:wrap;gap:.45rem;margin:.75rem 0}
+.modeler-grid{display:grid;gap:.6rem}.capacity-profile{padding:.75rem;background:#eef5ef;border-left:4px solid #347a55}.method-warning,.legal-disclaimer{padding:.7rem;background:#fff5db;border-left:4px solid var(--gold)}
+.map-stage{position:relative;min-height:38rem}.territory-map{height:38rem;min-height:38rem}.map-status{position:absolute;left:1rem;bottom:1rem;z-index:5;display:flex;align-items:center;gap:.65rem;max-width:calc(100% - 2rem);padding:.6rem .75rem;background:#fff;border:1px solid var(--line);box-shadow:0 3px 14px rgba(0,0,0,.15)}
+.map-status[data-state="ready"]{border-left:5px solid #347a55}.map-status[data-state="partial"]{border-left:5px solid var(--gold)}.map-status[data-state="error"]{border-left:5px solid var(--red)}
+.map-status button{display:none}.map-status[data-state="error"] button{display:inline-block}.drawing-active{outline:4px dashed #7b3fb4;outline-offset:-6px}
+.result-legend{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin:.7rem 0}.swatch.calculated{background:#347a55}
+.selected-table{margin-top:1rem;padding:1rem}.table-toolbar{display:flex;align-items:end;justify-content:space-between;gap:1rem}.table-scroll{max-height:30rem;overflow:auto}.selected-table table,.comparison-toolbar+div table{width:100%;border-collapse:collapse}.selected-table th,.selected-table td,.comparison-toolbar+div th,.comparison-toolbar+div td{padding:.55rem;border-bottom:1px solid var(--line);text-align:left}
+.lab-lower{margin-top:1rem;padding:1rem}.lab-lower details{border-bottom:1px solid var(--line);padding:.75rem 0}.lab-lower summary{font-weight:800;cursor:pointer}
+.button-like{position:relative;display:inline-flex;align-items:center}.button-like input{position:absolute;inline-size:1px;block-size:1px;opacity:0}
+.migration-notice{padding:.8rem;background:#fff5db;border:1px solid var(--gold)}.operation-announcer{position:fixed;right:1rem;bottom:1rem;z-index:80;max-width:28rem;background:var(--navy);color:#fff;padding:.7rem;box-shadow:0 3px 14px rgba(0,0,0,.25)}.operation-announcer:empty{display:none}
+body[data-lab-mode="roots"] .map-stage{border-top:4px solid #123b5d}body[data-lab-mode="sap"] .map-stage{border-top:4px solid #347a55}body[data-lab-mode="seeds"] .map-stage{border-top:4px solid #7b3fb4}
+@media(max-width:1150px){.lab-shell-v2{grid-template-columns:19rem 1fr}.lab-analysis{grid-column:1/-1}.territory-map,.map-stage{height:32rem;min-height:32rem}}
+@media(max-width:760px){.mode-navigation{top:4.25rem}.mode-navigation button{display:grid;gap:.1rem}.mobile-tabs{display:grid;grid-template-columns:repeat(4,1fr);position:sticky;top:8.2rem;z-index:44}.mobile-tabs button{padding:.6rem .25rem;border:1px solid var(--line);background:#fff;font-weight:700}.lab-shell-v2{grid-template-columns:1fr}.territory-map,.map-stage{height:440px;min-height:440px}.lab-shell-v2>[data-panel]{display:none}.lab-shell-v2>[data-panel][data-mobile-active="true"],.lab-shell-v2>[data-panel="controls"]{display:block}.lab-shell-v2>[data-panel="controls"][data-mobile-active="false"]{display:none}.table-toolbar{align-items:stretch;flex-direction:column}.result-legend{grid-template-columns:1fr}}
+@media print{.mode-navigation,.mobile-tabs,.scenario-actions,.selection-tools,.history-actions,.download-actions,.operation-announcer{display:none!important}.lab-shell-v2{display:block}.lab-context{display:none}.lab-analysis,.selected-table,.lab-lower{border:0}.territory-map{height:20rem}}
+
 /* Sistema de marca CAMS */
 .brand-logo {
   grid-column: 1;

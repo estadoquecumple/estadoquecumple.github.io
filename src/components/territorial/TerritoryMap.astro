@@ -1,43 +1,208 @@
 ---
 import 'maplibre-gl/dist/maplibre-gl.css';
 ---
-<section class="map-panel" aria-labelledby="map-title"><div class="map-head"><div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div><div class="legend" aria-label="Leyenda"><span><i class="swatch observed"></i>Observado</span><span><i class="swatch assumption"></i>Hipótesis</span><span><i class="swatch missing"></i>Sin dato</span></div></div><div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos de Colombia según DANE DIVIPOLA MGN 2025"><div class="map-loading" data-map-status>Preparando mapa oficial…</div></div><p class="map-help">Use +/− o rueda para zoom, arrastre para mover y pulse un departamento para consultar. La tabla siguiente ofrece la misma información sin mapa.</p></section>
+<section class="map-panel" aria-labelledby="map-title">
+  <div class="map-head">
+    <div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div>
+    <div class="legend" aria-label="Leyenda del modo"><span data-map-legend>RAÍCES · consulta oficial</span></div>
+  </div>
+  <div class="map-stage">
+    <div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos y municipios de Colombia según DANE DIVIPOLA MGN 2025"></div>
+    <div class="map-status" data-map-status data-state="loading" role="status" aria-live="polite">
+      <span data-map-message>Preparando motor cartográfico</span>
+      <button type="button" data-map-retry>Reintentar mapa</button>
+    </div>
+  </div>
+  <p class="map-help">Use teclado, búsqueda o tabla como alternativa completa al mapa. Ctrl/Cmd + clic añade unidades a la selección SEMILLAS.</p>
+</section>
 <script>
-  import * as maplibregl from 'maplibre-gl';
-  const container=document.querySelector<HTMLElement>('#territory-map');
-  const status=container?.querySelector<HTMLElement>('[data-map-status]');
-  if(container){
-    const map=new maplibregl.Map({container,style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#e8e3d8'}}]},center:[-73.5,4.3],zoom:4.2,attributionControl:false});
-    map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
-    map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'DANE DIVIPOLA MGN 2025'}));
-    map.on('load',async()=>{
-      try{
-        const response=await fetch('/data/territorial/geography/departments.geojson');
-        if(!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data=await response.json();
-        map.addSource('departments',{type:'geojson',data});
-        map.addLayer({id:'departments-fill',type:'fill',source:'departments',paint:{'fill-color':'#d8c8a4','fill-opacity':0.72}});
-        map.addLayer({id:'departments-line',type:'line',source:'departments',paint:{'line-color':'#123b5d','line-width':1.2}});
-        map.on('click','departments-fill',(event:any)=>{
-          const p=event.features?.[0]?.properties;if(!p)return;
-          const node=document.querySelector<HTMLElement>('[data-profile-title]');if(node)node.textContent=String(p.name);
-          new maplibregl.Popup().setLngLat(event.lngLat).setText(`${p.name} · DIVIPOLA ${p.code} · dato observado DANE 2025`).addTo(map);
-        });
-        map.on('mouseenter','departments-fill',()=>map.getCanvas().style.cursor='pointer');
-        map.on('mouseleave','departments-fill',()=>map.getCanvas().style.cursor='');
-        status?.remove();
-      }catch(error){if(status){status.textContent='No fue posible cargar el mapa. La tabla permanece disponible.';status.classList.add('error');}}
-    });
-    document.querySelectorAll<HTMLInputElement>('[data-layer]').forEach(input=>input.addEventListener('change',async()=>{
-      if(input.dataset.layer==='departments'&&map.getLayer('departments-fill')){
-        const visibility=input.checked?'visible':'none';map.setLayoutProperty('departments-fill','visibility',visibility);map.setLayoutProperty('departments-line','visibility',visibility);
-      }
-      if(input.dataset.layer==='municipalities'){
-        if(input.checked&&!map.getSource('municipalities')){
-          const response=await fetch('/data/territorial/geography/municipalities/11.geojson');const data=await response.json();
-          map.addSource('municipalities',{type:'geojson',data});map.addLayer({id:'municipalities-line',type:'line',source:'municipalities',paint:{'line-color':'#a11f2a','line-width':1.5}});
-        }else if(map.getLayer('municipalities-line')) map.setLayoutProperty('municipalities-line','visibility',input.checked?'visible':'none');
-      }
-    }));
-  }
+  import {
+    AttributionControl,
+    LngLatBounds,
+    Map as MapLibreMap,
+    NavigationControl,
+    Popup,
+    setWorkerUrl,
+    type GeoJSONSource,
+  } from 'maplibre-gl';
+  import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+
+  type FeatureCollection = GeoJSON.FeatureCollection<GeoJSON.Polygon | GeoJSON.MultiPolygon, { code: string; name: string }>;
+  const container = document.querySelector<HTMLElement>('#territory-map');
+  const status = document.querySelector<HTMLElement>('[data-map-status]');
+  const message = status?.querySelector<HTMLElement>('[data-map-message]');
+  const retry = status?.querySelector<HTMLButtonElement>('[data-map-retry]');
+  let map: MapLibreMap | undefined;
+  let observer: ResizeObserver | undefined;
+  const cache = new globalThis.Map<string, FeatureCollection>();
+  let drawingMode: 'rectangle' | 'polygon' | null = null;
+  let drawingPoints: Array<[number, number]> = [];
+
+  const setStatus = (text: string, state: 'loading' | 'ready' | 'partial' | 'error' = 'loading') => {
+    if (message) message.textContent = text;
+    if (status) {
+      status.dataset.state = state;
+      status.setAttribute('role', state === 'error' ? 'alert' : 'status');
+    }
+  };
+  const webGLAvailable = () => {
+    try {
+      const canvas = document.createElement('canvas');
+      return Boolean(canvas.getContext('webgl2') || canvas.getContext('webgl'));
+    } catch { return false; }
+  };
+  const validGeometry = (geometry: any) =>
+    geometry && ['Polygon', 'MultiPolygon'].includes(geometry.type) && Array.isArray(geometry.coordinates) && geometry.coordinates.length > 0;
+  const fetchCollection = async (url: string): Promise<FeatureCollection> => {
+    if (cache.has(url)) return cache.get(url)!;
+    const response = await fetch(url, { headers: { Accept: 'application/geo+json, application/json' } });
+    if (!response.ok) throw new Error(`Error HTTP ${response.status} al cargar ${url}`);
+    const contentType = response.headers.get('content-type')?.toLowerCase() ?? '';
+    if (!/(application\/(geo\+)?json|text\/json)/.test(contentType)) throw new Error(`Tipo de contenido inesperado: ${contentType || 'ausente'}`);
+    const data = await response.json();
+    if (data?.type !== 'FeatureCollection' || !Array.isArray(data.features) || !data.features.length) throw new Error('La respuesta no contiene una FeatureCollection con datos.');
+    for (const feature of data.features) {
+      if (!validGeometry(feature.geometry)) throw new Error('La cartografía contiene una geometría inválida.');
+      if (typeof feature.properties?.code !== 'string' || typeof feature.properties?.name !== 'string') throw new Error('Una entidad no contiene propiedades code y name válidas.');
+    }
+    cache.set(url, data);
+    return data;
+  };
+  const extendCoordinates = (bounds: LngLatBounds, coordinates: any): void => {
+    if (typeof coordinates?.[0] === 'number' && typeof coordinates?.[1] === 'number') bounds.extend(coordinates);
+    else if (Array.isArray(coordinates)) coordinates.forEach((child) => extendCoordinates(bounds, child));
+  };
+  const collectionBounds = (collection: FeatureCollection) => {
+    const bounds = new LngLatBounds();
+    collection.features.forEach((feature) => extendCoordinates(bounds, feature.geometry.coordinates));
+    return bounds;
+  };
+  const removeMunicipalities = () => {
+    if (!map) return;
+    if (map.getLayer('municipalities-line')) map.removeLayer('municipalities-line');
+    if (map.getLayer('municipalities-fill')) map.removeLayer('municipalities-fill');
+    if (map.getSource('municipalities')) map.removeSource('municipalities');
+  };
+  const drawingFeature = (finished = false): GeoJSON.FeatureCollection => {
+    if (!drawingPoints.length) return { type: 'FeatureCollection', features: [] };
+    let ring = [...drawingPoints];
+    if (drawingMode === 'rectangle' && drawingPoints.length >= 2) {
+      const [a, b] = drawingPoints;
+      ring = [[a[0], a[1]], [b[0], a[1]], [b[0], b[1]], [a[0], b[1]]];
+    }
+    if (ring.length >= 3) ring = [...ring, ring[0]];
+    const geometry = ring.length >= 4
+      ? { type: 'Polygon' as const, coordinates: [ring] }
+      : { type: 'LineString' as const, coordinates: ring };
+    return { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { experimental: true, finished }, geometry }] };
+  };
+  const updateDrawing = (finished = false) => {
+    const collection = drawingFeature(finished);
+    (map?.getSource('drawing-selection') as GeoJSONSource | undefined)?.setData(collection);
+    if (finished && collection.features[0]?.geometry.type === 'Polygon') {
+      document.dispatchEvent(new CustomEvent('territorial:geometry-drawn', { detail: { geometry: collection.features[0].geometry } }));
+      drawingMode = null;
+      drawingPoints = [];
+      container?.classList.remove('drawing-active');
+    }
+  };
+  const loadMunicipalities = async (code: string) => {
+    if (!map || !/^\d{2}$/.test(code)) return;
+    setStatus('Cargando cartografía DANE');
+    const data = await fetchCollection(`/data/territorial/geography/municipalities/${code}.geojson`);
+    removeMunicipalities();
+    map.addSource('municipalities', { type: 'geojson', data });
+    map.addLayer({ id: 'municipalities-fill', type: 'fill', source: 'municipalities', paint: { 'fill-color': '#d9a441', 'fill-opacity': 0.16 } });
+    map.addLayer({ id: 'municipalities-line', type: 'line', source: 'municipalities', paint: { 'line-color': '#a11f2a', 'line-width': 1.1 } });
+    map.fitBounds(collectionBounds(data), { padding: 36, duration: 0, maxZoom: 9 });
+    map.resize();
+    document.dispatchEvent(new CustomEvent('territorial:municipalities', { detail: { code, features: data.features } }));
+    setStatus(`Mapa disponible · ${data.features.length} municipios`, 'ready');
+  };
+  const initialize = async () => {
+    if (!container) return;
+    try {
+      setStatus('Preparando motor cartográfico');
+      if (!webGLAvailable()) throw new Error('WebGL no está disponible en este navegador.');
+      setWorkerUrl(maplibreWorkerUrl);
+      observer?.disconnect();
+      map?.remove();
+      container.replaceChildren();
+      map = new MapLibreMap({
+        container,
+        style: { version: 8, sources: {}, layers: [{ id: 'background', type: 'background', paint: { 'background-color': '#e8e3d8' } }] },
+        center: [-73.5, 4.3], zoom: 4.2, attributionControl: false,
+      });
+      (window as typeof window & { __territorialMap?: MapLibreMap }).__territorialMap = map;
+      map.on('error', (event) => setStatus(`Error: ${event.error?.message ?? 'Error desconocido de MapLibre'}`, 'error'));
+      map.addControl(new NavigationControl({ showCompass: false }), 'top-right');
+      map.addControl(new AttributionControl({ compact: true, customAttribution: 'DANE DIVIPOLA MGN 2025' }));
+      observer = new ResizeObserver(() => map?.resize());
+      observer.observe(container);
+      await new Promise<void>((resolve, reject) => {
+        map?.once('load', resolve);
+        map?.once('error', (event) => reject(event.error));
+      });
+      map.resize();
+      setStatus('Cargando cartografía DANE');
+      const departments = await fetchCollection('/data/territorial/geography/departments.geojson');
+      map.addSource('departments', { type: 'geojson', data: departments });
+      map.addLayer({ id: 'departments-fill', type: 'fill', source: 'departments', paint: { 'fill-color': '#d8c8a4', 'fill-opacity': 0.72 } });
+      map.addLayer({ id: 'departments-line', type: 'line', source: 'departments', paint: { 'line-color': '#123b5d', 'line-width': 1.2 } });
+      map.addLayer({ id: 'departments-hover', type: 'line', source: 'departments', paint: { 'line-color': '#a11f2a', 'line-width': 3 }, filter: ['==', ['get', 'code'], ''] });
+      map.addSource('scenario-units', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+      map.addLayer({ id: 'scenario-units-fill', type: 'fill', source: 'scenario-units', paint: { 'fill-color': '#7b3fb4', 'fill-opacity': 0.28 } });
+      map.addLayer({ id: 'scenario-units-line', type: 'line', source: 'scenario-units', paint: { 'line-color': '#52247a', 'line-width': 2.5 } });
+      map.addSource('drawing-selection', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+      map.addLayer({ id: 'drawing-selection-fill', type: 'fill', source: 'drawing-selection', filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': '#7b3fb4', 'fill-opacity': 0.2 } });
+      map.addLayer({ id: 'drawing-selection-line', type: 'line', source: 'drawing-selection', paint: { 'line-color': '#7b3fb4', 'line-width': 3, 'line-dasharray': [2, 1] } });
+      map.fitBounds(collectionBounds(departments), { padding: 28, duration: 0, maxZoom: 5.2 });
+      map.on('mousemove', 'departments-fill', (event) => map?.setFilter('departments-hover', ['==', ['get', 'code'], event.features?.[0]?.properties?.code ?? '']));
+      map.on('mouseleave', 'departments-fill', () => map?.setFilter('departments-hover', ['==', ['get', 'code'], '']));
+      map.on('click', 'departments-fill', async (event) => {
+        if (drawingMode) return;
+        const properties = event.features?.[0]?.properties;
+        if (!properties?.code || !properties?.name || !map) return;
+        new Popup().setLngLat(event.lngLat).setText(`${properties.name} · DIVIPOLA ${properties.code} · dato observado DANE 2025`).addTo(map);
+        document.dispatchEvent(new CustomEvent('territorial:select', { detail: { code: properties.code, name: properties.name, level: 'department', additive: event.originalEvent.ctrlKey || event.originalEvent.metaKey } }));
+        try { await loadMunicipalities(String(properties.code)); }
+        catch (error) { setStatus(`Datos parciales: ${error instanceof Error ? error.message : String(error)}`, 'partial'); }
+      });
+      map.on('click', 'municipalities-fill', (event) => {
+        if (drawingMode) return;
+        const properties = event.features?.[0]?.properties;
+        if (!properties?.code || !properties?.name) return;
+        document.dispatchEvent(new CustomEvent('territorial:select', { detail: { code: properties.code, name: properties.name, level: 'municipality', additive: event.originalEvent.ctrlKey || event.originalEvent.metaKey } }));
+      });
+      map.on('click', (event) => {
+        if (!drawingMode) return;
+        drawingPoints.push([event.lngLat.lng, event.lngLat.lat]);
+        updateDrawing(drawingMode === 'rectangle' && drawingPoints.length === 2);
+      });
+      map.on('dblclick', (event) => {
+        if (drawingMode !== 'polygon') return;
+        event.preventDefault();
+        if (drawingPoints.length >= 3) updateDrawing(true);
+        else setStatus('Datos parciales: el polígono necesita al menos tres vértices.', 'partial');
+      });
+      document.dispatchEvent(new CustomEvent('territorial:departments', { detail: { features: departments.features } }));
+      setStatus(`Mapa disponible · ${departments.features.length} entidades`, departments.features.length === 33 ? 'ready' : 'partial');
+    } catch (error) {
+      setStatus(`Error: ${error instanceof Error ? error.message : String(error)}. La tabla territorial continúa disponible.`, 'error');
+    }
+  };
+  retry?.addEventListener('click', initialize);
+  document.addEventListener('territorial:load-department', ((event: CustomEvent<{ code: string }>) => void loadMunicipalities(event.detail.code)) as EventListener);
+  document.addEventListener('territorial:scenario-geometry', ((event: CustomEvent<GeoJSON.FeatureCollection>) => {
+    (map?.getSource('scenario-units') as GeoJSONSource | undefined)?.setData(event.detail);
+  }) as EventListener);
+  document.addEventListener('territorial:start-draw', ((event: CustomEvent<{ mode: 'rectangle' | 'polygon' }>) => {
+    drawingMode = event.detail.mode;
+    drawingPoints = [];
+    container?.classList.add('drawing-active');
+    (map?.getSource('drawing-selection') as GeoJSONSource | undefined)?.setData({ type: 'FeatureCollection', features: [] });
+    setStatus(event.detail.mode === 'rectangle' ? 'Seleccione dos esquinas del rectángulo' : 'Dibuje vértices y haga doble clic para cerrar', 'partial');
+  }) as EventListener);
+  window.addEventListener('territorial:resize', () => requestAnimationFrame(() => map?.resize()));
+  void initialize();
 </script>
