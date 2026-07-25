@@ -17,6 +17,7 @@
     "data:refresh": "python scripts/territorial/fetch_all.py",
     "data:validate": "python scripts/territorial/validate_sources.py",
     "lab:test": "vitest run tests/territorial",
+    "lab:e2e": "playwright test",
     "lab:audit": "node tools/audit-territorial.mjs",
     "lab:legacy-audit": "node tools/audit-legacy.mjs",
     "lab:e2e": "playwright test",
