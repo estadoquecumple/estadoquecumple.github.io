@@ -1,0 +1,35 @@
+---
+import ModeSelector from './ModeSelector.astro';import ScenarioSelector from './ScenarioSelector.astro';import TerritorySelector from './TerritorySelector.astro';import MetricSelector from './MetricSelector.astro';import LayerControl from './LayerControl.astro';import TerritoryMap from './TerritoryMap.astro';import TerritoryProfile from './TerritoryProfile.astro';import ResultsPanel from './ResultsPanel.astro';import ComparisonPanel from './ComparisonPanel.astro';import MethodologyDrawer from './MethodologyDrawer.astro';import SourcesPanel from './SourcesPanel.astro';import DataStatus from './DataStatus.astro';import UncertaintyNotice from './UncertaintyNotice.astro';import AccessibleDataTable from './AccessibleDataTable.astro';import DownloadPanel from './DownloadPanel.astro';
+---
+<UncertaintyNotice />
+<nav class="mobile-tabs" aria-label="Paneles del laboratorio"><a href="#lab-config">Configurar</a><a href="#lab-map">Mapa</a><a href="#lab-results">Resultados</a></nav>
+<div class="lab-shell">
+  <aside id="lab-config" class="lab-config" aria-label="Configuración del laboratorio"><p class="panel-number">01 · CONFIGURAR</p><ModeSelector/><ScenarioSelector/><TerritorySelector/><MetricSelector/><LayerControl/><DataStatus/></aside>
+  <div id="lab-map" class="lab-map"><TerritoryMap/></div>
+  <aside id="lab-results" class="lab-results" aria-label="Resultados"><p class="panel-number">03 · INTERPRETAR</p><TerritoryProfile/><ResultsPanel/></aside>
+</div>
+<ComparisonPanel/><AccessibleDataTable/><div class="lab-below"><MethodologyDrawer/><SourcesPanel/></div><DownloadPanel/>
+<script>
+  import { parseLabParams } from '../../data/territorial/lab';
+  const state=parseLabParams(new URLSearchParams(location.search));
+  const scenario=document.querySelector<HTMLSelectElement>('[data-scenario]');const metric=document.querySelector<HTMLSelectElement>('[data-metric]');const year=document.querySelector<HTMLInputElement>('[data-year]');
+  if(scenario)scenario.value=state.scenario;if(metric)metric.value=state.metric;if(year)year.value=String(state.year);
+  document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.value===state.mode)));
+  const update=()=>{
+    const params=new URLSearchParams();
+    const mode=document.querySelector<HTMLButtonElement>('[data-mode-selector] button[aria-pressed="true"]')?.dataset.value||'roots';
+    params.set('mode',mode);params.set('scenario',scenario?.value||'current');params.set('territory',state.territory);params.set('metric',metric?.value||'coverage');params.set('year',year?.value||'2025');
+    history.replaceState(null,'',`${location.pathname}?${params}`);
+    const link=document.querySelector<HTMLAnchorElement>('[data-scenario-download]');if(link)link.href=`/data/territorial/scenarios/${scenario?.value||'current'}.json`;
+    const copy=document.querySelector<HTMLElement>('[data-result-copy]');const type=document.querySelector<HTMLElement>('[data-result-type]');
+    if(copy&&scenario?.value==='regional-exploratory'){copy.textContent='Agrupación exploratoria declarativa en 10 regiones. Los nodos, autoridades y transición son hipótesis con incertidumbre alta.';if(type)type.textContent='Hipótesis';}
+    else if(copy&&scenario?.value==='shared-services'){copy.textContent='Tres agrupaciones demostrativas conservan municipios y exploran servicios compartidos. Requieren validación jurídica y pilotos.';if(type)type.textContent='Hipótesis de piloto';}
+    else if(copy){copy.textContent='La línea base muestra la división político-administrativa oficial DANE MGN 2025. Los indicadores ausentes se presentan como “Sin dato disponible”.';if(type)type.textContent='Dato observado';}
+  };
+  document.querySelectorAll<HTMLButtonElement>('[data-mode-selector] button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-mode-selector] button').forEach(x=>x.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');update()}));
+  [scenario,metric,year].forEach(node=>node?.addEventListener('change',update));update();
+  const table=document.querySelector<HTMLElement>('[data-territory-table]');let rows:Array<{code:string,name:string}>=[];
+  fetch('/data/territorial/geography/departments.geojson').then(r=>r.json()).then(data=>{rows=data.features.map((f:any)=>f.properties);render(rows)}).catch(()=>{if(table)table.innerHTML='<tr><td colspan="5">Error de carga. <button type="button" onclick="location.reload()">Reintentar</button></td></tr>'});
+  const render=(items:typeof rows)=>{if(!table)return;table.textContent='';for(const row of items){const tr=document.createElement('tr');for(const value of [row.code,row.name,'observed','2025','DANE DIVIPOLA MGN 2025']){const td=document.createElement('td');td.textContent=value;tr.append(td)}table.append(tr)}};
+  document.querySelector<HTMLInputElement>('[data-table-filter]')?.addEventListener('input',event=>{const q=(event.currentTarget as HTMLInputElement).value.toLocaleLowerCase('es');render(rows.filter(x=>`${x.code} ${x.name}`.toLocaleLowerCase('es').includes(q)))});
+</script>

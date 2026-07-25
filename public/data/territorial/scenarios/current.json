@@ -1,0 +1,51 @@
+{
+  "id": "current",
+  "name": "Colombia actual",
+  "version": "1.0.0",
+  "authorship": "CAMS",
+  "status": "baseline",
+  "objective": "Describir la organización territorial vigente con datos oficiales disponibles.",
+  "units": [
+    "departamentos",
+    "municipios y distritos"
+  ],
+  "assignments": [],
+  "authorities": [
+    "Nación",
+    "departamentos",
+    "distritos y municipios"
+  ],
+  "competencies": [
+    "Las definidas por la Constitución y la ley vigente"
+  ],
+  "financing": [
+    "Ingresos territoriales",
+    "transferencias",
+    "regalías y otras fuentes legales"
+  ],
+  "planning": [
+    "Planes de desarrollo y ordenamiento e instrumentos vigentes"
+  ],
+  "assumptions": [],
+  "risks": [
+    "Comparabilidad temporal y cobertura desigual entre fuentes"
+  ],
+  "legalRequirements": [
+    "Ninguno: escenario descriptivo"
+  ],
+  "uncertainty": "Baja en la estructura; variable en indicadores según cobertura.",
+  "sources": [
+    "dane-divipola-mgn-2025",
+    "dane-population-projections",
+    "dnp-idf-2024",
+    "dnp-sgr-mzgh-shtp",
+    "secop-ii"
+  ],
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-25",
+      "change": "Línea base V1"
+    }
+  ]
+}

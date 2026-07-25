@@ -10,14 +10,22 @@
     "preview": "astro preview",
     "check": "astro check",
     "audit": "node tools/audit-dist.mjs",
-    "validate": "npm run check && npm run build && npm run audit"
+    "data:refresh": "python scripts/territorial/fetch_all.py",
+    "data:validate": "python scripts/territorial/validate_sources.py",
+    "lab:test": "vitest run tests/territorial",
+    "lab:audit": "node tools/audit-territorial.mjs",
+    "validate": "npm run data:validate && npm run lab:test && npm run check && npm run build && npm run audit && npm run lab:audit"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "maplibre-gl": "^6.0.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^5.9.3"
+    "@playwright/test": "^1.62.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
   }
 }

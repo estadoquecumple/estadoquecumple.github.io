@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TerritorialLab from '../../../components/territorial/TerritorialLab.astro';
+const title='Laboratorio Territorial CAMS';
+const description='Compare cómo cambiarían la administración, las competencias, la planeación y los recursos bajo distintos escenarios de organización territorial.';
+---
+<BaseLayout {title} {description} currentPath="/observatorio/laboratorio-territorial/">
+  <header class="lab-hero"><div class="container"><p class="eyebrow">Observatorio · Atlas institucional público</p><h1>{title}</h1><p>{description}</p><dl><div><dt>Versión</dt><dd>V1 · 25/07/2026</dd></div><div><dt>Llave territorial</dt><dd>DIVIPOLA</dd></div><div><dt>Cobertura cartográfica</dt><dd>Nacional</dd></div></dl></div></header>
+  <div class="container lab-page"><TerritorialLab/></div>
+</BaseLayout>

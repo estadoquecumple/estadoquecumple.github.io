@@ -21,6 +21,7 @@ export const searchItems: SearchItem[] = [
   ['Estado que Cumple 2026–2030','Documentos','Documento técnico-político de discusión pública.','/documentos/estado-que-cumple-2026-2030/',['PDF','propuesta']],
   ['Bitácora','Conocimiento','Agenda editorial, sin entradas ficticias.','/bitacora/',['artículos']],
   ['Observatorio','Conocimiento','Observatorio de capacidad pública en fase de diseño.','/observatorio/',['indicadores','fuentes']],
+  ['Laboratorio Territorial CAMS','Observatorio','Atlas institucional para comparar organización territorial, capacidad, fuentes y escenarios.','/observatorio/laboratorio-territorial/',['DIVIPOLA','MapLibre','territorio','RAÍCES','SAVIA','SEMILLAS']],
   ['Archivo','Conocimiento','Versiones, repositorio, cambios, correcciones y preservación.','/archivo/',['Git']],
   ['Participar','Participación','Corregir, aportar fuentes, comentar y colaborar mediante canales públicos.','/participar/',['GitHub']],
   ['Corregir un error','Participación','Plantilla pública para reportar errores verificables.','/participar/correcciones/',['issue']],

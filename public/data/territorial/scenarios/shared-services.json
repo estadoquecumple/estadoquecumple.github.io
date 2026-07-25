@@ -1,0 +1,119 @@
+{
+  "id": "shared-services",
+  "name": "Municipios conservados con servicios compartidos",
+  "version": "1.0.0",
+  "authorship": "CAMS",
+  "status": "pilot",
+  "objective": "Comparar coordinación intermunicipal manteniendo límites y autoridades municipales.",
+  "units": [
+    "agrupaciones demostrativas extensibles"
+  ],
+  "assignments": [
+    {
+      "id": "bogota-sabana",
+      "name": "Bogotá–Sabana",
+      "municipalities": [
+        "11001",
+        "25099",
+        "25126",
+        "25214",
+        "25260",
+        "25269",
+        "25286",
+        "25377",
+        "25430",
+        "25473",
+        "25486",
+        "25754",
+        "25758",
+        "25769",
+        "25817",
+        "25841",
+        "25843",
+        "25899"
+      ],
+      "services": [
+        "catastro",
+        "agua y saneamiento",
+        "infraestructura",
+        "sistemas de información"
+      ]
+    },
+    {
+      "id": "pacifico-medio",
+      "name": "Pacífico Medio",
+      "municipalities": [
+        "76109",
+        "76126",
+        "76233",
+        "76497"
+      ],
+      "services": [
+        "agua y saneamiento",
+        "infraestructura",
+        "contratación especializada",
+        "sistemas de información"
+      ]
+    },
+    {
+      "id": "norte-caldas-pequenos",
+      "name": "Norte de Caldas — municipios pequeños",
+      "municipalities": [
+        "17013",
+        "17042",
+        "17433",
+        "17444",
+        "17513"
+      ],
+      "services": [
+        "defensa jurídica",
+        "gestión tributaria",
+        "contratación especializada",
+        "sistemas de información"
+      ]
+    }
+  ],
+  "authorities": [
+    "Municipios conservan autoridades",
+    "esquema asociativo sujeto a instrumento legal"
+  ],
+  "competencies": [
+    "Catastro",
+    "contratación especializada",
+    "defensa jurídica",
+    "agua y saneamiento",
+    "infraestructura",
+    "gestión tributaria",
+    "sistemas de información"
+  ],
+  "financing": [
+    "Aportes y convenios por definir; no se calculan ahorros exactos"
+  ],
+  "planning": [
+    "Acuerdos de servicio, responsables, niveles y mecanismos de salida"
+  ],
+  "assumptions": [
+    "La selección demuestra estructura técnica, no viabilidad jurídica concluida"
+  ],
+  "risks": [
+    "Gobernanza difusa",
+    "distribución desigual de costos",
+    "dependencia del nodo"
+  ],
+  "legalRequirements": [
+    "Verificar competencias sectoriales y régimen de esquemas asociativos"
+  ],
+  "uncertainty": "Media-alta; requiere línea base y piloto evaluable.",
+  "sources": [
+    "dane-divipola-mgn-2025",
+    "dane-population-projections",
+    "dnp-idf-2024"
+  ],
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-25",
+      "change": "Tres agrupaciones demostrativas V1"
+    }
+  ]
+}

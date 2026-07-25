@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "status": "current",
+  "source": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer",
+  "downloadedAt": "2026-07-25T07:50:10Z",
+  "layers": {
+    "departments": 319,
+    "municipalities": 317
+  },
+  "departmentCount": 33,
+  "municipalityCount": 1122,
+  "crs": "EPSG:4326",
+  "partition": "municipalities by department",
+  "simplification": {
+    "method": "ArcGIS maxAllowableOffset and geometryPrecision",
+    "toleranceDegrees": 0.01,
+    "precisionDecimals": 5,
+    "purpose": "visualización web; no sustituye cartografía oficial"
+  }
+}

@@ -1,0 +1,8978 @@
+[
+  {
+    "code": "05001",
+    "departmentCode": "05",
+    "name": "MEDELLÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05002",
+    "departmentCode": "05",
+    "name": "ABEJORRAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05004",
+    "departmentCode": "05",
+    "name": "ABRIAQUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05021",
+    "departmentCode": "05",
+    "name": "ALEJANDRÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05030",
+    "departmentCode": "05",
+    "name": "AMAGÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05031",
+    "departmentCode": "05",
+    "name": "AMALFI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05034",
+    "departmentCode": "05",
+    "name": "ANDES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05036",
+    "departmentCode": "05",
+    "name": "ANGELÓPOLIS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05038",
+    "departmentCode": "05",
+    "name": "ANGOSTURA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05040",
+    "departmentCode": "05",
+    "name": "ANORÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05042",
+    "departmentCode": "05",
+    "name": "SANTA FÉ DE ANTIOQUIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05044",
+    "departmentCode": "05",
+    "name": "ANZÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05045",
+    "departmentCode": "05",
+    "name": "APARTADÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05051",
+    "departmentCode": "05",
+    "name": "ARBOLETES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05055",
+    "departmentCode": "05",
+    "name": "ARGELIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05059",
+    "departmentCode": "05",
+    "name": "ARMENIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05079",
+    "departmentCode": "05",
+    "name": "BARBOSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05086",
+    "departmentCode": "05",
+    "name": "BELMIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05088",
+    "departmentCode": "05",
+    "name": "BELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05091",
+    "departmentCode": "05",
+    "name": "BETANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05093",
+    "departmentCode": "05",
+    "name": "BETULIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05101",
+    "departmentCode": "05",
+    "name": "CIUDAD BOLÍVAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05107",
+    "departmentCode": "05",
+    "name": "BRICEÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05113",
+    "departmentCode": "05",
+    "name": "BURITICÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05120",
+    "departmentCode": "05",
+    "name": "CÁCERES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05125",
+    "departmentCode": "05",
+    "name": "CAICEDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05129",
+    "departmentCode": "05",
+    "name": "CALDAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05134",
+    "departmentCode": "05",
+    "name": "CAMPAMENTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05138",
+    "departmentCode": "05",
+    "name": "CAÑASGORDAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05142",
+    "departmentCode": "05",
+    "name": "CARACOLÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05145",
+    "departmentCode": "05",
+    "name": "CARAMANTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05147",
+    "departmentCode": "05",
+    "name": "CAREPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05148",
+    "departmentCode": "05",
+    "name": "EL CARMEN DE VIBORAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05150",
+    "departmentCode": "05",
+    "name": "CAROLINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05154",
+    "departmentCode": "05",
+    "name": "CAUCASIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05172",
+    "departmentCode": "05",
+    "name": "CHIGORODÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05190",
+    "departmentCode": "05",
+    "name": "CISNEROS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05197",
+    "departmentCode": "05",
+    "name": "COCORNÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05206",
+    "departmentCode": "05",
+    "name": "CONCEPCIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05209",
+    "departmentCode": "05",
+    "name": "CONCORDIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05212",
+    "departmentCode": "05",
+    "name": "COPACABANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05234",
+    "departmentCode": "05",
+    "name": "DABEIBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05237",
+    "departmentCode": "05",
+    "name": "DONMATÍAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05240",
+    "departmentCode": "05",
+    "name": "EBÉJICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05250",
+    "departmentCode": "05",
+    "name": "EL BAGRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05264",
+    "departmentCode": "05",
+    "name": "ENTRERRÍOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05266",
+    "departmentCode": "05",
+    "name": "ENVIGADO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05282",
+    "departmentCode": "05",
+    "name": "FREDONIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05284",
+    "departmentCode": "05",
+    "name": "FRONTINO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05306",
+    "departmentCode": "05",
+    "name": "GIRALDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05308",
+    "departmentCode": "05",
+    "name": "GIRARDOTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05310",
+    "departmentCode": "05",
+    "name": "GÓMEZ PLATA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05313",
+    "departmentCode": "05",
+    "name": "GRANADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05315",
+    "departmentCode": "05",
+    "name": "GUADALUPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05318",
+    "departmentCode": "05",
+    "name": "GUARNE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05321",
+    "departmentCode": "05",
+    "name": "GUATAPÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05347",
+    "departmentCode": "05",
+    "name": "HELICONIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05353",
+    "departmentCode": "05",
+    "name": "HISPANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05360",
+    "departmentCode": "05",
+    "name": "ITAGÜÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05361",
+    "departmentCode": "05",
+    "name": "ITUANGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05364",
+    "departmentCode": "05",
+    "name": "JARDÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05368",
+    "departmentCode": "05",
+    "name": "JERICÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05376",
+    "departmentCode": "05",
+    "name": "LA CEJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05380",
+    "departmentCode": "05",
+    "name": "LA ESTRELLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05390",
+    "departmentCode": "05",
+    "name": "LA PINTADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05400",
+    "departmentCode": "05",
+    "name": "LA UNIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05411",
+    "departmentCode": "05",
+    "name": "LIBORINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05425",
+    "departmentCode": "05",
+    "name": "MACEO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05440",
+    "departmentCode": "05",
+    "name": "MARINILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05467",
+    "departmentCode": "05",
+    "name": "MONTEBELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05475",
+    "departmentCode": "05",
+    "name": "MURINDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05480",
+    "departmentCode": "05",
+    "name": "MUTATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05483",
+    "departmentCode": "05",
+    "name": "NARIÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05490",
+    "departmentCode": "05",
+    "name": "NECOCLÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05495",
+    "departmentCode": "05",
+    "name": "NECHÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05501",
+    "departmentCode": "05",
+    "name": "OLAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05541",
+    "departmentCode": "05",
+    "name": "PEÑOL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05543",
+    "departmentCode": "05",
+    "name": "PEQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05576",
+    "departmentCode": "05",
+    "name": "PUEBLORRICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05579",
+    "departmentCode": "05",
+    "name": "PUERTO BERRÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05585",
+    "departmentCode": "05",
+    "name": "PUERTO NARE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05591",
+    "departmentCode": "05",
+    "name": "PUERTO TRIUNFO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05604",
+    "departmentCode": "05",
+    "name": "REMEDIOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05607",
+    "departmentCode": "05",
+    "name": "RETIRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05615",
+    "departmentCode": "05",
+    "name": "RIONEGRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05628",
+    "departmentCode": "05",
+    "name": "SABANALARGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05631",
+    "departmentCode": "05",
+    "name": "SABANETA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05642",
+    "departmentCode": "05",
+    "name": "SALGAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05647",
+    "departmentCode": "05",
+    "name": "SAN ANDRÉS DE CUERQUÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05649",
+    "departmentCode": "05",
+    "name": "SAN CARLOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05652",
+    "departmentCode": "05",
+    "name": "SAN FRANCISCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05656",
+    "departmentCode": "05",
+    "name": "SAN JERÓNIMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05658",
+    "departmentCode": "05",
+    "name": "SAN JOSÉ DE LA MONTAÑA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05659",
+    "departmentCode": "05",
+    "name": "SAN JUAN DE URABÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05660",
+    "departmentCode": "05",
+    "name": "SAN LUIS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05664",
+    "departmentCode": "05",
+    "name": "SAN PEDRO DE LOS MILAGROS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05665",
+    "departmentCode": "05",
+    "name": "SAN PEDRO DE URABÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05667",
+    "departmentCode": "05",
+    "name": "SAN RAFAEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05670",
+    "departmentCode": "05",
+    "name": "SAN ROQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05674",
+    "departmentCode": "05",
+    "name": "SAN VICENTE FERRER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05679",
+    "departmentCode": "05",
+    "name": "SANTA BÁRBARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05686",
+    "departmentCode": "05",
+    "name": "SANTA ROSA DE OSOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05690",
+    "departmentCode": "05",
+    "name": "SANTO DOMINGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05697",
+    "departmentCode": "05",
+    "name": "EL SANTUARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05736",
+    "departmentCode": "05",
+    "name": "SEGOVIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05756",
+    "departmentCode": "05",
+    "name": "SONSÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05761",
+    "departmentCode": "05",
+    "name": "SOPETRÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05789",
+    "departmentCode": "05",
+    "name": "TÁMESIS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05790",
+    "departmentCode": "05",
+    "name": "TARAZÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05792",
+    "departmentCode": "05",
+    "name": "TARSO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05809",
+    "departmentCode": "05",
+    "name": "TITIRIBÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05819",
+    "departmentCode": "05",
+    "name": "TOLEDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05837",
+    "departmentCode": "05",
+    "name": "TURBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05842",
+    "departmentCode": "05",
+    "name": "URAMITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05847",
+    "departmentCode": "05",
+    "name": "URRAO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05854",
+    "departmentCode": "05",
+    "name": "VALDIVIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05856",
+    "departmentCode": "05",
+    "name": "VALPARAÍSO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05858",
+    "departmentCode": "05",
+    "name": "VEGACHÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05861",
+    "departmentCode": "05",
+    "name": "VENECIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05873",
+    "departmentCode": "05",
+    "name": "VIGÍA DEL FUERTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05885",
+    "departmentCode": "05",
+    "name": "YALÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05887",
+    "departmentCode": "05",
+    "name": "YARUMAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05890",
+    "departmentCode": "05",
+    "name": "YOLOMBÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05893",
+    "departmentCode": "05",
+    "name": "YONDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "05895",
+    "departmentCode": "05",
+    "name": "ZARAGOZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08001",
+    "departmentCode": "08",
+    "name": "BARRANQUILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08078",
+    "departmentCode": "08",
+    "name": "BARANOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08137",
+    "departmentCode": "08",
+    "name": "CAMPO DE LA CRUZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08141",
+    "departmentCode": "08",
+    "name": "CANDELARIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08296",
+    "departmentCode": "08",
+    "name": "GALAPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08372",
+    "departmentCode": "08",
+    "name": "JUAN DE ACOSTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08421",
+    "departmentCode": "08",
+    "name": "LURUACO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08433",
+    "departmentCode": "08",
+    "name": "MALAMBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08436",
+    "departmentCode": "08",
+    "name": "MANATÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08520",
+    "departmentCode": "08",
+    "name": "PALMAR DE VARELA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08549",
+    "departmentCode": "08",
+    "name": "PIOJÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08558",
+    "departmentCode": "08",
+    "name": "POLONUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08560",
+    "departmentCode": "08",
+    "name": "PONEDERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08573",
+    "departmentCode": "08",
+    "name": "PUERTO COLOMBIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08606",
+    "departmentCode": "08",
+    "name": "REPELÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08634",
+    "departmentCode": "08",
+    "name": "SABANAGRANDE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08638",
+    "departmentCode": "08",
+    "name": "SABANALARGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08675",
+    "departmentCode": "08",
+    "name": "SANTA LUCÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08685",
+    "departmentCode": "08",
+    "name": "SANTO TOMÁS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08758",
+    "departmentCode": "08",
+    "name": "SOLEDAD",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08770",
+    "departmentCode": "08",
+    "name": "SUAN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08832",
+    "departmentCode": "08",
+    "name": "TUBARÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "08849",
+    "departmentCode": "08",
+    "name": "USIACURÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "11001",
+    "departmentCode": "11",
+    "name": "BOGOTÁ, D.C.",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13001",
+    "departmentCode": "13",
+    "name": "CARTAGENA DE INDIAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13006",
+    "departmentCode": "13",
+    "name": "ACHÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13030",
+    "departmentCode": "13",
+    "name": "ALTOS DEL ROSARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13042",
+    "departmentCode": "13",
+    "name": "ARENAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13052",
+    "departmentCode": "13",
+    "name": "ARJONA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13062",
+    "departmentCode": "13",
+    "name": "ARROYOHONDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13074",
+    "departmentCode": "13",
+    "name": "BARRANCO DE LOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13140",
+    "departmentCode": "13",
+    "name": "CALAMAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13160",
+    "departmentCode": "13",
+    "name": "CANTAGALLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13188",
+    "departmentCode": "13",
+    "name": "CICUCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13212",
+    "departmentCode": "13",
+    "name": "CÓRDOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13222",
+    "departmentCode": "13",
+    "name": "CLEMENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13244",
+    "departmentCode": "13",
+    "name": "EL CARMEN DE BOLÍVAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13248",
+    "departmentCode": "13",
+    "name": "EL GUAMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13268",
+    "departmentCode": "13",
+    "name": "EL PEÑÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13300",
+    "departmentCode": "13",
+    "name": "HATILLO DE LOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13430",
+    "departmentCode": "13",
+    "name": "MAGANGUÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13433",
+    "departmentCode": "13",
+    "name": "MAHATES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13440",
+    "departmentCode": "13",
+    "name": "MARGARITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13442",
+    "departmentCode": "13",
+    "name": "MARÍA LA BAJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13458",
+    "departmentCode": "13",
+    "name": "MONTECRISTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13468",
+    "departmentCode": "13",
+    "name": "SANTA CRUZ DE MOMPOX",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13473",
+    "departmentCode": "13",
+    "name": "MORALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13490",
+    "departmentCode": "13",
+    "name": "NOROSÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13549",
+    "departmentCode": "13",
+    "name": "PINILLOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13580",
+    "departmentCode": "13",
+    "name": "REGIDOR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13600",
+    "departmentCode": "13",
+    "name": "RÍO VIEJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13620",
+    "departmentCode": "13",
+    "name": "SAN CRISTÓBAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13647",
+    "departmentCode": "13",
+    "name": "SAN ESTANISLAO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13650",
+    "departmentCode": "13",
+    "name": "SAN FERNANDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13654",
+    "departmentCode": "13",
+    "name": "SAN JACINTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13655",
+    "departmentCode": "13",
+    "name": "SAN JACINTO DEL CAUCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13657",
+    "departmentCode": "13",
+    "name": "SAN JUAN NEPOMUCENO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13667",
+    "departmentCode": "13",
+    "name": "SAN MARTÍN DE LOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13670",
+    "departmentCode": "13",
+    "name": "SAN PABLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13673",
+    "departmentCode": "13",
+    "name": "SANTA CATALINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13683",
+    "departmentCode": "13",
+    "name": "SANTA ROSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13688",
+    "departmentCode": "13",
+    "name": "SANTA ROSA DEL SUR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13744",
+    "departmentCode": "13",
+    "name": "SIMITÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13760",
+    "departmentCode": "13",
+    "name": "SOPLAVIENTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13780",
+    "departmentCode": "13",
+    "name": "TALAIGUA NUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13810",
+    "departmentCode": "13",
+    "name": "TIQUISIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13836",
+    "departmentCode": "13",
+    "name": "TURBACO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13838",
+    "departmentCode": "13",
+    "name": "TURBANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13873",
+    "departmentCode": "13",
+    "name": "VILLANUEVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "13894",
+    "departmentCode": "13",
+    "name": "ZAMBRANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15001",
+    "departmentCode": "15",
+    "name": "TUNJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15022",
+    "departmentCode": "15",
+    "name": "ALMEIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15047",
+    "departmentCode": "15",
+    "name": "AQUITANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15051",
+    "departmentCode": "15",
+    "name": "ARCABUCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15087",
+    "departmentCode": "15",
+    "name": "BELÉN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15090",
+    "departmentCode": "15",
+    "name": "BERBEO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15092",
+    "departmentCode": "15",
+    "name": "BETÉITIVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15097",
+    "departmentCode": "15",
+    "name": "BOAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15104",
+    "departmentCode": "15",
+    "name": "BOYACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15106",
+    "departmentCode": "15",
+    "name": "BRICEÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15109",
+    "departmentCode": "15",
+    "name": "BUENAVISTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15114",
+    "departmentCode": "15",
+    "name": "BUSBANZÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15131",
+    "departmentCode": "15",
+    "name": "CALDAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15135",
+    "departmentCode": "15",
+    "name": "CAMPOHERMOSO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15162",
+    "departmentCode": "15",
+    "name": "CERINZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15172",
+    "departmentCode": "15",
+    "name": "CHINAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15176",
+    "departmentCode": "15",
+    "name": "CHIQUINQUIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15180",
+    "departmentCode": "15",
+    "name": "CHISCAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15183",
+    "departmentCode": "15",
+    "name": "CHITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15185",
+    "departmentCode": "15",
+    "name": "CHITARAQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15187",
+    "departmentCode": "15",
+    "name": "CHIVATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15189",
+    "departmentCode": "15",
+    "name": "CIÉNEGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15204",
+    "departmentCode": "15",
+    "name": "CÓMBITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15212",
+    "departmentCode": "15",
+    "name": "COPER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15215",
+    "departmentCode": "15",
+    "name": "CORRALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15218",
+    "departmentCode": "15",
+    "name": "COVARACHÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15223",
+    "departmentCode": "15",
+    "name": "CUBARÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15224",
+    "departmentCode": "15",
+    "name": "CUCAITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15226",
+    "departmentCode": "15",
+    "name": "CUÍTIVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15232",
+    "departmentCode": "15",
+    "name": "CHÍQUIZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15236",
+    "departmentCode": "15",
+    "name": "CHIVOR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15238",
+    "departmentCode": "15",
+    "name": "DUITAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15244",
+    "departmentCode": "15",
+    "name": "EL COCUY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15248",
+    "departmentCode": "15",
+    "name": "EL ESPINO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15272",
+    "departmentCode": "15",
+    "name": "FIRAVITOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15276",
+    "departmentCode": "15",
+    "name": "FLORESTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15293",
+    "departmentCode": "15",
+    "name": "GACHANTIVÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15296",
+    "departmentCode": "15",
+    "name": "GÁMEZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15299",
+    "departmentCode": "15",
+    "name": "GARAGOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15317",
+    "departmentCode": "15",
+    "name": "GUACAMAYAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15322",
+    "departmentCode": "15",
+    "name": "GUATEQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15325",
+    "departmentCode": "15",
+    "name": "GUAYATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15332",
+    "departmentCode": "15",
+    "name": "GÜICÁN DE LA SIERRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15362",
+    "departmentCode": "15",
+    "name": "IZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15367",
+    "departmentCode": "15",
+    "name": "JENESANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15368",
+    "departmentCode": "15",
+    "name": "JERICÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15377",
+    "departmentCode": "15",
+    "name": "LABRANZAGRANDE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15380",
+    "departmentCode": "15",
+    "name": "LA CAPILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15401",
+    "departmentCode": "15",
+    "name": "LA VICTORIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15403",
+    "departmentCode": "15",
+    "name": "LA UVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15407",
+    "departmentCode": "15",
+    "name": "VILLA DE LEYVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15425",
+    "departmentCode": "15",
+    "name": "MACANAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15442",
+    "departmentCode": "15",
+    "name": "MARIPÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15455",
+    "departmentCode": "15",
+    "name": "MIRAFLORES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15464",
+    "departmentCode": "15",
+    "name": "MONGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15466",
+    "departmentCode": "15",
+    "name": "MONGUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15469",
+    "departmentCode": "15",
+    "name": "MONIQUIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15476",
+    "departmentCode": "15",
+    "name": "MOTAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15480",
+    "departmentCode": "15",
+    "name": "MUZO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15491",
+    "departmentCode": "15",
+    "name": "NOBSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15494",
+    "departmentCode": "15",
+    "name": "NUEVO COLÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15500",
+    "departmentCode": "15",
+    "name": "OICATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15507",
+    "departmentCode": "15",
+    "name": "OTANCHE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15511",
+    "departmentCode": "15",
+    "name": "PACHAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15514",
+    "departmentCode": "15",
+    "name": "PÁEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15516",
+    "departmentCode": "15",
+    "name": "PAIPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15518",
+    "departmentCode": "15",
+    "name": "PAJARITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15522",
+    "departmentCode": "15",
+    "name": "PANQUEBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15531",
+    "departmentCode": "15",
+    "name": "PAUNA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15533",
+    "departmentCode": "15",
+    "name": "PAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15537",
+    "departmentCode": "15",
+    "name": "PAZ DE RÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15542",
+    "departmentCode": "15",
+    "name": "PESCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15550",
+    "departmentCode": "15",
+    "name": "PISBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15572",
+    "departmentCode": "15",
+    "name": "PUERTO BOYACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15580",
+    "departmentCode": "15",
+    "name": "QUÍPAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15599",
+    "departmentCode": "15",
+    "name": "RAMIRIQUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15600",
+    "departmentCode": "15",
+    "name": "RÁQUIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15621",
+    "departmentCode": "15",
+    "name": "RONDÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15632",
+    "departmentCode": "15",
+    "name": "SABOYÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15638",
+    "departmentCode": "15",
+    "name": "SÁCHICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15646",
+    "departmentCode": "15",
+    "name": "SAMACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15660",
+    "departmentCode": "15",
+    "name": "SAN EDUARDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15664",
+    "departmentCode": "15",
+    "name": "SAN JOSÉ DE PARE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15667",
+    "departmentCode": "15",
+    "name": "SAN LUIS DE GACENO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15673",
+    "departmentCode": "15",
+    "name": "SAN MATEO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15676",
+    "departmentCode": "15",
+    "name": "SAN MIGUEL DE SEMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15681",
+    "departmentCode": "15",
+    "name": "SAN PABLO DE BORBUR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15686",
+    "departmentCode": "15",
+    "name": "SANTANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15690",
+    "departmentCode": "15",
+    "name": "SANTA MARÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15693",
+    "departmentCode": "15",
+    "name": "SANTA ROSA DE VITERBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15696",
+    "departmentCode": "15",
+    "name": "SANTA SOFÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15720",
+    "departmentCode": "15",
+    "name": "SATIVANORTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15723",
+    "departmentCode": "15",
+    "name": "SATIVASUR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15740",
+    "departmentCode": "15",
+    "name": "SIACHOQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15753",
+    "departmentCode": "15",
+    "name": "SOATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15755",
+    "departmentCode": "15",
+    "name": "SOCOTÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15757",
+    "departmentCode": "15",
+    "name": "SOCHA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15759",
+    "departmentCode": "15",
+    "name": "SOGAMOSO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15761",
+    "departmentCode": "15",
+    "name": "SOMONDOCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15762",
+    "departmentCode": "15",
+    "name": "SORA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15763",
+    "departmentCode": "15",
+    "name": "SOTAQUIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15764",
+    "departmentCode": "15",
+    "name": "SORACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15774",
+    "departmentCode": "15",
+    "name": "SUSACÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15776",
+    "departmentCode": "15",
+    "name": "SUTAMARCHÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15778",
+    "departmentCode": "15",
+    "name": "SUTATENZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15790",
+    "departmentCode": "15",
+    "name": "TASCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15798",
+    "departmentCode": "15",
+    "name": "TENZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15804",
+    "departmentCode": "15",
+    "name": "TIBANÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15806",
+    "departmentCode": "15",
+    "name": "TIBASOSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15808",
+    "departmentCode": "15",
+    "name": "TINJACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15810",
+    "departmentCode": "15",
+    "name": "TIPACOQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15814",
+    "departmentCode": "15",
+    "name": "TOCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15816",
+    "departmentCode": "15",
+    "name": "TOGÜÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15820",
+    "departmentCode": "15",
+    "name": "TÓPAGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15822",
+    "departmentCode": "15",
+    "name": "TOTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15832",
+    "departmentCode": "15",
+    "name": "TUNUNGUÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15835",
+    "departmentCode": "15",
+    "name": "TURMEQUÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15837",
+    "departmentCode": "15",
+    "name": "TUTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15839",
+    "departmentCode": "15",
+    "name": "TUTAZÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15842",
+    "departmentCode": "15",
+    "name": "ÚMBITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15861",
+    "departmentCode": "15",
+    "name": "VENTAQUEMADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15879",
+    "departmentCode": "15",
+    "name": "VIRACACHÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "15897",
+    "departmentCode": "15",
+    "name": "ZETAQUIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17001",
+    "departmentCode": "17",
+    "name": "MANIZALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17013",
+    "departmentCode": "17",
+    "name": "AGUADAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17042",
+    "departmentCode": "17",
+    "name": "ANSERMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17050",
+    "departmentCode": "17",
+    "name": "ARANZAZU",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17088",
+    "departmentCode": "17",
+    "name": "BELALCÁZAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17174",
+    "departmentCode": "17",
+    "name": "CHINCHINÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17272",
+    "departmentCode": "17",
+    "name": "FILADELFIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17380",
+    "departmentCode": "17",
+    "name": "LA DORADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17388",
+    "departmentCode": "17",
+    "name": "LA MERCED",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17433",
+    "departmentCode": "17",
+    "name": "MANZANARES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17442",
+    "departmentCode": "17",
+    "name": "MARMATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17444",
+    "departmentCode": "17",
+    "name": "MARQUETALIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17446",
+    "departmentCode": "17",
+    "name": "MARULANDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17486",
+    "departmentCode": "17",
+    "name": "NEIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17495",
+    "departmentCode": "17",
+    "name": "NORCASIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17513",
+    "departmentCode": "17",
+    "name": "PÁCORA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17524",
+    "departmentCode": "17",
+    "name": "PALESTINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17541",
+    "departmentCode": "17",
+    "name": "PENSILVANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17614",
+    "departmentCode": "17",
+    "name": "RIOSUCIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17616",
+    "departmentCode": "17",
+    "name": "RISARALDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17653",
+    "departmentCode": "17",
+    "name": "SALAMINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17662",
+    "departmentCode": "17",
+    "name": "SAMANÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17665",
+    "departmentCode": "17",
+    "name": "SAN JOSÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17777",
+    "departmentCode": "17",
+    "name": "SUPÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17867",
+    "departmentCode": "17",
+    "name": "VICTORIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17873",
+    "departmentCode": "17",
+    "name": "VILLAMARÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "17877",
+    "departmentCode": "17",
+    "name": "VITERBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18001",
+    "departmentCode": "18",
+    "name": "FLORENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18029",
+    "departmentCode": "18",
+    "name": "ALBANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18094",
+    "departmentCode": "18",
+    "name": "BELÉN DE LOS ANDAQUÍES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18150",
+    "departmentCode": "18",
+    "name": "CARTAGENA DEL CHAIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18205",
+    "departmentCode": "18",
+    "name": "CURILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18247",
+    "departmentCode": "18",
+    "name": "EL DONCELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18256",
+    "departmentCode": "18",
+    "name": "EL PAUJÍL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18410",
+    "departmentCode": "18",
+    "name": "LA MONTAÑITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18460",
+    "departmentCode": "18",
+    "name": "MILÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18479",
+    "departmentCode": "18",
+    "name": "MORELIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18592",
+    "departmentCode": "18",
+    "name": "PUERTO RICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18610",
+    "departmentCode": "18",
+    "name": "SAN JOSÉ DEL FRAGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18753",
+    "departmentCode": "18",
+    "name": "SAN VICENTE DEL CAGUÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18756",
+    "departmentCode": "18",
+    "name": "SOLANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18785",
+    "departmentCode": "18",
+    "name": "SOLITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "18860",
+    "departmentCode": "18",
+    "name": "VALPARAÍSO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19001",
+    "departmentCode": "19",
+    "name": "POPAYÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19022",
+    "departmentCode": "19",
+    "name": "ALMAGUER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19050",
+    "departmentCode": "19",
+    "name": "ARGELIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19075",
+    "departmentCode": "19",
+    "name": "BALBOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19100",
+    "departmentCode": "19",
+    "name": "BOLÍVAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19110",
+    "departmentCode": "19",
+    "name": "BUENOS AIRES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19130",
+    "departmentCode": "19",
+    "name": "CAJIBÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19137",
+    "departmentCode": "19",
+    "name": "CALDONO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19142",
+    "departmentCode": "19",
+    "name": "CALOTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19212",
+    "departmentCode": "19",
+    "name": "CORINTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19256",
+    "departmentCode": "19",
+    "name": "EL TAMBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19290",
+    "departmentCode": "19",
+    "name": "FLORENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19300",
+    "departmentCode": "19",
+    "name": "GUACHENÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19318",
+    "departmentCode": "19",
+    "name": "GUAPI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19355",
+    "departmentCode": "19",
+    "name": "INZÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19364",
+    "departmentCode": "19",
+    "name": "JAMBALÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19392",
+    "departmentCode": "19",
+    "name": "LA SIERRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19397",
+    "departmentCode": "19",
+    "name": "LA VEGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19418",
+    "departmentCode": "19",
+    "name": "LÓPEZ DE MICAY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19450",
+    "departmentCode": "19",
+    "name": "MERCADERES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19455",
+    "departmentCode": "19",
+    "name": "MIRANDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19473",
+    "departmentCode": "19",
+    "name": "MORALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19513",
+    "departmentCode": "19",
+    "name": "PADILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19517",
+    "departmentCode": "19",
+    "name": "PÁEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19532",
+    "departmentCode": "19",
+    "name": "PATÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19533",
+    "departmentCode": "19",
+    "name": "PIAMONTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19548",
+    "departmentCode": "19",
+    "name": "PIENDAMÓ - TUNÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19573",
+    "departmentCode": "19",
+    "name": "PUERTO TEJADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19585",
+    "departmentCode": "19",
+    "name": "PURACÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19622",
+    "departmentCode": "19",
+    "name": "ROSAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19693",
+    "departmentCode": "19",
+    "name": "SAN SEBASTIÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19698",
+    "departmentCode": "19",
+    "name": "SANTANDER DE QUILICHAO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19701",
+    "departmentCode": "19",
+    "name": "SANTA ROSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19743",
+    "departmentCode": "19",
+    "name": "SILVIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19760",
+    "departmentCode": "19",
+    "name": "SOTARÁ PAISPAMBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19780",
+    "departmentCode": "19",
+    "name": "SUÁREZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19785",
+    "departmentCode": "19",
+    "name": "SUCRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19807",
+    "departmentCode": "19",
+    "name": "TIMBÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19809",
+    "departmentCode": "19",
+    "name": "TIMBIQUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19821",
+    "departmentCode": "19",
+    "name": "TORIBÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19824",
+    "departmentCode": "19",
+    "name": "TOTORÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "19845",
+    "departmentCode": "19",
+    "name": "VILLA RICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20001",
+    "departmentCode": "20",
+    "name": "VALLEDUPAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20011",
+    "departmentCode": "20",
+    "name": "AGUACHICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20013",
+    "departmentCode": "20",
+    "name": "AGUSTÍN CODAZZI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20032",
+    "departmentCode": "20",
+    "name": "ASTREA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20045",
+    "departmentCode": "20",
+    "name": "BECERRIL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20060",
+    "departmentCode": "20",
+    "name": "BOSCONIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20175",
+    "departmentCode": "20",
+    "name": "CHIMICHAGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20178",
+    "departmentCode": "20",
+    "name": "CHIRIGUANÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20228",
+    "departmentCode": "20",
+    "name": "CURUMANÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20238",
+    "departmentCode": "20",
+    "name": "EL COPEY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20250",
+    "departmentCode": "20",
+    "name": "EL PASO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20295",
+    "departmentCode": "20",
+    "name": "GAMARRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20310",
+    "departmentCode": "20",
+    "name": "GONZÁLEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20383",
+    "departmentCode": "20",
+    "name": "LA GLORIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20400",
+    "departmentCode": "20",
+    "name": "LA JAGUA DE IBIRICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20443",
+    "departmentCode": "20",
+    "name": "MANAURE BALCÓN DEL CESAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20517",
+    "departmentCode": "20",
+    "name": "PAILITAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20550",
+    "departmentCode": "20",
+    "name": "PELAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20570",
+    "departmentCode": "20",
+    "name": "PUEBLO BELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20614",
+    "departmentCode": "20",
+    "name": "RÍO DE ORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20621",
+    "departmentCode": "20",
+    "name": "LA PAZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20710",
+    "departmentCode": "20",
+    "name": "SAN ALBERTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20750",
+    "departmentCode": "20",
+    "name": "SAN DIEGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20770",
+    "departmentCode": "20",
+    "name": "SAN MARTÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "20787",
+    "departmentCode": "20",
+    "name": "TAMALAMEQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23001",
+    "departmentCode": "23",
+    "name": "MONTERÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23068",
+    "departmentCode": "23",
+    "name": "AYAPEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23079",
+    "departmentCode": "23",
+    "name": "BUENAVISTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23090",
+    "departmentCode": "23",
+    "name": "CANALETE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23162",
+    "departmentCode": "23",
+    "name": "CERETÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23168",
+    "departmentCode": "23",
+    "name": "CHIMÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23182",
+    "departmentCode": "23",
+    "name": "CHINÚ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23189",
+    "departmentCode": "23",
+    "name": "CIÉNAGA DE ORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23300",
+    "departmentCode": "23",
+    "name": "COTORRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23350",
+    "departmentCode": "23",
+    "name": "LA APARTADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23417",
+    "departmentCode": "23",
+    "name": "LORICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23419",
+    "departmentCode": "23",
+    "name": "LOS CÓRDOBAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23464",
+    "departmentCode": "23",
+    "name": "MOMIL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23466",
+    "departmentCode": "23",
+    "name": "MONTELÍBANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23500",
+    "departmentCode": "23",
+    "name": "MOÑITOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23555",
+    "departmentCode": "23",
+    "name": "PLANETA RICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23570",
+    "departmentCode": "23",
+    "name": "PUEBLO NUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23574",
+    "departmentCode": "23",
+    "name": "PUERTO ESCONDIDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23580",
+    "departmentCode": "23",
+    "name": "PUERTO LIBERTADOR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23586",
+    "departmentCode": "23",
+    "name": "PURÍSIMA DE LA CONCEPCIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23660",
+    "departmentCode": "23",
+    "name": "SAHAGÚN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23670",
+    "departmentCode": "23",
+    "name": "SAN ANDRÉS DE SOTAVENTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23672",
+    "departmentCode": "23",
+    "name": "SAN ANTERO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23675",
+    "departmentCode": "23",
+    "name": "SAN BERNARDO DEL VIENTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23678",
+    "departmentCode": "23",
+    "name": "SAN CARLOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23682",
+    "departmentCode": "23",
+    "name": "SAN JOSÉ DE URÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23686",
+    "departmentCode": "23",
+    "name": "SAN PELAYO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23807",
+    "departmentCode": "23",
+    "name": "TIERRALTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23815",
+    "departmentCode": "23",
+    "name": "TUCHÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "23855",
+    "departmentCode": "23",
+    "name": "VALENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25001",
+    "departmentCode": "25",
+    "name": "AGUA DE DIOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25019",
+    "departmentCode": "25",
+    "name": "ALBÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25035",
+    "departmentCode": "25",
+    "name": "ANAPOIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25040",
+    "departmentCode": "25",
+    "name": "ANOLAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25053",
+    "departmentCode": "25",
+    "name": "ARBELÁEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25086",
+    "departmentCode": "25",
+    "name": "BELTRÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25095",
+    "departmentCode": "25",
+    "name": "BITUIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25099",
+    "departmentCode": "25",
+    "name": "BOJACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25120",
+    "departmentCode": "25",
+    "name": "CABRERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25123",
+    "departmentCode": "25",
+    "name": "CACHIPAY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25126",
+    "departmentCode": "25",
+    "name": "CAJICÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25148",
+    "departmentCode": "25",
+    "name": "CAPARRAPÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25151",
+    "departmentCode": "25",
+    "name": "CÁQUEZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25154",
+    "departmentCode": "25",
+    "name": "CARMEN DE CARUPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25168",
+    "departmentCode": "25",
+    "name": "CHAGUANÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25175",
+    "departmentCode": "25",
+    "name": "CHÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25178",
+    "departmentCode": "25",
+    "name": "CHIPAQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25181",
+    "departmentCode": "25",
+    "name": "CHOACHÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25183",
+    "departmentCode": "25",
+    "name": "CHOCONTÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25200",
+    "departmentCode": "25",
+    "name": "COGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25214",
+    "departmentCode": "25",
+    "name": "COTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25224",
+    "departmentCode": "25",
+    "name": "CUCUNUBÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25245",
+    "departmentCode": "25",
+    "name": "EL COLEGIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25258",
+    "departmentCode": "25",
+    "name": "EL PEÑÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25260",
+    "departmentCode": "25",
+    "name": "EL ROSAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25269",
+    "departmentCode": "25",
+    "name": "FACATATIVÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25279",
+    "departmentCode": "25",
+    "name": "FÓMEQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25281",
+    "departmentCode": "25",
+    "name": "FOSCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25286",
+    "departmentCode": "25",
+    "name": "FUNZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25288",
+    "departmentCode": "25",
+    "name": "FÚQUENE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25290",
+    "departmentCode": "25",
+    "name": "FUSAGASUGÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25293",
+    "departmentCode": "25",
+    "name": "GACHALÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25295",
+    "departmentCode": "25",
+    "name": "GACHANCIPÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25297",
+    "departmentCode": "25",
+    "name": "GACHETÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25299",
+    "departmentCode": "25",
+    "name": "GAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25307",
+    "departmentCode": "25",
+    "name": "GIRARDOT",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25312",
+    "departmentCode": "25",
+    "name": "GRANADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25317",
+    "departmentCode": "25",
+    "name": "GUACHETÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25320",
+    "departmentCode": "25",
+    "name": "GUADUAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25322",
+    "departmentCode": "25",
+    "name": "GUASCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25324",
+    "departmentCode": "25",
+    "name": "GUATAQUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25326",
+    "departmentCode": "25",
+    "name": "GUATAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25328",
+    "departmentCode": "25",
+    "name": "GUAYABAL DE SÍQUIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25335",
+    "departmentCode": "25",
+    "name": "GUAYABETAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25339",
+    "departmentCode": "25",
+    "name": "GUTIÉRREZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25368",
+    "departmentCode": "25",
+    "name": "JERUSALÉN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25372",
+    "departmentCode": "25",
+    "name": "JUNÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25377",
+    "departmentCode": "25",
+    "name": "LA CALERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25386",
+    "departmentCode": "25",
+    "name": "LA MESA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25394",
+    "departmentCode": "25",
+    "name": "LA PALMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25398",
+    "departmentCode": "25",
+    "name": "LA PEÑA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25402",
+    "departmentCode": "25",
+    "name": "LA VEGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25407",
+    "departmentCode": "25",
+    "name": "LENGUAZAQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25426",
+    "departmentCode": "25",
+    "name": "MACHETÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25430",
+    "departmentCode": "25",
+    "name": "MADRID",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25436",
+    "departmentCode": "25",
+    "name": "MANTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25438",
+    "departmentCode": "25",
+    "name": "MEDINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25473",
+    "departmentCode": "25",
+    "name": "MOSQUERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25483",
+    "departmentCode": "25",
+    "name": "NARIÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25486",
+    "departmentCode": "25",
+    "name": "NEMOCÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25488",
+    "departmentCode": "25",
+    "name": "NILO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25489",
+    "departmentCode": "25",
+    "name": "NIMAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25491",
+    "departmentCode": "25",
+    "name": "NOCAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25506",
+    "departmentCode": "25",
+    "name": "VENECIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25513",
+    "departmentCode": "25",
+    "name": "PACHO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25518",
+    "departmentCode": "25",
+    "name": "PAIME",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25524",
+    "departmentCode": "25",
+    "name": "PANDI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25530",
+    "departmentCode": "25",
+    "name": "PARATEBUENO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25535",
+    "departmentCode": "25",
+    "name": "PASCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25572",
+    "departmentCode": "25",
+    "name": "PUERTO SALGAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25580",
+    "departmentCode": "25",
+    "name": "PULÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25592",
+    "departmentCode": "25",
+    "name": "QUEBRADANEGRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25594",
+    "departmentCode": "25",
+    "name": "QUETAME",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25596",
+    "departmentCode": "25",
+    "name": "QUIPILE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25599",
+    "departmentCode": "25",
+    "name": "APULO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25612",
+    "departmentCode": "25",
+    "name": "RICAURTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25645",
+    "departmentCode": "25",
+    "name": "SAN ANTONIO DEL TEQUENDAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25649",
+    "departmentCode": "25",
+    "name": "SAN BERNARDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25653",
+    "departmentCode": "25",
+    "name": "SAN CAYETANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25658",
+    "departmentCode": "25",
+    "name": "SAN FRANCISCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25662",
+    "departmentCode": "25",
+    "name": "SAN JUAN DE RIOSECO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25718",
+    "departmentCode": "25",
+    "name": "SASAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25736",
+    "departmentCode": "25",
+    "name": "SESQUILÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25740",
+    "departmentCode": "25",
+    "name": "SIBATÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25743",
+    "departmentCode": "25",
+    "name": "SILVANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25745",
+    "departmentCode": "25",
+    "name": "SIMIJACA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25754",
+    "departmentCode": "25",
+    "name": "SOACHA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25758",
+    "departmentCode": "25",
+    "name": "SOPÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25769",
+    "departmentCode": "25",
+    "name": "SUBACHOQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25772",
+    "departmentCode": "25",
+    "name": "SUESCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25777",
+    "departmentCode": "25",
+    "name": "SUPATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25779",
+    "departmentCode": "25",
+    "name": "SUSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25781",
+    "departmentCode": "25",
+    "name": "SUTATAUSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25785",
+    "departmentCode": "25",
+    "name": "TABIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25793",
+    "departmentCode": "25",
+    "name": "TAUSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25797",
+    "departmentCode": "25",
+    "name": "TENA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25799",
+    "departmentCode": "25",
+    "name": "TENJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25805",
+    "departmentCode": "25",
+    "name": "TIBACUY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25807",
+    "departmentCode": "25",
+    "name": "TIBIRITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25815",
+    "departmentCode": "25",
+    "name": "TOCAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25817",
+    "departmentCode": "25",
+    "name": "TOCANCIPÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25823",
+    "departmentCode": "25",
+    "name": "TOPAIPÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25839",
+    "departmentCode": "25",
+    "name": "UBALÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25841",
+    "departmentCode": "25",
+    "name": "UBAQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25843",
+    "departmentCode": "25",
+    "name": "VILLA DE SAN DIEGO DE UBATÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25845",
+    "departmentCode": "25",
+    "name": "UNE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25851",
+    "departmentCode": "25",
+    "name": "ÚTICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25862",
+    "departmentCode": "25",
+    "name": "VERGARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25867",
+    "departmentCode": "25",
+    "name": "VIANÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25871",
+    "departmentCode": "25",
+    "name": "VILLAGÓMEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25873",
+    "departmentCode": "25",
+    "name": "VILLAPINZÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25875",
+    "departmentCode": "25",
+    "name": "VILLETA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25878",
+    "departmentCode": "25",
+    "name": "VIOTÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25885",
+    "departmentCode": "25",
+    "name": "YACOPÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25898",
+    "departmentCode": "25",
+    "name": "ZIPACÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "25899",
+    "departmentCode": "25",
+    "name": "ZIPAQUIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27001",
+    "departmentCode": "27",
+    "name": "QUIBDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27006",
+    "departmentCode": "27",
+    "name": "ACANDÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27025",
+    "departmentCode": "27",
+    "name": "ALTO BAUDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27050",
+    "departmentCode": "27",
+    "name": "ATRATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27073",
+    "departmentCode": "27",
+    "name": "BAGADÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27075",
+    "departmentCode": "27",
+    "name": "BAHÍA SOLANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27077",
+    "departmentCode": "27",
+    "name": "BAJO BAUDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27099",
+    "departmentCode": "27",
+    "name": "BOJAYÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27135",
+    "departmentCode": "27",
+    "name": "EL CANTÓN DEL SAN PABLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27150",
+    "departmentCode": "27",
+    "name": "CARMEN DEL DARIÉN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27160",
+    "departmentCode": "27",
+    "name": "CÉRTEGUI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27205",
+    "departmentCode": "27",
+    "name": "CONDOTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27245",
+    "departmentCode": "27",
+    "name": "EL CARMEN DE ATRATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27250",
+    "departmentCode": "27",
+    "name": "EL LITORAL DEL SAN JUAN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27361",
+    "departmentCode": "27",
+    "name": "ISTMINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27372",
+    "departmentCode": "27",
+    "name": "JURADÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27413",
+    "departmentCode": "27",
+    "name": "LLORÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27425",
+    "departmentCode": "27",
+    "name": "MEDIO ATRATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27430",
+    "departmentCode": "27",
+    "name": "MEDIO BAUDÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27450",
+    "departmentCode": "27",
+    "name": "MEDIO SAN JUAN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27491",
+    "departmentCode": "27",
+    "name": "NÓVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27493",
+    "departmentCode": "27",
+    "name": "NUEVO BELÉN DE BAJIRÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27495",
+    "departmentCode": "27",
+    "name": "NUQUÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27580",
+    "departmentCode": "27",
+    "name": "RÍO IRÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27600",
+    "departmentCode": "27",
+    "name": "RÍO QUITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27615",
+    "departmentCode": "27",
+    "name": "RIOSUCIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27660",
+    "departmentCode": "27",
+    "name": "SAN JOSÉ DEL PALMAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27745",
+    "departmentCode": "27",
+    "name": "SIPÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27787",
+    "departmentCode": "27",
+    "name": "TADÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27800",
+    "departmentCode": "27",
+    "name": "UNGUÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "27810",
+    "departmentCode": "27",
+    "name": "UNIÓN PANAMERICANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41001",
+    "departmentCode": "41",
+    "name": "NEIVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41006",
+    "departmentCode": "41",
+    "name": "ACEVEDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41013",
+    "departmentCode": "41",
+    "name": "AGRADO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41016",
+    "departmentCode": "41",
+    "name": "AIPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41020",
+    "departmentCode": "41",
+    "name": "ALGECIRAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41026",
+    "departmentCode": "41",
+    "name": "ALTAMIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41078",
+    "departmentCode": "41",
+    "name": "BARAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41132",
+    "departmentCode": "41",
+    "name": "CAMPOALEGRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41206",
+    "departmentCode": "41",
+    "name": "COLOMBIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41244",
+    "departmentCode": "41",
+    "name": "ELÍAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41298",
+    "departmentCode": "41",
+    "name": "GARZÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41306",
+    "departmentCode": "41",
+    "name": "GIGANTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41319",
+    "departmentCode": "41",
+    "name": "GUADALUPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41349",
+    "departmentCode": "41",
+    "name": "HOBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41357",
+    "departmentCode": "41",
+    "name": "ÍQUIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41359",
+    "departmentCode": "41",
+    "name": "ISNOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41378",
+    "departmentCode": "41",
+    "name": "LA ARGENTINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41396",
+    "departmentCode": "41",
+    "name": "LA PLATA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41483",
+    "departmentCode": "41",
+    "name": "NÁTAGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41503",
+    "departmentCode": "41",
+    "name": "OPORAPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41518",
+    "departmentCode": "41",
+    "name": "PAICOL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41524",
+    "departmentCode": "41",
+    "name": "PALERMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41530",
+    "departmentCode": "41",
+    "name": "PALESTINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41548",
+    "departmentCode": "41",
+    "name": "PITAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41551",
+    "departmentCode": "41",
+    "name": "PITALITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41615",
+    "departmentCode": "41",
+    "name": "RIVERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41660",
+    "departmentCode": "41",
+    "name": "SALADOBLANCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41668",
+    "departmentCode": "41",
+    "name": "SAN AGUSTÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41676",
+    "departmentCode": "41",
+    "name": "SANTA MARÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41770",
+    "departmentCode": "41",
+    "name": "SUAZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41791",
+    "departmentCode": "41",
+    "name": "TARQUI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41797",
+    "departmentCode": "41",
+    "name": "TESALIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41799",
+    "departmentCode": "41",
+    "name": "TELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41801",
+    "departmentCode": "41",
+    "name": "TERUEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41807",
+    "departmentCode": "41",
+    "name": "TIMANÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41872",
+    "departmentCode": "41",
+    "name": "VILLAVIEJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "41885",
+    "departmentCode": "41",
+    "name": "YAGUARÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44001",
+    "departmentCode": "44",
+    "name": "RIOHACHA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44035",
+    "departmentCode": "44",
+    "name": "ALBANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44078",
+    "departmentCode": "44",
+    "name": "BARRANCAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44090",
+    "departmentCode": "44",
+    "name": "DIBULLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44098",
+    "departmentCode": "44",
+    "name": "DISTRACCIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44110",
+    "departmentCode": "44",
+    "name": "EL MOLINO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44279",
+    "departmentCode": "44",
+    "name": "FONSECA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44378",
+    "departmentCode": "44",
+    "name": "HATONUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44420",
+    "departmentCode": "44",
+    "name": "LA JAGUA DEL PILAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44430",
+    "departmentCode": "44",
+    "name": "MAICAO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44560",
+    "departmentCode": "44",
+    "name": "MANAURE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44650",
+    "departmentCode": "44",
+    "name": "SAN JUAN DEL CESAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44847",
+    "departmentCode": "44",
+    "name": "URIBIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44855",
+    "departmentCode": "44",
+    "name": "URUMITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "44874",
+    "departmentCode": "44",
+    "name": "VILLANUEVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47001",
+    "departmentCode": "47",
+    "name": "SANTA MARTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47030",
+    "departmentCode": "47",
+    "name": "ALGARROBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47053",
+    "departmentCode": "47",
+    "name": "ARACATACA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47058",
+    "departmentCode": "47",
+    "name": "ARIGUANÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47161",
+    "departmentCode": "47",
+    "name": "CERRO DE SAN ANTONIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47170",
+    "departmentCode": "47",
+    "name": "CHIVOLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47189",
+    "departmentCode": "47",
+    "name": "CIÉNAGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47205",
+    "departmentCode": "47",
+    "name": "CONCORDIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47245",
+    "departmentCode": "47",
+    "name": "EL BANCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47258",
+    "departmentCode": "47",
+    "name": "EL PIÑÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47268",
+    "departmentCode": "47",
+    "name": "EL RETÉN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47288",
+    "departmentCode": "47",
+    "name": "FUNDACIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47318",
+    "departmentCode": "47",
+    "name": "GUAMAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47460",
+    "departmentCode": "47",
+    "name": "NUEVA GRANADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47541",
+    "departmentCode": "47",
+    "name": "PEDRAZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47545",
+    "departmentCode": "47",
+    "name": "PIJIÑO DEL CARMEN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47551",
+    "departmentCode": "47",
+    "name": "PIVIJAY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47555",
+    "departmentCode": "47",
+    "name": "PLATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47570",
+    "departmentCode": "47",
+    "name": "PUEBLOVIEJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47605",
+    "departmentCode": "47",
+    "name": "REMOLINO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47660",
+    "departmentCode": "47",
+    "name": "SABANAS DE SAN ÁNGEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47675",
+    "departmentCode": "47",
+    "name": "SALAMINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47692",
+    "departmentCode": "47",
+    "name": "SAN SEBASTIÁN DE BUENAVISTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47703",
+    "departmentCode": "47",
+    "name": "SAN ZENÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47707",
+    "departmentCode": "47",
+    "name": "SANTA ANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47720",
+    "departmentCode": "47",
+    "name": "SANTA BÁRBARA DE PINTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47745",
+    "departmentCode": "47",
+    "name": "SITIONUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47798",
+    "departmentCode": "47",
+    "name": "TENERIFE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47960",
+    "departmentCode": "47",
+    "name": "ZAPAYÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "47980",
+    "departmentCode": "47",
+    "name": "ZONA BANANERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50001",
+    "departmentCode": "50",
+    "name": "VILLAVICENCIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50006",
+    "departmentCode": "50",
+    "name": "ACACÍAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50110",
+    "departmentCode": "50",
+    "name": "BARRANCA DE UPÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50124",
+    "departmentCode": "50",
+    "name": "CABUYARO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50150",
+    "departmentCode": "50",
+    "name": "CASTILLA LA NUEVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50223",
+    "departmentCode": "50",
+    "name": "CUBARRAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50226",
+    "departmentCode": "50",
+    "name": "CUMARAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50245",
+    "departmentCode": "50",
+    "name": "EL CALVARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50251",
+    "departmentCode": "50",
+    "name": "EL CASTILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50270",
+    "departmentCode": "50",
+    "name": "EL DORADO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50287",
+    "departmentCode": "50",
+    "name": "FUENTE DE ORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50313",
+    "departmentCode": "50",
+    "name": "GRANADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50318",
+    "departmentCode": "50",
+    "name": "GUAMAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50325",
+    "departmentCode": "50",
+    "name": "MAPIRIPÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50330",
+    "departmentCode": "50",
+    "name": "MESETAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50350",
+    "departmentCode": "50",
+    "name": "LA MACARENA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50370",
+    "departmentCode": "50",
+    "name": "URIBE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50400",
+    "departmentCode": "50",
+    "name": "LEJANÍAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50450",
+    "departmentCode": "50",
+    "name": "PUERTO CONCORDIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50568",
+    "departmentCode": "50",
+    "name": "PUERTO GAITÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50573",
+    "departmentCode": "50",
+    "name": "PUERTO LÓPEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50577",
+    "departmentCode": "50",
+    "name": "PUERTO LLERAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50590",
+    "departmentCode": "50",
+    "name": "PUERTO RICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50606",
+    "departmentCode": "50",
+    "name": "RESTREPO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50680",
+    "departmentCode": "50",
+    "name": "SAN CARLOS DE GUAROA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50683",
+    "departmentCode": "50",
+    "name": "SAN JUAN DE ARAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50686",
+    "departmentCode": "50",
+    "name": "SAN JUANITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50689",
+    "departmentCode": "50",
+    "name": "SAN MARTÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "50711",
+    "departmentCode": "50",
+    "name": "VISTAHERMOSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52001",
+    "departmentCode": "52",
+    "name": "PASTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52019",
+    "departmentCode": "52",
+    "name": "ALBÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52022",
+    "departmentCode": "52",
+    "name": "ALDANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52036",
+    "departmentCode": "52",
+    "name": "ANCUYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52051",
+    "departmentCode": "52",
+    "name": "ARBOLEDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52079",
+    "departmentCode": "52",
+    "name": "BARBACOAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52083",
+    "departmentCode": "52",
+    "name": "BELÉN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52110",
+    "departmentCode": "52",
+    "name": "BUESACO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52203",
+    "departmentCode": "52",
+    "name": "COLÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52207",
+    "departmentCode": "52",
+    "name": "CONSACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52210",
+    "departmentCode": "52",
+    "name": "CONTADERO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52215",
+    "departmentCode": "52",
+    "name": "CÓRDOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52224",
+    "departmentCode": "52",
+    "name": "CUASPUD CARLOSAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52227",
+    "departmentCode": "52",
+    "name": "CUMBAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52233",
+    "departmentCode": "52",
+    "name": "CUMBITARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52240",
+    "departmentCode": "52",
+    "name": "CHACHAGÜÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52250",
+    "departmentCode": "52",
+    "name": "EL CHARCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52254",
+    "departmentCode": "52",
+    "name": "EL PEÑOL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52256",
+    "departmentCode": "52",
+    "name": "EL ROSARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52258",
+    "departmentCode": "52",
+    "name": "EL TABLÓN DE GÓMEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52260",
+    "departmentCode": "52",
+    "name": "EL TAMBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52287",
+    "departmentCode": "52",
+    "name": "FUNES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52317",
+    "departmentCode": "52",
+    "name": "GUACHUCAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52320",
+    "departmentCode": "52",
+    "name": "GUAITARILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52323",
+    "departmentCode": "52",
+    "name": "GUALMATÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52352",
+    "departmentCode": "52",
+    "name": "ILES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52354",
+    "departmentCode": "52",
+    "name": "IMUÉS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52356",
+    "departmentCode": "52",
+    "name": "IPIALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52378",
+    "departmentCode": "52",
+    "name": "LA CRUZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52381",
+    "departmentCode": "52",
+    "name": "LA FLORIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52385",
+    "departmentCode": "52",
+    "name": "LA LLANADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52390",
+    "departmentCode": "52",
+    "name": "LA TOLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52399",
+    "departmentCode": "52",
+    "name": "LA UNIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52405",
+    "departmentCode": "52",
+    "name": "LEIVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52411",
+    "departmentCode": "52",
+    "name": "LINARES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52418",
+    "departmentCode": "52",
+    "name": "LOS ANDES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52427",
+    "departmentCode": "52",
+    "name": "MAGÜÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52435",
+    "departmentCode": "52",
+    "name": "MALLAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52473",
+    "departmentCode": "52",
+    "name": "MOSQUERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52480",
+    "departmentCode": "52",
+    "name": "NARIÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52490",
+    "departmentCode": "52",
+    "name": "OLAYA HERRERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52506",
+    "departmentCode": "52",
+    "name": "OSPINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52520",
+    "departmentCode": "52",
+    "name": "FRANCISCO PIZARRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52540",
+    "departmentCode": "52",
+    "name": "POLICARPA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52560",
+    "departmentCode": "52",
+    "name": "POTOSÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52565",
+    "departmentCode": "52",
+    "name": "PROVIDENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52573",
+    "departmentCode": "52",
+    "name": "PUERRES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52585",
+    "departmentCode": "52",
+    "name": "PUPIALES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52612",
+    "departmentCode": "52",
+    "name": "RICAURTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52621",
+    "departmentCode": "52",
+    "name": "ROBERTO PAYÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52678",
+    "departmentCode": "52",
+    "name": "SAMANIEGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52683",
+    "departmentCode": "52",
+    "name": "SANDONÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52685",
+    "departmentCode": "52",
+    "name": "SAN BERNARDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52687",
+    "departmentCode": "52",
+    "name": "SAN LORENZO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52693",
+    "departmentCode": "52",
+    "name": "SAN PABLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52694",
+    "departmentCode": "52",
+    "name": "SAN PEDRO DE CARTAGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52696",
+    "departmentCode": "52",
+    "name": "SANTA BÁRBARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52699",
+    "departmentCode": "52",
+    "name": "SANTACRUZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52720",
+    "departmentCode": "52",
+    "name": "SAPUYES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52786",
+    "departmentCode": "52",
+    "name": "TAMINANGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52788",
+    "departmentCode": "52",
+    "name": "TANGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52835",
+    "departmentCode": "52",
+    "name": "SAN ANDRÉS DE TUMACO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52838",
+    "departmentCode": "52",
+    "name": "TÚQUERRES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "52885",
+    "departmentCode": "52",
+    "name": "YACUANQUER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54001",
+    "departmentCode": "54",
+    "name": "SAN JOSÉ DE CÚCUTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54003",
+    "departmentCode": "54",
+    "name": "ÁBREGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54051",
+    "departmentCode": "54",
+    "name": "ARBOLEDAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54099",
+    "departmentCode": "54",
+    "name": "BOCHALEMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54109",
+    "departmentCode": "54",
+    "name": "BUCARASICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54125",
+    "departmentCode": "54",
+    "name": "CÁCOTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54128",
+    "departmentCode": "54",
+    "name": "CÁCHIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54172",
+    "departmentCode": "54",
+    "name": "CHINÁCOTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54174",
+    "departmentCode": "54",
+    "name": "CHITAGÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54206",
+    "departmentCode": "54",
+    "name": "CONVENCIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54223",
+    "departmentCode": "54",
+    "name": "CUCUTILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54239",
+    "departmentCode": "54",
+    "name": "DURANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54245",
+    "departmentCode": "54",
+    "name": "EL CARMEN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54250",
+    "departmentCode": "54",
+    "name": "EL TARRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54261",
+    "departmentCode": "54",
+    "name": "EL ZULIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54313",
+    "departmentCode": "54",
+    "name": "GRAMALOTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54344",
+    "departmentCode": "54",
+    "name": "HACARÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54347",
+    "departmentCode": "54",
+    "name": "HERRÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54377",
+    "departmentCode": "54",
+    "name": "LABATECA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54385",
+    "departmentCode": "54",
+    "name": "LA ESPERANZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54398",
+    "departmentCode": "54",
+    "name": "LA PLAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54405",
+    "departmentCode": "54",
+    "name": "LOS PATIOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54418",
+    "departmentCode": "54",
+    "name": "LOURDES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54480",
+    "departmentCode": "54",
+    "name": "MUTISCUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54498",
+    "departmentCode": "54",
+    "name": "OCAÑA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54518",
+    "departmentCode": "54",
+    "name": "PAMPLONA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54520",
+    "departmentCode": "54",
+    "name": "PAMPLONITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54553",
+    "departmentCode": "54",
+    "name": "PUERTO SANTANDER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54599",
+    "departmentCode": "54",
+    "name": "RAGONVALIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54660",
+    "departmentCode": "54",
+    "name": "SALAZAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54670",
+    "departmentCode": "54",
+    "name": "SAN CALIXTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54673",
+    "departmentCode": "54",
+    "name": "SAN CAYETANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54680",
+    "departmentCode": "54",
+    "name": "SANTIAGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54720",
+    "departmentCode": "54",
+    "name": "SARDINATA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54743",
+    "departmentCode": "54",
+    "name": "SILOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54800",
+    "departmentCode": "54",
+    "name": "TEORAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54810",
+    "departmentCode": "54",
+    "name": "TIBÚ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54820",
+    "departmentCode": "54",
+    "name": "TOLEDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54871",
+    "departmentCode": "54",
+    "name": "VILLA CARO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "54874",
+    "departmentCode": "54",
+    "name": "VILLA DEL ROSARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63001",
+    "departmentCode": "63",
+    "name": "ARMENIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63111",
+    "departmentCode": "63",
+    "name": "BUENAVISTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63130",
+    "departmentCode": "63",
+    "name": "CALARCÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63190",
+    "departmentCode": "63",
+    "name": "CIRCASIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63212",
+    "departmentCode": "63",
+    "name": "CÓRDOBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63272",
+    "departmentCode": "63",
+    "name": "FILANDIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63302",
+    "departmentCode": "63",
+    "name": "GÉNOVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63401",
+    "departmentCode": "63",
+    "name": "LA TEBAIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63470",
+    "departmentCode": "63",
+    "name": "MONTENEGRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63548",
+    "departmentCode": "63",
+    "name": "PIJAO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63594",
+    "departmentCode": "63",
+    "name": "QUIMBAYA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "63690",
+    "departmentCode": "63",
+    "name": "SALENTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66001",
+    "departmentCode": "66",
+    "name": "PEREIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66045",
+    "departmentCode": "66",
+    "name": "APÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66075",
+    "departmentCode": "66",
+    "name": "BALBOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66088",
+    "departmentCode": "66",
+    "name": "BELÉN DE UMBRÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66170",
+    "departmentCode": "66",
+    "name": "DOSQUEBRADAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66318",
+    "departmentCode": "66",
+    "name": "GUÁTICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66383",
+    "departmentCode": "66",
+    "name": "LA CELIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66400",
+    "departmentCode": "66",
+    "name": "LA VIRGINIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66440",
+    "departmentCode": "66",
+    "name": "MARSELLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66456",
+    "departmentCode": "66",
+    "name": "MISTRATÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66572",
+    "departmentCode": "66",
+    "name": "PUEBLO RICO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66594",
+    "departmentCode": "66",
+    "name": "QUINCHÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66682",
+    "departmentCode": "66",
+    "name": "SANTA ROSA DE CABAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "66687",
+    "departmentCode": "66",
+    "name": "SANTUARIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68001",
+    "departmentCode": "68",
+    "name": "BUCARAMANGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68013",
+    "departmentCode": "68",
+    "name": "AGUADA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68020",
+    "departmentCode": "68",
+    "name": "ALBANIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68051",
+    "departmentCode": "68",
+    "name": "ARATOCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68077",
+    "departmentCode": "68",
+    "name": "BARBOSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68079",
+    "departmentCode": "68",
+    "name": "BARICHARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68081",
+    "departmentCode": "68",
+    "name": "BARRANCABERMEJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68092",
+    "departmentCode": "68",
+    "name": "BETULIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68101",
+    "departmentCode": "68",
+    "name": "BOLÍVAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68121",
+    "departmentCode": "68",
+    "name": "CABRERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68132",
+    "departmentCode": "68",
+    "name": "CALIFORNIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68147",
+    "departmentCode": "68",
+    "name": "CAPITANEJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68152",
+    "departmentCode": "68",
+    "name": "CARCASÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68160",
+    "departmentCode": "68",
+    "name": "CEPITÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68162",
+    "departmentCode": "68",
+    "name": "CERRITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68167",
+    "departmentCode": "68",
+    "name": "CHARALÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68169",
+    "departmentCode": "68",
+    "name": "CHARTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68176",
+    "departmentCode": "68",
+    "name": "CHIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68179",
+    "departmentCode": "68",
+    "name": "CHIPATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68190",
+    "departmentCode": "68",
+    "name": "CIMITARRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68207",
+    "departmentCode": "68",
+    "name": "CONCEPCIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68209",
+    "departmentCode": "68",
+    "name": "CONFINES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68211",
+    "departmentCode": "68",
+    "name": "CONTRATACIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68217",
+    "departmentCode": "68",
+    "name": "COROMORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68229",
+    "departmentCode": "68",
+    "name": "CURITÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68235",
+    "departmentCode": "68",
+    "name": "EL CARMEN DE CHUCURÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68245",
+    "departmentCode": "68",
+    "name": "EL GUACAMAYO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68250",
+    "departmentCode": "68",
+    "name": "EL PEÑÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68255",
+    "departmentCode": "68",
+    "name": "EL PLAYÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68264",
+    "departmentCode": "68",
+    "name": "ENCINO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68266",
+    "departmentCode": "68",
+    "name": "ENCISO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68271",
+    "departmentCode": "68",
+    "name": "FLORIÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68276",
+    "departmentCode": "68",
+    "name": "FLORIDABLANCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68296",
+    "departmentCode": "68",
+    "name": "GALÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68298",
+    "departmentCode": "68",
+    "name": "GÁMBITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68307",
+    "departmentCode": "68",
+    "name": "GIRÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68318",
+    "departmentCode": "68",
+    "name": "GUACA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68320",
+    "departmentCode": "68",
+    "name": "GUADALUPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68322",
+    "departmentCode": "68",
+    "name": "GUAPOTÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68324",
+    "departmentCode": "68",
+    "name": "GUAVATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68327",
+    "departmentCode": "68",
+    "name": "GÜEPSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68344",
+    "departmentCode": "68",
+    "name": "HATO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68368",
+    "departmentCode": "68",
+    "name": "JESÚS MARÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68370",
+    "departmentCode": "68",
+    "name": "JORDÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68377",
+    "departmentCode": "68",
+    "name": "LA BELLEZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68385",
+    "departmentCode": "68",
+    "name": "LANDÁZURI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68397",
+    "departmentCode": "68",
+    "name": "LA PAZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68406",
+    "departmentCode": "68",
+    "name": "LEBRIJA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68418",
+    "departmentCode": "68",
+    "name": "LOS SANTOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68425",
+    "departmentCode": "68",
+    "name": "MACARAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68432",
+    "departmentCode": "68",
+    "name": "MÁLAGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68444",
+    "departmentCode": "68",
+    "name": "MATANZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68464",
+    "departmentCode": "68",
+    "name": "MOGOTES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68468",
+    "departmentCode": "68",
+    "name": "MOLAGAVITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68498",
+    "departmentCode": "68",
+    "name": "OCAMONTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68500",
+    "departmentCode": "68",
+    "name": "OIBA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68502",
+    "departmentCode": "68",
+    "name": "ONZAGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68522",
+    "departmentCode": "68",
+    "name": "PALMAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68524",
+    "departmentCode": "68",
+    "name": "PALMAS DEL SOCORRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68533",
+    "departmentCode": "68",
+    "name": "PÁRAMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68547",
+    "departmentCode": "68",
+    "name": "PIEDECUESTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68549",
+    "departmentCode": "68",
+    "name": "PINCHOTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68572",
+    "departmentCode": "68",
+    "name": "PUENTE NACIONAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68573",
+    "departmentCode": "68",
+    "name": "PUERTO PARRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68575",
+    "departmentCode": "68",
+    "name": "PUERTO WILCHES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68615",
+    "departmentCode": "68",
+    "name": "RIONEGRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68655",
+    "departmentCode": "68",
+    "name": "SABANA DE TORRES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68669",
+    "departmentCode": "68",
+    "name": "SAN ANDRÉS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68673",
+    "departmentCode": "68",
+    "name": "SAN BENITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68679",
+    "departmentCode": "68",
+    "name": "SAN GIL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68682",
+    "departmentCode": "68",
+    "name": "SAN JOAQUÍN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68684",
+    "departmentCode": "68",
+    "name": "SAN JOSÉ DE MIRANDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68686",
+    "departmentCode": "68",
+    "name": "SAN MIGUEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68689",
+    "departmentCode": "68",
+    "name": "SAN VICENTE DE CHUCURÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68705",
+    "departmentCode": "68",
+    "name": "SANTA BÁRBARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68720",
+    "departmentCode": "68",
+    "name": "SANTA HELENA DEL OPÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68745",
+    "departmentCode": "68",
+    "name": "SIMACOTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68755",
+    "departmentCode": "68",
+    "name": "SOCORRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68770",
+    "departmentCode": "68",
+    "name": "SUAITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68773",
+    "departmentCode": "68",
+    "name": "SUCRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68780",
+    "departmentCode": "68",
+    "name": "SURATÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68820",
+    "departmentCode": "68",
+    "name": "TONA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68855",
+    "departmentCode": "68",
+    "name": "VALLE DE SAN JOSÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68861",
+    "departmentCode": "68",
+    "name": "VÉLEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68867",
+    "departmentCode": "68",
+    "name": "VETAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68872",
+    "departmentCode": "68",
+    "name": "VILLANUEVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "68895",
+    "departmentCode": "68",
+    "name": "ZAPATOCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70001",
+    "departmentCode": "70",
+    "name": "SINCELEJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70110",
+    "departmentCode": "70",
+    "name": "BUENAVISTA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70124",
+    "departmentCode": "70",
+    "name": "CAIMITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70204",
+    "departmentCode": "70",
+    "name": "COLOSÓ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70215",
+    "departmentCode": "70",
+    "name": "COROZAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70221",
+    "departmentCode": "70",
+    "name": "COVEÑAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70230",
+    "departmentCode": "70",
+    "name": "CHALÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70233",
+    "departmentCode": "70",
+    "name": "EL ROBLE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70235",
+    "departmentCode": "70",
+    "name": "GALERAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70265",
+    "departmentCode": "70",
+    "name": "GUARANDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70400",
+    "departmentCode": "70",
+    "name": "LA UNIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70418",
+    "departmentCode": "70",
+    "name": "LOS PALMITOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70429",
+    "departmentCode": "70",
+    "name": "MAJAGUAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70473",
+    "departmentCode": "70",
+    "name": "MORROA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70508",
+    "departmentCode": "70",
+    "name": "OVEJAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70523",
+    "departmentCode": "70",
+    "name": "PALMITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70670",
+    "departmentCode": "70",
+    "name": "SAMPUÉS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70678",
+    "departmentCode": "70",
+    "name": "SAN BENITO ABAD",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70702",
+    "departmentCode": "70",
+    "name": "SAN JUAN DE BETULIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70708",
+    "departmentCode": "70",
+    "name": "SAN MARCOS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70713",
+    "departmentCode": "70",
+    "name": "SAN ONOFRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70717",
+    "departmentCode": "70",
+    "name": "SAN PEDRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70742",
+    "departmentCode": "70",
+    "name": "SAN LUIS DE SINCÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70771",
+    "departmentCode": "70",
+    "name": "SUCRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70820",
+    "departmentCode": "70",
+    "name": "SANTIAGO DE TOLÚ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "70823",
+    "departmentCode": "70",
+    "name": "SAN JOSÉ DE TOLUVIEJO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73001",
+    "departmentCode": "73",
+    "name": "IBAGUÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73024",
+    "departmentCode": "73",
+    "name": "ALPUJARRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73026",
+    "departmentCode": "73",
+    "name": "ALVARADO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73030",
+    "departmentCode": "73",
+    "name": "AMBALEMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73043",
+    "departmentCode": "73",
+    "name": "ANZOÁTEGUI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73055",
+    "departmentCode": "73",
+    "name": "ARMERO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73067",
+    "departmentCode": "73",
+    "name": "ATACO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73124",
+    "departmentCode": "73",
+    "name": "CAJAMARCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73148",
+    "departmentCode": "73",
+    "name": "CARMEN DE APICALÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73152",
+    "departmentCode": "73",
+    "name": "CASABIANCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73168",
+    "departmentCode": "73",
+    "name": "CHAPARRAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73200",
+    "departmentCode": "73",
+    "name": "COELLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73217",
+    "departmentCode": "73",
+    "name": "COYAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73226",
+    "departmentCode": "73",
+    "name": "CUNDAY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73236",
+    "departmentCode": "73",
+    "name": "DOLORES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73268",
+    "departmentCode": "73",
+    "name": "ESPINAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73270",
+    "departmentCode": "73",
+    "name": "FALAN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73275",
+    "departmentCode": "73",
+    "name": "FLANDES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73283",
+    "departmentCode": "73",
+    "name": "FRESNO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73319",
+    "departmentCode": "73",
+    "name": "GUAMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73347",
+    "departmentCode": "73",
+    "name": "HERVEO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73349",
+    "departmentCode": "73",
+    "name": "HONDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73352",
+    "departmentCode": "73",
+    "name": "ICONONZO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73408",
+    "departmentCode": "73",
+    "name": "LÉRIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73411",
+    "departmentCode": "73",
+    "name": "LÍBANO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73443",
+    "departmentCode": "73",
+    "name": "SAN SEBASTIÁN DE MARIQUITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73449",
+    "departmentCode": "73",
+    "name": "MELGAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73461",
+    "departmentCode": "73",
+    "name": "MURILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73483",
+    "departmentCode": "73",
+    "name": "NATAGAIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73504",
+    "departmentCode": "73",
+    "name": "ORTEGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73520",
+    "departmentCode": "73",
+    "name": "PALOCABILDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73547",
+    "departmentCode": "73",
+    "name": "PIEDRAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73555",
+    "departmentCode": "73",
+    "name": "PLANADAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73563",
+    "departmentCode": "73",
+    "name": "PRADO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73585",
+    "departmentCode": "73",
+    "name": "PURIFICACIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73616",
+    "departmentCode": "73",
+    "name": "RIOBLANCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73622",
+    "departmentCode": "73",
+    "name": "RONCESVALLES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73624",
+    "departmentCode": "73",
+    "name": "ROVIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73671",
+    "departmentCode": "73",
+    "name": "SALDAÑA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73675",
+    "departmentCode": "73",
+    "name": "SAN ANTONIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73678",
+    "departmentCode": "73",
+    "name": "SAN LUIS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73686",
+    "departmentCode": "73",
+    "name": "SANTA ISABEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73770",
+    "departmentCode": "73",
+    "name": "SUÁREZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73854",
+    "departmentCode": "73",
+    "name": "VALLE DE SAN JUAN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73861",
+    "departmentCode": "73",
+    "name": "VENADILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73870",
+    "departmentCode": "73",
+    "name": "VILLAHERMOSA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "73873",
+    "departmentCode": "73",
+    "name": "VILLARRICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76001",
+    "departmentCode": "76",
+    "name": "SANTIAGO DE CALI",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76020",
+    "departmentCode": "76",
+    "name": "ALCALÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76036",
+    "departmentCode": "76",
+    "name": "ANDALUCÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76041",
+    "departmentCode": "76",
+    "name": "ANSERMANUEVO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76054",
+    "departmentCode": "76",
+    "name": "ARGELIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76100",
+    "departmentCode": "76",
+    "name": "BOLÍVAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76109",
+    "departmentCode": "76",
+    "name": "BUENAVENTURA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76111",
+    "departmentCode": "76",
+    "name": "GUADALAJARA DE BUGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76113",
+    "departmentCode": "76",
+    "name": "BUGALAGRANDE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76122",
+    "departmentCode": "76",
+    "name": "CAICEDONIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76126",
+    "departmentCode": "76",
+    "name": "CALIMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76130",
+    "departmentCode": "76",
+    "name": "CANDELARIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76147",
+    "departmentCode": "76",
+    "name": "CARTAGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76233",
+    "departmentCode": "76",
+    "name": "DAGUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76243",
+    "departmentCode": "76",
+    "name": "EL ÁGUILA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76246",
+    "departmentCode": "76",
+    "name": "EL CAIRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76248",
+    "departmentCode": "76",
+    "name": "EL CERRITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76250",
+    "departmentCode": "76",
+    "name": "EL DOVIO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76275",
+    "departmentCode": "76",
+    "name": "FLORIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76306",
+    "departmentCode": "76",
+    "name": "GINEBRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76318",
+    "departmentCode": "76",
+    "name": "GUACARÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76364",
+    "departmentCode": "76",
+    "name": "JAMUNDÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76377",
+    "departmentCode": "76",
+    "name": "LA CUMBRE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76400",
+    "departmentCode": "76",
+    "name": "LA UNIÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76403",
+    "departmentCode": "76",
+    "name": "LA VICTORIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76497",
+    "departmentCode": "76",
+    "name": "OBANDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76520",
+    "departmentCode": "76",
+    "name": "PALMIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76563",
+    "departmentCode": "76",
+    "name": "PRADERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76606",
+    "departmentCode": "76",
+    "name": "RESTREPO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76616",
+    "departmentCode": "76",
+    "name": "RIOFRÍO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76622",
+    "departmentCode": "76",
+    "name": "ROLDANILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76670",
+    "departmentCode": "76",
+    "name": "SAN PEDRO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76736",
+    "departmentCode": "76",
+    "name": "SEVILLA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76823",
+    "departmentCode": "76",
+    "name": "TORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76828",
+    "departmentCode": "76",
+    "name": "TRUJILLO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76834",
+    "departmentCode": "76",
+    "name": "TULUÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76845",
+    "departmentCode": "76",
+    "name": "ULLOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76863",
+    "departmentCode": "76",
+    "name": "VERSALLES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76869",
+    "departmentCode": "76",
+    "name": "VIJES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76890",
+    "departmentCode": "76",
+    "name": "YOTOCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76892",
+    "departmentCode": "76",
+    "name": "YUMBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "76895",
+    "departmentCode": "76",
+    "name": "ZARZAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81001",
+    "departmentCode": "81",
+    "name": "ARAUCA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81065",
+    "departmentCode": "81",
+    "name": "ARAUQUITA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81220",
+    "departmentCode": "81",
+    "name": "CRAVO NORTE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81300",
+    "departmentCode": "81",
+    "name": "FORTUL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81591",
+    "departmentCode": "81",
+    "name": "PUERTO RONDÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81736",
+    "departmentCode": "81",
+    "name": "SARAVENA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "81794",
+    "departmentCode": "81",
+    "name": "TAME",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85001",
+    "departmentCode": "85",
+    "name": "YOPAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85010",
+    "departmentCode": "85",
+    "name": "AGUAZUL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85015",
+    "departmentCode": "85",
+    "name": "CHÁMEZA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85125",
+    "departmentCode": "85",
+    "name": "HATO COROZAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85136",
+    "departmentCode": "85",
+    "name": "LA SALINA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85139",
+    "departmentCode": "85",
+    "name": "MANÍ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85162",
+    "departmentCode": "85",
+    "name": "MONTERREY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85225",
+    "departmentCode": "85",
+    "name": "NUNCHÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85230",
+    "departmentCode": "85",
+    "name": "OROCUÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85250",
+    "departmentCode": "85",
+    "name": "PAZ DE ARIPORO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85263",
+    "departmentCode": "85",
+    "name": "PORE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85279",
+    "departmentCode": "85",
+    "name": "RECETOR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85300",
+    "departmentCode": "85",
+    "name": "SABANALARGA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85315",
+    "departmentCode": "85",
+    "name": "SÁCAMA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85325",
+    "departmentCode": "85",
+    "name": "SAN LUIS DE PALENQUE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85400",
+    "departmentCode": "85",
+    "name": "TÁMARA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85410",
+    "departmentCode": "85",
+    "name": "TAURAMENA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85430",
+    "departmentCode": "85",
+    "name": "TRINIDAD",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "85440",
+    "departmentCode": "85",
+    "name": "VILLANUEVA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86001",
+    "departmentCode": "86",
+    "name": "MOCOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86219",
+    "departmentCode": "86",
+    "name": "COLÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86320",
+    "departmentCode": "86",
+    "name": "ORITO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86568",
+    "departmentCode": "86",
+    "name": "PUERTO ASÍS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86569",
+    "departmentCode": "86",
+    "name": "PUERTO CAICEDO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86571",
+    "departmentCode": "86",
+    "name": "PUERTO GUZMÁN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86573",
+    "departmentCode": "86",
+    "name": "PUERTO LEGUÍZAMO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86749",
+    "departmentCode": "86",
+    "name": "SIBUNDOY",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86755",
+    "departmentCode": "86",
+    "name": "SAN FRANCISCO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86757",
+    "departmentCode": "86",
+    "name": "SAN MIGUEL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86760",
+    "departmentCode": "86",
+    "name": "SANTIAGO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86865",
+    "departmentCode": "86",
+    "name": "VALLE DEL GUAMUEZ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "86885",
+    "departmentCode": "86",
+    "name": "VILLAGARZÓN",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "88001",
+    "departmentCode": "88",
+    "name": "SAN ANDRÉS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "88564",
+    "departmentCode": "88",
+    "name": "PROVIDENCIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91001",
+    "departmentCode": "91",
+    "name": "LETICIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91263",
+    "departmentCode": "91",
+    "name": "EL ENCANTO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91405",
+    "departmentCode": "91",
+    "name": "LA CHORRERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91407",
+    "departmentCode": "91",
+    "name": "LA PEDRERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91430",
+    "departmentCode": "91",
+    "name": "LA VICTORIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91460",
+    "departmentCode": "91",
+    "name": "MIRITÍ - PARANÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91530",
+    "departmentCode": "91",
+    "name": "PUERTO ALEGRÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91536",
+    "departmentCode": "91",
+    "name": "PUERTO ARICA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91540",
+    "departmentCode": "91",
+    "name": "PUERTO NARIÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91669",
+    "departmentCode": "91",
+    "name": "PUERTO SANTANDER",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "91798",
+    "departmentCode": "91",
+    "name": "TARAPACÁ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94001",
+    "departmentCode": "94",
+    "name": "INÍRIDA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94343",
+    "departmentCode": "94",
+    "name": "BARRANCOMINAS",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94883",
+    "departmentCode": "94",
+    "name": "SAN FELIPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94884",
+    "departmentCode": "94",
+    "name": "PUERTO COLOMBIA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94885",
+    "departmentCode": "94",
+    "name": "LA GUADALUPE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94886",
+    "departmentCode": "94",
+    "name": "CACAHUAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94887",
+    "departmentCode": "94",
+    "name": "PANA PANA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "94888",
+    "departmentCode": "94",
+    "name": "MORICHAL",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "95001",
+    "departmentCode": "95",
+    "name": "SAN JOSÉ DEL GUAVIARE",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "95015",
+    "departmentCode": "95",
+    "name": "CALAMAR",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "95025",
+    "departmentCode": "95",
+    "name": "EL RETORNO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "95200",
+    "departmentCode": "95",
+    "name": "MIRAFLORES",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97001",
+    "departmentCode": "97",
+    "name": "MITÚ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97161",
+    "departmentCode": "97",
+    "name": "CARURÚ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97511",
+    "departmentCode": "97",
+    "name": "PACOA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97666",
+    "departmentCode": "97",
+    "name": "TARAIRA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97777",
+    "departmentCode": "97",
+    "name": "PAPUNAHUA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "97889",
+    "departmentCode": "97",
+    "name": "YAVARATÉ",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "99001",
+    "departmentCode": "99",
+    "name": "PUERTO CARREÑO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "99524",
+    "departmentCode": "99",
+    "name": "LA PRIMAVERA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "99624",
+    "departmentCode": "99",
+    "name": "SANTA ROSALÍA",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  },
+  {
+    "code": "99773",
+    "departmentCode": "99",
+    "name": "CUMARIBO",
+    "resultType": "observed",
+    "source": "dane-divipola-mgn-2025",
+    "year": 2025
+  }
+]

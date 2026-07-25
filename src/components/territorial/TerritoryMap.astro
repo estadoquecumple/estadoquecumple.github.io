@@ -1,0 +1,43 @@
+---
+import 'maplibre-gl/dist/maplibre-gl.css';
+---
+<section class="map-panel" aria-labelledby="map-title"><div class="map-head"><div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div><div class="legend" aria-label="Leyenda"><span><i class="swatch observed"></i>Observado</span><span><i class="swatch assumption"></i>Hipótesis</span><span><i class="swatch missing"></i>Sin dato</span></div></div><div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos de Colombia según DANE DIVIPOLA MGN 2025"><div class="map-loading" data-map-status>Preparando mapa oficial…</div></div><p class="map-help">Use +/− o rueda para zoom, arrastre para mover y pulse un departamento para consultar. La tabla siguiente ofrece la misma información sin mapa.</p></section>
+<script>
+  import * as maplibregl from 'maplibre-gl';
+  const container=document.querySelector<HTMLElement>('#territory-map');
+  const status=container?.querySelector<HTMLElement>('[data-map-status]');
+  if(container){
+    const map=new maplibregl.Map({container,style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#e8e3d8'}}]},center:[-73.5,4.3],zoom:4.2,attributionControl:false});
+    map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+    map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'DANE DIVIPOLA MGN 2025'}));
+    map.on('load',async()=>{
+      try{
+        const response=await fetch('/data/territorial/geography/departments.geojson');
+        if(!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data=await response.json();
+        map.addSource('departments',{type:'geojson',data});
+        map.addLayer({id:'departments-fill',type:'fill',source:'departments',paint:{'fill-color':'#d8c8a4','fill-opacity':0.72}});
+        map.addLayer({id:'departments-line',type:'line',source:'departments',paint:{'line-color':'#123b5d','line-width':1.2}});
+        map.on('click','departments-fill',(event:any)=>{
+          const p=event.features?.[0]?.properties;if(!p)return;
+          const node=document.querySelector<HTMLElement>('[data-profile-title]');if(node)node.textContent=String(p.name);
+          new maplibregl.Popup().setLngLat(event.lngLat).setText(`${p.name} · DIVIPOLA ${p.code} · dato observado DANE 2025`).addTo(map);
+        });
+        map.on('mouseenter','departments-fill',()=>map.getCanvas().style.cursor='pointer');
+        map.on('mouseleave','departments-fill',()=>map.getCanvas().style.cursor='');
+        status?.remove();
+      }catch(error){if(status){status.textContent='No fue posible cargar el mapa. La tabla permanece disponible.';status.classList.add('error');}}
+    });
+    document.querySelectorAll<HTMLInputElement>('[data-layer]').forEach(input=>input.addEventListener('change',async()=>{
+      if(input.dataset.layer==='departments'&&map.getLayer('departments-fill')){
+        const visibility=input.checked?'visible':'none';map.setLayoutProperty('departments-fill','visibility',visibility);map.setLayoutProperty('departments-line','visibility',visibility);
+      }
+      if(input.dataset.layer==='municipalities'){
+        if(input.checked&&!map.getSource('municipalities')){
+          const response=await fetch('/data/territorial/geography/municipalities/11.geojson');const data=await response.json();
+          map.addSource('municipalities',{type:'geojson',data});map.addLayer({id:'municipalities-line',type:'line',source:'municipalities',paint:{'line-color':'#a11f2a','line-width':1.5}});
+        }else if(map.getLayer('municipalities-line')) map.setLayoutProperty('municipalities-line','visibility',input.checked?'visible':'none');
+      }
+    }));
+  }
+</script>
