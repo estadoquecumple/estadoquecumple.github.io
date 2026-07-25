@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-25T07:39:10Z",
+  "sources": [
+    {
+      "id": "dnp-idf-2024",
+      "status": "manual-required",
+      "file": "fiscal.json",
+      "records": 0
+    },
+    {
+      "id": "dnp-mdm",
+      "status": "manual-required",
+      "file": "municipal-performance.json",
+      "records": 0
+    },
+    {
+      "id": "dane-population-projections",
+      "status": "manual-required",
+      "file": "population.json",
+      "records": 0
+    },
+    {
+      "id": "secop-ii",
+      "status": "current",
+      "file": "secop-aggregates.json",
+      "records": 4
+    },
+    {
+      "id": "dnp-sgr-mzgh-shtp",
+      "status": "partial",
+      "file": "sgr-aggregates.json",
+      "records": 34
+    },
+    {
+      "id": "dnp-typologies-2026",
+      "status": "manual-required",
+      "file": "typologies.json",
+      "records": 0
+    }
+  ]
+}

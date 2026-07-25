@@ -1,0 +1,36 @@
+{
+  "source": "secop-ii",
+  "status": "current",
+  "updatedAt": "2026-07-25T07:39:09Z",
+  "records": [
+    {
+      "dataset": "p6dx-8zbt",
+      "kind": "processes",
+      "recordCount": 8878158,
+      "resultType": "calculated",
+      "territorialDimension": "contracting-entity"
+    },
+    {
+      "dataset": "jbjy-vk9h",
+      "kind": "contracts",
+      "recordCount": 5869822,
+      "resultType": "calculated",
+      "territorialDimension": "contracting-entity"
+    },
+    {
+      "dataset": "gra4-pcp2",
+      "kind": "locations",
+      "recordCount": 6136757,
+      "resultType": "calculated",
+      "territorialDimension": "execution"
+    },
+    {
+      "dataset": "mfmm-jqmq",
+      "kind": "execution",
+      "recordCount": 4682326,
+      "resultType": "calculated",
+      "territorialDimension": "execution"
+    }
+  ],
+  "limitations": "Conteos API verificables. Las agregaciones municipales se habilitan al confirmar campos estables por dataset; no se descargan filas masivas al navegador."
+}

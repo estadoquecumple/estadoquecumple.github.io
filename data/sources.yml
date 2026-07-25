@@ -1,0 +1,129 @@
+version: 1.0.0
+updated: 2026-07-25
+sources:
+  - id: dane-divipola-mgn-2025
+    entity: Departamento Administrativo Nacional de Estadística (DANE)
+    url: https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer
+    access: ArcGIS REST
+    frequency: anual
+    data_date: 2025-01-01
+    downloaded_at: null
+    coverage: nacional, departamentos y municipios/distritos
+    key: DIVIPOLA
+    license: Condiciones de uso de información pública del DANE
+    transformations: reproyección EPSG:4326, selección de campos, partición departamental, simplificación web
+    limitations: geometría simplificada; no sustituye cartografía oficial
+    status: current
+    hash: null
+  - id: dane-population-projections
+    entity: DANE
+    url: https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion
+    access: descarga manual documentada
+    frequency: según publicación
+    data_date: null
+    downloaded_at: null
+    coverage: municipal 2018–2042
+    key: DIVIPOLA, año, área
+    license: Condiciones de uso del DANE
+    transformations: normalización de columnas y DIVIPOLA
+    limitations: la URL directa del archivo cambia entre publicaciones
+    status: manual-required
+    hash: null
+  - id: dnp-typologies-2026
+    entity: Departamento Nacional de Planeación (DNP)
+    url: https://www.dnp.gov.co/
+    access: importación manual documentada
+    frequency: por edición
+    data_date: 2026-01-01
+    downloaded_at: null
+    coverage: municipal/distrital y departamental
+    key: DIVIPOLA
+    license: Condiciones de uso del DNP
+    transformations: validación de siete tipologías municipales y tres departamentales
+    limitations: no reemplaza categorías legales ni asigna recursos
+    status: manual-required
+    hash: null
+  - id: dnp-idf-2024
+    entity: DNP
+    url: https://www.dnp.gov.co/
+    access: importación manual documentada
+    frequency: anual
+    data_date: 2024-12-31
+    downloaded_at: null
+    coverage: entidades territoriales
+    key: DIVIPOLA
+    license: Condiciones de uso del DNP
+    transformations: normalización de vigencia y resultados
+    limitations: distingue vigencia 2024 de fecha de publicación
+    status: manual-required
+    hash: null
+  - id: dnp-mdm
+    entity: DNP
+    url: https://www.dnp.gov.co/
+    access: importación manual documentada
+    frequency: anual
+    data_date: null
+    downloaded_at: null
+    coverage: municipal
+    key: DIVIPOLA
+    license: Condiciones de uso del DNP
+    transformations: validación metodológica y normalización DIVIPOLA
+    limitations: solo se publica una edición oficial comparable
+    status: manual-required
+    hash: null
+  - id: dnp-sgr-mzgh-shtp
+    entity: DNP / datos.gov.co
+    url: https://www.datos.gov.co/resource/mzgh-shtp.json
+    access: API Socrata
+    frequency: según actualización del portal
+    data_date: null
+    downloaded_at: null
+    coverage: proyectos SGR
+    key: código territorial informado por la fuente
+    license: Datos Abiertos Colombia
+    transformations: consulta agregada, normalización territorial, sumas y conteos
+    limitations: cobertura depende de campos territoriales publicados
+    status: current
+    hash: null
+  - id: secop-ii
+    entity: Agencia Nacional de Contratación Pública – Colombia Compra Eficiente
+    url: https://www.datos.gov.co/
+    access: API Socrata (p6dx-8zbt, jbjy-vk9h, gra4-pcp2, mfmm-jqmq)
+    frequency: continua
+    data_date: null
+    downloaded_at: null
+    coverage: SECOP II
+    key: municipio/departamento/año/sector
+    license: Datos Abiertos Colombia
+    transformations: consultas SoQL agregadas, paginación, reintentos y caché
+    limitations: entidad contratante y lugar de ejecución son conceptos diferentes
+    status: partial
+    hash: null
+  - id: sispt-terridata
+    entity: DNP
+    url: https://terridata.dnp.gov.co/
+    access: solo descargas estables documentadas
+    frequency: variable
+    data_date: null
+    downloaded_at: null
+    coverage: territorial
+    key: DIVIPOLA
+    license: Condiciones del DNP
+    transformations: pendiente
+    limitations: no se automatiza Power BI ni scraping visual
+    status: manual-required
+    hash: null
+  - id: igac-ideam
+    entity: IGAC / IDEAM
+    url: https://www.igac.gov.co/
+    access: adaptador preparado
+    frequency: variable
+    data_date: null
+    downloaded_at: null
+    coverage: ambiental y geográfica
+    key: espacial
+    license: según conjunto
+    transformations: ninguna en V1
+    limitations: no se publican raster nacionales pesados
+    status: unavailable
+    hash: null

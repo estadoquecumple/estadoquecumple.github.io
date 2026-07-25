@@ -1,0 +1,11 @@
+<section class="downloads" aria-labelledby="downloads-title"><p class="eyebrow">Reutilización responsable</p><h2 id="downloads-title">Descargas de la vista</h2><div class="download-grid"><button type="button" data-download="csv">CSV de vista</button><button type="button" data-download="profile">JSON de perfil</button><a href="/data/territorial/geography/departments.geojson" download>GeoJSON visible</a><button type="button" data-download="method">Ficha metodológica</button><a href="/data/territorial/manifest.json" download>Manifiesto de fuentes</a><a href="/data/territorial/scenarios/current.json" data-scenario-download download>Configuración del escenario</a><button type="button" data-print>Imprimir</button></div><p>No se exponen bases brutas masivas. Cada archivo conserva fuente y tipo del resultado.</p></section>
+<script>
+  const save=(name:string,type:string,content:string)=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url)};
+  document.querySelectorAll<HTMLElement>('[data-download]').forEach(button=>button.addEventListener('click',()=>{
+    const kind=button.dataset.download;
+    if(kind==='csv') save('laboratorio-vista.csv','text/csv;charset=utf-8','territorio,codigo,tipo,ano,fuente\nColombia,CO,observed,2025,DANE DIVIPOLA MGN 2025\n');
+    if(kind==='profile') save('perfil-territorial.json','application/json',JSON.stringify({territory:'Colombia',code:'CO',resultType:'observed',year:2025,source:'DANE DIVIPOLA MGN 2025',missing:['population','fiscal']},null,2));
+    if(kind==='method') save('metodologia-laboratorio.txt','text/plain;charset=utf-8','Laboratorio Territorial CAMS V1\nDatos observados, cálculos reproducibles e hipótesis separadas.\nNo constituye predicción, concepto jurídico ni propuesta definitiva.\n');
+  }));
+  document.querySelector('[data-print]')?.addEventListener('click',()=>window.print());
+</script>

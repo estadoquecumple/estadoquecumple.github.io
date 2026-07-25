@@ -1,0 +1,250 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-25T07:50:31Z",
+  "files": [
+    {
+      "path": "geography/departments.geojson",
+      "bytes": 591883,
+      "sha256": "f26e035df08a7d8fc49798662b14490e344ca3612ecc6cedbb009f627677cfc7"
+    },
+    {
+      "path": "geography/geography-manifest.json",
+      "bytes": 637,
+      "sha256": "0ae7818ce9ca9a210974ea4100c253c219edfb4f5e53966a9210f2809350e032"
+    },
+    {
+      "path": "geography/municipalities/05.geojson",
+      "bytes": 249731,
+      "sha256": "dc718dc2eee9567ea556b0ee24f0c51541a12463d390b41cb55899f18df75b87"
+    },
+    {
+      "path": "geography/municipalities/08.geojson",
+      "bytes": 30764,
+      "sha256": "1be00a497878234dcc73514beb2bd5ca65f641d39335b8594203e05be9735620"
+    },
+    {
+      "path": "geography/municipalities/11.geojson",
+      "bytes": 5580,
+      "sha256": "bc6fb7979815a0a0b8a791bc68d87d2c27347e48407fd471c44e94dbd7333e2f"
+    },
+    {
+      "path": "geography/municipalities/13.geojson",
+      "bytes": 138851,
+      "sha256": "39e40475cd8b68826f8495fcf5f90a35d80386a6ba077d3dabee000843b5314f"
+    },
+    {
+      "path": "geography/municipalities/15.geojson",
+      "bytes": 170462,
+      "sha256": "4d9ea58d41ae569be9f5151a54efb0bc1276dc8d2008aa5234d517357c4a65bd"
+    },
+    {
+      "path": "geography/municipalities/17.geojson",
+      "bytes": 48353,
+      "sha256": "7a87326f75c7270c87aa50d4983a4bb589e086749cc177c384a33d83208f855a"
+    },
+    {
+      "path": "geography/municipalities/18.geojson",
+      "bytes": 100802,
+      "sha256": "1dd70614ee4e61e83632fb658d9d4d1d335b27625af8bb6d1a5ac7c1cb50b844"
+    },
+    {
+      "path": "geography/municipalities/19.geojson",
+      "bytes": 98388,
+      "sha256": "e445003fa4487208903fc6d54c30d6d8c763426c8333142fcdf3f0bf041223e0"
+    },
+    {
+      "path": "geography/municipalities/20.geojson",
+      "bytes": 66816,
+      "sha256": "706ea4cb3e7da66c64ec60a7b235322a6a3fac9b251d7d97a379f69a4bba97d3"
+    },
+    {
+      "path": "geography/municipalities/23.geojson",
+      "bytes": 88193,
+      "sha256": "ec70a39c049d3812797b341610fdc11ba2f641ae6dd0bf258ef5bc8da9aad482"
+    },
+    {
+      "path": "geography/municipalities/25.geojson",
+      "bytes": 173060,
+      "sha256": "7743fb2d36c83c27b85c3279ebc4b372491157219dd5f71700b2eb961acc3603"
+    },
+    {
+      "path": "geography/municipalities/27.geojson",
+      "bytes": 127387,
+      "sha256": "d0c30316e1fa16f404b6aed7502cfe6edbd5dfed0c2873a1f23946dba9fcb373"
+    },
+    {
+      "path": "geography/municipalities/41.geojson",
+      "bytes": 77439,
+      "sha256": "9a01a45a707be1a4c6e6e29950e54dd189f2b9e783fc71415be55bfd0071d58d"
+    },
+    {
+      "path": "geography/municipalities/44.geojson",
+      "bytes": 40205,
+      "sha256": "7a4540b1ea2ed1a6c9d603465686793c91b123c7bdd211accc028e5b356bb0e6"
+    },
+    {
+      "path": "geography/municipalities/47.geojson",
+      "bytes": 76943,
+      "sha256": "6d28fe14fc00b923d9170303240ab0e59a7af4501fa700fff3dc08a5be37c96e"
+    },
+    {
+      "path": "geography/municipalities/50.geojson",
+      "bytes": 116217,
+      "sha256": "ae64aade2ea0eda6f763877019a1d1df34ccb50a78f8350933b0703bcb70ec48"
+    },
+    {
+      "path": "geography/municipalities/52.geojson",
+      "bytes": 130121,
+      "sha256": "62a64bc3335b412714dfc3423e8f86b24867d1d50bd1629e079b76a3a99153fe"
+    },
+    {
+      "path": "geography/municipalities/54.geojson",
+      "bytes": 93579,
+      "sha256": "b84f6dd083cf5e678b4c2fb0ece8c6ba26e86e8173958138e6d49aa86f126bad"
+    },
+    {
+      "path": "geography/municipalities/63.geojson",
+      "bytes": 16479,
+      "sha256": "1aaea2aebdb874250c679ae6e48e9d8a72b3b9709bda9b1193b22a1b112736aa"
+    },
+    {
+      "path": "geography/municipalities/66.geojson",
+      "bytes": 21534,
+      "sha256": "d5027044ea93e90bad061f175257d64fa67c3246ba97c447fc31e70b7010bd0d"
+    },
+    {
+      "path": "geography/municipalities/68.geojson",
+      "bytes": 164763,
+      "sha256": "f5d0be6b975d1a615babe6794411ec31bb77c7733655c2e92ae4f45befb04953"
+    },
+    {
+      "path": "geography/municipalities/70.geojson",
+      "bytes": 61085,
+      "sha256": "e0cc1dfcc96cefbb00dacdb33c42233d980fcc05a8230b9670272f36a208b4e7"
+    },
+    {
+      "path": "geography/municipalities/73.geojson",
+      "bytes": 97479,
+      "sha256": "45a56e1f58190e35af68c6fb0e43feeb926e16559decd48a6e6f79f03bdec5a7"
+    },
+    {
+      "path": "geography/municipalities/76.geojson",
+      "bytes": 101044,
+      "sha256": "d3986c33c1356a88ea388f79868985a7dbf453b198cab8a2e7d60652c6f8d9bf"
+    },
+    {
+      "path": "geography/municipalities/81.geojson",
+      "bytes": 27310,
+      "sha256": "9b73a2006fbc8e01cc81992be1c31a329cea0b1299ef1e5b4e2891f41d3b4ea4"
+    },
+    {
+      "path": "geography/municipalities/85.geojson",
+      "bytes": 82857,
+      "sha256": "ffb6bebf9b79c699234b91613f0dba2ec6ba4971478277a65b722977f57ec937"
+    },
+    {
+      "path": "geography/municipalities/86.geojson",
+      "bytes": 43785,
+      "sha256": "8ad23bd5b04d5b8c94aa22b4df60b31763ecc4f2b620a833beab220503efc32e"
+    },
+    {
+      "path": "geography/municipalities/88.geojson",
+      "bytes": 3894,
+      "sha256": "9aefd0fa85adc42c167f80256eb77fdc59e2d7999b82842ef1858939fe5d2c4f"
+    },
+    {
+      "path": "geography/municipalities/91.geojson",
+      "bytes": 86553,
+      "sha256": "cbb1efcfa1de06f2774bd2a0a65863e7c12cc949e473011831dfd3dae74c5d62"
+    },
+    {
+      "path": "geography/municipalities/94.geojson",
+      "bytes": 63454,
+      "sha256": "47a65822a6a2ae601b6430429baf7b4042c5e509c38a91731a2c4345f1b2075f"
+    },
+    {
+      "path": "geography/municipalities/95.geojson",
+      "bytes": 62013,
+      "sha256": "d202d7c84f3fcd77a19bd2619b805ea77a682f3fc5d059bfab23b303aea6aab5"
+    },
+    {
+      "path": "geography/municipalities/97.geojson",
+      "bytes": 42835,
+      "sha256": "367ba6f0e5e16187654accdee63687fcbffedc19b8ac38fec6afdf89f6b1da16"
+    },
+    {
+      "path": "geography/municipalities/99.geojson",
+      "bytes": 53406,
+      "sha256": "71640550e19b7ba0adca7b8b758c4b8a37dc61b3f6bf85b6a2ac517d42c2af4a"
+    },
+    {
+      "path": "geography/municipalities-index.json",
+      "bytes": 200093,
+      "sha256": "5ddcbfab7283225962ec98624a9e6afea3a8634cc0d2f270f0734a8e9bd757d7"
+    },
+    {
+      "path": "geography/municipality-centroids.json",
+      "bytes": 124037,
+      "sha256": "33913be990768862f71f6e2a482d7f3a0ee7e42bf36cfa24ac3a8abef65bc14e"
+    },
+    {
+      "path": "indicators/fiscal.json",
+      "bytes": 211,
+      "sha256": "5fcc70db3d206b564df667d880c9c506aae57273086b7cfd9b6a3af8d4dd0470"
+    },
+    {
+      "path": "indicators/index.json",
+      "bytes": 915,
+      "sha256": "1131c28df0c04721caa02ab92fd0cc6f09daa26a731c0cd2da532f2619427b94"
+    },
+    {
+      "path": "indicators/municipal-performance.json",
+      "bytes": 201,
+      "sha256": "5ef9b7e55583667a7d13e9b702186838330a04548007256efc057280e38aac53"
+    },
+    {
+      "path": "indicators/population.json",
+      "bytes": 224,
+      "sha256": "8f6d41ed079e43316be027d4f0b7f1d90ce140de7361d5242d1b9af3fea52a7a"
+    },
+    {
+      "path": "indicators/secop-aggregates.json",
+      "bytes": 1040,
+      "sha256": "4e6077595ec8ed9ad6e871f5745dbcbb1ccc501ce056161a58fe03b10dacfb29"
+    },
+    {
+      "path": "indicators/sgr-aggregates.json",
+      "bytes": 6588,
+      "sha256": "0e8a9186b110048bb1e9b7aad03e38989d26a47059167e819948d2fe1066cd23"
+    },
+    {
+      "path": "indicators/typologies.json",
+      "bytes": 225,
+      "sha256": "bc425e68d359449dba2b4027cbfeaab3d44bd303cec7dc5917934c31056ce0e9"
+    },
+    {
+      "path": "scenarios/current.json",
+      "bytes": 1252,
+      "sha256": "ae44e30b1cd892078ecf61c6d3a835f07840d4a4f1e038987d9d00bcfd13b22c"
+    },
+    {
+      "path": "scenarios/regional-exploratory.json",
+      "bytes": 3752,
+      "sha256": "23a060462dd89e350dd119272d703479215fb46494a7f34d4c54183d7706c81f"
+    },
+    {
+      "path": "scenarios/shared-services.json",
+      "bytes": 2901,
+      "sha256": "8b19c848a42b58c2e383510977530c2f4464d0c1a1867c46f2aea656c577e550"
+    }
+  ],
+  "contract": {
+    "key": "DIVIPOLA",
+    "resultTypes": [
+      "observed",
+      "calculated",
+      "assumption"
+    ],
+    "missing": "Sin dato disponible"
+  }
+}

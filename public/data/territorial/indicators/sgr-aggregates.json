@@ -1,0 +1,248 @@
+{
+  "source": "dnp-sgr-mzgh-shtp",
+  "status": "partial",
+  "updatedAt": "2026-07-25T07:39:02Z",
+  "dataDate": "Fecha informada por cada registro; muestra API de hasta 5.000 filas",
+  "recordSampleSize": 5000,
+  "records": [
+    {
+      "territoryLabel": "AMAZONAS",
+      "projectCount": 16,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "ANTIOQUIA",
+      "projectCount": 337,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "ARAUCA",
+      "projectCount": 118,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "ATLANTICO",
+      "projectCount": 73,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "BOGOTA D.C.",
+      "projectCount": 25,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "BOLIVAR",
+      "projectCount": 203,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "BOYACA",
+      "projectCount": 223,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CALDAS",
+      "projectCount": 77,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CAQUETA",
+      "projectCount": 68,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CASANARE",
+      "projectCount": 151,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CAUCA",
+      "projectCount": 174,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CESAR",
+      "projectCount": 198,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CHOCO",
+      "projectCount": 116,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CORDOBA",
+      "projectCount": 230,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "CUNDINAMARCA",
+      "projectCount": 153,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "GUAINIA",
+      "projectCount": 14,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "GUAVIARE",
+      "projectCount": 31,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "HUILA",
+      "projectCount": 167,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "LA GUAJIRA",
+      "projectCount": 189,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "MAGDALENA",
+      "projectCount": 133,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "META",
+      "projectCount": 208,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "NARIÑO",
+      "projectCount": 288,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "NORTE DE SANTANDER",
+      "projectCount": 118,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "PUTUMAYO",
+      "projectCount": 153,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "QUINDIO",
+      "projectCount": 33,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "RISARALDA",
+      "projectCount": 51,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "SAN ANDRES",
+      "projectCount": 13,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "SANTANDER",
+      "projectCount": 197,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "SUCRE",
+      "projectCount": 179,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "Sin dato disponible",
+      "projectCount": 733,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "TOLIMA",
+      "projectCount": 160,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "VALLE",
+      "projectCount": 127,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "VAUPES",
+      "projectCount": 16,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    },
+    {
+      "territoryLabel": "VICHADA",
+      "projectCount": 28,
+      "resultType": "calculated",
+      "source": "dnp-sgr-mzgh-shtp",
+      "valueAvailable": false
+    }
+  ],
+  "limitations": "Agregado de cobertura de muestra; no se extrapola ni se presenta como total nacional."
+}

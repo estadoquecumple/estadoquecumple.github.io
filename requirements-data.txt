@@ -1,0 +1,10 @@
+requests>=2.32,<3
+pandas>=2.2,<3
+geopandas>=1.0,<2
+pyogrio>=0.10,<1
+shapely>=2.0,<3
+pyproj>=3.7,<4
+pydantic>=2.10,<3
+PyYAML>=6.0,<7
+tenacity>=9.0,<10
+openpyxl>=3.1,<4

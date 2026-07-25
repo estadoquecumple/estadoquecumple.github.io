@@ -1,0 +1,10 @@
+import {existsSync,readFileSync,readdirSync,statSync} from 'node:fs';
+import {join} from 'node:path';
+const root='public/data/territorial',errors=[],warnings=[];
+const required=['manifest.json','geography/departments.geojson','geography/municipalities-index.json','geography/geography-manifest.json','indicators/population.json','indicators/fiscal.json','indicators/sgr-aggregates.json','indicators/secop-aggregates.json','scenarios/current.json','scenarios/regional-exploratory.json','scenarios/shared-services.json'];
+for(const f of required){const p=join(root,f);if(!existsSync(p)){errors.push(`falta ${f}`);continue}try{const t=readFileSync(p,'utf8');JSON.parse(t);if(/\b(?:NaN|Infinity|-Infinity)\b/.test(t))errors.push(`${f}: valor no finito`)}catch(e){errors.push(`${f}: JSON inválido`)}}
+const index=JSON.parse(readFileSync(join(root,'geography/municipalities-index.json'),'utf8'));if(index.some(x=>!/^\d{5}$/.test(x.code)))errors.push('DIVIPOLA municipal inválido');if(new Set(index.map(x=>x.code)).size!==index.length)errors.push('DIVIPOLA duplicado');
+const walk=d=>readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(join(d,e.name)):[join(d,e.name)]);
+for(const file of walk(root)){const bytes=statSync(file).size;if(bytes>8_000_000)warnings.push(`${file}: ${bytes} bytes supera 8 MB`)}
+const html=join('dist','observatorio','laboratorio-territorial','index.html');if(!existsSync(html))errors.push('falta ruta compilada');else{const t=readFileSync(html,'utf8');for(const term of ['Laboratorio Territorial CAMS','Herramienta exploratoria y no oficial','¿Cómo se construyó este escenario?','Tabla territorial completa'])if(!t.includes(term))errors.push(`HTML: falta ${term}`)}
+if(warnings.length)console.log(warnings.map(x=>`AVISO: ${x}`).join('\n'));if(errors.length){console.error(`LAB AUDIT: ${errors.length} error(es)\n${errors.map(x=>`- ${x}`).join('\n')}`);process.exit(1)}console.log(`LAB AUDIT OK: ruta, ${required.length} archivos, JSON, DIVIPOLA, metadatos, descargas y límites de tamaño verificados.`);

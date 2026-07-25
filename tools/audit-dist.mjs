@@ -1,11 +1,13 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 const root=resolve('dist');
+const territorialRoute='/observatorio/laboratorio-territorial/';
 const routes=['/','/cams/','/cams/trayectoria/','/cams/metodo/','/cams/criterios-y-transparencia/','/propuestas/','/conocimiento/','/investigaciones/','/documentos/','/documentos/estado-que-cumple-2026-2030/','/bitacora/','/observatorio/','/archivo/','/participar/','/participar/correcciones/','/participar/aportar-fuente/','/participar/colaborar/','/buscar/','/accesibilidad/','/privacidad-y-datos/','/estado-que-cumple/','/estado-que-cumple/problema/','/estado-que-cumple/fundamentos/','/estado-que-cumple/metodo/','/estado-que-cumple/arquitectura/','/estado-que-cumple/activacion/','/estado-que-cumple/implementacion/','/estado-que-cumple/aplicaciones/','/estado-que-cumple/documento/','/404.html'];
 const htmlFiles=[];const walk=d=>readdirSync(d,{withFileTypes:true}).forEach(e=>{const p=join(d,e.name);e.isDirectory()?walk(p):e.name.endsWith('.html')&&htmlFiles.push(p)});
 const failures=[];const warn=[];
 if(!existsSync(root)) failures.push('No existe dist/. Ejecute npm run build.'); else walk(root);
 const routeFile=r=>r==='/404.html'?join(root,'404.html'):r==='/'?join(root,'index.html'):join(root,r.slice(1),'index.html');
+routes.push(territorialRoute);
 for(const r of routes)if(!existsSync(routeFile(r)))failures.push(`Falta ruta compilada: ${r}`);
 const ids=new Map();const links=[];
 for(const file of htmlFiles){const html=readFileSync(file,'utf8');const rel=file.slice(root.length).replaceAll('\\','/');

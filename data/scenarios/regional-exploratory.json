@@ -1,0 +1,31 @@
+{
+  "id": "regional-exploratory",
+  "name": "Estado unitario regional — escenario exploratorio",
+  "version": "1.0.0",
+  "authorship": "CAMS",
+  "status": "exploratory",
+  "objective": "Explorar escalas regionales sin presentar una propuesta territorial definitiva.",
+  "units": ["10 regiones exploratorias"],
+  "assignments": [
+    {"id":"andina-norte","name":"Andina Norte","departments":["05","15","17","25","54","63","66","68"],"proposedNode":"Medellín","resultType":"assumption"},
+    {"id":"caribe","name":"Caribe","departments":["08","13","20","23","44","47","70"],"proposedNode":"Barranquilla","resultType":"assumption"},
+    {"id":"centro-capital","name":"Centro Capital","departments":["11"],"proposedNode":"Bogotá D.C.","resultType":"assumption"},
+    {"id":"pacifico","name":"Pacífico","departments":["19","27","52","76"],"proposedNode":"Cali","resultType":"assumption"},
+    {"id":"sur-andina","name":"Sur Andina","departments":["41","73","86"],"proposedNode":"Neiva","resultType":"assumption"},
+    {"id":"orinoquia","name":"Orinoquía","departments":["50","81","85","99"],"proposedNode":"Villavicencio","resultType":"assumption"},
+    {"id":"amazonia","name":"Amazonía","departments":["18","91","94","95","97"],"proposedNode":"Florencia","resultType":"assumption"},
+    {"id":"nororiente","name":"Nororiente","departments":["15","54","68"],"proposedNode":"Bucaramanga","resultType":"assumption"},
+    {"id":"eje-cafetero","name":"Eje Cafetero","departments":["17","63","66"],"proposedNode":"Pereira","resultType":"assumption"},
+    {"id":"insular","name":"Insular","departments":["88"],"proposedNode":"San Andrés","resultType":"assumption"}
+  ],
+  "authorities": ["Autoridad regional por definir jurídicamente", "entidades territoriales"],
+  "competencies": ["Planeación regional", "coordinación de servicios de escala supramunicipal"],
+  "financing": ["Por definir; no se estiman ahorros ni nuevos ingresos"],
+  "planning": ["Instrumentos regionales compatibles con autonomía territorial"],
+  "assumptions": ["Nodos propuestos son hipótesis", "Agrupaciones son declarativas y revisables"],
+  "risks": ["Centralización", "asimetrías internas", "costos de transición", "conflictos de competencia"],
+  "legalRequirements": ["Revisión constitucional y legal", "Definición democrática de autoridades, competencias y financiación"],
+  "uncertainty": "Alta. No es predicción ni propuesta definitiva.",
+  "sources": ["dane-divipola-mgn-2025"],
+  "history": [{"version":"1.0.0","date":"2026-07-25","change":"Agrupación exploratoria inicial"}]
+}
