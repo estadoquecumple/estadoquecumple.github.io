@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+  "reviewedAt": "2026-07-26",
+  "sources": [
+    {
+      "id": "dane-population",
+      "topic": "Población",
+      "authority": "DANE",
+      "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion",
+      "coverage": "Municipal 2018–2042",
+      "integration": "manual-required",
+      "note": "La descarga oficial existe, pero el archivo no está incorporado al repositorio."
+    },
+    {
+      "id": "sigep-entities",
+      "topic": "Gobierno y entidades públicas",
+      "authority": "Función Pública / Datos Abiertos Colombia",
+      "url": "https://www.datos.gov.co/Funci-n-P-blica/Directorio-Georreferenciado-de-Entidades-P-blicas-/kqut-4h4r",
+      "api": "https://www.datos.gov.co/resource/kqut-4h4r.json",
+      "coverage": "Entidades públicas con DIVIPOLA, orden, cobertura, sector y clasificación orgánica",
+      "integration": "current",
+      "file": "government/entities-by-territory.json"
+    },
+    {
+      "id": "secop-ii",
+      "topic": "Contratación pública",
+      "authority": "Colombia Compra Eficiente / Datos Abiertos Colombia",
+      "url": "https://www.datos.gov.co/Estad-sticas-Nacionales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt",
+      "api": "https://www.datos.gov.co/resource/p6dx-8zbt.json",
+      "coverage": "Nacional; actualización diaria",
+      "integration": "current",
+      "file": "indicators/secop-aggregates.json"
+    },
+    {
+      "id": "sgr",
+      "topic": "Regalías e inversión",
+      "authority": "Departamento Nacional de Planeación / Datos Abiertos Colombia",
+      "url": "https://www.datos.gov.co/resource/mzgh-shtp",
+      "api": "https://www.datos.gov.co/resource/mzgh-shtp.json",
+      "coverage": "Muestra API acotada; no equivale al total nacional",
+      "integration": "partial",
+      "file": "indicators/sgr-aggregates.json"
+    },
+    {
+      "id": "chip",
+      "topic": "Presupuesto, contabilidad y recursos públicos",
+      "authority": "Contaduría General de la Nación",
+      "url": "https://www.contaduria.gov.co/generalidades_del_chip",
+      "coverage": "Entidades nacionales y territoriales; CHIP, FUT y CUIPO",
+      "integration": "external-tool",
+      "note": "La consulta pública no ofrece un API estable documentado para descarga automática desde el sitio."
+    },
+    {
+      "id": "mapa-inversiones",
+      "topic": "Inversión pública",
+      "authority": "Departamento Nacional de Planeación",
+      "url": "https://mapainversiones.dnp.gov.co/Home/FichaRecursosCuantoSeInvierte",
+      "coverage": "Departamentos y municipios; recursos presupuestados y ejecutados",
+      "integration": "external-tool",
+      "note": "Se enlaza la herramienta pública; no se extraen cifras de su interfaz."
+    }
+  ]
+}

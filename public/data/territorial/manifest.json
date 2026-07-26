@@ -1,7 +1,42 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-07-25T07:50:31Z",
+  "generatedAt": "2026-07-26T22:09:41Z",
   "files": [
+    {
+      "path": "context/capital-cities.geojson",
+      "bytes": 2718,
+      "sha256": "34a5f26bb3e603198e35f237ac6275157d4a4407f9c2fa06f5901e264f97637a"
+    },
+    {
+      "path": "context/coastline.geojson",
+      "bytes": 78027,
+      "sha256": "5c94f3c1d88929b2d382e1dc25f3d7c22b36707acd1b7fcad5b1490376b7f90d"
+    },
+    {
+      "path": "context/context-manifest.json",
+      "bytes": 695,
+      "sha256": "3f31960795fddcda9679a3ffe2df532f6698099c15a07e2e931c594c8f6ce0bc"
+    },
+    {
+      "path": "context/countries-near-colombia.geojson",
+      "bytes": 55685,
+      "sha256": "ddd42e8cc15a5cbc2b17cb5e4fcf186c317cabbadfc194c99058e7c28202b931"
+    },
+    {
+      "path": "context/country-borders.geojson",
+      "bytes": 56277,
+      "sha256": "7f3eed1c804d0ca7824c17495c4e50e39464941430bf836579dd499357d42379"
+    },
+    {
+      "path": "context/geographic-labels.geojson",
+      "bytes": 3157,
+      "sha256": "f44146de47246d504fbb4f0c698e4b5097ee286ac398ab039904d72ae9a37848"
+    },
+    {
+      "path": "context/ocean.geojson",
+      "bytes": 431387,
+      "sha256": "6d4da7dedd3d4bcb3e715b24e4139ec4ae7a4ba8d2786d25a7f601e430cf9275"
+    },
     {
       "path": "geography/departments.geojson",
       "bytes": 591883,
@@ -188,6 +223,11 @@
       "sha256": "33913be990768862f71f6e2a482d7f3a0ee7e42bf36cfa24ac3a8abef65bc14e"
     },
     {
+      "path": "government/entities-by-territory.json",
+      "bytes": 514943,
+      "sha256": "e339dd453627267640c720eda92e5909cde8383dc2f9723632808dfebf9efd7c"
+    },
+    {
       "path": "indicators/fiscal.json",
       "bytes": 211,
       "sha256": "5fcc70db3d206b564df667d880c9c506aae57273086b7cfd9b6a3af8d4dd0470"
@@ -223,19 +263,194 @@
       "sha256": "bc425e68d359449dba2b4027cbfeaab3d44bd303cec7dc5917934c31056ce0e9"
     },
     {
+      "path": "official-sources.json",
+      "bytes": 2797,
+      "sha256": "c30a0ae7f8ceb85bc2bd2e8d2d21584cbcf7bb7bf9752fc108802e47936def3c"
+    },
+    {
       "path": "scenarios/current.json",
       "bytes": 1252,
       "sha256": "ae44e30b1cd892078ecf61c6d3a835f07840d4a4f1e038987d9d00bcfd13b22c"
     },
     {
       "path": "scenarios/regional-exploratory.json",
-      "bytes": 3752,
-      "sha256": "23a060462dd89e350dd119272d703479215fb46494a7f34d4c54183d7706c81f"
+      "bytes": 4027,
+      "sha256": "0598bfee2185501a5907db596169a5f62c55ec1e5e805f2386f6b26983eb311c"
     },
     {
       "path": "scenarios/shared-services.json",
       "bytes": 2901,
       "sha256": "8b19c848a42b58c2e383510977530c2f4464d0c1a1867c46f2aea656c577e550"
+    },
+    {
+      "path": "topology/department-neighbours.json",
+      "bytes": 7458,
+      "sha256": "0073e4bf74058ba92f5dbcf1eab7457c9a78a3be829a82368be78ade28560c4e"
+    },
+    {
+      "path": "topology/municipalities/05.json",
+      "bytes": 26688,
+      "sha256": "19e0cebbf1602366986302bd8881585f753660905b2a477d027f7c773896ed2b"
+    },
+    {
+      "path": "topology/municipalities/08.json",
+      "bytes": 5018,
+      "sha256": "c0981395ef403a2602cd27d5150f7b5bdca34ae0e438744e5c2721c3d7c7c4b8"
+    },
+    {
+      "path": "topology/municipalities/11.json",
+      "bytes": 353,
+      "sha256": "2bc4e46063f2a178444863780707fe9a469a8eb6aba47f85d16f9d28c37a2787"
+    },
+    {
+      "path": "topology/municipalities/13.json",
+      "bytes": 10435,
+      "sha256": "6e6260166138f184b5af1d09c3dc169b328a82d3a19fa47599b9491baa343194"
+    },
+    {
+      "path": "topology/municipalities/15.json",
+      "bytes": 24344,
+      "sha256": "034ac79ad0a68fa03b7100fc72dbe61395e09bce2b17459fb37e0e27ced47147"
+    },
+    {
+      "path": "topology/municipalities/17.json",
+      "bytes": 5668,
+      "sha256": "7b37324cc4c500cfdcb3e254c1237146106d6943bad036d7df0625679472c4e9"
+    },
+    {
+      "path": "topology/municipalities/18.json",
+      "bytes": 3780,
+      "sha256": "d4f37851af3d955c410332a49da799c36f79d42dd9f3084396e321f86428d65b"
+    },
+    {
+      "path": "topology/municipalities/19.json",
+      "bytes": 9258,
+      "sha256": "47f63e88eaba54bea97533fdcce68b2160dd3172c3fd6098852b0814866eff53"
+    },
+    {
+      "path": "topology/municipalities/20.json",
+      "bytes": 5498,
+      "sha256": "c38a4a06cb227dbad5d8e3752fcf3de7c70457bf7b8c36456ec900926794d26e"
+    },
+    {
+      "path": "topology/municipalities/23.json",
+      "bytes": 6908,
+      "sha256": "09d352b005c910472e39e14d8d047ba7f6bb63eaa9f66efa7ff6e9051ca6173e"
+    },
+    {
+      "path": "topology/municipalities/25.json",
+      "bytes": 23181,
+      "sha256": "e5075ddf274f51138bab7f790546392de2c7a2e6c7eb3c83949a75ad3e48a4f0"
+    },
+    {
+      "path": "topology/municipalities/27.json",
+      "bytes": 7184,
+      "sha256": "13307e07eb40f6375c99be0c19e9661f20f9bf74b71740f71e5c850f6e365ff8"
+    },
+    {
+      "path": "topology/municipalities/41.json",
+      "bytes": 8185,
+      "sha256": "0d672029bf5d5f8253667eb4b1d83a7fefe78465ab132896b2cd57fff3c67177"
+    },
+    {
+      "path": "topology/municipalities/44.json",
+      "bytes": 3304,
+      "sha256": "a4be149bb0e271ed61a7b0e6d1ff2e612478c8657a6009311292b88ddb87b171"
+    },
+    {
+      "path": "topology/municipalities/47.json",
+      "bytes": 6731,
+      "sha256": "e93068984cae71da0b2e8b55fd76cbd36e0ae7b81cedab66a809220bc1c6fc84"
+    },
+    {
+      "path": "topology/municipalities/50.json",
+      "bytes": 6790,
+      "sha256": "8adbca8df1df6663656fc31beb18aabe18a4885a213610818e62cefd0aad2a6b"
+    },
+    {
+      "path": "topology/municipalities/52.json",
+      "bytes": 13112,
+      "sha256": "1281041446d5719c3ed8a727a6d326eaa8b561224fde61f26a17f6161331eaaa"
+    },
+    {
+      "path": "topology/municipalities/54.json",
+      "bytes": 9007,
+      "sha256": "bb1e29e62412a0688d397afb3d2a80bd18eca503f8a4a404589d2002178048e9"
+    },
+    {
+      "path": "topology/municipalities/63.json",
+      "bytes": 2362,
+      "sha256": "2e23ef134e05cf2070c59e251829ea537faa54d284b2039980443afe9d52fec9"
+    },
+    {
+      "path": "topology/municipalities/66.json",
+      "bytes": 2814,
+      "sha256": "53b4c87c8808392aacaca50538ce74bcb15d3b328009e6aa9e6fe24a9da3575b"
+    },
+    {
+      "path": "topology/municipalities/68.json",
+      "bytes": 18120,
+      "sha256": "165a3c92277a81795f2c7742e1a5e3ccffb8adeb30a39289643eba61a2d0b0a5"
+    },
+    {
+      "path": "topology/municipalities/70.json",
+      "bytes": 5987,
+      "sha256": "96c706c53c5db819fb855f6450b2a38af485362c1757238d4bb48c984d056475"
+    },
+    {
+      "path": "topology/municipalities/73.json",
+      "bytes": 10167,
+      "sha256": "5884062cfe76924b2314b0aed8b848c533237343abc8aa538cca7189cb4dc112"
+    },
+    {
+      "path": "topology/municipalities/76.json",
+      "bytes": 9133,
+      "sha256": "26098ee999828f2b0451a0c5e59b7893888a770d8c624175e7dd8bee889ae952"
+    },
+    {
+      "path": "topology/municipalities/81.json",
+      "bytes": 1655,
+      "sha256": "512282d8220e89b37414c61c5a6c872529f615fd8291d1ba7ff608b6f511f882"
+    },
+    {
+      "path": "topology/municipalities/85.json",
+      "bytes": 4292,
+      "sha256": "0500896fa71b3cb5d0f46eb5dd3fadd931808324cf11cdab5b9e2cb82168f39d"
+    },
+    {
+      "path": "topology/municipalities/86.json",
+      "bytes": 3025,
+      "sha256": "3a8c828d9a6d74fb6776589d153a05eef161ac88f42b257d299bc6ec91fcba89"
+    },
+    {
+      "path": "topology/municipalities/88.json",
+      "bytes": 502,
+      "sha256": "23d8a30e9f8d4d0678ebf8fa0c905c8b8eaf54f43ac3ea6c7777c93d2f2d1d65"
+    },
+    {
+      "path": "topology/municipalities/91.json",
+      "bytes": 2546,
+      "sha256": "886ef21f7b209c861a8f8ac05c08662bf8070c0dcf3f61b259100517f492ba27"
+    },
+    {
+      "path": "topology/municipalities/94.json",
+      "bytes": 1834,
+      "sha256": "ccecd4eda3fbdf6e2c73e480836cecb2e38f85e95807efd8270daeb3280659f4"
+    },
+    {
+      "path": "topology/municipalities/95.json",
+      "bytes": 1012,
+      "sha256": "601a3651bc5a98bb23aa62dda4e20e26fb38b43e8f61e65dba6796fe401513ea"
+    },
+    {
+      "path": "topology/municipalities/97.json",
+      "bytes": 1398,
+      "sha256": "6bbf1e6a9813ddaf1effd340d6bb5198a4c3b695956f0e95e84583bf6625c9fd"
+    },
+    {
+      "path": "topology/municipalities/99.json",
+      "bytes": 1026,
+      "sha256": "349b1ecc4a9a2a978cf2a2c3b81d660a3f705cf7c621d4a5a5e45e1edef14268"
     }
   ],
   "contract": {

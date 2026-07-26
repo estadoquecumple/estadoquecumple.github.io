@@ -10,7 +10,7 @@ if __name__=="__main__":
     if not opts.offline or not geography.exists(): run("fetch_dane_geography.py")
     for name in ("fetch_dane_population.py","fetch_dnp_typologies.py","fetch_dnp_fiscal.py","fetch_dnp_mdm.py"): run(name)
     if opts.offline:
-        run("fetch_sgr.py","--offline"); run("fetch_secop.py","--offline")
+        run("fetch_sgr.py","--offline"); run("fetch_secop.py","--offline"); run("fetch_government_entities.py","--offline")
     else:
-        run("fetch_sgr.py"); run("fetch_secop.py")
+        run("fetch_sgr.py"); run("fetch_secop.py"); run("fetch_government_entities.py")
     for name in ("normalize_divipola.py","build_geography.py","build_scenarios.py","build_indicators.py","build_manifest.py","validate_sources.py"): run(name)

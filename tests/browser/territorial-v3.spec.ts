@@ -92,6 +92,8 @@ test('SAVIA declara fuentes manual-required como ausentes',async({page},testInfo
   if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="controls"]').click();
   await page.locator('[data-evaluate]').click();
   await expect(page.locator('[data-capacity-profile]')).toContainText('insuficiente');
+  await expect(page.locator('[data-official-sources]')).toContainText('Función Pública');
+  await expect(page.locator('[data-official-metrics]')).toContainText('SECOP II');
   await page.locator('[data-weight="fiscal"]').fill('40'); await page.locator('[data-reset-weights]').click();
   await expect(page.locator('[data-weight="fiscal"]')).toHaveValue('25');
 });

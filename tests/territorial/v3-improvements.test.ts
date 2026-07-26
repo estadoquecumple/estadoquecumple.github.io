@@ -6,6 +6,7 @@ import { safeCsvCell, safeExternalUrl, scenarioCsv } from '../../src/data/territ
 import { classifyBoundaryRelation, repairRing } from '../../src/data/territorial/topology-v3';
 import { labelTerritorialUnit, normalizeMpioTipo } from '../../src/data/territorial/unit-types';
 import { territorialExamples } from '../../src/data/territorial/examples-v3';
+import { metricsForSelection } from '../../src/data/territorial/official-metrics';
 
 const square = (x: number) => ({ type: 'Polygon', coordinates: [[[x, 0], [x + 1, 0], [x + 1, 1], [x, 1], [x, 0]]] });
 
@@ -61,5 +62,17 @@ describe('mejoras funcionales V3', () => {
       'bogota-sabana', 'rap-caribe-ret', 'without-departments',
     ]);
     expect(territorialExamples.filter((item) => !item.available).every((item) => item.selection.length > 0)).toBe(true);
+  });
+
+  it('conecta gobierno y SGR por territorio sin atribuir SECOP nacional a la selección', () => {
+    const metrics=metricsForSelection(
+      [{code:'05001',name:'Medellín',level:'municipality'},{code:'05',name:'Antioquia',level:'department'}],
+      [{code:'05001',entityCount:31}],
+      [{territoryLabel:'ANTIOQUIA',projectCount:337}],
+      [{kind:'contracts',recordCount:100}],
+    );
+    expect(metrics.find((item)=>item.id==='government-entities')).toMatchObject({value:31,kind:'calculated'});
+    expect(metrics.find((item)=>item.id==='sgr-project-sample')).toMatchObject({value:337,kind:'calculated'});
+    expect(metrics.find((item)=>item.id==='secop-system')?.warning).toContain('no contratación atribuible');
   });
 });

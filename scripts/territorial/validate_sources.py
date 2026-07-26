@@ -6,7 +6,7 @@ from common import PUBLIC, ROOT, read_json
 ALLOWED={"current","stale","partial","manual-required","unavailable"}
 def run():
     errors=[]; warnings=[]
-    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","manifest.json"]
+    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","government/entities-by-territory.json","official-sources.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","manifest.json"]
     for rel in required:
         path=PUBLIC/rel
         if not path.exists(): errors.append(f"falta {rel}"); continue
@@ -24,6 +24,16 @@ def run():
         doc=read_json(path)
         if "status" in doc and doc["status"] not in ALLOWED: errors.append(f"{path.name}: estado inválido")
         if doc.get("status")=="manual-required": warnings.append(f"{doc.get('source')}: manual-required")
+    government=PUBLIC/"government"/"entities-by-territory.json"
+    if government.exists():
+        doc=read_json(government); records=doc.get("records",[]); codes=[item.get("code","") for item in records]
+        if doc.get("source")!="sigep-entities-kqut-4h4r": errors.append("government: fuente inesperada")
+        if any(not re.fullmatch(r"\d{5}",code) for code in codes): errors.append("government: DIVIPOLA inválido")
+        if len(codes)!=len(set(codes)): errors.append("government: DIVIPOLA duplicado")
+    registry=PUBLIC/"official-sources.json"
+    if registry.exists():
+        for source in read_json(registry).get("sources",[]):
+            if not str(source.get("url","")).startswith("https://"): errors.append(f"official-sources: URL insegura en {source.get('id')}")
     for path in (PUBLIC/"scenarios").glob("*.json"):
         doc=read_json(path)
         for key in ("version","authorship","status","objective","units","assignments","assumptions","risks","legalRequirements","uncertainty","sources","history"):

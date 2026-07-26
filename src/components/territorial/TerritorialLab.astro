@@ -85,6 +85,7 @@ import TerritoryMap from './TerritoryMap.astro';
   import { subdivisionCaveat, subdivisionModels } from '../../data/territorial/subdivisions';
   import { scenarioToMapCollections } from '../../data/territorial/scenario-map';
   import { scenarioCsv } from '../../data/territorial/security';
+  import { metricsForSelection } from '../../data/territorial/official-metrics';
 
   type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; geometry?: unknown };
   const $ = <T extends Element>(selector: string) => document.querySelector<T>(selector);
@@ -120,6 +121,9 @@ import TerritoryMap from './TerritoryMap.astro';
   let municipalityIndex: Array<{code:string;departmentCode:string;name:string}> = [];
   let spatialCandidates: Selection[] = [];
   let spatialRelations = new Map<string,'intersection'|'containment'|'contact'>();
+  let governmentMetrics: Array<{code:string;entityCount:number}> = [];
+  let sgrMetrics: Array<{territoryLabel:string;projectCount:number}> = [];
+  let secopMetrics: Array<{kind:string;recordCount:number|null}> = [];
   const polygonRings=(geometry:any):number[][][]=>geometry.type==='Polygon'?geometry.coordinates:geometry.coordinates.flat();
   const inside=(point:number[],ring:number[][])=>{let result=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const [xi,yi]=ring[i],[xj,yj]=ring[j];if(((yi>point[1])!==(yj>point[1]))&&(point[0]<(xj-xi)*(point[1]-yi)/(yj-yi)+xi))result=!result;}return result;};
   const orientation=(a:number[],b:number[],c:number[])=>Math.sign((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]));
@@ -364,8 +368,19 @@ import TerritoryMap from './TerritoryMap.astro';
     const weights = $$<HTMLInputElement>('[data-weight]').map((input) => Number(input.value));
     const names = ['Fiscal', 'Administrativa', 'Escala y accesibilidad', 'Coordinación y sostenibilidad'];
     profile.textContent = '';
-    names.forEach((name, index) => { const p = document.createElement('p'); p.textContent = `${name}: peso ${weights[index]} · evidencia ${selected.size ? 'parcial' : 'insuficiente'} · resultado ${selected.size ? 'calculated' : 'unavailable'}`; profile.append(p); });
-    const conclusion = document.createElement('p'); conclusion.textContent = selected.size ? 'Recomendación condicionada: requerir mayor evidencia y considerar asistencia o coordinación antes de transformar estructuras.' : 'Seleccione unidades para evaluar.'; profile.append(conclusion);
+    names.forEach((name, index) => { const p = document.createElement('p'); p.textContent = `${name}: peso ${weights[index]} · evidencia insuficiente · resultado unavailable`; profile.append(p); });
+    const conclusion = document.createElement('p'); conclusion.textContent = 'No disponible: los pesos solo producirán un puntaje cuando existan valores comparables para todas las dimensiones. La selección por sí sola no genera una recomendación.'; profile.append(conclusion);
+    const metricsHost = $('[data-official-metrics]');
+    if (metricsHost) {
+      metricsHost.textContent = '';
+      for (const metric of metricsForSelection(selectedUnits(), governmentMetrics, sgrMetrics, secopMetrics)) {
+        const article = document.createElement('article');
+        appendText(article, 'strong', `${metric.label}: ${metric.value == null ? 'No disponible' : `${metric.value.toLocaleString('es-CO')} ${metric.unit}`}`);
+        appendText(article, 'p', `Cobertura: ${metric.coverage} · ${metric.kind}. Fuente: ${metric.source}.`);
+        if (metric.warning) appendText(article, 'p', metric.warning);
+        metricsHost.append(article);
+      }
+    }
   });
   $('[data-create-scenario]')?.addEventListener('click', () => {
     const scenario = createScenario(`Escenario ${scenarios.size + 1}`); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); refreshScenarioLists(scenario.id); void renderScenario(); announce('Escenario editable creado.');
@@ -480,6 +495,15 @@ import TerritoryMap from './TerritoryMap.astro';
     }
   } catch { announce('No fue posible revisar preferencias locales antiguas.'); }
   store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
+  Promise.all([
+    fetch('/data/territorial/government/entities-by-territory.json').then((response)=>response.json()),
+    fetch('/data/territorial/indicators/sgr-aggregates.json').then((response)=>response.json()),
+    fetch('/data/territorial/indicators/secop-aggregates.json').then((response)=>response.json()),
+    fetch('/data/territorial/official-sources.json').then((response)=>response.json()),
+  ]).then(([government,sgr,secop,registry])=>{
+    governmentMetrics=government.records??[];sgrMetrics=sgr.records??[];secopMetrics=secop.records??[];
+    const host=$('[data-official-sources]');if(host){host.textContent='';for(const source of registry.sources??[]){const li=document.createElement('li');const link=document.createElement('a');link.textContent=`${source.topic} — ${source.authority}`;link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';li.append(link,` · ${source.integration} · ${source.coverage}`);host.append(li);}}
+  }).catch((error)=>{const host=$('[data-official-sources]');if(host)host.textContent=`No fue posible cargar el registro local de fuentes: ${error instanceof Error?error.message:String(error)}`;});
   const initialParams = new URLSearchParams(location.search);
   const shared = initialParams.get('share');
   if (shared) try {
