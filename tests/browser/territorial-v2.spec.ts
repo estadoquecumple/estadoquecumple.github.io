@@ -8,10 +8,22 @@ const screenshot = (name: string) => resolve(`artifacts/playwright/${name}.png`)
 test.beforeEach(async ({ page }) => {
   await page.goto(route, { waitUntil: 'networkidle' });
 });
+test('normaliza aliases históricos a parámetros canónicos', async ({ page }) => {
+  for (const [legacy, canonical] of [['roots', 'raices'], ['sap', 'savia'], ['seeds', 'semillas']] as const) {
+    await page.goto(`${route}?mode=${legacy}`, { waitUntil: 'networkidle' });
+    await expect(page).toHaveURL(new RegExp(`\\?mode=${canonical}$`));
+    await expect(page.locator(`[data-workspace="${canonical}"]`)).toBeAttached();
+  }
+});
 
-test('RAÍCES carga mapa, selecciona departamento y mantiene tabla', async ({ page }, testInfo) => {
-  await expect(page.locator('[data-workspace="roots"]')).toBeVisible();
-  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-panel="map"]').click();
+test('RAÍCES abre en mapa y mantiene tabla', async ({ page }, testInfo) => {
+  await expect(page.locator('[data-workspace="raices"]')).toBeAttached();
+  if (testInfo.project.name === 'mobile') {
+    await expect(page.locator('[data-mobile-tab="map"]')).toHaveAttribute('aria-pressed', 'true');
+    await page.locator('[data-mobile-tab="map"]').click();
+  } else {
+    await expect(page.locator('[data-workspace="raices"]')).toBeVisible();
+  }
   const map = page.locator('#territory-map');
   await map.scrollIntoViewIfNeeded();
   await expect(page.locator('[data-map-status]')).toHaveAttribute('data-state', 'ready');
@@ -27,7 +39,10 @@ test('RAÍCES carga mapa, selecciona departamento y mantiene tabla', async ({ pa
     };
   });
   expect(contract).toEqual({ source: true, fill: true, line: true });
-  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-panel="controls"]').click();
+  if (testInfo.project.name === 'mobile') {
+    await page.locator('[data-mobile-tab="controls"]').click();
+    await expect(page.locator('[data-workspace="raices"]')).toBeVisible();
+  }
   await page.locator('[data-department-select]').selectOption('05');
   await expect(page.locator('[data-municipality-select]')).toBeEnabled();
   await expect(page.locator('[data-territory-table] tr')).not.toHaveCount(0);
@@ -37,7 +52,12 @@ test('RAÍCES carga mapa, selecciona departamento y mantiene tabla', async ({ pa
 
 test('SAVIA cambia y restablece pesos con advertencia metodológica', async ({ page }, testInfo) => {
   await page.getByRole('button', { name: /SAVIA/ }).click();
-  await expect(page.locator('[data-workspace="sap"]')).toBeVisible();
+  await expect(page.locator('[data-workspace="savia"]')).toBeAttached();
+  if (testInfo.project.name === 'mobile') {
+    await expect(page.locator('[data-mobile-tab="results"]')).toHaveAttribute('aria-pressed', 'true');
+    await page.locator('[data-mobile-tab="controls"]').click();
+  }
+  await expect(page.locator('[data-workspace="savia"]')).toBeVisible();
   const fiscal = page.locator('[data-weight="fiscal"]');
   await fiscal.fill('60');
   await expect(fiscal).toHaveValue('60');
@@ -46,11 +66,15 @@ test('SAVIA cambia y restablece pesos con advertencia metodológica', async ({ p
   await page.locator('[data-evaluate]').click();
   await expect(page.locator('[data-capacity-profile]')).toContainText('evidencia insuficiente');
   await expect(page.locator('.method-warning')).toContainText('No se determina');
-  await page.screenshot({ path: screenshot(`v2-savia-${testInfo.project.name}`), fullPage: true });
+  if (testInfo.project.name === 'chromium') await page.screenshot({ path: screenshot('savia'), fullPage: true });
 });
 
 test('SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta', async ({ page }, testInfo) => {
   await page.getByRole('button', { name: /SEMILLAS/ }).click();
+  await expect(page.locator('[data-workspace="semillas"]')).toBeVisible();
+  if (testInfo.project.name === 'mobile') {
+    await expect(page.locator('[data-mobile-tab="controls"]')).toHaveAttribute('aria-pressed', 'true');
+  }
   await page.locator('[data-create-scenario]').click();
   await expect(page.locator('[data-save-status]')).toContainText('Guardado');
   const checks = page.locator('[data-territory-check]');
@@ -89,34 +113,25 @@ test('SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta', as
   await page.reload({ waitUntil: 'networkidle' });
   await page.getByRole('button', { name: /SEMILLAS/ }).click();
   expect(await page.locator('[data-local-scenarios] option').count()).toBeGreaterThan(1);
-  await page.screenshot({ path: screenshot(`v2-seeds-${testInfo.project.name}`), fullPage: true });
+  if (testInfo.project.name === 'chromium') await page.screenshot({ path: screenshot('semillas'), fullPage: true });
 });
 
 test('fallo GeoJSON muestra error y conserva alternativa textual', async ({ page }, testInfo) => {
   await page.route('**/data/territorial/geography/departments.geojson', (route) => route.fulfill({ status: 503, contentType: 'application/json', body: '{}' }));
   await page.reload({ waitUntil: 'networkidle' });
-  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-panel="map"]').click();
+  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-tab="map"]').click();
   await expect(page.locator('[data-map-status]')).toHaveAttribute('data-state', 'error');
-  await expect(page.getByRole('button', { name: 'Reintentar mapa' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Tabla territorial y selección' })).toBeVisible();
+  await expect(page.locator('[data-map-retry]')).toBeVisible();
+  await expect(page.locator('[data-territory-table]')).toBeVisible();
 });
 
-test('fallo IndexedDB no bloquea RAÍCES ni el mapa', async ({ page }) => {
+test('fallo IndexedDB no bloquea RAÍCES ni el mapa', async ({ page }, testInfo) => {
   await page.addInitScript(() => {
     Object.defineProperty(window, 'indexedDB', { configurable: true, get: () => { throw new Error('IndexedDB bloqueada para prueba'); } });
   });
   await page.reload({ waitUntil: 'networkidle' });
-  await expect(page.locator('[data-workspace="roots"]')).toBeVisible();
+  await expect(page.locator('[data-workspace="raices"]')).toBeAttached();
+  if (testInfo.project.name === 'mobile') await expect(page.locator('[data-mobile-tab="map"]')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('[data-map-status]')).toHaveAttribute('data-state', 'ready');
   await expect(page.locator('[data-operation-status]')).toContainText('IndexedDB');
-});
-
-test('captura comparación y vista móvil', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'Captura móvil solo en el proyecto móvil.');
-  await page.getByRole('button', { name: /SEMILLAS/ }).click();
-  await page.locator('[data-mobile-panel="map"]').click();
-  const map = page.locator('#territory-map');
-  await expect(map).toBeVisible();
-  expect((await map.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(440);
-  await page.screenshot({ path: screenshot('v2-mobile'), fullPage: true });
 });

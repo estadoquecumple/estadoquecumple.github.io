@@ -1,26 +1,26 @@
 ---
 import RootsWorkspace from './RootsWorkspace.astro';
-import SapWorkspace from './SapWorkspace.astro';
+import SaviaWorkspace from './SaviaWorkspace.astro';
 import SeedsWorkspace from './SeedsWorkspace.astro';
 import ScenarioOutputs from './ScenarioOutputs.astro';
 import TerritoryMap from './TerritoryMap.astro';
 ---
 <div class="migration-notice" data-migration-notice hidden role="status">El Laboratorio fue actualizado. Los escenarios incompatibles de la versión anterior no se reutilizaron.</div>
 <nav class="mode-navigation" aria-label="Instrumentos del Laboratorio" data-mode-navigation>
-  <button type="button" data-mode="roots" aria-pressed="true"><strong>RAÍCES</strong><span>Ver</span></button>
-  <button type="button" data-mode="sap" aria-pressed="false"><strong>SAVIA</strong><span>Evaluar</span></button>
-  <button type="button" data-mode="seeds" aria-pressed="false"><strong>SEMILLAS</strong><span>Diseñar</span></button>
+  <button type="button" data-mode="raices" aria-pressed="true"><strong>RAÍCES</strong><span>Ver</span></button>
+  <button type="button" data-mode="savia" aria-pressed="false"><strong>SAVIA</strong><span>Evaluar</span></button>
+  <button type="button" data-mode="semillas" aria-pressed="false"><strong>SEMILLAS</strong><span>Diseñar</span></button>
 </nav>
 <nav class="mobile-tabs" aria-label="Paneles del laboratorio">
-  <button type="button" data-mobile-panel="controls">Controles</button>
-  <button type="button" data-mobile-panel="map">Mapa</button>
-  <button type="button" data-mobile-panel="results">Resultados</button>
-  <button type="button" data-mobile-panel="method">Método</button>
+  <button type="button" data-mobile-panel="controls" data-mobile-tab="controls" aria-pressed="false">Controles</button>
+  <button type="button" data-mobile-panel="map" data-mobile-tab="map" aria-pressed="true">Mapa</button>
+  <button type="button" data-mobile-panel="results" data-mobile-tab="results" aria-pressed="false">Resultados</button>
+  <button type="button" data-mobile-panel="method" data-mobile-tab="method" aria-pressed="false">Método</button>
 </nav>
 <div class="lab-shell-v2">
   <aside class="lab-context" data-panel="controls" aria-label="Panel contextual">
     <RootsWorkspace />
-    <SapWorkspace />
+    <SaviaWorkspace />
     <SeedsWorkspace />
   </aside>
   <main class="lab-map" data-panel="map"><TerritoryMap /></main>
@@ -90,7 +90,9 @@ import TerritoryMap from './TerritoryMap.astro';
   let timeline: ScenarioTimeline | undefined;
   let departments: Array<any> = [];
   let municipalities: Array<any> = [];
-  let mode: 'roots' | 'sap' | 'seeds' = 'roots';
+  type LabMode = 'raices' | 'savia' | 'semillas';
+  type MobilePanel = 'controls' | 'map' | 'results' | 'method';
+  let mode: LabMode = 'raices';
   let experimentalGeometry: GeoJSON.Polygon | null = null;
   const announce = (text: string) => { const node = $('[data-operation-status]'); if (node) node.textContent = text; };
   const download = (name: string, type: string, content: string) => {
@@ -142,6 +144,30 @@ import TerritoryMap from './TerritoryMap.astro';
     }
     renderSelection();
   };
+  const ingestDepartments = (features: Array<any>) => {
+    departments = features;
+    const selectNode = $<HTMLSelectElement>('[data-department-select]');
+    if (selectNode) {
+      const previous = selectNode.value;
+      selectNode.textContent = '';
+      selectNode.add(new Option('Colombia', ''));
+      departments.forEach((feature) => selectNode.add(new Option(feature.properties.name, feature.properties.code)));
+      if ([...selectNode.options].some((option) => option.value === previous)) selectNode.value = previous;
+    }
+    renderTable();
+  };
+  const loadTableFallback = async () => {
+    try {
+      const response = await fetch('/data/territorial/geography/departments.geojson', { headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const collection = await response.json();
+      if (collection?.type !== 'FeatureCollection' || !Array.isArray(collection.features) || !collection.features.length) throw new Error('GeoJSON sin entidades');
+      ingestDepartments(collection.features);
+    } catch (error) {
+      const table = $('[data-territory-table]');
+      if (table) table.textContent = `No fue posible cargar la tabla: ${error instanceof Error ? error.message : String(error)}`;
+    }
+  };
   const renderScenario = async () => {
     const scenario = timeline?.current;
     enableScenarioActions(Boolean(scenario));
@@ -189,31 +215,37 @@ import TerritoryMap from './TerritoryMap.astro';
       if ([...selectNode.options].some((option) => option.value === previous)) selectNode.value = previous;
     }
   };
-  const setMode = (next: typeof mode) => {
+  const setMobilePanel = (next: MobilePanel) => {
+    $$<HTMLElement>('[data-panel]').forEach((panel) => panel.dataset.mobileActive = String(panel.dataset.panel === next));
+    $$<HTMLButtonElement>('[data-mobile-tab]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.mobileTab === next)));
+    window.dispatchEvent(new CustomEvent('territorial:resize'));
+  };
+  const defaultPanel: Record<LabMode, MobilePanel> = { raices: 'map', savia: 'results', semillas: 'controls' };
+  const setMode = (next: LabMode, chooseDefaultPanel = true) => {
     mode = next;
     $$<HTMLElement>('[data-workspace]').forEach((workspace) => workspace.hidden = workspace.dataset.workspace !== mode);
     $$<HTMLButtonElement>('[data-mode]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
     document.body.dataset.labMode = mode;
     const descriptions = {
-      roots: 'RAÍCES muestra el sistema actual y no habilita operaciones de edición.',
-      sap: 'SAVIA evalúa la selección sin modificar el escenario oficial.',
-      seeds: 'SEMILLAS permite editar únicamente escenarios locales exploratorios.',
+      raices: 'RAÍCES muestra el sistema actual y no habilita operaciones de edición.',
+      savia: 'SAVIA evalúa la selección sin modificar el escenario oficial.',
+      semillas: 'SEMILLAS permite editar únicamente escenarios locales exploratorios.',
     };
     const result = $('[data-mode-result]'); if (result) result.textContent = descriptions[mode];
-    const legend = $('[data-map-legend]'); if (legend) legend.textContent = `${mode === 'roots' ? 'RAÍCES · consulta oficial' : mode === 'sap' ? 'SAVIA · perfil multidimensional' : 'SEMILLAS · hipótesis editable'}`;
+    const legend = $('[data-map-legend]'); if (legend) legend.textContent = `${mode === 'raices' ? 'RAÍCES · consulta oficial' : mode === 'savia' ? 'SAVIA · perfil multidimensional' : 'SEMILLAS · hipótesis editable'}`;
     const params = new URLSearchParams(location.search); params.set('mode', mode); history.replaceState(null, '', `${location.pathname}?${params}`);
-    window.dispatchEvent(new CustomEvent('territorial:resize'));
+    if (chooseDefaultPanel) setMobilePanel(defaultPanel[mode]);
+    else window.dispatchEvent(new CustomEvent('territorial:resize'));
   };
-  $$<HTMLButtonElement>('[data-mode]').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode as typeof mode)));
+  $$<HTMLButtonElement>('[data-mode]').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode as LabMode)));
   $$<HTMLButtonElement>('[data-mobile-panel]').forEach((button) => button.addEventListener('click', () => {
-    $$<HTMLElement>('[data-panel]').forEach((panel) => panel.dataset.mobileActive = String(panel.dataset.panel === button.dataset.mobilePanel));
-    window.dispatchEvent(new CustomEvent('territorial:resize'));
+    setMobilePanel(button.dataset.mobilePanel as MobilePanel);
   }));
+  $('[data-view-table]')?.addEventListener('click', () => {
+    document.querySelector('#selected-table-title')?.scrollIntoView({ block: 'start' });
+  });
   document.addEventListener('territorial:departments', ((event: CustomEvent<any>) => {
-    departments = event.detail.features;
-    const selectNode = $<HTMLSelectElement>('[data-department-select]');
-    departments.forEach((feature) => selectNode?.add(new Option(feature.properties.name, feature.properties.code)));
-    renderTable();
+    ingestDepartments(event.detail.features);
   }) as EventListener);
   document.addEventListener('territorial:municipalities', ((event: CustomEvent<any>) => {
     municipalities = event.detail.features;
@@ -309,7 +341,7 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-export-geojson]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.geojson`, 'application/geo+json', JSON.stringify({ type: 'FeatureCollection', features: timeline.current.units.filter((unit) => unit.geometry).map((unit) => ({ type: 'Feature', id: unit.id, properties: { name: unit.name, state: unit.state, resultKind: 'assumption' }, geometry: unit.geometry })) }, null, 2)));
   $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', `id,nombre,estado,tipo\n${timeline.current.units.map((unit) => `${unit.id},"${unit.name}",${unit.state},assumption`).join('\n')}`));
   $('[data-export-method]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}-metodologia.txt`, 'text/plain', `${timeline.current.name}\nBase: ${timeline.current.baseScenarioId}\nOperaciones: ${timeline.current.history.length}\nTodo resultado se clasifica como observed, calculated, assumption o unavailable.\nNo constituye concepto jurídico.`));
-  $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(JSON.stringify({ id: timeline.current.id, name: timeline.current.name, history: timeline.current.history.slice(-5) })); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) return announce('El escenario es grande: use Exportar JSON.'); const url = `${location.origin}${location.pathname}?mode=seeds&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace compartible copiado.'); });
+  $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(JSON.stringify({ id: timeline.current.id, name: timeline.current.name, history: timeline.current.history.slice(-5) })); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) return announce('El escenario es grande: use Exportar JSON.'); const url = `${location.origin}${location.pathname}?mode=semillas&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace compartible copiado.'); });
   $('[data-print]')?.addEventListener('click', () => window.print());
   $<HTMLInputElement>('[data-import-json]')?.addEventListener('change', async (event) => {
     const file = (event.currentTarget as HTMLInputElement).files?.[0]; if (!file) return;
@@ -335,6 +367,12 @@ import TerritoryMap from './TerritoryMap.astro';
     }
   } catch { announce('No fue posible revisar preferencias locales antiguas.'); }
   store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
-  const initialMode = new URLSearchParams(location.search).get('mode');
-  setMode(initialMode === 'sap' || initialMode === 'seeds' ? initialMode : 'roots');
+  const requestedMode = new URLSearchParams(location.search).get('mode');
+  const aliases: Record<string, LabMode> = { roots: 'raices', sap: 'savia', seeds: 'semillas' };
+  const canonicalModes: LabMode[] = ['raices', 'savia', 'semillas'];
+  const initialMode = requestedMode && aliases[requestedMode]
+    ? aliases[requestedMode]
+    : canonicalModes.includes(requestedMode as LabMode) ? requestedMode as LabMode : 'raices';
+  setMode(initialMode);
+  void loadTableFallback();
 </script>

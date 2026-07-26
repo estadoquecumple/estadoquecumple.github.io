@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 const lab = readFileSync('src/components/territorial/TerritorialLab.astro', 'utf8');
 const map = readFileSync('src/components/territorial/TerritoryMap.astro', 'utf8');
 const roots = readFileSync('src/components/territorial/RootsWorkspace.astro', 'utf8');
-const sap = readFileSync('src/components/territorial/SapWorkspace.astro', 'utf8');
+const sap = readFileSync('src/components/territorial/SaviaWorkspace.astro', 'utf8');
 const seeds = readFileSync('src/components/territorial/SeedsWorkspace.astro', 'utf8');
 const model = readFileSync('src/data/territorial/scenario-v2.ts', 'utf8');
 

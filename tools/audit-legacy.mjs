@@ -28,10 +28,10 @@ for (const file of publicFiles) {
 const map = read('src/components/territorial/TerritoryMap.astro');
 if (/import\s+\*\s+as\s+maplibregl/.test(map)) failures.push('TerritoryMap: importación namespace anterior');
 if (/municipalities\/11\.geojson/.test(map)) failures.push('TerritoryMap: código fijo de Bogotá');
-const workspaces = ['RootsWorkspace.astro', 'SapWorkspace.astro', 'SeedsWorkspace.astro']
+const workspaces = ['RootsWorkspace.astro', 'SaviaWorkspace.astro', 'SeedsWorkspace.astro']
   .map((name) => read(`src/components/territorial/${name}`)).join('\n');
 const lab = read('src/components/territorial/TerritorialLab.astro');
-for (const contract of ['data-workspace="roots"', 'data-workspace="sap"', 'data-workspace="seeds"', 'IndexedDB', 'data-export-json']) {
+for (const contract of ['data-workspace="raices"', 'data-workspace="savia"', 'data-workspace="semillas"', 'IndexedDB', 'data-export-json']) {
   if (!(workspaces + lab).includes(contract)) failures.push(`V2: falta contrato ${contract}`);
 }
 if (failures.length) {
