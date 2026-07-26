@@ -260,6 +260,11 @@ import 'maplibre-gl/dist/maplibre-gl.css';
   document.addEventListener('territorial:scenario-geometry', ((event: CustomEvent<GeoJSON.FeatureCollection>) => {
     (map?.getSource('scenario-units') as GeoJSONSource | undefined)?.setData(event.detail);
   }) as EventListener);
+  document.addEventListener('territorial:scenario-collections', ((event: CustomEvent<Record<string, GeoJSON.FeatureCollection>>) => {
+    for (const [id, collection] of Object.entries(event.detail)) {
+      (map?.getSource(id) as GeoJSONSource | undefined)?.setData(collection);
+    }
+  }) as EventListener);
   document.addEventListener('territorial:selection-geometry', ((event: CustomEvent<{ departments: GeoJSON.FeatureCollection; municipalities: GeoJSON.FeatureCollection }>) => {
     (map?.getSource('selected-departments') as GeoJSONSource | undefined)?.setData(event.detail.departments);
     (map?.getSource('selected-municipalities') as GeoJSONSource | undefined)?.setData(event.detail.municipalities);

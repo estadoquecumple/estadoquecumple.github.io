@@ -83,10 +83,30 @@ import TerritoryMap from './TerritoryMap.astro';
   import { territorialExamples } from '../../data/territorial/examples-v3';
   import { connectedSelection, normalizeSearch } from '../../data/territorial/selection-v3';
   import { subdivisionCaveat, subdivisionModels } from '../../data/territorial/subdivisions';
+  import { scenarioToMapCollections } from '../../data/territorial/scenario-map';
+  import { scenarioCsv } from '../../data/territorial/security';
 
   type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; geometry?: unknown };
   const $ = <T extends Element>(selector: string) => document.querySelector<T>(selector);
   const $$ = <T extends Element>(selector: string) => [...document.querySelectorAll<T>(selector)];
+  const appendText = (parent: Element, tag: string, text: string) => {
+    const node = document.createElement(tag);
+    node.textContent = text;
+    parent.append(node);
+    return node;
+  };
+  const renderConsequenceItems = (host: Element, items: TerritorialScenario['consequences'], empty: string) => {
+    host.textContent = '';
+    if (!items.length) return void appendText(host, 'p', empty);
+    for (const item of items) {
+      const article = document.createElement('article');
+      article.dataset.kind = item.kind;
+      appendText(article, 'strong', `${item.dimension} · ${item.kind}`);
+      appendText(article, 'p', `${item.before} → ${item.decision} → ${item.after}`);
+      appendText(article, 'p', `${item.explanation}${item.source ? ` Fuente: ${item.source}.` : ''}`);
+      host.append(article);
+    }
+  };
   const store = new ScenarioStore();
   const scenarios = new Map<string, TerritorialScenario>();
   const selected = new Map<string, Selection>();
@@ -134,7 +154,23 @@ import TerritoryMap from './TerritoryMap.astro';
     renderSelection();
     announce(`${unit.name} seleccionada.`);
     const card = $('[data-territory-card]');
-    if (card) card.innerHTML = `<h3>${unit.name}</h3><dl><div><dt>Código</dt><dd>${unit.code}</dd></div><div><dt>Naturaleza</dt><dd>${unit.level === 'department' ? (unit.code === '11' ? 'Distrito Capital / entidad territorial' : 'Departamento / entidad territorial') : 'Municipio o distrito según clasificación DIVIPOLA'}</dd></div><div><dt>Unidad superior</dt><dd>${unit.level === 'department' ? 'Nación' : `Departamento ${unit.code.slice(0,2)}`}</dd></div><div><dt>Autoridades y competencias</dt><dd>Régimen vigente; detalle territorial no conectado.</dd></div><div><dt>Ingresos, transferencias e indicadores</dt><dd>Fuente pendiente; no disponible.</dd></div><div><dt>Fuente, fecha y calidad</dt><dd>DANE DIVIPOLA MGN 2025 · geometría observada · cobertura cartográfica nacional.</dd></div></dl>`;
+    if (card) {
+      card.textContent = '';
+      appendText(card, 'h3', unit.name);
+      const dl = document.createElement('dl');
+      const entries = [
+        ['Código', unit.code],
+        ['Naturaleza', unit.level === 'department' ? (unit.code === '11' ? 'Distrito Capital / entidad territorial' : 'Departamento / entidad territorial') : 'Tipo territorial no suministrado por el índice incorporado'],
+        ['Unidad superior', unit.level === 'department' ? 'Nación' : `Departamento ${unit.code.slice(0, 2)}`],
+        ['Autoridades y competencias', 'Régimen vigente; detalle territorial no conectado.'],
+        ['Ingresos, transferencias e indicadores', 'Fuente pendiente; no disponible.'],
+        ['Fuente, fecha y calidad', 'DANE DIVIPOLA MGN 2025 · geometría observada · cobertura cartográfica nacional.'],
+      ];
+      for (const [term, description] of entries) {
+        const div = document.createElement('div'); appendText(div, 'dt', term); appendText(div, 'dd', description); dl.append(div);
+      }
+      card.append(dl);
+    }
   };
   const renderTable = () => {
     const table = $('[data-territory-table]');
@@ -192,14 +228,14 @@ import TerritoryMap from './TerritoryMap.astro';
     const summary = $('[data-scenario-summary]');
     const legal = $('[data-legal-impact]');
     if (!scenario) {
-      if (history) history.innerHTML = '<li>Sin operaciones en el escenario actual.</li>';
+      if (history) { history.textContent = ''; appendText(history, 'li', 'Sin operaciones en el escenario actual.'); }
       if (summary) summary.textContent = 'Estado actual bloqueado; no contiene operaciones editables.';
       return;
     }
     const classified = classifyLegalImpact(scenario);
     if (history) {
       history.textContent = '';
-      if (!scenario.history.length) history.innerHTML = '<li>Escenario creado; sin operaciones adicionales.</li>';
+      if (!scenario.history.length) appendText(history, 'li', 'Escenario creado; sin operaciones adicionales.');
       for (const item of scenario.history) { const li = document.createElement('li'); li.textContent = `${item.at} · ${item.summary}`; history.append(li); }
     }
     if (summary) summary.textContent = `${scenario.name} · ${scenario.history.length} operaciones · base ${scenario.baseScenarioId} · guardado local`;
@@ -208,12 +244,20 @@ import TerritoryMap from './TerritoryMap.astro';
       for (const impact of classified.legalImpacts) { const article = document.createElement('article'); const strong = document.createElement('strong'); strong.textContent = impact.category; const p = document.createElement('p'); p.textContent = `${impact.trigger}: ${impact.rationale} Fuente: ${impact.source}.`; article.append(strong, p); legal.append(article); }
     }
     const consequences = $('[data-consequence-output]');
-    if (consequences) consequences.innerHTML = scenario.consequences.length ? scenario.consequences.map((item)=>`<article data-kind="${item.kind}"><strong>${item.dimension} · ${item.kind}</strong><p>${item.before} → ${item.decision} → ${item.after}</p><p>${item.explanation}${item.source ? ` Fuente: ${item.source}.` : ''}</p></article>`).join('') : '<p>Escenario base materializado; aplique una operación para recalcular consecuencias.</p>';
+    if (consequences) renderConsequenceItems(consequences, scenario.consequences, 'Escenario base materializado; aplique una operación para recalcular consecuencias.');
     const operationResult = $('[data-operation-result]');
-    if (operationResult) operationResult.innerHTML = scenario.history.length ? `<p><strong>Operación aplicada:</strong> ${scenario.history.at(-1)!.summary}</p><p><strong>Unidades afectadas:</strong> ${selected.size || 'según historial'}. <strong>Resultado:</strong> escenario actualizado. <strong>Advertencias:</strong> revise datos faltantes e incertidumbre. Puede deshacer.</p>` : '<p>Sin operaciones. Deshacer estará disponible después de aplicar una.</p>';
+    if (operationResult) {
+      operationResult.textContent = '';
+      appendText(operationResult, 'p', scenario.history.length
+        ? `Operación aplicada: ${scenario.history.at(-1)!.summary}. Unidades afectadas: ${selected.size || 'según historial'}. Resultado: escenario actualizado. Advertencias: revise datos faltantes e incertidumbre. Puede deshacer.`
+        : 'Sin operaciones. Deshacer estará disponible después de aplicar una.');
+    }
     const competenceLevel = $<HTMLSelectElement>('[data-competence-level]');
     if (competenceLevel) { const value=competenceLevel.value; competenceLevel.textContent=''; for(const level of scenario.levels) competenceLevel.add(new Option(`${level.name} · nivel`,level.id)); for(const unit of scenario.units.filter((item)=>item.state==='active').slice(0,100)) competenceLevel.add(new Option(`${unit.name} · unidad`,unit.id)); if([...competenceLevel.options].some((option)=>option.value===value)) competenceLevel.value=value; }
-    const tree = $('[data-hierarchy-tree]'); if(tree) tree.innerHTML = `<ul>${scenario.levels.map((level)=>`<li>${level.order}. ${level.name} · ${level.nature}</li>`).join('')}</ul>`;
+    const tree = $('[data-hierarchy-tree]'); if (tree) { tree.textContent = ''; const ul = document.createElement('ul'); for (const level of scenario.levels) appendText(ul, 'li', `${level.order}. ${level.name} · ${level.nature}`); tree.append(ul); }
+    const mapCollections = scenarioToMapCollections(scenario);
+    document.dispatchEvent(new CustomEvent('territorial:scenario-collections', { detail: mapCollections }));
+    document.dispatchEvent(new CustomEvent('territorial:scenario-geometry', { detail: mapCollections['scenario-units'] }));
     $('[data-save-status]')!.textContent = 'Guardando…';
     try {
       await store.save(scenario);
@@ -273,7 +317,12 @@ import TerritoryMap from './TerritoryMap.astro';
     void fetch('/data/territorial/geography/municipalities-index.json').then((response) => response.json()).then((items) => {
       municipalityIndex = items;
       const list = $('[data-search-results]');
-      if (list) list.innerHTML = [...departments.map((feature: any) => `<option value="${feature.properties.code} · ${feature.properties.name}"></option>`), ...items.map((item: any) => `<option value="${item.code} · ${item.name} · ${item.departmentCode}"></option>`)].join('');
+      if (list) {
+        list.textContent = '';
+        for (const value of [...departments.map((feature: any) => `${feature.properties.code} · ${feature.properties.name}`), ...items.map((item: any) => `${item.code} · ${item.name} · ${item.departmentCode}`)]) {
+          const option = document.createElement('option'); option.value = value; list.append(option);
+        }
+      }
     });
   }) as EventListener);
   document.addEventListener('territorial:municipalities', ((event: CustomEvent<any>) => {
@@ -306,7 +355,7 @@ import TerritoryMap from './TerritoryMap.astro';
   $$<HTMLInputElement>('[data-layer]').forEach((input)=>input.addEventListener('change',()=>{ const map=(window as any).__territorialMap; const ids=input.dataset.layer==='departments'?['departments-fill','departments-line']:input.dataset.layer==='municipalities'?['municipalities-fill','municipalities-line']:[]; for(const id of ids) if(map?.getLayer(id)) map.setLayoutProperty(id,'visibility',input.checked?'visible':'none'); announce(`${input.parentElement?.textContent?.trim()}: ${input.checked?'visible':'oculta'}.`); }));
   const routes:Record<string,string>={salud:'Nación regula · Nación y territorios financian · departamentos y municipios planean según competencias · aseguradores y prestadores operan · autoridades sanitarias inspeccionan · controles fiscal, político y judicial.',educación:'Nación regula · Nación y entidades certificadas financian y planean · establecimientos ejecutan · autoridades educativas inspeccionan · controles fiscal y político.',agua:'Nación regula · municipios aseguran la prestación · prestadores operan y mantienen · autoridades ambientales y de servicios vigilan · financiación depende del arreglo vigente.',transporte:'Regulación, planeación, financiación, operación, mantenimiento e inspección varían por modo y jurisdicción; seleccione territorio y verifique régimen.',catastro:'Regulación nacional · gestores catastrales prestan el servicio · financiación y operación dependen de habilitación o convenio · control conforme al régimen.',residuos:'Municipio asegura prestación · prestador opera · regulación y vigilancia nacional sectorial · planeación y financiación locales según régimen.'};
   $<HTMLSelectElement>('[data-function-route]')?.addEventListener('change',(event)=>{const value=(event.currentTarget as HTMLSelectElement).value; const result=$('[data-function-result]'); if(result) result.textContent=routes[value]??`${value}: cadena específica pendiente de fuente normativa detallada; no se repite una fórmula genérica.`;});
-  $('[data-roots-compare]')?.addEventListener('click',()=>{const output=$('[data-comparison-output]'); if(!output) return; if(selected.size<2){announce('Seleccione al menos dos unidades para comparar.'); return;} output.innerHTML=`<table><thead><tr><th>Unidad</th><th>Nivel</th><th>Fuente</th><th>Datos faltantes</th></tr></thead><tbody>${selectedUnits().map((item)=>`<tr><td>${item.name}</td><td>${item.level}</td><td>DANE 2025</td><td>Indicadores, ingresos y detalle institucional</td></tr>`).join('')}</tbody></table>`; announce(`${selected.size} unidades comparadas con campos disponibles y faltantes.`);});
+  $('[data-roots-compare]')?.addEventListener('click',()=>{const output=$('[data-comparison-output]'); if(!output) return; if(selected.size<2){announce('Seleccione al menos dos unidades para comparar.'); return;} output.textContent=''; const table=document.createElement('table'); const head=document.createElement('thead'); const header=document.createElement('tr'); for(const value of ['Unidad','Nivel','Fuente','Datos faltantes'])appendText(header,'th',value); head.append(header); const body=document.createElement('tbody'); for(const item of selectedUnits()){const row=document.createElement('tr'); for(const value of [item.name,item.level,'DANE 2025','Indicadores, ingresos y detalle institucional'])appendText(row,'td',value); body.append(row);} table.append(head,body);output.append(table); announce(`${selected.size} unidades comparadas con campos disponibles y faltantes.`);});
   $('[data-table-filter]')?.addEventListener('input', renderTable);
   $('[data-reset-weights]')?.addEventListener('click', () => $$<HTMLInputElement>('[data-weight]').forEach((input) => { input.value = '25'; input.dispatchEvent(new Event('input')); }));
   $$<HTMLInputElement>('[data-weight]').forEach((input) => input.addEventListener('input', () => { const output = input.parentElement?.querySelector('output'); if (output) output.value = input.value; }));
@@ -321,9 +370,9 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-create-scenario]')?.addEventListener('click', () => {
     const scenario = createScenario(`Escenario ${scenarios.size + 1}`); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); refreshScenarioLists(scenario.id); void renderScenario(); announce('Escenario editable creado.');
   });
-  $('[data-load-example]')?.addEventListener('click',()=>{const example=territorialExamples.find((item)=>item.id===$<HTMLSelectElement>('[data-example-select]')?.value); if(!example)return announce('Seleccione un ejemplo.'); const scenario=createScenario(example.name); scenario.assumptions.push(...example.assumptions.map((text,index)=>({id:`example-${example.id}-${index}`,text,uncertainty:'declarada'}))); scenario.risks.push(...example.uncertainty.map((text,index)=>({id:`risk-${example.id}-${index}`,text,severity:'por evaluar'}))); scenario.sources.push(...example.sources.map((title)=>({title,url:'',date:'revisión 2026-07-25'}))); scenarios.set(scenario.id,scenario); timeline=new ScenarioTimeline(scenario); const summary=$('[data-example-summary]'); if(summary)summary.innerHTML=`<strong>${example.name}</strong><p>${example.objective}</p><p>Selección: ${example.selection.join(', ')}.</p><p>Operación: ${example.operation}. Figura: ${example.figure}. Gobierno: ${example.government}.</p><p>Ruta: ${example.legalPath}</p><ol>${example.guide.map((step)=>`<li>${step}</li>`).join('')}</ol>`; refreshScenarioLists(scenario.id); void renderScenario(); announce(`Ejemplo ${example.name} cargado. Sus selecciones por validar no se aplican como datos oficiales.`);});
-  $('[data-add-subdivisions]')?.addEventListener('click',()=>{if(!editable())return; const key=$<HTMLSelectElement>('[data-subdivision-model]')!.value as keyof typeof subdivisionModels; const result=$('[data-subdivision-result]'); if(result)result.innerHTML=`<strong>${key}</strong><ul>${subdivisionModels[key].map((item)=>`<li>${item}</li>`).join('')}</ul><p>${subdivisionCaveat}</p>`; const current=timeline!.current; current.assumptions.push({id:`subdivision-${Date.now()}`,text:`Modelo interno ${key}: ${subdivisionModels[key].join(', ')}. ${subdivisionCaveat}`,uncertainty:'requiere configuración territorial concreta'}); apply({...current});});
-  $$<HTMLButtonElement>('[data-consequence-tab]').forEach((button)=>button.addEventListener('click',()=>{$$<HTMLButtonElement>('[data-consequence-tab]').forEach((item)=>item.setAttribute('aria-selected',String(item===button))); const output=$('[data-consequence-output]'); if(output&&timeline){const terms=['','autoridades|elección','competencias|concurrencia|subsidiariedad','financiación','servicios|mantenimiento','representación','transición','ruta normativa|naturaleza jurídica','datos faltantes|incertidumbre|capacidad']; const regex=new RegExp(terms[Number(button.dataset.consequenceTab)]||'.','i'); const items=timeline.current.consequences.filter((item)=>regex.test(item.dimension)); output.innerHTML=items.length?items.map((item)=>`<article><strong>${item.dimension} · ${item.kind}</strong><p>${item.before} → ${item.decision} → ${item.after}</p><p>${item.explanation}</p></article>`).join(''):'<p>No hay consecuencias en esta pestaña todavía.</p>';}}));
+  $('[data-load-example]')?.addEventListener('click',()=>{const example=territorialExamples.find((item)=>item.id===$<HTMLSelectElement>('[data-example-select]')?.value); if(!example)return announce('Seleccione un ejemplo.'); if(!example.available)return announce('No disponible todavía. El ejemplo no creó un escenario.'); const scenario=createScenario(example.name); scenario.assumptions.push(...example.assumptions.map((text,index)=>({id:`example-${example.id}-${index}`,text,uncertainty:'declarada'}))); scenario.risks.push(...example.uncertainty.map((text,index)=>({id:`risk-${example.id}-${index}`,text,severity:'por evaluar'}))); scenario.sources.push(...example.sources.map((title)=>({title,url:'',date:'revisión 2026-07-25'}))); scenarios.set(scenario.id,scenario); timeline=new ScenarioTimeline(scenario); const summary=$('[data-example-summary]'); if(summary){summary.textContent='';appendText(summary,'strong',example.name);appendText(summary,'p',example.objective);appendText(summary,'p',`Selección: ${example.selection.join(', ')}.`);appendText(summary,'p',`Operación: ${example.operation}. Figura: ${example.figure}. Gobierno: ${example.government}.`);appendText(summary,'p',`Ruta: ${example.legalPath}`);const list=document.createElement('ol');for(const step of example.guide)appendText(list,'li',step);summary.append(list);} refreshScenarioLists(scenario.id); void renderScenario(); announce(`Ejemplo ${example.name} cargado con escenario estructurado.`);});
+  $('[data-add-subdivisions]')?.addEventListener('click',()=>{if(!editable())return; const key=$<HTMLSelectElement>('[data-subdivision-model]')!.value as keyof typeof subdivisionModels; const result=$('[data-subdivision-result]'); if(result){result.textContent='';appendText(result,'strong',key);const list=document.createElement('ul');for(const item of subdivisionModels[key])appendText(list,'li',item);result.append(list);appendText(result,'p',subdivisionCaveat);} const current=timeline!.current; current.assumptions.push({id:`subdivision-${Date.now()}`,text:`Modelo interno ${key}: ${subdivisionModels[key].join(', ')}. ${subdivisionCaveat}`,uncertainty:'requiere configuración territorial concreta'}); apply({...current});});
+  $$<HTMLButtonElement>('[data-consequence-tab]').forEach((button)=>button.addEventListener('click',()=>{$$<HTMLButtonElement>('[data-consequence-tab]').forEach((item)=>item.setAttribute('aria-selected',String(item===button))); const output=$('[data-consequence-output]'); if(output&&timeline){const terms=['','autoridades|elección','competencias|concurrencia|subsidiariedad','financiación','servicios|mantenimiento','representación','transición','ruta normativa|naturaleza jurídica','datos faltantes|incertidumbre|capacidad']; const regex=new RegExp(terms[Number(button.dataset.consequenceTab)]||'.','i'); const items=timeline.current.consequences.filter((item)=>regex.test(item.dimension));renderConsequenceItems(output,items,'No hay consecuencias en esta pestaña todavía.');}}));
   $('[data-duplicate-scenario]')?.addEventListener('click', () => { if (!timeline) return; const scenario = duplicateScenario(timeline.current); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); void renderScenario(); });
   $('[data-rename-scenario]')?.addEventListener('click', () => { if (!timeline) return; const name = prompt('Nombre del escenario', timeline.current.name)?.trim(); if (name) apply({ ...timeline.current, name, updatedAt: new Date().toISOString() }); });
   $('[data-archive-scenario]')?.addEventListener('click', () => { if (timeline) apply({ ...timeline.current, status: 'archived' }); });
@@ -354,7 +403,7 @@ import TerritoryMap from './TerritoryMap.astro';
       apply(mergeUnits(scenario, selectedUnits().map((item) => item.id), ($<HTMLInputElement>('[data-unit-name]')?.value || 'Unidad exploratoria'), $<HTMLSelectElement>('[data-unit-nature]')?.value || 'region', ($<HTMLSelectElement>('[data-disposition]')?.value || 'political') as any));
     } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
   });
-  const addGroupRow=()=>{const host=$('[data-groups]'); if(!host)return; const row=document.createElement('fieldset'); row.dataset.group=''; row.innerHTML=`<label>Nombre <input data-group-name required /></label><div>${selectedUnits().filter((item)=>item.level==='municipality').map((item)=>`<label><input type="checkbox" data-group-member value="${item.id}"> ${item.name}</label>`).join('')}</div>`; host.append(row);};
+  const addGroupRow=()=>{const host=$('[data-groups]'); if(!host)return; const row=document.createElement('fieldset'); row.dataset.group=''; const nameLabel=document.createElement('label');nameLabel.append('Nombre ');const name=document.createElement('input');name.dataset.groupName='';name.required=true;nameLabel.append(name);row.append(nameLabel);const members=document.createElement('div');for(const item of selectedUnits().filter((unit)=>unit.level==='municipality')){const label=document.createElement('label');const input=document.createElement('input');input.type='checkbox';input.dataset.groupMember='';input.value=item.id;label.append(input,` ${item.name}`);members.append(label);}row.append(members);host.append(row);};
   $('[data-split-membership]')?.addEventListener('click',()=>{if(!editable()||selectedUnits().filter((item)=>item.level==='municipality').length<2)return announce('Seleccione al menos dos municipios.'); $('[data-group-editor]')?.removeAttribute('hidden'); const parent=$<HTMLSelectElement>('[data-group-parent]'); if(parent){parent.textContent=''; for(const unit of timeline!.current.units.filter((item)=>item.levelId==='department'||item.memberIds.length))parent.add(new Option(unit.name,unit.id));} const host=$('[data-groups]'); if(host)host.textContent=''; addGroupRow();addGroupRow(); announce('Editor abierto: nombre al menos dos grupos y asigne cada municipio una sola vez.');});
   $('[data-add-group]')?.addEventListener('click',addGroupRow);
   $('[data-cancel-groups]')?.addEventListener('click',()=>{ $('[data-group-editor]')?.setAttribute('hidden',''); announce('División cancelada sin cambios.');});
@@ -396,7 +445,7 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-redo]')?.addEventListener('click', () => { timeline?.redo(); void renderScenario(); });
   $('[data-export-json]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.json`, 'application/json', exportScenario(timeline.current)));
   $('[data-export-geojson]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.geojson`, 'application/geo+json', JSON.stringify({ type: 'FeatureCollection', features: timeline.current.units.filter((unit) => unit.geometry).map((unit) => ({ type: 'Feature', id: unit.id, properties: { name: unit.name, state: unit.state, resultKind: 'assumption' }, geometry: unit.geometry })) }, null, 2)));
-  $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', `id,nombre,estado,tipo\n${timeline.current.units.map((unit) => `${unit.id},"${unit.name}",${unit.state},assumption`).join('\n')}`));
+  $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', scenarioCsv(timeline.current.units.map((unit)=>({id:unit.id,nombre:unit.name,estado:unit.state,tipo:'assumption'})),['id','nombre','estado','tipo'])));
   $('[data-export-method]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}-metodologia.txt`, 'text/plain', `${timeline.current.name}\nBase: ${timeline.current.baseScenarioId}\nOperaciones: ${timeline.current.history.length}\nTodo resultado se clasifica como observed, calculated, assumption o unavailable.\nNo constituye concepto jurídico.`));
   $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(exportScenario(timeline.current)); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) { download(`${timeline.current.id}.json`,'application/json',exportScenario(timeline.current)); return announce('El escenario completo excede el límite seguro del enlace: se generó un archivo V3 exportable.'); } const url = `${location.origin}${location.pathname}?mode=semillas&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace V3 completo copiado. Incluye unidades, fuentes, supuestos, operaciones y configuración.'); });
   $('[data-print]')?.addEventListener('click', () => window.print());
@@ -407,13 +456,20 @@ import TerritoryMap from './TerritoryMap.astro';
   const comparison = (a: TerritorialScenario | undefined, b: TerritorialScenario | undefined) => {
     const output = $('[data-comparison-output]'); if (!output || !a) return;
     const baseline = b ?? createScenario('Estado actual');
-    output.innerHTML = `<table><thead><tr><th>Cambio</th><th>${baseline.name}</th><th>${a.name}</th></tr></thead><tbody>
-      <tr><th>Unidades</th><td>${baseline.units.length}</td><td>${a.units.length}</td></tr>
-      <tr><th>Competencias</th><td>${baseline.competences.length}</td><td>${a.competences.length}</td></tr>
-      <tr><th>Gobiernos</th><td>${baseline.governments.length}</td><td>${a.governments.length}</td></tr>
-      <tr><th>Reglas fiscales</th><td>${baseline.finances.length}</td><td>${a.finances.length}</td></tr>
-      <tr><th>Impacto jurídico</th><td>Referencia vigente</td><td>${classifyLegalImpact(a).legalImpacts.map((item) => item.category).join('; ')}</td></tr>
-      <tr><th>Cobertura</th><td>observed</td><td>${a.assumptions.length ? 'assumption / unavailable' : 'calculated'}</td></tr></tbody></table>`;
+    output.textContent = '';
+    const table=document.createElement('table');const head=document.createElement('thead');const header=document.createElement('tr');
+    for(const value of ['Cambio',baseline.name,a.name])appendText(header,'th',value);head.append(header);
+    const body=document.createElement('tbody');
+    const rows=[
+      ['Unidades',baseline.units.length,a.units.length],
+      ['Competencias',baseline.competences.length,a.competences.length],
+      ['Gobiernos',baseline.governments.length,a.governments.length],
+      ['Reglas fiscales',baseline.finances.length,a.finances.length],
+      ['Impacto jurídico','Referencia vigente',classifyLegalImpact(a).legalImpacts.map((item)=>item.category).join('; ')],
+      ['Cobertura','observed',a.assumptions.length?'assumption / unavailable':'calculated'],
+    ];
+    for(const values of rows){const row=document.createElement('tr');appendText(row,'th',String(values[0]));appendText(row,'td',String(values[1]));appendText(row,'td',String(values[2]));body.append(row);}
+    table.append(head,body);output.append(table);
   };
   $('[data-compare-current]')?.addEventListener('click', () => comparison(timeline?.current, undefined));
   $('[data-compare-scenarios]')?.addEventListener('click', () => comparison(scenarios.get($<HTMLSelectElement>('[data-compare-a]')!.value), scenarios.get($<HTMLSelectElement>('[data-compare-b]')!.value)));

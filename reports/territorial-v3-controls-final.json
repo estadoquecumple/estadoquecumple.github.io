@@ -1,0 +1,450 @@
+{
+  "generatedAt": "2026-07-26",
+  "rule": "Un botón cuenta solo si tiene manejador y una interacción en un archivo Playwright aprobado. Los comentarios se eliminan.",
+  "controls": [
+    {
+      "selector": "[data-mode",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-mobile-tab",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts",
+        "tests/browser/territorial-map.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-export-json",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-export-geojson",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-export-csv",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-export-method",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-share-link",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-print",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-compare-current",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-compare-scenarios",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-camera",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-map-retry",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-map.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-roots-compare",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-reset-weights",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-evaluate",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-load-example",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-create-scenario",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-duplicate-scenario",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-rename-scenario",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-archive-scenario",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-delete-scenario",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-select-department",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-select-neighbours",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-select-contiguous",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-draw-rectangle",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-draw-polygon",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-invert-selection",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-clear-selection",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-apply-spatial",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-cancel-spatial",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-merge",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-split-membership",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-split-geometry",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-suppress-department",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-create-level",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-add-group",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-confirm-groups",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-cancel-groups",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-confirm-level",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-cancel-level",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-change-government",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-assign-competence",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-change-finance",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-change-planning",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-add-subdivisions",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-undo",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-redo",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts",
+        "tests/browser/territorial-v2.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    },
+    {
+      "selector": "[data-consequence-tab",
+      "handler": true,
+      "playwrightInteraction": [
+        "tests/browser/territorial-v3.spec.ts"
+      ],
+      "executed": true,
+      "classification": "funcional"
+    }
+  ]
+}

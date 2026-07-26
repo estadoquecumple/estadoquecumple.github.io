@@ -1,7 +1,7 @@
 export type TerritorialExample = {
   id:string; name:string; objective:string; selection:string[]; operation:string; figure:string; government:string;
   competences:string[]; finance:string[]; expected:string[]; sources:string[]; assumptions:string[]; uncertainty:string[];
-  legalPath:string; guide:string[];
+  legalPath:string; guide:string[]; available?: boolean;
 };
 const common = {
   finance:['Financiación por definir con instrumentos legales y datos fiscales; no se estima ahorro.'],
@@ -22,4 +22,7 @@ export const territorialExamples: TerritorialExample[] = [
   { ...common,id:'municipal-subdivisions',name:'Municipio con comunas y corregimientos',objective:'Distinguir división urbana, rural y unidades comunitarias.',selection:['municipio-por-elegir'],operation:'crear subdivisiones',figure:'Comunas urbanas y corregimientos rurales',government:'Alcaldía, JAL y corregidor conforme al régimen aplicable',competences:['Participación','Presupuesto participativo exploratorio'],legalPath:'Ley 136 de 1994 y modificaciones; barrio y vereda no son entidades territoriales.' },
   { ...common,id:'political-professional',name:'Gobierno político + administrador profesional',objective:'Comparar legitimidad política, continuidad profesional y reparto de responsabilidad.',selection:['unidad-por-elegir'],operation:'cambiar gobierno',figure:'Diseño institucional exploratorio',government:'Autoridad elegida + gerente profesional',competences:['Dirección política','Administración profesional'],legalPath:'La viabilidad depende de la figura y puede requerir reforma legal o constitucional.' },
 ];
+
+const implementedExamples = new Set(['bogota-sabana', 'rap-caribe-ret', 'without-departments']);
+for (const example of territorialExamples) example.available = implementedExamples.has(example.id);
 

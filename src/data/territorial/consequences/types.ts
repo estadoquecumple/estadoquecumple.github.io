@@ -5,7 +5,9 @@ export type ConsequenceDimension =
   | 'control judicial'|'coordinación'|'concurrencia'|'subsidiariedad'|'capacidad administrativa'|'escala'
   | 'proximidad'|'accesibilidad'|'continuidad territorial'|'identidad territorial'|'enfoque étnico'
   | 'consulta previa potencial'|'prestación de servicios'|'mantenimiento'|'transición'|'costos de transición'
-  | 'riesgos de captura'|'datos faltantes'|'incertidumbre';
+  | 'riesgos de captura'|'datos faltantes'|'incertidumbre'
+  | 'unidades'|'niveles'|'autoridades y forma de selección'|'competencias y roles'
+  | 'planeación y control'|'población y capacidad'|'ruta jurídica y transición';
 export type Consequence = {
   dimension: ConsequenceDimension;
   kind: ConsequenceKind;

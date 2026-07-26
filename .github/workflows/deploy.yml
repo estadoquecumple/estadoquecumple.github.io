@@ -11,16 +11,17 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
-  check:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - run: npm ci
-      - run: npm run check
+      - run: npm run validate
+      - run: npm run lab:e2e
   build:
-    needs: check
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-07-26",
+  "baseCommit": "bae90ce",
+  "method": "Inspección de manejadores, cambios de estado, mapa y pruebas que interactúan; comentarios y coincidencias textuales excluidos.",
+  "summary": {
+    "functional": 9,
+    "partial": 15,
+    "nominal": 4,
+    "broken": 2,
+    "duplicate": 0,
+    "unavailable": 2
+  },
+  "criticalFindings": [
+    "Las auditorías certificaban cadenas y comentarios, no ejecuciones.",
+    "Unión y divisiones no materializaban geometrías completas.",
+    "La comparación interpolaba contenido externo con innerHTML.",
+    "El CSV admitía fórmulas.",
+    "Los ejemplos no implementados aparentaban estar disponibles.",
+    "El índice no conserva MPIO_TIPO y la topología dependía de segmentos exactos redondeados."
+  ],
+  "detail": "reports/territorial-v3-improvement-initial.md"
+}

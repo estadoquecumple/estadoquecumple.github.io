@@ -71,9 +71,9 @@ test('SEMILLAS materializa base, carga ejemplo, modela y calcula consecuencias',
   await page.locator('[data-subdivision-model]').selectOption('bogota');
   await page.locator('[data-add-subdivisions]').click();
   await expect(page.locator('[data-subdivision-result]')).toContainText('Alcalde Mayor');
-  await page.locator('[data-example-select]').selectOption('federal-colombia');
+  await page.locator('[data-example-select]').selectOption('without-departments');
   await page.locator('[data-load-example]').click();
-  await expect(page.locator('[data-example-summary]')).toContainText('república unitaria');
+  await expect(page.locator('[data-example-summary]')).toContainText('reforma constitucional');
 });
 
 test('editor de nivel valida y crea sin prompt',async({page})=>{
@@ -105,14 +105,50 @@ test('exportación, comparación, compartir completo y undo/redo',async({page})=
   await page.locator('[data-share-link]').click(); await expect(page.locator('[data-operation-status]')).toContainText(/completo|archivo V3/);
 });
 
-test('capturas de ejemplos Bogotá–Sabana y Colombia federal',async({page},testInfo)=>{
+test('ejemplos Bogotá–Sabana, RAP Caribe y Colombia sin departamentos son funcionales',async({page})=>{
   await page.getByRole('button',{name:/SEMILLAS/}).click();
   await page.locator('[data-example-select]').selectOption('bogota-sabana');
   await page.locator('[data-load-example]').click();
   await expect(page.locator('[data-example-summary]')).toContainText('Ley 2199');
-  await page.screenshot({path:`artifacts/playwright/acceptance-ejemplo-bogota-sabana-${testInfo.project.name}.png`,fullPage:true});
-  await page.locator('[data-example-select]').selectOption('federal-colombia');
+  await page.locator('[data-example-select]').selectOption('rap-caribe-ret');
   await page.locator('[data-load-example]').click();
-  await expect(page.locator('[data-example-summary]')).toContainText('república unitaria');
-  await page.screenshot({path:`artifacts/playwright/acceptance-ejemplo-colombia-federal-${testInfo.project.name}.png`,fullPage:true});
+  await expect(page.locator('[data-example-summary]')).toContainText('Ley 1962');
+  await page.locator('[data-example-select]').selectOption('without-departments');
+  await page.locator('[data-load-example]').click();
+  await expect(page.locator('[data-example-summary]')).toContainText('reforma constitucional');
+  await expect(page.locator('[data-example-select] option[value="federal-colombia"]')).toHaveAttribute('disabled','');
+});
+
+test('contratos restantes producen resultados o errores controlados',async({page})=>{
+  const activate=(selector:string)=>page.locator(selector).evaluate((element:HTMLElement)=>element.click());
+  await activate('[data-mode="semillas"]');
+  await activate('[data-create-scenario]');
+  for(const selector of ['[data-select-department]','[data-draw-polygon]','[data-apply-spatial]','[data-cancel-spatial]','[data-split-membership]','[data-add-group]','[data-confirm-groups]','[data-cancel-groups]','[data-create-level]','[data-cancel-level]']){
+    await activate(selector);
+    await expect(page.locator('[data-operation-status]')).not.toBeEmpty();
+  }
+  await activate('[data-select-department]'); await activate('[data-draw-polygon]');
+  await activate('[data-apply-spatial]'); await activate('[data-cancel-spatial]');
+  await activate('[data-split-membership]'); await activate('[data-add-group]');
+  await activate('[data-confirm-groups]'); await activate('[data-cancel-groups]');
+  await activate('[data-create-level]'); await activate('[data-cancel-level]');
+  await activate('[data-consequence-tab="1"]');
+  await expect(page.locator('[data-consequence-tab="1"]')).toHaveAttribute('aria-selected','true');
+  for(const selector of ['[data-export-geojson]','[data-export-csv]','[data-export-method]'])await activate(selector);
+  await page.evaluate(()=>{Object.defineProperty(window,'print',{value:()=>document.body.dataset.printInvoked='true'});});
+  await activate('[data-print]');
+  await expect(page.locator('body')).toHaveAttribute('data-print-invoked','true');
+  await activate('[data-duplicate-scenario]');
+  await page.evaluate(()=>{window.prompt=()=> 'Escenario seguro <script>'; window.confirm=()=>true;});
+  await activate('[data-rename-scenario]');
+  await expect(page.locator('[data-scenario-summary]')).toContainText('Escenario seguro <script>');
+  await activate('[data-archive-scenario]');
+  await expect(page.locator('[data-scenario-summary]')).not.toBeEmpty();
+  await activate('[data-compare-scenarios]');
+  await expect(page.locator('[data-comparison-output]')).toBeAttached();
+  await activate('[data-delete-scenario]');
+  await expect(page.locator('[data-operation-status]')).toContainText('eliminado');
+  await activate('[data-create-scenario]');
+  await activate('[data-suppress-department]');
+  await expect(page.locator('[data-hierarchy-tree]')).toContainText('Región reemplazante');
 });
