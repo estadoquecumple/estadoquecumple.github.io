@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - run: npm ci
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
       - run: npm run validate
       - run: npm run lab:e2e
   build:
