@@ -53,7 +53,7 @@ const visit = (suite, file = suite.file) => {
 };
 for (const suite of report.suites ?? []) visit(suite);
 const evidence = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: '2026-07-26',
   source: 'Playwright JSON reporter; only completed browser interactions are evidence.',
   summary: {
     total: executions.length,

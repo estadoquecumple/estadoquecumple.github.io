@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T19:15:40.800Z",
+  "generatedAt": "2026-07-26",
   "rule": "Un botón cuenta solo si tiene manejador y una interacción en un archivo Playwright aprobado. Los comentarios se eliminan.",
   "controls": [
     {
