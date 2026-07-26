@@ -1,4 +1,8 @@
 {
+  "schemaVersion": 3,
+  "spatialModel": "overlapping-functional-regions",
+  "exclusivePoliticalAdministrativeDivision": false,
+  "overlapWarning": "Estas regiones funcionales exploratorias se superponen. No constituyen una división político-administrativa exclusiva.",
   "id": "regional-exploratory",
   "name": "Estado unitario regional — escenario exploratorio",
   "version": "1.0.0",

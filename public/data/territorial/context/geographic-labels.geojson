@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "caribbean-sea",
+      "properties": {
+        "name": "Mar Caribe",
+        "kind": "ocean-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5,
+          15
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pacific-ocean",
+      "properties": {
+        "name": "Océano Pacífico",
+        "kind": "ocean-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85,
+          1
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-BRA",
+      "properties": {
+        "name": "Brazil",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.92618139901478,
+          -9.656487300492616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-PER",
+      "properties": {
+        "name": "Peru",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08178505263159,
+          -7.753107973684208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-COL",
+      "properties": {
+        "name": "Colombia",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.65296166000003,
+          4.490703469999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-PAN",
+      "properties": {
+        "name": "Panama",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.31720192307694,
+          8.495830826923076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-CRI",
+      "properties": {
+        "name": "Costa Rica",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.16182833333332,
+          9.822146222222221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-NIC",
+      "properties": {
+        "name": "Nicaragua",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.97791375,
+          13.078829249999997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-VEN",
+      "properties": {
+        "name": "Venezuela",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.85159614130438,
+          7.213489043478258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "label-ECU",
+      "properties": {
+        "name": "Ecuador",
+        "kind": "country-label"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.7045224848485,
+          -1.637014393939394
+        ]
+      }
+    }
+  ]
+}

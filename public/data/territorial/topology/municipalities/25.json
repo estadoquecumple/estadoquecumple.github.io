@@ -1,0 +1,1112 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "25",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "25001": {
+      "neighbours": [
+        "25488"
+      ],
+      "pointContacts": [
+        "25815"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25019": {
+      "neighbours": [
+        "25328"
+      ],
+      "pointContacts": [
+        "25718"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25035": {
+      "neighbours": [
+        "25245",
+        "25599"
+      ],
+      "pointContacts": [
+        "25386"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25040": {
+      "neighbours": [
+        "25123"
+      ],
+      "pointContacts": [
+        "25095",
+        "25328"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25053": {
+      "neighbours": [],
+      "pointContacts": [
+        "25524",
+        "25649"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25086": {
+      "neighbours": [],
+      "pointContacts": [
+        "25580"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25095": {
+      "neighbours": [],
+      "pointContacts": [
+        "25040",
+        "25867"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25099": {
+      "neighbours": [],
+      "pointContacts": [
+        "25754",
+        "25898"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25120": {
+      "neighbours": [],
+      "pointContacts": [
+        "25506",
+        "25649"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25123": {
+      "neighbours": [
+        "25040"
+      ],
+      "pointContacts": [
+        "25386",
+        "25596"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25126": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25148": {
+      "neighbours": [
+        "25885"
+      ],
+      "pointContacts": [
+        "25320",
+        "25394",
+        "25851"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25151": {
+      "neighbours": [],
+      "pointContacts": [
+        "25594"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25154": {
+      "neighbours": [],
+      "pointContacts": [
+        "25779",
+        "25793",
+        "25843"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25168": {
+      "neighbours": [
+        "25320"
+      ],
+      "pointContacts": [
+        "25662"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25175": {
+      "neighbours": [],
+      "pointContacts": [
+        "25214",
+        "25758"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25178": {
+      "neighbours": [],
+      "pointContacts": [
+        "25841",
+        "25845"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25181": {
+      "neighbours": [
+        "25377"
+      ],
+      "pointContacts": [
+        "25279"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25183": {
+      "neighbours": [
+        "25426",
+        "25772"
+      ],
+      "pointContacts": [
+        "25736",
+        "25873"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25200": {
+      "neighbours": [
+        "25793",
+        "25899"
+      ],
+      "pointContacts": [
+        "25486"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25214": {
+      "neighbours": [],
+      "pointContacts": [
+        "25175"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25224": {
+      "neighbours": [
+        "25772"
+      ],
+      "pointContacts": [
+        "25407",
+        "25793"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25245": {
+      "neighbours": [
+        "25035"
+      ],
+      "pointContacts": [
+        "25878"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25258": {
+      "neighbours": [],
+      "pointContacts": [
+        "25513"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25260": {
+      "neighbours": [],
+      "pointContacts": [
+        "25269"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25269": {
+      "neighbours": [],
+      "pointContacts": [
+        "25260",
+        "25430"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25279": {
+      "neighbours": [
+        "25372"
+      ],
+      "pointContacts": [
+        "25181"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25281": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25286": {
+      "neighbours": [
+        "25473",
+        "25799"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25288": {
+      "neighbours": [
+        "25843"
+      ],
+      "pointContacts": [
+        "25317",
+        "25779"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25290": {
+      "neighbours": [
+        "25740"
+      ],
+      "pointContacts": [
+        "25535",
+        "25743",
+        "25805"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25293": {
+      "neighbours": [
+        "25438"
+      ],
+      "pointContacts": [
+        "25299",
+        "25372",
+        "25839"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25295": {
+      "neighbours": [
+        "25817"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25297": {
+      "neighbours": [],
+      "pointContacts": [
+        "25326",
+        "25436",
+        "25839"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25299": {
+      "neighbours": [],
+      "pointContacts": [
+        "25293",
+        "25372"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25307": {
+      "neighbours": [],
+      "pointContacts": [
+        "25612"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25312": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25317": {
+      "neighbours": [],
+      "pointContacts": [
+        "25288",
+        "25407"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25320": {
+      "neighbours": [
+        "25168"
+      ],
+      "pointContacts": [
+        "25148",
+        "25572"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25322": {
+      "neighbours": [
+        "25326",
+        "25377",
+        "25758"
+      ],
+      "pointContacts": [
+        "25372"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25324": {
+      "neighbours": [
+        "25368"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25326": {
+      "neighbours": [
+        "25322",
+        "25736"
+      ],
+      "pointContacts": [
+        "25297"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25328": {
+      "neighbours": [
+        "25019"
+      ],
+      "pointContacts": [
+        "25040"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25335": {
+      "neighbours": [
+        "25594"
+      ],
+      "pointContacts": [
+        "25339"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25339": {
+      "neighbours": [],
+      "pointContacts": [
+        "25335",
+        "25845"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25368": {
+      "neighbours": [
+        "25324",
+        "25580"
+      ],
+      "pointContacts": [
+        "25596",
+        "25815"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25372": {
+      "neighbours": [
+        "25279"
+      ],
+      "pointContacts": [
+        "25293",
+        "25299",
+        "25322"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25377": {
+      "neighbours": [
+        "25181",
+        "25322"
+      ],
+      "pointContacts": [
+        "25758"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25386": {
+      "neighbours": [
+        "25797"
+      ],
+      "pointContacts": [
+        "25035",
+        "25123",
+        "25596",
+        "25898"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25394": {
+      "neighbours": [
+        "25823"
+      ],
+      "pointContacts": [
+        "25148",
+        "25885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25398": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25402": {
+      "neighbours": [
+        "25718"
+      ],
+      "pointContacts": [
+        "25658",
+        "25777"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25407": {
+      "neighbours": [
+        "25873"
+      ],
+      "pointContacts": [
+        "25224",
+        "25317"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25426": {
+      "neighbours": [
+        "25183",
+        "25436"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25430": {
+      "neighbours": [],
+      "pointContacts": [
+        "25269"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25436": {
+      "neighbours": [
+        "25426"
+      ],
+      "pointContacts": [
+        "25297"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25438": {
+      "neighbours": [
+        "25293",
+        "25530",
+        "25839"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25473": {
+      "neighbours": [
+        "25286"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25483": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25486": {
+      "neighbours": [
+        "25772",
+        "25793"
+      ],
+      "pointContacts": [
+        "25200"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25488": {
+      "neighbours": [
+        "25001"
+      ],
+      "pointContacts": [
+        "25805",
+        "25815"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25489": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25491": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25506": {
+      "neighbours": [],
+      "pointContacts": [
+        "25120",
+        "25524",
+        "25649"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25513": {
+      "neighbours": [
+        "25862"
+      ],
+      "pointContacts": [
+        "25258",
+        "25769",
+        "25777",
+        "25793",
+        "25871"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25518": {
+      "neighbours": [
+        "25653"
+      ],
+      "pointContacts": [
+        "25823",
+        "25871"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25524": {
+      "neighbours": [],
+      "pointContacts": [
+        "25053",
+        "25506",
+        "25649"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25530": {
+      "neighbours": [
+        "25438"
+      ],
+      "pointContacts": [
+        "25839"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25535": {
+      "neighbours": [],
+      "pointContacts": [
+        "25290"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25572": {
+      "neighbours": [
+        "25885"
+      ],
+      "pointContacts": [
+        "25320"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25580": {
+      "neighbours": [
+        "25368"
+      ],
+      "pointContacts": [
+        "25086",
+        "25596"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25592": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25594": {
+      "neighbours": [
+        "25335"
+      ],
+      "pointContacts": [
+        "25151"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25596": {
+      "neighbours": [],
+      "pointContacts": [
+        "25123",
+        "25368",
+        "25386",
+        "25580"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25599": {
+      "neighbours": [
+        "25035",
+        "25878"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25612": {
+      "neighbours": [],
+      "pointContacts": [
+        "25307"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25645": {
+      "neighbours": [
+        "25797"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25649": {
+      "neighbours": [],
+      "pointContacts": [
+        "25053",
+        "25120",
+        "25506",
+        "25524"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25653": {
+      "neighbours": [
+        "25518"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25658": {
+      "neighbours": [],
+      "pointContacts": [
+        "25402"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25662": {
+      "neighbours": [],
+      "pointContacts": [
+        "25168"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25718": {
+      "neighbours": [
+        "25402"
+      ],
+      "pointContacts": [
+        "25019"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25736": {
+      "neighbours": [
+        "25326"
+      ],
+      "pointContacts": [
+        "25183",
+        "25772"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25740": {
+      "neighbours": [
+        "25290"
+      ],
+      "pointContacts": [
+        "25754"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25743": {
+      "neighbours": [],
+      "pointContacts": [
+        "25290",
+        "25805"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25745": {
+      "neighbours": [],
+      "pointContacts": [
+        "25779"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25754": {
+      "neighbours": [],
+      "pointContacts": [
+        "25099",
+        "25740"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25758": {
+      "neighbours": [
+        "25322"
+      ],
+      "pointContacts": [
+        "25175",
+        "25377"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25769": {
+      "neighbours": [],
+      "pointContacts": [
+        "25513"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25772": {
+      "neighbours": [
+        "25183",
+        "25224",
+        "25486"
+      ],
+      "pointContacts": [
+        "25736"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25777": {
+      "neighbours": [],
+      "pointContacts": [
+        "25402",
+        "25513"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25779": {
+      "neighbours": [],
+      "pointContacts": [
+        "25154",
+        "25288",
+        "25745"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25781": {
+      "neighbours": [],
+      "pointContacts": [
+        "25793"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25785": {
+      "neighbours": [
+        "25899"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25793": {
+      "neighbours": [
+        "25200",
+        "25486"
+      ],
+      "pointContacts": [
+        "25154",
+        "25224",
+        "25513",
+        "25781"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25797": {
+      "neighbours": [
+        "25386",
+        "25645"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25799": {
+      "neighbours": [
+        "25286"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25805": {
+      "neighbours": [],
+      "pointContacts": [
+        "25290",
+        "25488",
+        "25743"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25807": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25815": {
+      "neighbours": [
+        "25878"
+      ],
+      "pointContacts": [
+        "25001",
+        "25368",
+        "25488"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25817": {
+      "neighbours": [
+        "25295",
+        "25899"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25823": {
+      "neighbours": [
+        "25394",
+        "25885"
+      ],
+      "pointContacts": [
+        "25518"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25839": {
+      "neighbours": [
+        "25438"
+      ],
+      "pointContacts": [
+        "25293",
+        "25297",
+        "25530"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25841": {
+      "neighbours": [],
+      "pointContacts": [
+        "25178"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25843": {
+      "neighbours": [
+        "25288"
+      ],
+      "pointContacts": [
+        "25154"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25845": {
+      "neighbours": [],
+      "pointContacts": [
+        "25178",
+        "25339"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25851": {
+      "neighbours": [],
+      "pointContacts": [
+        "25148"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25862": {
+      "neighbours": [
+        "25513"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25867": {
+      "neighbours": [],
+      "pointContacts": [
+        "25095"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25871": {
+      "neighbours": [],
+      "pointContacts": [
+        "25513",
+        "25518"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25873": {
+      "neighbours": [
+        "25407"
+      ],
+      "pointContacts": [
+        "25183"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25875": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25878": {
+      "neighbours": [
+        "25599",
+        "25815"
+      ],
+      "pointContacts": [
+        "25245"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25885": {
+      "neighbours": [
+        "25148",
+        "25572",
+        "25823"
+      ],
+      "pointContacts": [
+        "25394"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25898": {
+      "neighbours": [],
+      "pointContacts": [
+        "25099",
+        "25386"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25899": {
+      "neighbours": [
+        "25200",
+        "25785",
+        "25817"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

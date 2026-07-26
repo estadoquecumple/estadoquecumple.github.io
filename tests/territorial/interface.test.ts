@@ -8,7 +8,7 @@ const sap = readFileSync('src/components/territorial/SaviaWorkspace.astro', 'utf
 const seeds = readFileSync('src/components/territorial/SeedsWorkspace.astro', 'utf8');
 const model = readFileSync('src/data/territorial/scenario-v2.ts', 'utf8');
 
-describe('contrato de interfaz V2', () => {
+describe('contrato de interfaz V3', () => {
   it('separa RAÍCES, SAVIA y SEMILLAS', () => {
     expect(roots).toMatch(/RAÍCES · VER/);
     expect(sap).toMatch(/SAVIA · EVALUAR/);
@@ -36,5 +36,5 @@ describe('contrato de interfaz V2', () => {
     expect(map).toMatch(/ResizeObserver[\s\S]*fitBounds[\s\S]*setText/);
   });
   it('clasifica todos los resultados', () => expect(model).toMatch(/observed[\s\S]*calculated[\s\S]*assumption[\s\S]*unavailable/));
-  it('migra claves antiguas con schemaVersion 2', () => expect(model).toMatch(/LAB_SCHEMA_VERSION = 2[\s\S]*LEGACY_KEYS[\s\S]*removeItem/));
+  it('migra claves antiguas con schemaVersion 3', () => expect(model).toMatch(/LAB_SCHEMA_VERSION = 3[\s\S]*LEGACY_KEYS[\s\S]*removeItem/));
 });

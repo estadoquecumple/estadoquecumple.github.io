@@ -17,11 +17,13 @@
     "data:refresh": "python scripts/territorial/fetch_all.py",
     "data:validate": "python scripts/territorial/validate_sources.py",
     "lab:test": "vitest run tests/territorial",
-    "lab:e2e": "playwright test",
+    "lab:functional-audit": "node tools/audit-territorial-v3-functional.mjs",
+    "lab:legal-audit": "node tools/audit-territorial-v3-legal.mjs",
+    "lab:button-contract": "node tools/audit-territorial-v3-buttons.mjs",
     "lab:audit": "node tools/audit-territorial.mjs",
     "lab:legacy-audit": "node tools/audit-legacy.mjs",
-    "lab:e2e": "playwright test",
-    "validate": "npm run data:validate && npm run lab:legacy-audit && npm run lab:test && npm run check && npm run build && npm run audit && npm run seo:audit && npm run lab:audit"
+    "lab:e2e": "node tools/run-lab-e2e.mjs",
+    "validate": "npm run data:validate && npm run lab:legacy-audit && npm run lab:test && npm run check && npm run build && npm run audit && npm run seo:audit && npm run lab:audit && npm run lab:legal-audit && npm run lab:button-contract && npm run lab:functional-audit"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",

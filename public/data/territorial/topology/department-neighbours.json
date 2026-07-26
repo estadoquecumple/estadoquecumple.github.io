@@ -1,0 +1,379 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera en la geometría DANE redondeada a 5 decimales. El contacto puntual se registra aparte y no se incluye automáticamente.",
+  "units": {
+    "11": {
+      "neighbours": [
+        "25",
+        "50"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "13": {
+      "neighbours": [
+        "05",
+        "08",
+        "20",
+        "23",
+        "47",
+        "68",
+        "70"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "15": {
+      "neighbours": [
+        "05",
+        "25",
+        "54",
+        "68",
+        "81",
+        "85"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "17": {
+      "neighbours": [
+        "05",
+        "25",
+        "66",
+        "73"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "18": {
+      "neighbours": [
+        "19",
+        "41",
+        "50",
+        "86",
+        "91",
+        "95",
+        "97"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "19": {
+      "neighbours": [
+        "18",
+        "41",
+        "52",
+        "73",
+        "76",
+        "86"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "20": {
+      "neighbours": [
+        "13",
+        "44",
+        "47",
+        "54",
+        "68"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "23": {
+      "neighbours": [
+        "05",
+        "13",
+        "70"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "25": {
+      "neighbours": [
+        "11",
+        "15",
+        "17",
+        "41",
+        "50",
+        "73"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "27": {
+      "neighbours": [
+        "05",
+        "66",
+        "76"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41": {
+      "neighbours": [
+        "18",
+        "19",
+        "25",
+        "50",
+        "73"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "44": {
+      "neighbours": [
+        "20",
+        "47"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "47": {
+      "neighbours": [
+        "08",
+        "13",
+        "20",
+        "44"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "50": {
+      "neighbours": [
+        "11",
+        "18",
+        "25",
+        "41",
+        "85",
+        "95",
+        "99"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "52": {
+      "neighbours": [
+        "19",
+        "86"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "54": {
+      "neighbours": [
+        "15",
+        "20",
+        "68"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "63": {
+      "neighbours": [
+        "66",
+        "73",
+        "76"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "66": {
+      "neighbours": [
+        "05",
+        "17",
+        "27",
+        "63",
+        "76"
+      ],
+      "pointContacts": [
+        "73"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "68": {
+      "neighbours": [
+        "05",
+        "13",
+        "15",
+        "20",
+        "54"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "70": {
+      "neighbours": [
+        "13",
+        "23"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "73": {
+      "neighbours": [
+        "17",
+        "19",
+        "25",
+        "41",
+        "63",
+        "76"
+      ],
+      "pointContacts": [
+        "66"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "76": {
+      "neighbours": [
+        "19",
+        "27",
+        "63",
+        "66",
+        "73"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81": {
+      "neighbours": [
+        "15",
+        "85",
+        "99"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85": {
+      "neighbours": [
+        "15",
+        "50",
+        "81",
+        "99"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "86": {
+      "neighbours": [
+        "18",
+        "19",
+        "52",
+        "91"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "88": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91": {
+      "neighbours": [
+        "18",
+        "86",
+        "97"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94": {
+      "neighbours": [
+        "95",
+        "97",
+        "99"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "95": {
+      "neighbours": [
+        "18",
+        "50",
+        "94",
+        "97",
+        "99"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97": {
+      "neighbours": [
+        "18",
+        "91",
+        "94",
+        "95"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "99": {
+      "neighbours": [
+        "50",
+        "81",
+        "85",
+        "94",
+        "95"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "05": {
+      "neighbours": [
+        "13",
+        "15",
+        "17",
+        "23",
+        "27",
+        "66",
+        "68"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "08": {
+      "neighbours": [
+        "13",
+        "47"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

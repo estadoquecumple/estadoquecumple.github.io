@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "11",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "11001": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

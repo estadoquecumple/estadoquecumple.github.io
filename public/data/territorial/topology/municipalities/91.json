@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "91",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "91001": {
+      "neighbours": [
+        "91798"
+      ],
+      "pointContacts": [
+        "91540"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91263": {
+      "neighbours": [
+        "91405",
+        "91536"
+      ],
+      "pointContacts": [
+        "91530"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91405": {
+      "neighbours": [
+        "91263",
+        "91669"
+      ],
+      "pointContacts": [
+        "91530",
+        "91536"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91407": {
+      "neighbours": [],
+      "pointContacts": [
+        "91460",
+        "91798"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91430": {
+      "neighbours": [
+        "91460"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91460": {
+      "neighbours": [
+        "91430",
+        "91536",
+        "91669"
+      ],
+      "pointContacts": [
+        "91407"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91530": {
+      "neighbours": [],
+      "pointContacts": [
+        "91263",
+        "91405"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91536": {
+      "neighbours": [
+        "91263",
+        "91460",
+        "91669"
+      ],
+      "pointContacts": [
+        "91405",
+        "91798"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91540": {
+      "neighbours": [],
+      "pointContacts": [
+        "91001",
+        "91798"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91669": {
+      "neighbours": [
+        "91405",
+        "91460",
+        "91536"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "91798": {
+      "neighbours": [
+        "91001"
+      ],
+      "pointContacts": [
+        "91407",
+        "91536",
+        "91540"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}
