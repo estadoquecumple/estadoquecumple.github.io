@@ -1,0 +1,402 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "41",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "41001": {
+      "neighbours": [
+        "41016",
+        "41524",
+        "41615",
+        "41799"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41006": {
+      "neighbours": [
+        "41530"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41013": {
+      "neighbours": [
+        "41518"
+      ],
+      "pointContacts": [
+        "41298",
+        "41306",
+        "41548"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41016": {
+      "neighbours": [
+        "41001",
+        "41872"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41020": {
+      "neighbours": [
+        "41132"
+      ],
+      "pointContacts": [
+        "41306",
+        "41349"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41026": {
+      "neighbours": [
+        "41298",
+        "41319"
+      ],
+      "pointContacts": [
+        "41791"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41078": {
+      "neighbours": [],
+      "pointContacts": [
+        "41206",
+        "41799",
+        "41872"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41132": {
+      "neighbours": [
+        "41020",
+        "41349",
+        "41615"
+      ],
+      "pointContacts": [
+        "41524",
+        "41885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41206": {
+      "neighbours": [],
+      "pointContacts": [
+        "41078"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41244": {
+      "neighbours": [
+        "41807"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41298": {
+      "neighbours": [
+        "41026"
+      ],
+      "pointContacts": [
+        "41013"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41306": {
+      "neighbours": [
+        "41349",
+        "41518"
+      ],
+      "pointContacts": [
+        "41013",
+        "41020",
+        "41885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41319": {
+      "neighbours": [
+        "41026",
+        "41770"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41349": {
+      "neighbours": [
+        "41132",
+        "41306",
+        "41885"
+      ],
+      "pointContacts": [
+        "41020"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41357": {
+      "neighbours": [
+        "41797"
+      ],
+      "pointContacts": [
+        "41483",
+        "41801",
+        "41885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41359": {
+      "neighbours": [
+        "41551"
+      ],
+      "pointContacts": [
+        "41660",
+        "41668"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41378": {
+      "neighbours": [
+        "41396",
+        "41660"
+      ],
+      "pointContacts": [
+        "41503",
+        "41791"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41396": {
+      "neighbours": [
+        "41378"
+      ],
+      "pointContacts": [
+        "41548"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41483": {
+      "neighbours": [
+        "41797"
+      ],
+      "pointContacts": [
+        "41357"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41503": {
+      "neighbours": [],
+      "pointContacts": [
+        "41378",
+        "41791"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41518": {
+      "neighbours": [
+        "41013",
+        "41306",
+        "41797"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41524": {
+      "neighbours": [
+        "41001",
+        "41676",
+        "41801"
+      ],
+      "pointContacts": [
+        "41132",
+        "41885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41530": {
+      "neighbours": [
+        "41006"
+      ],
+      "pointContacts": [
+        "41551"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41548": {
+      "neighbours": [],
+      "pointContacts": [
+        "41013",
+        "41396",
+        "41791"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41551": {
+      "neighbours": [
+        "41359",
+        "41668"
+      ],
+      "pointContacts": [
+        "41530",
+        "41660",
+        "41807"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41615": {
+      "neighbours": [
+        "41001",
+        "41132"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41660": {
+      "neighbours": [
+        "41378"
+      ],
+      "pointContacts": [
+        "41359",
+        "41551"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41668": {
+      "neighbours": [
+        "41551"
+      ],
+      "pointContacts": [
+        "41359"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41676": {
+      "neighbours": [
+        "41524"
+      ],
+      "pointContacts": [
+        "41801"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41770": {
+      "neighbours": [
+        "41319",
+        "41807"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41791": {
+      "neighbours": [],
+      "pointContacts": [
+        "41026",
+        "41378",
+        "41503",
+        "41548"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41797": {
+      "neighbours": [
+        "41357",
+        "41483",
+        "41518"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41799": {
+      "neighbours": [
+        "41001",
+        "41872"
+      ],
+      "pointContacts": [
+        "41078"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41801": {
+      "neighbours": [
+        "41524"
+      ],
+      "pointContacts": [
+        "41357",
+        "41676",
+        "41885"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41807": {
+      "neighbours": [
+        "41244",
+        "41770"
+      ],
+      "pointContacts": [
+        "41551"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41872": {
+      "neighbours": [
+        "41016",
+        "41799"
+      ],
+      "pointContacts": [
+        "41078"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "41885": {
+      "neighbours": [
+        "41349"
+      ],
+      "pointContacts": [
+        "41132",
+        "41306",
+        "41357",
+        "41524",
+        "41801"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

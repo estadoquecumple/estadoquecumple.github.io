@@ -1,61 +1,83 @@
+---
+import { territorialExamples } from '../../data/territorial/examples-v3';
+---
 <section class="mode-workspace seeds-workspace" data-workspace="seeds" hidden aria-labelledby="seeds-title">
   <p class="panel-number">SEMILLAS · DISEÑAR</p>
-  <h2 id="seeds-title">¿Qué alternativa institucional puede diseñarse, compararse y pilotarse?</h2>
-  <p>El estado actual permanece bloqueado. Cree o duplique un escenario para editar.</p>
+  <h2 id="seeds-title">¿Qué alternativa institucional puede diseñarse y compararse?</h2>
+  <ol class="scenario-steps" data-scenario-steps>{['Ejemplo/objetivo','Unidades','Operación','Figura','Gobierno','Competencias','Financiación','Planeación','Consecuencias','Ruta jurídica','Comparar','Guardar'].map((step,index)=><li data-step={index+1}>{index+1}. {step}</li>)}</ol>
+  <fieldset><legend>Biblioteca pedagógica</legend>
+    <label>Ejemplo <select data-example-select>{territorialExamples.map((example)=><option value={example.id}>{example.name}</option>)}</select></label>
+    <button type="button" data-load-example>Cargar ejemplo</button>
+    <div data-example-summary>Los ejemplos no constituyen propuestas definitivas de CAMS.</div>
+  </fieldset>
   <div class="scenario-actions">
-    <button type="button" data-create-scenario>Crear escenario</button>
-    <button type="button" data-duplicate-scenario disabled>Duplicar</button>
-    <button type="button" data-rename-scenario disabled>Renombrar</button>
-    <button type="button" data-archive-scenario disabled>Archivar</button>
-    <button type="button" data-delete-scenario disabled>Eliminar</button>
+    <button type="button" data-create-scenario>Crear escenario desde Colombia actual</button>
+    <button type="button" data-duplicate-scenario disabled>Duplicar</button><button type="button" data-rename-scenario disabled>Renombrar</button>
+    <button type="button" data-archive-scenario disabled>Archivar</button><button type="button" data-delete-scenario disabled>Eliminar</button>
   </div>
   <label>Escenario local <select data-local-scenarios><option value="current">Estado actual · bloqueado</option></select></label>
   <div class="selection-tools">
     <button type="button" data-select-department>Seleccionar departamento completo</button>
     <button type="button" data-select-neighbours>Seleccionar vecinos</button>
     <button type="button" data-select-contiguous>Seleccionar contiguos</button>
-    <button type="button" data-draw-rectangle>Selección rectangular</button>
-    <button type="button" data-draw-polygon>Selección poligonal</button>
-    <button type="button" data-invert-selection>Invertir</button>
-    <button type="button" data-clear-selection>Limpiar</button>
+    <label>Anillos <input type="number" data-contiguous-rings min="1" max="5" value="1" /></label>
+    <button type="button" data-draw-rectangle>Selección rectangular</button><button type="button" data-draw-polygon>Selección poligonal</button>
+    <button type="button" data-invert-selection>Invertir</button><button type="button" data-clear-selection>Limpiar</button>
   </div>
   <p><strong>Unidades seleccionadas:</strong> <span data-selection-summary>Ninguna</span></p>
+  <p data-selection-universe>Universo: 33 departamentos y Distrito Capital.</p>
+  <div class="spatial-preview" data-spatial-preview hidden>
+    <p data-spatial-preview-text></p>
+    <label>Regla <select data-spatial-rule><option value="intersection">Intersección</option><option value="containment">Contención</option><option value="contact">Contacto</option></select></label>
+    <button type="button" data-apply-spatial>Aplicar selección espacial</button><button type="button" data-cancel-spatial>Cancelar</button>
+  </div>
   <div class="modeler-grid">
     <fieldset><legend>Estructura territorial</legend>
       <label>Nombre de nueva unidad <input data-unit-name value="Región exploratoria" /></label>
-      <label>Naturaleza <select data-unit-nature><option>región</option><option>provincia</option><option>distrito funcional</option><option>área metropolitana</option><option>ciudad-región</option><option>mancomunidad</option><option>unidad personalizada</option></select></label>
+      <label>Naturaleza <select data-unit-nature><option>región</option><option>provincia</option><option>distrito funcional</option><option>área metropolitana</option><option>unidad personalizada</option></select></label>
       <label>Integrantes <select data-disposition><option value="political">Conservar como entidades políticas</option><option value="administrative">Conservar como subdivisiones administrativas</option><option value="absorbed">Absorber</option><option value="statistical">Solo límites estadísticos</option></select></label>
-      <button type="button" data-merge>Unir selección</button>
-      <button type="button" data-split-membership>Dividir por municipios</button>
-      <button type="button" data-split-geometry>División geométrica experimental</button>
-      <button type="button" data-suppress-department>Suprimir nivel departamental en escenario</button>
+      <button type="button" data-merge>Unir selección</button><button type="button" data-split-membership>Dividir por municipios</button>
+      <button type="button" data-split-geometry>División geométrica</button><button type="button" data-suppress-department>Suprimir nivel departamental en escenario</button>
       <button type="button" data-create-level>Crear nuevo nivel</button>
+      <div data-group-editor hidden>
+        <h3>Editor de grupos</h3><label>Unidad padre <select data-group-parent></select></label><div data-groups></div>
+        <button type="button" data-add-group>Añadir grupo</button><p data-unassigned>Municipios no asignados: seleccione una unidad padre.</p>
+        <p data-continuity>Continuidad: pendiente de asignación.</p><button type="button" data-confirm-groups>Confirmar división</button><button type="button" data-cancel-groups>Cancelar</button>
+      </div>
+      <div data-level-editor hidden>
+        <h3>Editor de nuevo nivel</h3><label>Nombre <input data-level-name /></label><label>Código interno <input data-level-code pattern="[a-z0-9-]+" /></label>
+        <label>Orden jerárquico <input type="number" data-level-order min="1" max="10" value="2" /></label>
+        <label>Naturaleza <select data-level-nature><option>administrativa</option><option>territorial hipotética</option><option>funcional</option><option>estadística</option></select></label>
+        <label>Estatus jurídico <select data-level-legal><option>figura vigente por verificar</option><option>requiere reforma legal</option><option>requiere reforma constitucional</option></select></label>
+        <label>Cobertura y unidades <textarea data-level-coverage></textarea></label><label>Autoridad <input data-level-authority /></label>
+        <label>Corporación representativa <input data-level-body /></label><label>Competencias <textarea data-level-competences></textarea></label>
+        <label>Financiación <textarea data-level-finance></textarea></label><label>Planeación y control <textarea data-level-control></textarea></label>
+        <label>Relación con otros niveles <textarea data-level-relation></textarea></label><label>Carácter <select data-level-duration><option>permanente</option><option>temporal</option><option>funcional</option></select></label>
+        <button type="button" data-confirm-level>Crear nivel configurado</button><button type="button" data-cancel-level>Cancelar</button>
+      </div>
     </fieldset>
     <fieldset><legend>Gobierno</legend>
-      <label>Autoridad <select data-government-authority><option>ejecutivo elegido</option><option>ejecutivo colegiado</option><option>administrador profesional</option><option>dirección política y administración separadas</option></select></label>
+      <label>Autoridad <select data-government-authority><option>ejecutivo elegido directamente</option><option>ejecutivo elegido por corporación</option><option>ejecutivo colegiado</option><option>administrador profesional nombrado</option><option>dirección política + administración profesional</option><option>autoridad intergubernamental</option><option>gobierno propio indígena</option><option>modelo federal hipotético</option></select></label>
       <label>Selección <select data-government-selection><option value="elección directa">Elección directa</option><option value="corporación">Elección por corporación</option><option value="nombramiento">Nombramiento</option><option value="híbrido">Procedimiento híbrido</option></select></label>
       <button type="button" data-change-government>Aplicar gobierno</button>
     </fieldset>
-    <fieldset><legend>Competencias</legend>
-      <label>Función <select data-competence-function>{['educación','salud','agua','residuos','transporte','vivienda','ambiente','catastro','tributación','contratación','defensa jurídica','seguridad','infraestructura','planeación','desarrollo productivo','ciencia y tecnología','cultura','cuidado'].map((item) => <option>{item}</option>)}</select></label>
-      <label>Nivel <select data-competence-level><option value="nation">Nación</option><option value="department">Departamento</option><option value="municipality">Municipio</option></select></label>
+    <fieldset><legend>Competencias por rol</legend>
+      <label>Función <select data-competence-function>{['educación','salud','agua','residuos','transporte','vivienda','ambiente','catastro','tributación','contratación','defensa jurídica','seguridad','infraestructura','planeación','desarrollo productivo','ciencia y tecnología','cultura','cuidado'].map((item)=><option>{item}</option>)}</select></label>
+      <label>Rol <select data-competence-role>{['regulation','financing','planning','execution','operation','maintenance','inspection','surveillance','fiscal-control','political-control','evaluation'].map((item)=><option value={item}>{item}</option>)}</select></label>
+      <label>Nivel o unidad <select data-competence-level></select></label>
       <label>Modalidad <select data-competence-modality><option value="exclusive">Exclusiva</option><option value="concurrent">Concurrente</option><option value="shared">Compartida</option><option value="delegated">Delegada</option><option value="subsidiary">Subsidiaria</option><option value="temporary">Temporal</option></select></label>
-      <button type="button" data-assign-competence>Asignar competencia</button>
+      <button type="button" data-assign-competence>Asignar rol</button>
     </fieldset>
     <fieldset><legend>Financiación y planeación</legend>
-      <label><input type="checkbox" data-finance="impuestos propios" /> Impuestos propios</label>
-      <label><input type="checkbox" data-finance="transferencias" /> Transferencias</label>
-      <label><input type="checkbox" data-finance="igualación" /> Igualación</label>
-      <label><input type="checkbox" data-finance="fondos regionales" /> Fondos regionales</label>
-      <label><input type="checkbox" data-finance="cofinanciación" /> Cofinanciación</label>
+      {['impuestos propios','transferencias','igualación','fondos regionales','cofinanciación'].map((item)=><label><input type="checkbox" data-finance={item} /> {item}</label>)}
       <button type="button" data-change-finance>Aplicar financiación</button>
-      <label>Horizonte de planeación <input type="number" min="1" max="30" value="12" data-planning-horizon /> años</label>
-      <button type="button" data-change-planning>Aplicar planeación</button>
+      <label>Horizonte <input type="number" min="1" max="30" value="12" data-planning-horizon /> años</label><button type="button" data-change-planning>Aplicar planeación</button>
     </fieldset>
   </div>
-  <div class="history-actions">
-    <button type="button" data-undo disabled>Deshacer</button>
-    <button type="button" data-redo disabled>Rehacer</button>
-    <span data-save-status>Sin escenario editable</span>
-  </div>
+  <fieldset><legend>Jerarquía y subdivisiones internas</legend>
+    <div data-hierarchy-tree>Nación → Departamento/Distrito Capital → Municipio/Distrito → subdivisión interna.</div>
+    <label>Modelo interno <select data-subdivision-model><option value="municipality">Municipio ordinario</option><option value="specialDistrict">Distrito especial</option><option value="bogota">Bogotá</option></select></label>
+    <button type="button" data-add-subdivisions>Añadir modelo interno</button><div data-subdivision-result>Comunas, corregimientos y localidades no se presentan como municipios.</div>
+  </fieldset>
+  <div class="history-actions"><button type="button" data-undo disabled>Deshacer</button><button type="button" data-redo disabled>Rehacer</button><span data-save-status>Sin escenario editable</span></div>
 </section>

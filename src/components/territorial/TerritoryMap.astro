@@ -6,6 +6,19 @@ import 'maplibre-gl/dist/maplibre-gl.css';
     <div><p class="eyebrow">Cartografía oficial</p><h2 id="map-title">Mapa territorial</h2></div>
     <div class="legend" aria-label="Leyenda del modo"><span data-map-legend>RAÍCES · consulta oficial</span></div>
   </div>
+  <div class="map-toolbar" aria-label="Contexto y cámara">
+    <label>Mapa base
+      <select data-basemap>
+        <option value="atlas">Atlas institucional local</option>
+        <option value="light">Fondo claro</option>
+        <option value="dark">Fondo oscuro</option>
+        <option value="none">Sin mapa base</option>
+      </select>
+    </label>
+    <button type="button" data-camera="colombia">Ver Colombia completa</button>
+    <button type="button" data-camera="caribbean">Ver Caribe e islas</button>
+    <button type="button" data-camera="selection">Volver a selección</button>
+  </div>
   <div class="map-stage">
     <div id="territory-map" class="territory-map" role="img" aria-label="Mapa de departamentos y municipios de Colombia según DANE DIVIPOLA MGN 2025"></div>
     <div class="map-status" data-map-status data-state="loading" role="status" aria-live="polite">
@@ -13,6 +26,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
       <button type="button" data-map-retry>Reintentar mapa</button>
     </div>
   </div>
+  <p class="context-warning">Las fronteras de países vecinos se muestran solo como contexto cartográfico. Los límites territoriales colombianos provienen de las fuentes oficiales declaradas.</p>
   <p class="map-help">Use teclado, búsqueda o tabla como alternativa completa al mapa. Ctrl/Cmd + clic añade unidades a la selección SEMILLAS.</p>
 </section>
 <script>
@@ -37,6 +51,8 @@ import 'maplibre-gl/dist/maplibre-gl.css';
   const cache = new globalThis.Map<string, FeatureCollection>();
   let drawingMode: 'rectangle' | 'polygon' | null = null;
   let drawingPoints: Array<[number, number]> = [];
+  let departmentData: FeatureCollection | undefined;
+  let lastSelection: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
   const setStatus = (text: string, state: 'loading' | 'ready' | 'partial' | 'error' = 'loading') => {
     if (message) message.textContent = text;
@@ -66,6 +82,13 @@ import 'maplibre-gl/dist/maplibre-gl.css';
       if (typeof feature.properties?.code !== 'string' || typeof feature.properties?.name !== 'string') throw new Error('Una entidad no contiene propiedades code y name válidas.');
     }
     cache.set(url, data);
+    return data;
+  };
+  const fetchGeoJSON = async (url: string): Promise<GeoJSON.FeatureCollection> => {
+    const response = await fetch(url, { headers: { Accept: 'application/geo+json, application/json' } });
+    if (!response.ok) throw new Error(`Error HTTP ${response.status} al cargar ${url}`);
+    const data = await response.json();
+    if (data?.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error(`GeoJSON inválido: ${url}`);
     return data;
   };
   const extendCoordinates = (bounds: LngLatBounds, coordinates: any): void => {
@@ -146,16 +169,42 @@ import 'maplibre-gl/dist/maplibre-gl.css';
       map.resize();
       setStatus('Cargando cartografía DANE');
       const departments = await fetchCollection('/data/territorial/geography/departments.geojson');
+      departmentData = departments;
+      const [ocean, countries, coast, borders, labels, capitals] = await Promise.all([
+        fetchGeoJSON('/data/territorial/context/ocean.geojson'),
+        fetchGeoJSON('/data/territorial/context/countries-near-colombia.geojson'),
+        fetchGeoJSON('/data/territorial/context/coastline.geojson'),
+        fetchGeoJSON('/data/territorial/context/country-borders.geojson'),
+        fetchGeoJSON('/data/territorial/context/geographic-labels.geojson'),
+        fetchGeoJSON('/data/territorial/context/capital-cities.geojson'),
+      ]);
+      map.addSource('context-ocean', { type:'geojson', data:ocean });
+      map.addLayer({ id:'context-ocean', type:'fill', source:'context-ocean', paint:{'fill-color':'#dcecf2','fill-opacity':0.85} });
+      map.addSource('context-countries', { type:'geojson', data:countries });
+      map.addLayer({ id:'context-countries', type:'fill', source:'context-countries', paint:{'fill-color':'#eee8d8','fill-opacity':0.8} });
+      map.addSource('context-coastline', { type:'geojson', data:coast });
+      map.addLayer({ id:'context-coastline', type:'line', source:'context-coastline', paint:{'line-color':'#55717d','line-width':1} });
+      map.addSource('context-borders', { type:'geojson', data:borders });
+      map.addLayer({ id:'context-borders', type:'line', source:'context-borders', paint:{'line-color':'#8a8172','line-width':0.8,'line-dasharray':[3,2]} });
       map.addSource('departments', { type: 'geojson', data: departments });
       map.addLayer({ id: 'departments-fill', type: 'fill', source: 'departments', paint: { 'fill-color': '#d8c8a4', 'fill-opacity': 0.72 } });
       map.addLayer({ id: 'departments-line', type: 'line', source: 'departments', paint: { 'line-color': '#123b5d', 'line-width': 1.2 } });
       map.addLayer({ id: 'departments-hover', type: 'line', source: 'departments', paint: { 'line-color': '#a11f2a', 'line-width': 3 }, filter: ['==', ['get', 'code'], ''] });
+      for (const id of ['selected-departments','selected-municipalities','candidate-units','scenario-created','scenario-transformed','scenario-suppressed','scenario-functional']) {
+        map.addSource(id, { type:'geojson', data:{type:'FeatureCollection',features:[]} });
+        map.addLayer({ id:`${id}-fill`, type:'fill', source:id, paint:{'fill-color':id.startsWith('selected') ? '#f3c742' : '#7b3fb4','fill-opacity':0.42} });
+        map.addLayer({ id:`${id}-line`, type:'line', source:id, paint:{'line-color':id.startsWith('selected') ? '#8d1b20' : '#52247a','line-width':3} });
+      }
       map.addSource('scenario-units', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       map.addLayer({ id: 'scenario-units-fill', type: 'fill', source: 'scenario-units', paint: { 'fill-color': '#7b3fb4', 'fill-opacity': 0.28 } });
       map.addLayer({ id: 'scenario-units-line', type: 'line', source: 'scenario-units', paint: { 'line-color': '#52247a', 'line-width': 2.5 } });
       map.addSource('drawing-selection', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       map.addLayer({ id: 'drawing-selection-fill', type: 'fill', source: 'drawing-selection', filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': '#7b3fb4', 'fill-opacity': 0.2 } });
       map.addLayer({ id: 'drawing-selection-line', type: 'line', source: 'drawing-selection', paint: { 'line-color': '#7b3fb4', 'line-width': 3, 'line-dasharray': [2, 1] } });
+      map.addSource('context-labels', { type:'geojson', data:labels });
+      map.addLayer({ id:'context-labels', type:'symbol', source:'context-labels', layout:{'text-field':['get','name'],'text-size':12}, paint:{'text-color':'#52636b','text-halo-color':'#fff','text-halo-width':1} });
+      map.addSource('context-capitals', { type:'geojson', data:capitals });
+      map.addLayer({ id:'context-capitals', type:'circle', source:'context-capitals', paint:{'circle-radius':3,'circle-color':'#123b5d'} });
       map.fitBounds(collectionBounds(departments), { padding: 28, duration: 0, maxZoom: 5.2 });
       map.on('mousemove', 'departments-fill', (event) => map?.setFilter('departments-hover', ['==', ['get', 'code'], event.features?.[0]?.properties?.code ?? '']));
       map.on('mouseleave', 'departments-fill', () => map?.setFilter('departments-hover', ['==', ['get', 'code'], '']));
@@ -186,15 +235,48 @@ import 'maplibre-gl/dist/maplibre-gl.css';
         else setStatus('Datos parciales: el polígono necesita al menos tres vértices.', 'partial');
       });
       document.dispatchEvent(new CustomEvent('territorial:departments', { detail: { features: departments.features } }));
+      await new Promise<void>((resolve) => {
+        if (map?.isSourceLoaded('departments')) return resolve();
+        const timeout=window.setTimeout(resolve,2000);
+        map?.on('sourcedata',(event)=>{if(event.sourceId==='departments'&&event.isSourceLoaded){window.clearTimeout(timeout);resolve();}});
+      });
       setStatus(`Mapa disponible · ${departments.features.length} entidades`, departments.features.length === 33 ? 'ready' : 'partial');
     } catch (error) {
       setStatus(`Error: ${error instanceof Error ? error.message : String(error)}. La tabla territorial continúa disponible.`, 'error');
+      try {
+        const fallback = await fetch('/data/territorial/geography/departments.geojson', { headers: { Accept: 'application/json' } });
+        if (fallback.ok) {
+          const data = await fallback.json();
+          if (data?.type === 'FeatureCollection' && Array.isArray(data.features)) document.dispatchEvent(new CustomEvent('territorial:departments', { detail: { features: data.features, fallback: true } }));
+        }
+      } catch {
+        // El error cartográfico permanece visible y la interfaz textual sigue disponible.
+      }
     }
   };
   retry?.addEventListener('click', initialize);
   document.addEventListener('territorial:load-department', ((event: CustomEvent<{ code: string }>) => void loadMunicipalities(event.detail.code)) as EventListener);
   document.addEventListener('territorial:scenario-geometry', ((event: CustomEvent<GeoJSON.FeatureCollection>) => {
     (map?.getSource('scenario-units') as GeoJSONSource | undefined)?.setData(event.detail);
+  }) as EventListener);
+  document.addEventListener('territorial:selection-geometry', ((event: CustomEvent<{ departments: GeoJSON.FeatureCollection; municipalities: GeoJSON.FeatureCollection }>) => {
+    (map?.getSource('selected-departments') as GeoJSONSource | undefined)?.setData(event.detail.departments);
+    (map?.getSource('selected-municipalities') as GeoJSONSource | undefined)?.setData(event.detail.municipalities);
+    lastSelection = { type:'FeatureCollection', features:[...event.detail.departments.features, ...event.detail.municipalities.features] };
+  }) as EventListener);
+  document.querySelector<HTMLSelectElement>('[data-basemap]')?.addEventListener('change', (event) => {
+    const value = (event.currentTarget as HTMLSelectElement).value;
+    const colors:Record<string,string> = {atlas:'#e8e3d8',light:'#f7f7f4',dark:'#17232d',none:'#ffffff'};
+    map?.setPaintProperty('background','background-color',colors[value]);
+  });
+  document.querySelectorAll<HTMLButtonElement>('[data-camera]').forEach((button) => button.addEventListener('click', () => {
+    if (!map) return;
+    if (button.dataset.camera === 'caribbean') map.fitBounds([[-83,8],[-75,16]],{padding:30,duration:0});
+    else if (button.dataset.camera === 'selection' && lastSelection.features.length) map.fitBounds(collectionBounds(lastSelection as FeatureCollection),{padding:40,duration:0,maxZoom:10});
+    else if (departmentData) map.fitBounds(collectionBounds(departmentData),{padding:28,duration:0,maxZoom:5.2});
+  }));
+  document.addEventListener('territorial:focus-collection', ((event:CustomEvent<GeoJSON.FeatureCollection>) => {
+    if (map && event.detail.features.length) map.fitBounds(collectionBounds(event.detail as FeatureCollection),{padding:45,duration:0,maxZoom:10});
   }) as EventListener);
   document.addEventListener('territorial:start-draw', ((event: CustomEvent<{ mode: 'rectangle' | 'polygon' }>) => {
     drawingMode = event.detail.mode;

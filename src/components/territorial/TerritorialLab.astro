@@ -80,6 +80,9 @@ import TerritoryMap from './TerritoryMap.astro';
     type TerritorialScenario,
   } from '../../data/territorial/scenario-v2';
   import { ScenarioStore } from '../../data/territorial/scenario-store';
+  import { territorialExamples } from '../../data/territorial/examples-v3';
+  import { connectedSelection, normalizeSearch } from '../../data/territorial/selection-v3';
+  import { subdivisionCaveat, subdivisionModels } from '../../data/territorial/subdivisions';
 
   type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; geometry?: unknown };
   const $ = <T extends Element>(selector: string) => document.querySelector<T>(selector);
@@ -92,6 +95,14 @@ import TerritoryMap from './TerritoryMap.astro';
   let municipalities: Array<any> = [];
   let mode: 'roots' | 'sap' | 'seeds' = 'roots';
   let experimentalGeometry: GeoJSON.Polygon | null = null;
+  let municipalityIndex: Array<{code:string;departmentCode:string;name:string}> = [];
+  let spatialCandidates: Selection[] = [];
+  let spatialRelations = new Map<string,'intersection'|'containment'|'contact'>();
+  const polygonRings=(geometry:any):number[][][]=>geometry.type==='Polygon'?geometry.coordinates:geometry.coordinates.flat();
+  const inside=(point:number[],ring:number[][])=>{let result=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const [xi,yi]=ring[i],[xj,yj]=ring[j];if(((yi>point[1])!==(yj>point[1]))&&(point[0]<(xj-xi)*(point[1]-yi)/(yj-yi)+xi))result=!result;}return result;};
+  const orientation=(a:number[],b:number[],c:number[])=>Math.sign((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]));
+  const crosses=(a:number[],b:number[],c:number[],d:number[])=>orientation(a,b,c)!==orientation(a,b,d)&&orientation(c,d,a)!==orientation(c,d,b);
+  const spatialRelation=(geometry:any,draw:number[][]):'intersection'|'containment'|'contact'|null=>{const rings=polygonRings(geometry);const points=rings.flat();const allInside=points.length>0&&points.every((point)=>inside(point,draw));if(allInside)return'containment';const unitInsideDraw=points.some((point)=>inside(point,draw));const drawInsideUnit=draw.some((point)=>rings.some((ring)=>inside(point,ring)));let boundary=false;for(const ring of rings)for(let i=1;i<ring.length;i++)for(let j=1;j<draw.length;j++)if(crosses(ring[i-1],ring[i],draw[j-1],draw[j]))boundary=true;if(unitInsideDraw||drawInsideUnit||boundary)return'intersection';const rounded=new Set(draw.map((point)=>`${point[0].toFixed(5)},${point[1].toFixed(5)}`));return points.some((point)=>rounded.has(`${point[0].toFixed(5)},${point[1].toFixed(5)}`))?'contact':null;};
   const announce = (text: string) => { const node = $('[data-operation-status]'); if (node) node.textContent = text; };
   const download = (name: string, type: string, content: string) => {
     const url = URL.createObjectURL(new Blob([content], { type }));
@@ -110,12 +121,18 @@ import TerritoryMap from './TerritoryMap.astro';
     const summary = $('[data-selection-summary]');
     if (summary) summary.textContent = selected.size ? selectedUnits().map((item) => `${item.name} (${item.code})`).join(', ') : 'Ninguna';
     $$<HTMLInputElement>('[data-territory-check]').forEach((input) => input.checked = selected.has(input.value));
+    const departmentFeatures = selectedUnits().filter((item)=>item.level==='department' && item.geometry).map((item)=>({type:'Feature',id:item.id,properties:{code:item.code,name:item.name},geometry:item.geometry}));
+    const municipalityFeatures = selectedUnits().filter((item)=>item.level==='municipality' && item.geometry).map((item)=>({type:'Feature',id:item.id,properties:{code:item.code,name:item.name},geometry:item.geometry}));
+    document.dispatchEvent(new CustomEvent('territorial:selection-geometry',{detail:{departments:{type:'FeatureCollection',features:departmentFeatures},municipalities:{type:'FeatureCollection',features:municipalityFeatures}}}));
+    const universe = $('[data-selection-universe]'); if (universe) universe.textContent = municipalities.length ? `Universo visible: 33 departamentos y ${municipalities.length} municipios del departamento cargado. Invertir opera sobre este universo visible.` : 'Universo visible: 33 departamentos y Distrito Capital.';
   };
   const select = (unit: Selection, additive = false) => {
     if (!additive) selected.clear();
     selected.set(unit.id, unit);
     renderSelection();
     announce(`${unit.name} seleccionada.`);
+    const card = $('[data-territory-card]');
+    if (card) card.innerHTML = `<h3>${unit.name}</h3><dl><div><dt>Código</dt><dd>${unit.code}</dd></div><div><dt>Naturaleza</dt><dd>${unit.level === 'department' ? (unit.code === '11' ? 'Distrito Capital / entidad territorial' : 'Departamento / entidad territorial') : 'Municipio o distrito según clasificación DIVIPOLA'}</dd></div><div><dt>Unidad superior</dt><dd>${unit.level === 'department' ? 'Nación' : `Departamento ${unit.code.slice(0,2)}`}</dd></div><div><dt>Autoridades y competencias</dt><dd>Régimen vigente; detalle territorial no conectado.</dd></div><div><dt>Ingresos, transferencias e indicadores</dt><dd>Fuente pendiente; no disponible.</dd></div><div><dt>Fuente, fecha y calidad</dt><dd>DANE DIVIPOLA MGN 2025 · geometría observada · cobertura cartográfica nacional.</dd></div></dl>`;
   };
   const renderTable = () => {
     const table = $('[data-territory-table]');
@@ -164,6 +181,13 @@ import TerritoryMap from './TerritoryMap.astro';
       legal.textContent = '';
       for (const impact of classified.legalImpacts) { const article = document.createElement('article'); const strong = document.createElement('strong'); strong.textContent = impact.category; const p = document.createElement('p'); p.textContent = `${impact.trigger}: ${impact.rationale} Fuente: ${impact.source}.`; article.append(strong, p); legal.append(article); }
     }
+    const consequences = $('[data-consequence-output]');
+    if (consequences) consequences.innerHTML = scenario.consequences.length ? scenario.consequences.map((item)=>`<article data-kind="${item.kind}"><strong>${item.dimension} · ${item.kind}</strong><p>${item.before} → ${item.decision} → ${item.after}</p><p>${item.explanation}${item.source ? ` Fuente: ${item.source}.` : ''}</p></article>`).join('') : '<p>Escenario base materializado; aplique una operación para recalcular consecuencias.</p>';
+    const operationResult = $('[data-operation-result]');
+    if (operationResult) operationResult.innerHTML = scenario.history.length ? `<p><strong>Operación aplicada:</strong> ${scenario.history.at(-1)!.summary}</p><p><strong>Unidades afectadas:</strong> ${selected.size || 'según historial'}. <strong>Resultado:</strong> escenario actualizado. <strong>Advertencias:</strong> revise datos faltantes e incertidumbre. Puede deshacer.</p>` : '<p>Sin operaciones. Deshacer estará disponible después de aplicar una.</p>';
+    const competenceLevel = $<HTMLSelectElement>('[data-competence-level]');
+    if (competenceLevel) { const value=competenceLevel.value; competenceLevel.textContent=''; for(const level of scenario.levels) competenceLevel.add(new Option(`${level.name} · nivel`,level.id)); for(const unit of scenario.units.filter((item)=>item.state==='active').slice(0,100)) competenceLevel.add(new Option(`${unit.name} · unidad`,unit.id)); if([...competenceLevel.options].some((option)=>option.value===value)) competenceLevel.value=value; }
+    const tree = $('[data-hierarchy-tree]'); if(tree) tree.innerHTML = `<ul>${scenario.levels.map((level)=>`<li>${level.order}. ${level.name} · ${level.nature}</li>`).join('')}</ul>`;
     $('[data-save-status]')!.textContent = 'Guardando…';
     try {
       await store.save(scenario);
@@ -214,6 +238,7 @@ import TerritoryMap from './TerritoryMap.astro';
     const selectNode = $<HTMLSelectElement>('[data-department-select]');
     departments.forEach((feature) => selectNode?.add(new Option(feature.properties.name, feature.properties.code)));
     renderTable();
+    void fetch('/data/territorial/geography/municipalities-index.json').then((response)=>response.json()).then((items)=>{ municipalityIndex=items; const list=$('[data-search-results]'); if(list) list.innerHTML=[...departments.map((feature:any)=>`<option value="${feature.properties.code} · ${feature.properties.name}"></option>`),...items.map((item:any)=>`<option value="${item.code} · ${item.name} · ${item.departmentCode}"></option>`)].join(''); });
   }) as EventListener);
   document.addEventListener('territorial:municipalities', ((event: CustomEvent<any>) => {
     municipalities = event.detail.features;
@@ -231,8 +256,21 @@ import TerritoryMap from './TerritoryMap.astro';
   $<HTMLSelectElement>('[data-municipality-select]')?.addEventListener('change', (event) => {
     const code = (event.currentTarget as HTMLSelectElement).value;
     const feature = municipalities.find((item) => item.properties.code === code);
-    if (feature) select({ id: `municipality:${code}`, code, name: feature.properties.name, level: 'municipality', geometry: feature.geometry });
+    if (feature) { const unit={ id: `municipality:${code}`, code, name: feature.properties.name, level: 'municipality' as const, geometry: feature.geometry }; select(unit); document.dispatchEvent(new CustomEvent('territorial:focus-collection',{detail:{type:'FeatureCollection',features:[{type:'Feature',properties:{code,name:unit.name},geometry:unit.geometry}]}})); }
   });
+  $<HTMLInputElement>('[data-territory-search]')?.addEventListener('change', async (event) => {
+    const query=normalizeSearch((event.currentTarget as HTMLInputElement).value.split(' · ')[0]); const feedback=$('[data-search-feedback]');
+    if(!query){ if(feedback) feedback.textContent='Escriba un nombre o código DIVIPOLA.'; return; }
+    const department=departments.find((feature)=>normalizeSearch(feature.properties.name).includes(query)||feature.properties.code===query);
+    const municipality=municipalityIndex.find((item)=>normalizeSearch(item.name).includes(query)||item.code===query);
+    if(department){ select({id:`department:${department.properties.code}`,code:department.properties.code,name:department.properties.name,level:'department',geometry:department.geometry}); if(feedback) feedback.textContent=`Departamento encontrado: ${department.properties.name}.`; return; }
+    if(!municipality){ if(feedback) feedback.textContent='Sin resultados. Revise nombre o código DIVIPOLA.'; return; }
+    try { document.dispatchEvent(new CustomEvent('territorial:load-department',{detail:{code:municipality.departmentCode}})); const response=await fetch(`/data/territorial/geography/municipalities/${municipality.departmentCode}.geojson`); const data=await response.json(); const feature=data.features.find((item:any)=>item.properties.code===municipality.code); if(!feature) throw new Error('La geometría municipal no está disponible.'); select({id:`municipality:${municipality.code}`,code:municipality.code,name:municipality.name,level:'municipality',geometry:feature.geometry}); document.dispatchEvent(new CustomEvent('territorial:focus-collection',{detail:{type:'FeatureCollection',features:[feature]}})); if(feedback) feedback.textContent=`${municipality.name} · municipio · departamento ${municipality.departmentCode}. Departamento cargado automáticamente.`; } catch(error){if(feedback) feedback.textContent=error instanceof Error?error.message:String(error);}
+  });
+  $$<HTMLInputElement>('[data-layer]').forEach((input)=>input.addEventListener('change',()=>{ const map=(window as any).__territorialMap; const ids=input.dataset.layer==='departments'?['departments-fill','departments-line']:input.dataset.layer==='municipalities'?['municipalities-fill','municipalities-line']:[]; for(const id of ids) if(map?.getLayer(id)) map.setLayoutProperty(id,'visibility',input.checked?'visible':'none'); announce(`${input.parentElement?.textContent?.trim()}: ${input.checked?'visible':'oculta'}.`); }));
+  const routes:Record<string,string>={salud:'Nación regula · Nación y territorios financian · departamentos y municipios planean según competencias · aseguradores y prestadores operan · autoridades sanitarias inspeccionan · controles fiscal, político y judicial.',educación:'Nación regula · Nación y entidades certificadas financian y planean · establecimientos ejecutan · autoridades educativas inspeccionan · controles fiscal y político.',agua:'Nación regula · municipios aseguran la prestación · prestadores operan y mantienen · autoridades ambientales y de servicios vigilan · financiación depende del arreglo vigente.',transporte:'Regulación, planeación, financiación, operación, mantenimiento e inspección varían por modo y jurisdicción; seleccione territorio y verifique régimen.',catastro:'Regulación nacional · gestores catastrales prestan el servicio · financiación y operación dependen de habilitación o convenio · control conforme al régimen.',residuos:'Municipio asegura prestación · prestador opera · regulación y vigilancia nacional sectorial · planeación y financiación locales según régimen.'};
+  $<HTMLSelectElement>('[data-function-route]')?.addEventListener('change',(event)=>{const value=(event.currentTarget as HTMLSelectElement).value; const result=$('[data-function-result]'); if(result) result.textContent=routes[value]??`${value}: cadena específica pendiente de fuente normativa detallada; no se repite una fórmula genérica.`;});
+  $('[data-roots-compare]')?.addEventListener('click',()=>{const output=$('[data-comparison-output]'); if(!output) return; if(selected.size<2){announce('Seleccione al menos dos unidades para comparar.'); return;} output.innerHTML=`<table><thead><tr><th>Unidad</th><th>Nivel</th><th>Fuente</th><th>Datos faltantes</th></tr></thead><tbody>${selectedUnits().map((item)=>`<tr><td>${item.name}</td><td>${item.level}</td><td>DANE 2025</td><td>Indicadores, ingresos y detalle institucional</td></tr>`).join('')}</tbody></table>`; announce(`${selected.size} unidades comparadas con campos disponibles y faltantes.`);});
   $('[data-table-filter]')?.addEventListener('input', renderTable);
   $('[data-reset-weights]')?.addEventListener('click', () => $$<HTMLInputElement>('[data-weight]').forEach((input) => { input.value = '25'; input.dispatchEvent(new Event('input')); }));
   $$<HTMLInputElement>('[data-weight]').forEach((input) => input.addEventListener('input', () => { const output = input.parentElement?.querySelector('output'); if (output) output.value = input.value; }));
@@ -247,6 +285,9 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-create-scenario]')?.addEventListener('click', () => {
     const scenario = createScenario(`Escenario ${scenarios.size + 1}`); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); refreshScenarioLists(scenario.id); void renderScenario(); announce('Escenario editable creado.');
   });
+  $('[data-load-example]')?.addEventListener('click',()=>{const example=territorialExamples.find((item)=>item.id===$<HTMLSelectElement>('[data-example-select]')?.value); if(!example)return announce('Seleccione un ejemplo.'); const scenario=createScenario(example.name); scenario.assumptions.push(...example.assumptions.map((text,index)=>({id:`example-${example.id}-${index}`,text,uncertainty:'declarada'}))); scenario.risks.push(...example.uncertainty.map((text,index)=>({id:`risk-${example.id}-${index}`,text,severity:'por evaluar'}))); scenario.sources.push(...example.sources.map((title)=>({title,url:'',date:'revisión 2026-07-25'}))); scenarios.set(scenario.id,scenario); timeline=new ScenarioTimeline(scenario); const summary=$('[data-example-summary]'); if(summary)summary.innerHTML=`<strong>${example.name}</strong><p>${example.objective}</p><p>Selección: ${example.selection.join(', ')}.</p><p>Operación: ${example.operation}. Figura: ${example.figure}. Gobierno: ${example.government}.</p><p>Ruta: ${example.legalPath}</p><ol>${example.guide.map((step)=>`<li>${step}</li>`).join('')}</ol>`; refreshScenarioLists(scenario.id); void renderScenario(); announce(`Ejemplo ${example.name} cargado. Sus selecciones por validar no se aplican como datos oficiales.`);});
+  $('[data-add-subdivisions]')?.addEventListener('click',()=>{if(!editable())return; const key=$<HTMLSelectElement>('[data-subdivision-model]')!.value as keyof typeof subdivisionModels; const result=$('[data-subdivision-result]'); if(result)result.innerHTML=`<strong>${key}</strong><ul>${subdivisionModels[key].map((item)=>`<li>${item}</li>`).join('')}</ul><p>${subdivisionCaveat}</p>`; const current=timeline!.current; current.assumptions.push({id:`subdivision-${Date.now()}`,text:`Modelo interno ${key}: ${subdivisionModels[key].join(', ')}. ${subdivisionCaveat}`,uncertainty:'requiere configuración territorial concreta'}); apply({...current});});
+  $$<HTMLButtonElement>('[data-consequence-tab]').forEach((button)=>button.addEventListener('click',()=>{$$<HTMLButtonElement>('[data-consequence-tab]').forEach((item)=>item.setAttribute('aria-selected',String(item===button))); const output=$('[data-consequence-output]'); if(output&&timeline){const terms=['','autoridades|elección','competencias|concurrencia|subsidiariedad','financiación','servicios|mantenimiento','representación','transición','ruta normativa|naturaleza jurídica','datos faltantes|incertidumbre|capacidad']; const regex=new RegExp(terms[Number(button.dataset.consequenceTab)]||'.','i'); const items=timeline.current.consequences.filter((item)=>regex.test(item.dimension)); output.innerHTML=items.length?items.map((item)=>`<article><strong>${item.dimension} · ${item.kind}</strong><p>${item.before} → ${item.decision} → ${item.after}</p><p>${item.explanation}</p></article>`).join(''):'<p>No hay consecuencias en esta pestaña todavía.</p>';}}));
   $('[data-duplicate-scenario]')?.addEventListener('click', () => { if (!timeline) return; const scenario = duplicateScenario(timeline.current); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); void renderScenario(); });
   $('[data-rename-scenario]')?.addEventListener('click', () => { if (!timeline) return; const name = prompt('Nombre del escenario', timeline.current.name)?.trim(); if (name) apply({ ...timeline.current, name, updatedAt: new Date().toISOString() }); });
   $('[data-archive-scenario]')?.addEventListener('click', () => { if (timeline) apply({ ...timeline.current, status: 'archived' }); });
@@ -256,14 +297,20 @@ import TerritoryMap from './TerritoryMap.astro';
   });
   $('[data-clear-selection]')?.addEventListener('click', () => { selected.clear(); renderSelection(); });
   $('[data-invert-selection]')?.addEventListener('click', () => { const all = [...departments, ...municipalities]; const previous = new Set(selected.keys()); selected.clear(); for (const feature of all) { const level = feature.properties.code.length === 2 ? 'department' : 'municipality'; const id = `${level}:${feature.properties.code}`; if (!previous.has(id)) selected.set(id, { id, code: feature.properties.code, name: feature.properties.name, level, geometry: feature.geometry }); } renderSelection(); });
-  $('[data-select-department]')?.addEventListener('click', () => { municipalities.forEach((feature) => selected.set(`municipality:${feature.properties.code}`, { id: `municipality:${feature.properties.code}`, code: feature.properties.code, name: feature.properties.name, level: 'municipality', geometry: feature.geometry })); renderSelection(); });
-  for (const selector of ['[data-select-neighbours]', '[data-select-contiguous]']) $(selector)?.addEventListener('click', () => announce('Selección de vecindad disponible sobre las unidades cargadas; use la tabla para confirmar.'));
+  $('[data-select-department]')?.addEventListener('click', async () => { const departmentCode=selectedUnits().find((item)=>item.level==='department')?.code ?? $<HTMLSelectElement>('[data-department-select]')?.value; if(!departmentCode) return announce('Seleccione primero el departamento que desea cargar completo.'); try{const response=await fetch(`/data/territorial/geography/municipalities/${departmentCode}.geojson`); if(!response.ok) throw new Error(`HTTP ${response.status}`); const data=await response.json(); municipalities=data.features; for(const feature of data.features) selected.set(`municipality:${feature.properties.code}`, { id:`municipality:${feature.properties.code}`,code:feature.properties.code,name:feature.properties.name,level:'municipality',geometry:feature.geometry }); renderSelection(); announce(`${data.features.length} municipios del departamento ${departmentCode} cargados y seleccionados.`);}catch(error){announce(`No fue posible seleccionar el departamento completo: ${error instanceof Error?error.message:String(error)}`);}});
+  const applyTopology = async (rings:number) => { const primary=selectedUnits()[0]; if(!primary) return announce('Seleccione una unidad inicial.'); const url=primary.level==='department'?'/data/territorial/topology/department-neighbours.json':`/data/territorial/topology/municipalities/${primary.code.slice(0,2)}.json`; try{const payload=await (await fetch(url)).json(); const result=connectedSelection(payload.units,[primary.code],rings); const available=primary.level==='department'?departments:municipalities; for(const code of result.ids){const feature=available.find((item)=>item.properties.code===code); if(feature) selected.set(`${primary.level}:${code}`,{id:`${primary.level}:${code}`,code,name:feature.properties.name,level:primary.level,geometry:feature.geometry});} renderSelection(); announce(`${result.ids.length} unidades seleccionadas por frontera compartida, ${rings} anillo(s). Contactos puntuales excluidos. ${Object.values(result.reasons).join('; ')}`);}catch(error){announce(`Topología no disponible: ${error instanceof Error?error.message:String(error)}`);}};
+  $('[data-select-neighbours]')?.addEventListener('click',()=>void applyTopology(1));
+  $('[data-select-contiguous]')?.addEventListener('click',()=>void applyTopology(Math.max(1,Number($<HTMLInputElement>('[data-contiguous-rings]')?.value||1))));
   $('[data-draw-rectangle]')?.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('territorial:start-draw', { detail: { mode: 'rectangle' } })); announce('Seleccione dos esquinas en el mapa.'); });
   $('[data-draw-polygon]')?.addEventListener('click', () => { document.dispatchEvent(new CustomEvent('territorial:start-draw', { detail: { mode: 'polygon' } })); announce('Dibuje al menos tres vértices y cierre con doble clic.'); });
   document.addEventListener('territorial:geometry-drawn', ((event: CustomEvent<{ geometry: GeoJSON.Polygon }>) => {
     experimentalGeometry = event.detail.geometry;
-    announce('Geometría experimental validada visualmente. Confirme la división para registrarla.');
+    const ring=event.detail.geometry.coordinates[0]; spatialRelations.clear();
+    spatialCandidates=[...departments,...municipalities].flatMap((feature)=>{const relation=spatialRelation(feature.geometry,ring);if(!relation)return[];const unit={id:`${feature.properties.code.length===2?'department':'municipality'}:${feature.properties.code}`,code:feature.properties.code,name:feature.properties.name,level:feature.properties.code.length===2?'department':'municipality',geometry:feature.geometry} as Selection;spatialRelations.set(unit.id,relation);return[unit];});
+    $('[data-spatial-preview]')?.removeAttribute('hidden'); const text=$('[data-spatial-preview-text]'); if(text) text.textContent=`Vista previa: ${spatialCandidates.length} unidades candidatas. Elija regla, aplique o cancele.`; announce(`Geometría dibujada; ${spatialCandidates.length} candidatas pendientes de confirmación.`);
   }) as EventListener);
+  $('[data-apply-spatial]')?.addEventListener('click',()=>{const rule=($<HTMLSelectElement>('[data-spatial-rule]')?.value??'intersection') as 'intersection'|'containment'|'contact'; const applied=spatialCandidates.filter((unit)=>rule==='intersection'?spatialRelations.get(unit.id)!=='contact':spatialRelations.get(unit.id)===rule); if(!applied.length)return announce(`No hay unidades que cumplan la regla ${rule}.`); for(const unit of applied)selected.set(unit.id,unit); renderSelection(); $('[data-spatial-preview]')?.setAttribute('hidden',''); announce(`${applied.length} unidades seleccionadas. Regla registrada: ${rule}.`); spatialCandidates=[];});
+  $('[data-cancel-spatial]')?.addEventListener('click',()=>{spatialCandidates=[]; experimentalGeometry=null; $('[data-spatial-preview]')?.setAttribute('hidden',''); announce('Selección espacial cancelada sin modificar la selección.');});
   $('[data-merge]')?.addEventListener('click', () => {
     if (!editable()) return; try {
       let scenario = timeline!.current;
@@ -271,13 +318,11 @@ import TerritoryMap from './TerritoryMap.astro';
       apply(mergeUnits(scenario, selectedUnits().map((item) => item.id), ($<HTMLInputElement>('[data-unit-name]')?.value || 'Unidad exploratoria'), $<HTMLSelectElement>('[data-unit-nature]')?.value || 'region', ($<HTMLSelectElement>('[data-disposition]')?.value || 'political') as any));
     } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
   });
-  $('[data-split-membership]')?.addEventListener('click', () => {
-    if (!editable() || selected.size < 2) return announce('Seleccione al menos dos municipios.');
-    let scenario = timeline!.current;
-    for (const item of selectedUnits()) if (!scenario.units.some((unit) => unit.id === item.id)) scenario = addUnit(scenario, { id: item.id, name: item.name, levelId: 'municipality', officialCodes: [item.code] });
-    const half = Math.ceil(selected.size / 2); const items = selectedUnits();
-    apply(splitByMembership(scenario, scenario.units.find((unit) => unit.memberIds.some((id) => selected.has(id)))?.id ?? items[0].id, [{ name: 'Unidad A', memberIds: items.slice(0, half).map((item) => item.id) }, { name: 'Unidad B', memberIds: items.slice(half).map((item) => item.id) }]));
-  });
+  const addGroupRow=()=>{const host=$('[data-groups]'); if(!host)return; const row=document.createElement('fieldset'); row.dataset.group=''; row.innerHTML=`<label>Nombre <input data-group-name required /></label><div>${selectedUnits().filter((item)=>item.level==='municipality').map((item)=>`<label><input type="checkbox" data-group-member value="${item.id}"> ${item.name}</label>`).join('')}</div>`; host.append(row);};
+  $('[data-split-membership]')?.addEventListener('click',()=>{if(!editable()||selectedUnits().filter((item)=>item.level==='municipality').length<2)return announce('Seleccione al menos dos municipios.'); $('[data-group-editor]')?.removeAttribute('hidden'); const parent=$<HTMLSelectElement>('[data-group-parent]'); if(parent){parent.textContent=''; for(const unit of timeline!.current.units.filter((item)=>item.levelId==='department'||item.memberIds.length))parent.add(new Option(unit.name,unit.id));} const host=$('[data-groups]'); if(host)host.textContent=''; addGroupRow();addGroupRow(); announce('Editor abierto: nombre al menos dos grupos y asigne cada municipio una sola vez.');});
+  $('[data-add-group]')?.addEventListener('click',addGroupRow);
+  $('[data-cancel-groups]')?.addEventListener('click',()=>{ $('[data-group-editor]')?.setAttribute('hidden',''); announce('División cancelada sin cambios.');});
+  $('[data-confirm-groups]')?.addEventListener('click',()=>{if(!editable())return; try{const groups=$$<HTMLElement>('[data-group]').map((row)=>({name:row.querySelector<HTMLInputElement>('[data-group-name]')?.value.trim()??'',memberIds:[...row.querySelectorAll<HTMLInputElement>('[data-group-member]:checked')].map((input)=>input.value)})); if(groups.length<2||groups.some((group)=>!group.name||!group.memberIds.length))throw new Error('Nombre al menos dos grupos no vacíos.'); const all=groups.flatMap((group)=>group.memberIds); if(new Set(all).size!==all.length)throw new Error('Hay municipios duplicados entre grupos.'); const selectedMunicipal=selectedUnits().filter((item)=>item.level==='municipality'); const missing=selectedMunicipal.filter((item)=>!all.includes(item.id)); const unassigned=$('[data-unassigned]'); if(unassigned)unassigned.textContent=`Municipios no asignados: ${missing.map((item)=>item.name).join(', ')||'ninguno'}.`; if(missing.length)throw new Error('Asigne todos los municipios antes de confirmar.'); let scenario=timeline!.current; for(const item of selectedMunicipal)if(!scenario.units.some((unit)=>unit.id===item.id))scenario=addUnit(scenario,{id:item.id,name:item.name,levelId:'municipality',officialCodes:[item.code],geometry:item.geometry}); apply(splitByMembership(scenario,$<HTMLSelectElement>('[data-group-parent]')!.value,groups)); $('[data-group-editor]')?.setAttribute('hidden',''); announce(`División confirmada en ${groups.length} grupos. Continuidad debe revisarse en el mapa.`);}catch(error){announce(error instanceof Error?error.message:String(error));}});
   $('[data-split-geometry]')?.addEventListener('click', () => {
     if (!editable() || !selected.size) return announce('Seleccione una unidad intersectada.');
     if (!experimentalGeometry) return announce('Dibuje primero un rectángulo o polígono válido en el mapa.');
@@ -291,15 +336,23 @@ import TerritoryMap from './TerritoryMap.astro';
     worker.onerror = () => { worker.terminate(); announce('El Web Worker geométrico no pudo completar la validación.'); };
     worker.postMessage({ operation: 'inspect', geometries: [experimentalGeometry] });
   });
-  $('[data-create-level]')?.addEventListener('click', () => { if (!editable()) return; const name = prompt('Nombre del nuevo nivel', 'Provincia')?.trim(); if (name) apply(createLevel(timeline!.current, name, 2, 'nivel exploratorio')); });
+  $('[data-create-level]')?.addEventListener('click',()=>{if(!editable())return; $('[data-level-editor]')?.removeAttribute('hidden'); announce('Complete el editor del nuevo nivel.');});
+  $('[data-cancel-level]')?.addEventListener('click',()=>{ $('[data-level-editor]')?.setAttribute('hidden',''); announce('Creación de nivel cancelada.');});
+  $('[data-confirm-level]')?.addEventListener('click',()=>{if(!editable())return; const name=$<HTMLInputElement>('[data-level-name]')?.value.trim(); const code=$<HTMLInputElement>('[data-level-code]')?.value.trim(); const order=Number($<HTMLInputElement>('[data-level-order]')?.value); if(!name||!code||!/^[a-z0-9-]+$/.test(code)||!Number.isInteger(order))return announce('Nombre, código interno válido y orden entero son obligatorios.'); const details=['legal','coverage','authority','body','competences','finance','control','relation','duration'].map((key)=>`${key}: ${($(`[data-level-${key}]`) as HTMLInputElement|HTMLSelectElement)?.value||'no definido'}`).join(' · '); apply(createLevel(timeline!.current,name,order,`${$<HTMLSelectElement>('[data-level-nature]')?.value}; ${details}`)); $('[data-level-editor]')?.setAttribute('hidden',''); announce(`Nivel ${name} creado con configuración registrada.`);});
   $('[data-suppress-department]')?.addEventListener('click', () => {
     if (!editable() || !confirm('¿Suprimir el nivel departamental dentro de este escenario? Podrá deshacer la operación.')) return;
     let scenario = timeline!.current; const departmentsInScenario = scenario.units.filter((unit) => unit.levelId === 'department');
     for (const unit of departmentsInScenario) scenario = suppressUnit(scenario, unit.id);
-    if (!departmentsInScenario.length) scenario = createLevel(scenario, 'Región reemplazante', 1, 'hipótesis que sustituye departamentos');
+    scenario = createLevel(scenario, 'Región reemplazante', 1, 'hipótesis constitucional que sustituye departamentos; autoridad, representación, financiación y controles requieren definición');
+    scenario.transitions.push(
+      {order:1,text:'Inventariar competencias, autoridades, personal, activos, pasivos, contratos, archivos y controles departamentales.',status:'requerido'},
+      {order:2,text:'Definir unidades sustitutas y reasignar cada municipio sin duplicados ni vacíos.',status:'requerido'},
+      {order:3,text:'Mantener continuidad de servicios y control durante el régimen de transición.',status:'requerido'},
+    );
+    scenario.assumptions.push({id:`suppression-${Date.now()}`,text:'La supresión general del nivel departamental es un escenario constitucional hipotético. No se presume ahorro ni mejora.',uncertainty:'alta'});
     apply(scenario);
   });
-  $('[data-assign-competence]')?.addEventListener('click', () => { if (!editable()) return; apply(assignCompetence(timeline!.current, $<HTMLSelectElement>('[data-competence-function]')!.value, $<HTMLSelectElement>('[data-competence-level]')!.value, $<HTMLSelectElement>('[data-competence-modality]')!.value as any)); });
+  $('[data-assign-competence]')?.addEventListener('click', () => { if (!editable()) return; apply(assignCompetence(timeline!.current, $<HTMLSelectElement>('[data-competence-function]')!.value, $<HTMLSelectElement>('[data-competence-level]')!.value, $<HTMLSelectElement>('[data-competence-modality]')!.value as any,$<HTMLSelectElement>('[data-competence-role]')!.value as any)); });
   $('[data-change-government]')?.addEventListener('click', () => { if (!editable()) return; apply(changeGovernment(timeline!.current, { unitId: selectedUnits()[0]?.id ?? 'scenario-wide', authority: $<HTMLSelectElement>('[data-government-authority]')!.value, selection: $<HTMLSelectElement>('[data-government-selection]')!.value, termYears: 4, reelection: 'hipótesis no definida', representativeBody: 'por definir' })); });
   $('[data-change-finance]')?.addEventListener('click', () => { if (!editable()) return; apply(changeFinance(timeline!.current, { levelId: 'scenario-wide', instruments: $$<HTMLInputElement>('[data-finance]:checked').map((input) => input.dataset.finance!), note: 'No estima recaudos futuros.' })); });
   $('[data-change-planning]')?.addEventListener('click', () => { if (!editable()) return; apply(changePlanning(timeline!.current, { levelId: 'scenario-wide', horizonYears: Number($<HTMLInputElement>('[data-planning-horizon]')!.value), instruments: ['plan estratégico', 'programas de misión'], review: 'evaluación cuatrienal' })); });
@@ -309,7 +362,7 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-export-geojson]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.geojson`, 'application/geo+json', JSON.stringify({ type: 'FeatureCollection', features: timeline.current.units.filter((unit) => unit.geometry).map((unit) => ({ type: 'Feature', id: unit.id, properties: { name: unit.name, state: unit.state, resultKind: 'assumption' }, geometry: unit.geometry })) }, null, 2)));
   $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', `id,nombre,estado,tipo\n${timeline.current.units.map((unit) => `${unit.id},"${unit.name}",${unit.state},assumption`).join('\n')}`));
   $('[data-export-method]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}-metodologia.txt`, 'text/plain', `${timeline.current.name}\nBase: ${timeline.current.baseScenarioId}\nOperaciones: ${timeline.current.history.length}\nTodo resultado se clasifica como observed, calculated, assumption o unavailable.\nNo constituye concepto jurídico.`));
-  $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(JSON.stringify({ id: timeline.current.id, name: timeline.current.name, history: timeline.current.history.slice(-5) })); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) return announce('El escenario es grande: use Exportar JSON.'); const url = `${location.origin}${location.pathname}?mode=seeds&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace compartible copiado.'); });
+  $('[data-share-link]')?.addEventListener('click', async () => { if (!timeline) return; const bytes = new TextEncoder().encode(exportScenario(timeline.current)); const compact = btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join('')); if (compact.length > 1800) { download(`${timeline.current.id}.json`,'application/json',exportScenario(timeline.current)); return announce('El escenario completo excede el límite seguro del enlace: se generó un archivo V3 exportable.'); } const url = `${location.origin}${location.pathname}?mode=seeds&share=${encodeURIComponent(compact)}`; await navigator.clipboard?.writeText(url); announce('Enlace V3 completo copiado. Incluye unidades, fuentes, supuestos, operaciones y configuración.'); });
   $('[data-print]')?.addEventListener('click', () => window.print());
   $<HTMLInputElement>('[data-import-json]')?.addEventListener('change', async (event) => {
     const file = (event.currentTarget as HTMLInputElement).files?.[0]; if (!file) return;
@@ -335,6 +388,12 @@ import TerritoryMap from './TerritoryMap.astro';
     }
   } catch { announce('No fue posible revisar preferencias locales antiguas.'); }
   store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
-  const initialMode = new URLSearchParams(location.search).get('mode');
+  const initialParams = new URLSearchParams(location.search);
+  const shared = initialParams.get('share');
+  if (shared) try {
+    const binary=atob(shared); const bytes=Uint8Array.from(binary,(character)=>character.charCodeAt(0)); const scenario=importScenario(JSON.parse(new TextDecoder().decode(bytes)));
+    scenarios.set(scenario.id,scenario); timeline=new ScenarioTimeline(scenario); void renderScenario(); announce(`Escenario compartido V${scenario.schemaVersion} importado y validado; no se ejecutó contenido.`);
+  } catch(error) { announce(`Enlace compartido rechazado: ${error instanceof Error?error.message:String(error)}`); }
+  const initialMode = initialParams.get('mode');
   setMode(initialMode === 'sap' || initialMode === 'seeds' ? initialMode : 'roots');
 </script>

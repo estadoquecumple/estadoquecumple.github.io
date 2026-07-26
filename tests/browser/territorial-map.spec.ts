@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 const route = '/observatorio/laboratorio-territorial/';
 const screenshotPath = resolve('artifacts/playwright/territorial-map.png');
 
-test('renderiza 33 departamentos en un canvas MapLibre utilizable', async ({ page }) => {
+test('renderiza 33 departamentos en un canvas MapLibre utilizable', async ({ page }, testInfo) => {
   const consoleErrors: string[] = [];
   page.on('console', (message) => {
     if (message.type() === 'error') consoleErrors.push(message.text());
@@ -17,6 +17,7 @@ test('renderiza 33 departamentos en un canvas MapLibre utilizable', async ({ pag
     && response.request().headers().accept?.includes('application/geo+json'),
   );
   await page.goto(route, { waitUntil: 'networkidle' });
+  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-panel="map"]').click();
   const response = await geoJSONResponse;
   expect(response.status()).toBe(200);
   const collection = await response.json();
@@ -63,24 +64,3 @@ test('renderiza 33 departamentos en un canvas MapLibre utilizable', async ({ pag
   await page.screenshot({ path: screenshotPath, fullPage: true });
 });
 
-test('expone un error de carga y conserva la tabla accesible', async ({ page }) => {
-  await page.route('**/data/territorial/geography/departments.geojson', async (requestRoute) => {
-    const accept = requestRoute.request().headers().accept ?? '';
-    if (accept.includes('application/geo+json')) {
-      await requestRoute.fulfill({
-        status: 503,
-        contentType: 'application/json',
-        body: JSON.stringify({ error: 'Fallo de prueba' }),
-      });
-    } else {
-      await requestRoute.continue();
-    }
-  });
-  await page.goto(route, { waitUntil: 'networkidle' });
-  const status = page.locator('[data-map-status]');
-  await expect(status).toHaveAttribute('data-state', 'error');
-  await expect(status).toContainText('Error HTTP 503');
-  await expect(page.getByRole('button', { name: 'Reintentar mapa' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Tabla territorial completa' })).toBeVisible();
-  await expect(page.locator('[data-territory-table] tr')).toHaveCount(33);
-});

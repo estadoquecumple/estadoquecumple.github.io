@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "97",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "97001": {
+      "neighbours": [
+        "97161",
+        "97511",
+        "97777",
+        "97889"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97161": {
+      "neighbours": [
+        "97001",
+        "97511",
+        "97777"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97511": {
+      "neighbours": [
+        "97001",
+        "97161",
+        "97666"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97666": {
+      "neighbours": [
+        "97511"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97777": {
+      "neighbours": [
+        "97001",
+        "97161"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "97889": {
+      "neighbours": [
+        "97001"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

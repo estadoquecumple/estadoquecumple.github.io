@@ -1,28 +1,29 @@
 <section class="mode-workspace roots-workspace" data-workspace="roots" aria-labelledby="roots-title">
   <p class="panel-number">RAÍCES · VER</p>
   <h2 id="roots-title">¿Qué Estado existe realmente sobre este territorio?</h2>
-  <p>Consulta inmutable de unidades, autoridades, competencias, fuentes y vacíos.</p>
+  <p>Atlas inmutable de unidades, autoridades, competencias, fuentes y vacíos.</p>
   <label>Buscar territorio o DIVIPOLA
-    <input type="search" data-territory-search autocomplete="off" placeholder="Ej. Antioquia o 05" />
+    <input type="search" data-territory-search list="territory-search-results" autocomplete="off" placeholder="Ej. Antioquia, Medellín o 05001" />
+    <datalist id="territory-search-results" data-search-results></datalist>
   </label>
-  <label>Departamento
-    <select data-department-select><option value="">Colombia</option></select>
-  </label>
-  <label>Municipio
-    <select data-municipality-select disabled><option value="">Seleccione un departamento</option></select>
-  </label>
+  <p data-search-feedback aria-live="polite">Busca en 33 departamentos y el índice nacional de 1.122 municipios.</p>
+  <label>Departamento <select data-department-select><option value="">Colombia</option></select></label>
+  <label>Municipio <select data-municipality-select disabled><option value="">Seleccione un departamento</option></select></label>
   <fieldset>
-    <legend>Capas con fuente disponible</legend>
+    <legend>Capas</legend>
     <label><input type="checkbox" data-layer="departments" checked /> Departamentos</label>
     <label><input type="checkbox" data-layer="municipalities" /> Municipios bajo demanda</label>
-    <label><input type="checkbox" data-layer="population" /> Población DANE</label>
-    <label><input type="checkbox" data-layer="fiscal" /> Desempeño fiscal disponible</label>
+    <label title="Fuente pendiente"><input type="checkbox" data-layer="population" disabled /> Población DANE · Fuente pendiente</label>
+    <label title="Fuente pendiente"><input type="checkbox" data-layer="fiscal" disabled /> Desempeño fiscal · Fuente pendiente</label>
   </fieldset>
   <label>Rastrear función pública
     <select data-function-route>
       {['salud','educación','agua','transporte','catastro','residuos','vivienda','ambiente','contratación','defensa jurídica','planeación'].map((item) => <option>{item}</option>)}
     </select>
   </label>
-  <p class="function-route" data-function-result>Nación regula → Nación y territorio financian → territorio planifica → prestadores ejecutan → organismos competentes controlan. <strong>Vacío:</strong> detalle territorial incompleto.</p>
+  <p class="function-route" data-function-result aria-live="polite">Seleccione una función para distinguir regulación, financiación, planeación, ejecución, operación, mantenimiento, inspección y control.</p>
   <button type="button" data-roots-compare>Comparar selección actual</button>
+  <article class="territory-card" data-territory-card aria-live="polite">
+    <h3>Ficha territorial</h3><p>Seleccione una unidad. Los campos sin fuente se mostrarán como no disponibles.</p>
+  </article>
 </section>

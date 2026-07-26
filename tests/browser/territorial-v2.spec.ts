@@ -33,6 +33,7 @@ test('RAÍCES carga mapa, selecciona departamento y mantiene tabla', async ({ pa
   await expect(page.locator('[data-territory-table] tr')).not.toHaveCount(0);
   mkdirSync(resolve('artifacts/playwright'), { recursive: true });
   await page.screenshot({ path: screenshot(`v2-roots-${testInfo.project.name}`), fullPage: true });
+  await page.screenshot({ path: screenshot(`acceptance-raices-${testInfo.project.name}`), fullPage: true });
 });
 
 test('SAVIA cambia y restablece pesos con advertencia metodológica', async ({ page }, testInfo) => {
@@ -47,6 +48,7 @@ test('SAVIA cambia y restablece pesos con advertencia metodológica', async ({ p
   await expect(page.locator('[data-capacity-profile]')).toContainText('evidencia insuficiente');
   await expect(page.locator('.method-warning')).toContainText('No se determina');
   await page.screenshot({ path: screenshot(`v2-savia-${testInfo.project.name}`), fullPage: true });
+  await page.screenshot({ path: screenshot(`acceptance-savia-${testInfo.project.name}`), fullPage: true });
 });
 
 test('SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta', async ({ page }, testInfo) => {
@@ -90,6 +92,7 @@ test('SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta', as
   await page.getByRole('button', { name: /SEMILLAS/ }).click();
   expect(await page.locator('[data-local-scenarios] option').count()).toBeGreaterThan(1);
   await page.screenshot({ path: screenshot(`v2-seeds-${testInfo.project.name}`), fullPage: true });
+  await page.screenshot({ path: screenshot(`acceptance-semillas-${testInfo.project.name}`), fullPage: true });
 });
 
 test('fallo GeoJSON muestra error y conserva alternativa textual', async ({ page }, testInfo) => {
@@ -99,6 +102,8 @@ test('fallo GeoJSON muestra error y conserva alternativa textual', async ({ page
   await expect(page.locator('[data-map-status]')).toHaveAttribute('data-state', 'error');
   await expect(page.getByRole('button', { name: 'Reintentar mapa' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Tabla territorial y selección' })).toBeVisible();
+  await page.locator('[data-territory-table]').scrollIntoViewIfNeeded();
+  await page.screenshot({ path: screenshot(`acceptance-error-cartografico-tabla-${testInfo.project.name}`), fullPage: true });
 });
 
 test('fallo IndexedDB no bloquea RAÍCES ni el mapa', async ({ page }) => {
@@ -111,12 +116,11 @@ test('fallo IndexedDB no bloquea RAÍCES ni el mapa', async ({ page }) => {
   await expect(page.locator('[data-operation-status]')).toContainText('IndexedDB');
 });
 
-test('captura comparación y vista móvil', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile', 'Captura móvil solo en el proyecto móvil.');
+test('captura comparación en todos los proyectos', async ({ page }, testInfo) => {
   await page.getByRole('button', { name: /SEMILLAS/ }).click();
-  await page.locator('[data-mobile-panel="map"]').click();
+  if (testInfo.project.name === 'mobile') await page.locator('[data-mobile-panel="map"]').click();
   const map = page.locator('#territory-map');
   await expect(map).toBeVisible();
-  expect((await map.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(440);
-  await page.screenshot({ path: screenshot('v2-mobile'), fullPage: true });
+  expect((await map.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(testInfo.project.name === 'mobile' ? 440 : 400);
+  await page.screenshot({ path: screenshot(`acceptance-comparacion-${testInfo.project.name}`), fullPage: true });
 });

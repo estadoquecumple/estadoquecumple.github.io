@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "81",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "81001": {
+      "neighbours": [
+        "81065",
+        "81220",
+        "81591"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81065": {
+      "neighbours": [
+        "81001",
+        "81591",
+        "81736"
+      ],
+      "pointContacts": [
+        "81300"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81220": {
+      "neighbours": [
+        "81001"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81300": {
+      "neighbours": [
+        "81736",
+        "81794"
+      ],
+      "pointContacts": [
+        "81065"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81591": {
+      "neighbours": [
+        "81001",
+        "81065"
+      ],
+      "pointContacts": [
+        "81794"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81736": {
+      "neighbours": [
+        "81065",
+        "81300"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "81794": {
+      "neighbours": [
+        "81300"
+      ],
+      "pointContacts": [
+        "81591"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

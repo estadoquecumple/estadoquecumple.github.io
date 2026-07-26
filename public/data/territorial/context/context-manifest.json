@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-25",
+  "region": [
+    -92,
+    -20,
+    -58,
+    19
+  ],
+  "license": "Public domain",
+  "source": "Natural Earth 1:110m version available 2026-07-25",
+  "sourceUrl": "https://www.naturalearthdata.com/",
+  "warning": "Las fronteras de países vecinos se muestran solo como contexto cartográfico. Los límites territoriales colombianos provienen de las fuentes oficiales declaradas.",
+  "maritimeBoundariesIncluded": false,
+  "files": [
+    "countries-near-colombia.geojson",
+    "country-borders.geojson",
+    "coastline.geojson",
+    "ocean.geojson",
+    "geographic-labels.geojson",
+    "capital-cities.geojson"
+  ]
+}

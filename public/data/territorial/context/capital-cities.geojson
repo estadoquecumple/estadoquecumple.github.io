@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "NIC",
+      "properties": {
+        "name": "Managua",
+        "country": "Nicaragua",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.270437,
+          12.154962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PAN",
+      "properties": {
+        "name": "Panama City",
+        "country": "Panama",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.534983,
+          8.969963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ECU",
+      "properties": {
+        "name": "Quito",
+        "country": "Ecuador",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.501997,
+          -0.213042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "CRI",
+      "properties": {
+        "name": "San José",
+        "country": "Costa Rica",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.078814,
+          9.930371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BRA",
+      "properties": {
+        "name": "Brasília",
+        "country": "Brazil",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.917998,
+          -15.781394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "VEN",
+      "properties": {
+        "name": "Caracas",
+        "country": "Venezuela",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.918983,
+          10.502944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "PER",
+      "properties": {
+        "name": "Lima",
+        "country": "Peru",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.052008,
+          -12.046067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "COL",
+      "properties": {
+        "name": "Bogota",
+        "country": "Colombia",
+        "source": "Natural Earth 1:110m"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08529,
+          4.598369
+        ]
+      }
+    }
+  ]
+}
