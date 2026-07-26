@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-07-26",
+  "source": "public/data/territorial/geography/municipalities-index.json",
+  "officialField": "MPIO_TIPO",
+  "total": 1122,
+  "counts": {
+    "municipio": 0,
+    "distrito": 0,
+    "Distrito Capital": 0,
+    "área no municipalizada": 0,
+    "unavailable": 1122
+  },
+  "limitation": "La fuente incorporada no suministra MPIO_TIPO. No se inventó una clasificación; las 1.122 unidades quedan explícitamente no disponibles hasta incorporar ese campo oficial."
+}

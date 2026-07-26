@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { calculateConsequences } from './consequences/compare';
+import { calculateScenarioDiff } from './consequences/compare';
 
 export const LAB_SCHEMA_VERSION = 3 as const;
 export const LAB_DB_NAME = 'cams-territorial-lab';
@@ -22,6 +22,16 @@ const levelSchema = z.object({
   name: z.string().min(1),
   order: z.number().int(),
   nature: z.string(),
+  code: z.string().optional(),
+  coverage: z.string().optional(),
+  authority: z.string().optional(),
+  selectionMethod: z.string().optional(),
+  representativeBody: z.string().optional(),
+  competences: z.array(z.string()).optional(),
+  financing: z.array(z.string()).optional(),
+  planning: z.string().optional(),
+  control: z.string().optional(),
+  relations: z.array(z.string()).optional(),
 });
 const unitSchema = z.object({
   id: z.string().min(1),
@@ -180,7 +190,11 @@ function commit(scenario: TerritorialScenario, op: ScenarioOperation, patch: Par
     updatedAt: now(),
     history: [...scenario.history, op],
   };
-  next.consequences = calculateConsequences({ operation: op.summary });
+  next.consequences = calculateScenarioDiff(scenario, op, next, {
+    figure: typeof op.payload.figure === 'string' ? op.payload.figure : undefined,
+    contiguous: typeof op.payload.contiguous === 'boolean' ? op.payload.contiguous : null,
+    legalPath: typeof op.payload.legalPath === 'string' ? op.payload.legalPath : undefined,
+  });
   return territorialScenarioSchema.parse(next);
 }
 
@@ -211,10 +225,17 @@ export function mergeUnits(
   if (ids.length < 2) throw new Error('Seleccione al menos dos unidades para unir.');
   const members = scenario.units.filter((unit) => ids.includes(unit.id));
   if (members.length !== ids.length) throw new Error('Una o más unidades seleccionadas no existen.');
+  const polygons = members.flatMap((unit) => {
+    const geometry = unit.geometry as { type?: string; coordinates?: unknown[] } | null;
+    if (geometry?.type === 'Polygon') return [geometry.coordinates];
+    if (geometry?.type === 'MultiPolygon') return geometry.coordinates ?? [];
+    return [];
+  });
+  const mergedGeometry = polygons.length ? { type: 'MultiPolygon', coordinates: polygons } : null;
   const merged: TerritorialUnit = {
     id: uid('cams-merged'), name, levelId, state: 'active', parentId: null,
     memberIds: ids, officialCodes: members.flatMap((unit) => unit.officialCodes),
-    geometry: null, politicalStatus: disposition === 'political' ? 'members-retained' : 'exploratory',
+    geometry: mergedGeometry, politicalStatus: disposition === 'political' ? 'members-retained' : 'exploratory',
     administrativeStatus: disposition, statisticalStatus: 'derived',
   };
   const nextUnits = scenario.units.map((unit) => ids.includes(unit.id) && disposition === 'absorbed'
