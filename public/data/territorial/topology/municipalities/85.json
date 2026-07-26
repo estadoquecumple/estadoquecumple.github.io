@@ -1,0 +1,208 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "85",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "85001": {
+      "neighbours": [
+        "85010",
+        "85139",
+        "85225",
+        "85230",
+        "85325"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85010": {
+      "neighbours": [
+        "85001",
+        "85139",
+        "85279",
+        "85410"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85015": {
+      "neighbours": [
+        "85279"
+      ],
+      "pointContacts": [
+        "85410"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85125": {
+      "neighbours": [
+        "85250"
+      ],
+      "pointContacts": [
+        "85315"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85136": {
+      "neighbours": [],
+      "pointContacts": [],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85139": {
+      "neighbours": [
+        "85001",
+        "85010",
+        "85230",
+        "85410"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85162": {
+      "neighbours": [
+        "85410"
+      ],
+      "pointContacts": [
+        "85440"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85225": {
+      "neighbours": [
+        "85001",
+        "85325"
+      ],
+      "pointContacts": [
+        "85400"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85230": {
+      "neighbours": [
+        "85001",
+        "85139",
+        "85325"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85250": {
+      "neighbours": [
+        "85125",
+        "85263",
+        "85400",
+        "85430"
+      ],
+      "pointContacts": [
+        "85315"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85263": {
+      "neighbours": [
+        "85250",
+        "85430"
+      ],
+      "pointContacts": [
+        "85400"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85279": {
+      "neighbours": [
+        "85010",
+        "85015"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85300": {
+      "neighbours": [],
+      "pointContacts": [
+        "85440"
+      ],
+      "island": true,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85315": {
+      "neighbours": [
+        "85400"
+      ],
+      "pointContacts": [
+        "85125",
+        "85250"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85325": {
+      "neighbours": [
+        "85001",
+        "85225",
+        "85230",
+        "85430"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85400": {
+      "neighbours": [
+        "85250",
+        "85315"
+      ],
+      "pointContacts": [
+        "85225",
+        "85263"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85410": {
+      "neighbours": [
+        "85010",
+        "85139",
+        "85162",
+        "85440"
+      ],
+      "pointContacts": [
+        "85015"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85430": {
+      "neighbours": [
+        "85250",
+        "85263",
+        "85325"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "85440": {
+      "neighbours": [
+        "85410"
+      ],
+      "pointContacts": [
+        "85162",
+        "85300"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

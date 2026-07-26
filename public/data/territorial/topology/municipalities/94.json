@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "departmentCode": "94",
+  "generatedAt": "2026-07-25",
+  "definition": "Vecino: comparte al menos un segmento de frontera; contacto puntual separado.",
+  "units": {
+    "94001": {
+      "neighbours": [
+        "94343",
+        "94884",
+        "94886"
+      ],
+      "pointContacts": [
+        "94888"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94343": {
+      "neighbours": [
+        "94001",
+        "94888"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94883": {
+      "neighbours": [
+        "94884",
+        "94885"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94884": {
+      "neighbours": [
+        "94001",
+        "94883",
+        "94886",
+        "94887"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94885": {
+      "neighbours": [
+        "94883"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94886": {
+      "neighbours": [
+        "94001",
+        "94884"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94887": {
+      "neighbours": [
+        "94884",
+        "94888"
+      ],
+      "pointContacts": [],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    },
+    "94888": {
+      "neighbours": [
+        "94343",
+        "94887"
+      ],
+      "pointContacts": [
+        "94001"
+      ],
+      "island": false,
+      "rule": "shared-rounded-boundary-segment"
+    }
+  }
+}

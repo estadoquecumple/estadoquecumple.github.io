@@ -30,7 +30,7 @@ const seeded = () => {
   return scenario;
 };
 
-describe('modelo territorial V2', () => {
+describe('modelo territorial V3', () => {
   it('crea un esquema tipado y versionado', () => {
     const scenario = createScenario();
     expect(scenario.schemaVersion).toBe(LAB_SCHEMA_VERSION);
@@ -73,7 +73,7 @@ describe('modelo territorial V2', () => {
   });
   it('reasigna competencias con modalidad', () => {
     const result = assignCompetence(seeded(), 'salud', 'region', 'shared');
-    expect(result.competences).toContainEqual({ function: 'salud', levelId: 'region', modality: 'shared' });
+    expect(result.competences).toContainEqual({ function: 'salud', levelId: 'region', modality: 'shared', role: 'execution' });
   });
   it('cambia gobierno, financiación y planeación separadamente', () => {
     let result = changeGovernment(seeded(), { unitId: 'department:05', authority: 'colegiada', selection: 'corporación', termYears: 4, reelection: 'no', representativeBody: 'asamblea' });
@@ -102,7 +102,7 @@ describe('modelo territorial V2', () => {
     const scenario = seeded();
     const text = exportScenario(scenario);
     expect(importScenario(JSON.parse(text))).toEqual(scenario);
-    expect(text).toContain('"schemaVersion": 2');
+    expect(text).toContain('"schemaVersion": 3');
   });
   it('toda operación entra al historial', () => {
     const scenario = assignCompetence(seeded(), 'catastro', 'region', 'delegated');

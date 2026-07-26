@@ -1,9 +1,10 @@
 import { z } from 'zod';
+import { calculateConsequences } from './consequences/compare';
 
-export const LAB_SCHEMA_VERSION = 2 as const;
+export const LAB_SCHEMA_VERSION = 3 as const;
 export const LAB_DB_NAME = 'cams-territorial-lab';
-export const LAB_STORE_NAME = 'scenarios-v2';
-export const LEGACY_KEYS = ['cams-territorial-scenarios-v1', 'territorial-lab-v1'];
+export const LAB_STORE_NAME = 'scenarios-v3';
+export const LEGACY_KEYS = ['cams-territorial-scenarios-v1', 'territorial-lab-v1', 'cams-territorial-scenarios-v2'];
 
 export const unitStateSchema = z.enum([
   'active', 'transformed', 'absorbed', 'statistical-only', 'political-only',
@@ -52,6 +53,7 @@ const competenceSchema = z.object({
   function: z.string(),
   levelId: z.string(),
   modality: z.enum(['exclusive', 'concurrent', 'shared', 'delegated', 'subsidiary', 'temporary']),
+  role: z.enum(['regulation','financing','planning','execution','operation','maintenance','inspection','surveillance','fiscal-control','political-control','evaluation']).default('execution'),
 });
 const financeSchema = z.object({
   levelId: z.string(),
@@ -85,7 +87,7 @@ const legalImpactSchema = z.object({
 });
 
 export const territorialScenarioSchema = z.object({
-  schemaVersion: z.literal(2),
+  schemaVersion: z.literal(3),
   id: z.string().min(1),
   name: z.string().min(1),
   version: z.string(),
@@ -105,6 +107,10 @@ export const territorialScenarioSchema = z.object({
   assumptions: z.array(z.object({ id: z.string(), text: z.string(), uncertainty: z.string() })),
   risks: z.array(z.object({ id: z.string(), text: z.string(), severity: z.string() })),
   legalImpacts: z.array(legalImpactSchema),
+  consequences: z.array(z.object({
+    dimension: z.string(), kind: z.enum(['direct','conditional','risk','requirement','missing-data','uncertainty']),
+    before: z.string(), decision: z.string(), after: z.string(), explanation: z.string(), source: z.string().optional(),
+  })),
   transitions: z.array(z.object({ order: z.number(), text: z.string(), status: z.string() })),
   sources: z.array(z.object({ title: z.string(), url: z.string(), date: z.string() })),
   history: z.array(operationSchema),
@@ -125,7 +131,7 @@ export function createScenario(name = 'Escenario territorial sin título'): Terr
     schemaVersion: LAB_SCHEMA_VERSION,
     id: uid('scenario'),
     name,
-    version: '2.0.0',
+    version: '3.0.0',
     status: 'draft',
     baseScenarioId: 'current-colombia-2025',
     createdAt: stamp,
@@ -136,7 +142,10 @@ export function createScenario(name = 'Escenario territorial sin título'): Terr
       { id: 'department', name: 'Departamento', order: 1, nature: 'entidad territorial vigente' },
       { id: 'municipality', name: 'Municipio', order: 2, nature: 'entidad territorial vigente' },
     ],
-    units: [],
+    units: [
+      { id:'nation:CO', name:'Colombia', levelId:'nation', state:'active', parentId:null, memberIds:DEPARTMENTS.map(([code])=>`department:${code}`), officialCodes:['CO'], geometry:null, politicalStatus:'república unitaria vigente', administrativeStatus:'Nación', statisticalStatus:'oficial' },
+      ...DEPARTMENTS.map(([code, name]) => ({ id:`department:${code}`, name, levelId:'department', state:'active' as const, parentId:'nation:CO', memberIds:[], officialCodes:[code], geometry:null, politicalStatus:code === '11' ? 'Distrito Capital y entidad territorial' : 'entidad territorial vigente', administrativeStatus:code === '11' ? 'Distrito Capital' : 'departamento', statisticalStatus:'oficial' })),
+    ],
     memberships: [],
     governments: [],
     competences: [],
@@ -146,6 +155,7 @@ export function createScenario(name = 'Escenario territorial sin título'): Terr
     assumptions: [],
     risks: [],
     legalImpacts: [],
+    consequences: [],
     transitions: [],
     sources: [
       { title: 'DANE DIVIPOLA MGN 2025', url: 'https://geoportal.dane.gov.co/', date: '2025' },
@@ -155,17 +165,23 @@ export function createScenario(name = 'Escenario territorial sin título'): Terr
   };
 }
 
+const DEPARTMENTS = [
+  ['05','Antioquia'],['08','Atlántico'],['11','Bogotá, D.C.'],['13','Bolívar'],['15','Boyacá'],['17','Caldas'],['18','Caquetá'],['19','Cauca'],['20','Cesar'],['23','Córdoba'],['25','Cundinamarca'],['27','Chocó'],['41','Huila'],['44','La Guajira'],['47','Magdalena'],['50','Meta'],['52','Nariño'],['54','Norte de Santander'],['63','Quindío'],['66','Risaralda'],['68','Santander'],['70','Sucre'],['73','Tolima'],['76','Valle del Cauca'],['81','Arauca'],['85','Casanare'],['86','Putumayo'],['88','Archipiélago de San Andrés, Providencia y Santa Catalina'],['91','Amazonas'],['94','Guainía'],['95','Guaviare'],['97','Vaupés'],['99','Vichada'],
+] as const;
+
 function operation(kind: ScenarioOperation['kind'], summary: string, payload: Record<string, unknown>): ScenarioOperation {
   return { id: uid('op'), kind, at: now(), summary, payload };
 }
 
 function commit(scenario: TerritorialScenario, op: ScenarioOperation, patch: Partial<TerritorialScenario>): TerritorialScenario {
-  return territorialScenarioSchema.parse({
+  const next = {
     ...scenario,
     ...patch,
     updatedAt: now(),
     history: [...scenario.history, op],
-  });
+  };
+  next.consequences = calculateConsequences({ operation: op.summary });
+  return territorialScenarioSchema.parse(next);
 }
 
 export function addUnit(scenario: TerritorialScenario, input: Partial<TerritorialUnit> & Pick<TerritorialUnit, 'name' | 'levelId'>) {
@@ -274,10 +290,10 @@ export function createLevel(scenario: TerritorialScenario, name: string, order: 
   return commit(scenario, operation('create-level', `Creó el nivel ${name}`, { level }), { levels: [...scenario.levels, level].sort((a, b) => a.order - b.order) });
 }
 
-export function assignCompetence(scenario: TerritorialScenario, publicFunction: string, levelId: string, modality: z.infer<typeof competenceSchema>['modality']) {
-  const competences = scenario.competences.filter((item) => item.function !== publicFunction);
-  competences.push({ function: publicFunction, levelId, modality });
-  return commit(scenario, operation('assign-competence', `Asignó ${publicFunction} a ${levelId}`, { publicFunction, levelId, modality }), { competences });
+export function assignCompetence(scenario: TerritorialScenario, publicFunction: string, levelId: string, modality: z.infer<typeof competenceSchema>['modality'], role: z.infer<typeof competenceSchema>['role'] = 'execution') {
+  const competences = scenario.competences.filter((item) => !(item.function === publicFunction && item.role === role));
+  competences.push({ function: publicFunction, levelId, modality, role });
+  return commit(scenario, operation('assign-competence', `Asignó ${role} de ${publicFunction} a ${levelId}`, { publicFunction, levelId, modality, role }), { competences });
 }
 
 export function changeGovernment(scenario: TerritorialScenario, government: z.infer<typeof governmentSchema>) {
@@ -341,7 +357,7 @@ export function migrateLocalState(storage: Pick<Storage, 'getItem' | 'removeItem
     try {
       const parsed = JSON.parse(value);
       if (parsed && typeof parsed === 'object' && typeof parsed.mode === 'string') {
-        storage.setItem('cams-territorial-preferences-v2', JSON.stringify({ mode: parsed.mode }));
+        storage.setItem('cams-territorial-preferences-v3', JSON.stringify({ mode: parsed.mode }));
         migratedPreferences = true;
       }
     } catch {
