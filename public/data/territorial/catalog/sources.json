@@ -1,6 +1,6 @@
 {
   "version": "4.0.0",
-  "updated": "2026-07-26",
+  "updated": "2026-07-27",
   "sources": [
     {
       "id": "dane-divipola-mgn-2025",
@@ -10,7 +10,7 @@
       "frequency": "anual",
       "data_date": "2025-01-01",
       "published_at": null,
-      "downloaded_at": null,
+      "downloaded_at": "2026-07-27",
       "coverage": "nacional, departamental y municipal/distrital",
       "granularity": "unidad territorial",
       "key": "DIVIPOLA",
@@ -39,8 +39,8 @@
       "update_policy": "promover sólo si esquema, conteos, geometría y hashes son válidos",
       "status": "current",
       "quality_status": "current",
-      "hash": null,
-      "snapshot": null,
+      "hash": "5751e0404554be2d7928a37824a715d3087706a163e38da322fc0589b2a91832",
+      "snapshot": "dane-divipola-mgn-2025-fd80363ddd2c754a",
       "published_version": "2025",
       "last_valid_version": "2025"
     },
@@ -82,12 +82,12 @@
     {
       "id": "dnp-typologies-2026",
       "entity": "Departamento Nacional de Planeación (DNP)",
-      "url": "https://www.dnp.gov.co/LaEntidad_/subdireccion-general-descentralizacion-desarrollo-territorial/direccion-descentralizacion-fortalecimiento-fiscal/Paginas/tipologias-territoriales.aspx",
+      "url": "https://www.dnp.gov.co/LaEntidad_/subdireccion-general-descentralizacion-desarrollo-territorial/direccion-descentralizacion-fortalecimiento-fiscal/Paginas/tipologias-de-entidades-territoriales.aspx",
       "access": "descubrimiento HTML oficial o importación manual reproducible",
       "frequency": "por edición",
       "data_date": "2026-01-01",
       "published_at": null,
-      "downloaded_at": null,
+      "downloaded_at": "2026-07-27",
       "coverage": "municipal/distrital y departamental",
       "granularity": "unidad territorial",
       "key": "DIVIPOLA",
@@ -105,12 +105,12 @@
         "no asigna recursos"
       ],
       "update_policy": "archivar descarga oficial; respaldo manual con plantilla y SHA-256",
-      "status": "manual-required",
-      "quality_status": "manual-required",
-      "hash": null,
-      "snapshot": null,
+      "status": "current",
+      "quality_status": "current",
+      "hash": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e",
+      "snapshot": "dnp-typologies-2026-33cad88b6d05269e",
       "published_version": "2026",
-      "last_valid_version": null
+      "last_valid_version": "2026"
     },
     {
       "id": "dnp-idf-2024",
@@ -120,7 +120,7 @@
       "frequency": "anual",
       "data_date": "2024-12-31",
       "published_at": null,
-      "downloaded_at": null,
+      "downloaded_at": "2026-07-27",
       "coverage": "entidades territoriales",
       "granularity": "entidad territorial y vigencia",
       "key": "DIVIPOLA",
@@ -138,12 +138,12 @@
         "la vigencia del indicador difiere de la fecha de publicación"
       ],
       "update_policy": "archivar descarga oficial; respaldo manual con plantilla y SHA-256",
-      "status": "manual-required",
-      "quality_status": "manual-required",
-      "hash": null,
-      "snapshot": null,
+      "status": "current",
+      "quality_status": "current",
+      "hash": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e",
+      "snapshot": "dnp-idf-2024-4dd54028af0292f4",
       "published_version": "2024",
-      "last_valid_version": null
+      "last_valid_version": "2024"
     },
     {
       "id": "dnp-mdm",
@@ -151,11 +151,11 @@
       "url": "https://portalterritorial.dnp.gov.co/AdmInfoTerritorial/MenuInfoTerrEstMDM",
       "access": "descarga oficial estable o importación manual reproducible",
       "frequency": "anual",
-      "data_date": null,
+      "data_date": "2024-12-31",
       "published_at": null,
-      "downloaded_at": null,
-      "coverage": "municipal",
-      "granularity": "municipio y vigencia",
+      "downloaded_at": "2026-07-27",
+      "coverage": "municipal y departamental",
+      "granularity": "entidad territorial y vigencia",
       "key": "DIVIPOLA",
       "license": "Condiciones de uso del DNP",
       "fields": [
@@ -171,12 +171,12 @@
         "sólo se compara la edición oficial disponible"
       ],
       "update_policy": "no automatizar Power BI; archivar archivo descargable o importación manual con hash",
-      "status": "manual-required",
-      "quality_status": "manual-required",
-      "hash": null,
-      "snapshot": null,
-      "published_version": null,
-      "last_valid_version": null
+      "status": "current",
+      "quality_status": "current",
+      "hash": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e",
+      "snapshot": "dnp-mdm-6a75e689e5f25884",
+      "published_version": "2024",
+      "last_valid_version": "2024"
     },
     {
       "id": "dnp-sgr-mzgh-shtp",
@@ -186,7 +186,7 @@
       "frequency": "según actualización del portal",
       "data_date": null,
       "published_at": null,
-      "downloaded_at": null,
+      "downloaded_at": "2026-07-27",
       "coverage": "proyectos del Sistema General de Regalías",
       "granularity": "proyecto y territorio informado",
       "key": "BPIN y código territorial de la fuente",
@@ -212,12 +212,12 @@
         "no se extrapolan ausencias"
       ],
       "update_policy": "promover sólo si paginación, deduplicación y totales son consistentes",
-      "status": "partial",
-      "quality_status": "partial",
-      "hash": null,
-      "snapshot": null,
-      "published_version": null,
-      "last_valid_version": null
+      "status": "current",
+      "quality_status": "current",
+      "hash": "c8255f8852b8a229e71f34799d76b832b6bfc9c09fa3e63c3c8e87a64f32cecd",
+      "snapshot": "dnp-sgr-mzgh-shtp-cb36ce84588ac238",
+      "published_version": "2026-07-27",
+      "last_valid_version": "2026-07-27"
     },
     {
       "id": "secop-ii",
@@ -227,7 +227,7 @@
       "frequency": "continua",
       "data_date": null,
       "published_at": null,
-      "downloaded_at": null,
+      "downloaded_at": "2026-07-27",
       "coverage": "SECOP II",
       "granularity": "contrato, proceso, entidad y lugar de ejecución",
       "key": "identificador contractual, DIVIPOLA y año",
@@ -260,12 +260,12 @@
         "no se publica SECOP crudo"
       ],
       "update_policy": "promover agregados sólo con campos confirmados y controles de totales",
-      "status": "partial",
-      "quality_status": "partial",
-      "hash": null,
-      "snapshot": null,
-      "published_version": null,
-      "last_valid_version": null
+      "status": "current",
+      "quality_status": "current",
+      "hash": "4e426631bc06549752225194d21a0543fd716e309ded169cc25b3a4d46b7fb51",
+      "snapshot": "secop-ii-a602739aa1712d21",
+      "published_version": "2026-07-27",
+      "last_valid_version": "2026-07-27"
     },
     {
       "id": "sigep-entities-kqut-4h4r",
@@ -337,7 +337,7 @@
       "last_valid_version": null
     }
   ],
-  "generatedAt": "2026-07-27T02:09:35Z",
+  "generatedAt": "2026-07-27T05:42:58Z",
   "policy": {
     "pricing": "100 % gratuito; sin tarjeta, suscripción ni pago por consumo",
     "defaultProviders": {

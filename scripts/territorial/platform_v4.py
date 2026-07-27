@@ -310,8 +310,8 @@ def write_analytics() -> list[Path]:
                     "dataset": source_path.stem,
                     "source": document.get("source"),
                     "status": document.get("status"),
-                    "code": record.get("code"),
-                    "year": record.get("year"),
+                    "code": record.get("code") or record.get("territoryCode"),
+                    "year": str(record.get("year") or document.get("dataPeriod") or ""),
                     "value": _numeric_value(record),
                     "record": json.dumps(record, ensure_ascii=False, sort_keys=True),
                 }
@@ -323,6 +323,27 @@ def write_analytics() -> list[Path]:
     indicators_path = ANALYTICS / "indicators.parquet"
     indicator_frame.to_parquet(indicators_path, index=False)
     outputs.append(indicators_path)
+
+    series_path = ANALYTICS / "series.parquet"
+    indicator_frame[indicator_frame["year"].astype(str).str.len() > 0].to_parquet(
+        series_path, index=False
+    )
+    outputs.append(series_path)
+
+    entities = read_json(PUBLIC / "government" / "entities-by-territory.json")
+    entities_path = ANALYTICS / "entities.parquet"
+    pd.DataFrame(entities.get("records", [])).to_parquet(entities_path, index=False)
+    outputs.append(entities_path)
+
+    sgr = read_json(PUBLIC / "indicators" / "sgr-aggregates.json")
+    sgr_path = ANALYTICS / "sgr-aggregates.parquet"
+    pd.DataFrame(sgr.get("records", [])).to_parquet(sgr_path, index=False)
+    outputs.append(sgr_path)
+
+    secop_path = ANALYTICS / "secop-aggregates.parquet"
+    if not secop_path.exists():
+        raise FileNotFoundError("Falta el agregado SECOP Parquet completo")
+    outputs.append(secop_path)
 
     departments = gpd.read_file(PUBLIC / "geography" / "departments.geojson")
     departments.set_crs("EPSG:4326", allow_override=True, inplace=True)

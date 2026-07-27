@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "checkedAt": "2026-07-27T05:37:56Z",
+  "publishedStatus": "current",
+  "checks": [
+    "original-presente",
+    "sha256",
+    "producto-normalizado-presente"
+  ]
+}

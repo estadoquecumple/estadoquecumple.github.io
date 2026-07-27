@@ -28,18 +28,21 @@ def run() -> None:
         },
         "secop-ii": {
             "raw": sorted(CACHE.glob("secop-jbjy-vk9h-*-raw-aggregate.json")) + [CACHE / "secop-jbjy-vk9h-metadata.json"],
-            "normalized": [PUBLIC / "indicators" / "secop-aggregates.json"],
+            "normalized": [
+                PUBLIC / "indicators" / "secop-aggregates.json",
+                PUBLIC / "analytics" / "secop-aggregates.parquet",
+            ],
         },
         "dnp-typologies-2026": {
             "raw": [ROOT / "data" / "manual" / "dnp_typologies_2026.xlsx"],
             "normalized": [PUBLIC / "indicators" / "typologies.json"],
         },
         "dnp-idf-2024": {
-            "raw": [ROOT / "data" / "manual" / "dnp_idf_2024.xlsx"],
+            "raw": [ROOT / "data" / "manual" / "dnp_typologies_2026.xlsx"],
             "normalized": [PUBLIC / "indicators" / "fiscal.json"],
         },
         "dnp-mdm": {
-            "raw": [ROOT / "data" / "manual" / "dnp_mdm.xlsx"],
+            "raw": [ROOT / "data" / "manual" / "dnp_typologies_2026.xlsx"],
             "normalized": [PUBLIC / "indicators" / "municipal-performance.json"],
         },
     }

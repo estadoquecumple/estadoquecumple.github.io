@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -113,18 +113,18 @@
         "name": "SAN ANDRÉS",
         "originalCode": "001",
         "originalName": "SAN ANDRÉS",
+        "MPIO_TIPO": "ISLA",
         "type": "ISLA",
+        "unitType": "isla",
+        "MPIO_NAREA": 27.26527266,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Const. política. Art. 309 del 4 de Julio de 1991",
         "areaName": 27.26527266,
         "creationYear": 2025,
         "creationResolution": "Const. política. Art. 309 del 4 de Julio de 1991",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ISLA",
-        "unitType": "isla",
-        "MPIO_NAREA": 27.26527266,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Const. política. Art. 309 del 4 de Julio de 1991"
+        "year": 2025
       }
     },
     {
@@ -185,18 +185,18 @@
         "name": "PROVIDENCIA",
         "originalCode": "564",
         "originalName": "PROVIDENCIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 22.32331173,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto  2964B del 13 de Noviembre de 1953",
         "areaName": 22.32331173,
         "creationYear": 2024,
         "creationResolution": "Decreto  2964B del 13 de Noviembre de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 22.32331173,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto  2964B del 13 de Noviembre de 1953"
+        "year": 2025
       }
     }
   ]

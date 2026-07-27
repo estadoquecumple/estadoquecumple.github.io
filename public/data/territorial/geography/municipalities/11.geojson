@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -267,18 +267,18 @@
         "name": "BOGOTÁ, D.C.",
         "originalCode": "001",
         "originalName": "BOGOTÁ, D.C.",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1620.54083433,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1538",
         "areaName": 1620.54083433,
         "creationYear": 2025,
         "creationResolution": "1538",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1620.54083433,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1538"
+        "year": 2025
       }
     }
   ]

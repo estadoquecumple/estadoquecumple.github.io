@@ -131,9 +131,7 @@ def run(offline: bool = False) -> None:
     write_json(CACHE / "sgr-mzgh-shtp-raw.json", {"sourceUrl": URL, "retrievedAt": now(), "expectedRows": expected, "rows": rows})
     records, quality = aggregate_rows(rows)
     status = "current" if complete and quality["valid"] else "partial"
-    write_json(
-        output,
-        {
+    candidate = {
             "source": "dnp-sgr-mzgh-shtp",
             "status": status,
             "updatedAt": now(),
@@ -149,8 +147,22 @@ def run(offline: bool = False) -> None:
                 if complete
                 else "Cobertura parcial explícita; no se extrapolan filas no recuperadas."
             ),
-        },
-    )
+        }
+    if status != "current":
+        write_json(
+            CACHE / "sgr-mzgh-shtp-failed-update.json",
+            {
+                "failedAt": now(),
+                "candidate": candidate,
+                "retainedPublishedVersion": output.exists(),
+            },
+        )
+        print(
+            f"SGR: actualización no promovida ({len(rows)}/{expected}); "
+            "se conserva la última versión válida"
+        )
+        return
+    write_json(output, candidate)
     print(f"SGR: {len(rows)}/{expected} filas; {quality['uniqueProjects']} proyectos únicos; {status}")
 
 

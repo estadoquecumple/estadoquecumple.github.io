@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -175,18 +175,18 @@
         "name": "MOCOA",
         "originalCode": "001",
         "originalName": "MOCOA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1305.26361705,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1958",
         "areaName": 1305.26361705,
         "creationYear": 2024,
         "creationResolution": "1958",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1305.26361705,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1958"
+        "year": 2025
       }
     },
     {
@@ -245,18 +245,18 @@
         "name": "COLÓN",
         "originalCode": "219",
         "originalName": "COLÓN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 64.31747923,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989",
         "areaName": 64.31747923,
         "creationYear": 2024,
         "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 64.31747923,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
+        "year": 2025
       }
     },
     {
@@ -387,18 +387,18 @@
         "name": "ORITO",
         "originalCode": "320",
         "originalName": "ORITO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1940.59417359,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2891 de Diciembre 28 de 1978",
         "areaName": 1940.59417359,
         "creationYear": 2024,
         "creationResolution": "Decreto 2891 de Diciembre 28 de 1978",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1940.59417359,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 2891 de Diciembre 28 de 1978"
+        "year": 2025
       }
     },
     {
@@ -653,18 +653,18 @@
         "name": "PUERTO ASÍS",
         "originalCode": "568",
         "originalName": "PUERTO ASÍS",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 2819.84374964,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1951 de Octubre 24 de 1967",
         "areaName": 2819.84374964,
         "creationYear": 2024,
         "creationResolution": "Decreto 1951 de Octubre 24 de 1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 2819.84374964,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1951 de Octubre 24 de 1967"
+        "year": 2025
       }
     },
     {
@@ -759,18 +759,18 @@
         "name": "PUERTO CAICEDO",
         "originalCode": "569",
         "originalName": "PUERTO CAICEDO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 926.84282756,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 12 de Noviembre 24 de 1992",
         "areaName": 926.84282756,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 12 de Noviembre 24 de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 926.84282756,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 12 de Noviembre 24 de 1992"
+        "year": 2025
       }
     },
     {
@@ -1117,18 +1117,18 @@
         "name": "PUERTO GUZMÁN",
         "originalCode": "571",
         "originalName": "PUERTO GUZMÁN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 4576.35166237,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 13 de Noviembre 24 de 1992",
         "areaName": 4576.35166237,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 13 de Noviembre 24 de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 4576.35166237,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 13 de Noviembre 24 de 1992"
+        "year": 2025
       }
     },
     {
@@ -1627,18 +1627,18 @@
         "name": "PUERTO LEGUÍZAMO",
         "originalCode": "573",
         "originalName": "PUERTO LEGUÍZAMO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 10900.42598581,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 698 de Noviembre 13 de 1953",
         "areaName": 10900.42598581,
         "creationYear": 2024,
         "creationResolution": "Decreto 698 de Noviembre 13 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 10900.42598581,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 698 de Noviembre 13 de 1953"
+        "year": 2025
       }
     },
     {
@@ -1697,18 +1697,18 @@
         "name": "SIBUNDOY",
         "originalCode": "749",
         "originalName": "SIBUNDOY",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 97.79631883,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1871 de Julio 1 de 1982",
         "areaName": 97.79631883,
         "creationYear": 2024,
         "creationResolution": "Decreto 1871 de Julio 1 de 1982",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 97.79631883,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1871 de Julio 1 de 1982"
+        "year": 2025
       }
     },
     {
@@ -1795,18 +1795,18 @@
         "name": "SAN FRANCISCO",
         "originalCode": "755",
         "originalName": "SAN FRANCISCO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 407.59616234,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989",
         "areaName": 407.59616234,
         "creationYear": 2024,
         "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 407.59616234,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
+        "year": 2025
       }
     },
     {
@@ -1953,18 +1953,18 @@
         "name": "SAN MIGUEL",
         "originalCode": "757",
         "originalName": "SAN MIGUEL",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 379.96831073,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 45 de Abril 29 de 1994",
         "areaName": 379.96831073,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 45 de Abril 29 de 1994",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 379.96831073,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 45 de Abril 29 de 1994"
+        "year": 2025
       }
     },
     {
@@ -2051,18 +2051,18 @@
         "name": "SANTIAGO",
         "originalCode": "760",
         "originalName": "SANTIAGO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 342.16073335,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989",
         "areaName": 342.16073335,
         "creationYear": 2024,
         "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 342.16073335,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
+        "year": 2025
       }
     },
     {
@@ -2181,18 +2181,18 @@
         "name": "VALLE DEL GUAMUEZ",
         "originalCode": "865",
         "originalName": "VALLE DEL GUAMUEZ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 815.66121418,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto DAINCO 3293 de Noviembre 12 de 1985",
         "areaName": 815.66121418,
         "creationYear": 2024,
         "creationResolution": "Decreto DAINCO 3293 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 815.66121418,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto DAINCO 3293 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -2295,18 +2295,18 @@
         "name": "VILLAGARZÓN",
         "originalCode": "885",
         "originalName": "VILLAGARZÓN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1397.70273326,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 574 de Marzo 14 de 1977",
         "areaName": 1397.70273326,
         "creationYear": 2024,
         "creationResolution": "Decreto 574 de Marzo 14 de 1977",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1397.70273326,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 574 de Marzo 14 de 1977"
+        "year": 2025
       }
     }
   ]

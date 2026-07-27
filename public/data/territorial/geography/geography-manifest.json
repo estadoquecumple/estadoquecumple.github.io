@@ -2,7 +2,7 @@
   "version": "4.0.0",
   "status": "current",
   "source": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer",
-  "downloadedAt": "2026-07-27T01:49:40Z",
+  "downloadedAt": "2026-07-27T05:06:31Z",
   "layers": {
     "departments": 319,
     "municipalities": 317
@@ -10,6 +10,7 @@
   "departmentCount": 33,
   "territorialUnitCount": 1122,
   "municipalityCount": 1103,
+  "nonMunicipalizedAreaCount": 18,
   "typeCounts": {
     "MUNICIPIO": 1103,
     "ISLA": 1,
@@ -24,6 +25,5 @@
     "precisionDecimals": 5,
     "purpose": "visualización web; no sustituye cartografía oficial"
   },
-  "representativePoint": "Shapely representative_point; no promedio de vértices",
-  "nonMunicipalizedAreaCount": 18
+  "representativePoint": "Shapely representative_point; no promedio de vértices"
 }

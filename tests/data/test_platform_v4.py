@@ -121,3 +121,26 @@ def test_secop_resolves_metadata_and_paginates_aggregates():
     assert normalized[0]["records"] == 2
     assert normalized[0]["value"] == 30
     assert calls[0]["$group"] == "`nombre_entidad`"
+
+
+def test_published_secop_and_sgr_are_complete_and_match_parquet():
+    import pandas as pd
+
+    secop = json.loads(
+        (platform_v4.PUBLIC / "indicators" / "secop-aggregates.json").read_text(encoding="utf-8")
+    )
+    secop_frame = pd.read_parquet(platform_v4.PUBLIC / "analytics" / "secop-aggregates.parquet")
+    assert secop["status"] == "current"
+    assert len(secop_frame) == secop["quality"]["aggregatedRows"]
+    assert len(secop_frame) > 1_000_000
+    assert {"execution-location", "modifications", "supplier"} <= set(secop_frame["dimension"])
+
+    sgr = json.loads(
+        (platform_v4.PUBLIC / "indicators" / "sgr-aggregates.json").read_text(encoding="utf-8")
+    )
+    sgr_frame = pd.read_parquet(platform_v4.PUBLIC / "analytics" / "sgr-aggregates.parquet")
+    assert sgr["status"] == "current"
+    assert sgr["complete"] is True
+    assert sgr["retrievedRows"] == sgr["expectedRows"]
+    assert sgr["retrievedRows"] > 5_000
+    assert len(sgr_frame) == len(sgr["records"])
