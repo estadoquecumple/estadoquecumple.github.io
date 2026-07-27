@@ -18,7 +18,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - uses: actions/setup-python@v5
-        with: { python-version: '3.12', cache: pip }
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements-data.txt
+            requirements-platform-core-free.txt
       - name: Install free data validation platform
         run: |
           "$pythonLocation/bin/python" -m pip install -r requirements-data.txt
@@ -36,7 +41,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - uses: actions/setup-python@v5
-        with: { python-version: '3.12', cache: pip }
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements-data.txt
+            requirements-platform-core-free.txt
       - name: Install free build dependencies
         run: |
           "$pythonLocation/bin/python" -m pip install -r requirements-data.txt
