@@ -115,5 +115,6 @@ control, ruta jurídica y transición.
 
 ## Commits e integración
 
-Los hashes de commit y publicación se completan después de crear los commits
-locales y fusionar en `main`.
+- `c536059` — `Completar fuentes y analítica de la Fase 1 territorial V4`.
+- El commit documental y el commit de fusión en `main` se registran en la
+  entrega final, porque sus hashes solo existen después de cerrar este informe.
