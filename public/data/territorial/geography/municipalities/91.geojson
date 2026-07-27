@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -163,18 +163,18 @@
         "name": "LETICIA",
         "originalCode": "001",
         "originalName": "LETICIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 6158.33098233,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 352 de Feb 20 de 1964",
         "areaName": 6158.33098233,
         "creationYear": 2024,
         "creationResolution": "Decreto 352 de Feb 20 de 1964",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 6158.33098233,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 352 de Feb 20 de 1964"
+        "year": 2025
       }
     },
     {
@@ -833,18 +833,18 @@
         "name": "EL ENCANTO",
         "originalCode": "263",
         "originalName": "EL ENCANTO",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 10874.26468095,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 10874.26468095,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 10874.26468095,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     },
     {
@@ -1427,18 +1427,18 @@
         "name": "LA CHORRERA",
         "originalCode": "405",
         "originalName": "LA CHORRERA",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 12641.44908998,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 12641.44908998,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 12641.44908998,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     },
     {
@@ -1817,18 +1817,18 @@
         "name": "LA PEDRERA",
         "originalCode": "407",
         "originalName": "LA PEDRERA",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 13614.79648727,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 13614.79648727,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 13614.79648727,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     },
     {
@@ -2031,18 +2031,18 @@
         "name": "LA VICTORIA",
         "originalCode": "430",
         "originalName": "LA VICTORIA",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 1428.20281483,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "ORD 12 DE JULIO 9 DE 1996",
         "areaName": 1428.20281483,
         "creationYear": 2024,
         "creationResolution": "ORD 12 DE JULIO 9 DE 1996",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 1428.20281483,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "ORD 12 DE JULIO 9 DE 1996"
+        "year": 2025
       }
     },
     {
@@ -2349,18 +2349,18 @@
         "name": "MIRITÍ - PARANÁ",
         "originalCode": "460",
         "originalName": "MIRITÍ - PARANÁ",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 16814.37349933,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 16814.37349933,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 16814.37349933,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     },
     {
@@ -2595,18 +2595,18 @@
         "name": "PUERTO ALEGRÍA",
         "originalCode": "530",
         "originalName": "PUERTO ALEGRÍA",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 8481.82446212,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "ORD 24 DE AGOSTO 01 DE 1997",
         "areaName": 8481.82446212,
         "creationYear": 2024,
         "creationResolution": "ORD 24 DE AGOSTO 01 DE 1997",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 8481.82446212,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "ORD 24 DE AGOSTO 01 DE 1997"
+        "year": 2025
       }
     },
     {
@@ -3297,18 +3297,18 @@
         "name": "PUERTO ARICA",
         "originalCode": "536",
         "originalName": "PUERTO ARICA",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 13806.07573053,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "ORD 23 DE AGOSTO 01 DE 1997",
         "areaName": 13806.07573053,
         "creationYear": 2024,
         "creationResolution": "ORD 23 DE AGOSTO 01 DE 1997",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 13806.07573053,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "ORD 23 DE AGOSTO 01 DE 1997"
+        "year": 2025
       }
     },
     {
@@ -3379,18 +3379,18 @@
         "name": "PUERTO NARIÑO",
         "originalCode": "540",
         "originalName": "PUERTO NARIÑO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1503.74996488,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 106 de Enero 18 de 1984",
         "areaName": 1503.74996488,
         "creationYear": 2024,
         "creationResolution": "Decreto 106 de Enero 18 de 1984",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1503.74996488,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 106 de Enero 18 de 1984"
+        "year": 2025
       }
     },
     {
@@ -4145,18 +4145,18 @@
         "name": "PUERTO SANTANDER",
         "originalCode": "669",
         "originalName": "PUERTO SANTANDER",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 14691.98551601,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 14691.98551601,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 14691.98551601,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     },
     {
@@ -4375,18 +4375,18 @@
         "name": "TARAPACÁ",
         "originalCode": "798",
         "originalName": "TARAPACÁ",
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
         "type": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 9159.77532069,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953",
         "areaName": 9159.77532069,
         "creationYear": 2024,
         "creationResolution": "Decreto 274 de Mayo 28 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
-        "unitType": "área no municipalizada",
-        "MPIO_NAREA": 9159.77532069,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 274 de Mayo 28 de 1953"
+        "year": 2025
       }
     }
   ]

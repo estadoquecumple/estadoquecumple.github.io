@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -119,18 +119,18 @@
         "name": "SANTIAGO DE CALI",
         "originalCode": "001",
         "originalName": "SANTIAGO DE CALI",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 563.26630566,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1536",
         "areaName": 563.26630566,
         "creationYear": 2025,
         "creationResolution": "1536",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 563.26630566,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1536"
+        "year": 2025
       }
     },
     {
@@ -189,18 +189,18 @@
         "name": "ALCALÁ",
         "originalCode": "020",
         "originalName": "ALCALÁ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 62.34625058,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 12 de Marzo 31 de 1919",
         "areaName": 62.34625058,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 12 de Marzo 31 de 1919",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 62.34625058,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 12 de Marzo 31 de 1919"
+        "year": 2025
       }
     },
     {
@@ -267,18 +267,18 @@
         "name": "ANDALUCÍA",
         "originalCode": "036",
         "originalName": "ANDALUCÍA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 110.47444024,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 38 de Abril 25 de 1921",
         "areaName": 110.47444024,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 38 de Abril 25 de 1921",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 110.47444024,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 38 de Abril 25 de 1921"
+        "year": 2025
       }
     },
     {
@@ -369,18 +369,18 @@
         "name": "ANSERMANUEVO",
         "originalCode": "041",
         "originalName": "ANSERMANUEVO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 305.46237345,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 29 de 1925",
         "areaName": 305.46237345,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 29 de 1925",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 305.46237345,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 29 de 1925"
+        "year": 2025
       }
     },
     {
@@ -443,18 +443,18 @@
         "name": "ARGELIA",
         "originalCode": "054",
         "originalName": "ARGELIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 90.80595366,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 15 de 1956",
         "areaName": 90.80595366,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 15 de 1956",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 90.80595366,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 15 de 1956"
+        "year": 2025
       }
     },
     {
@@ -609,18 +609,18 @@
         "name": "BOLÍVAR",
         "originalCode": "100",
         "originalName": "BOLÍVAR",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 743.7632345,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 2 de 1884",
         "areaName": 743.7632345,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 2 de 1884",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 743.7632345,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 2 de 1884"
+        "year": 2025
       }
     },
     {
@@ -1673,18 +1673,18 @@
         "name": "BUENAVENTURA",
         "originalCode": "109",
         "originalName": "BUENAVENTURA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 6300.9861909,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1872",
         "areaName": 6300.9861909,
         "creationYear": 2025,
         "creationResolution": "1872",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 6300.9861909,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1872"
+        "year": 2025
       }
     },
     {
@@ -1851,18 +1851,18 @@
         "name": "GUADALAJARA DE BUGA",
         "originalCode": "111",
         "originalName": "GUADALAJARA DE BUGA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 825.95104432,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1555",
         "areaName": 825.95104432,
         "creationYear": 2024,
         "creationResolution": "1555",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 825.95104432,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1555"
+        "year": 2025
       }
     },
     {
@@ -1945,18 +1945,18 @@
         "name": "BUGALAGRANDE",
         "originalCode": "113",
         "originalName": "BUGALAGRANDE",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 396.81197299999997,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1791",
         "areaName": 396.81197299999997,
         "creationYear": 2024,
         "creationResolution": "1791",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 396.81197299999997,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1791"
+        "year": 2025
       }
     },
     {
@@ -2019,18 +2019,18 @@
         "name": "CAICEDONIA",
         "originalCode": "122",
         "originalName": "CAICEDONIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 166.97168873,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 21 del 20 de Abril de 1923",
         "areaName": 166.97168873,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 21 del 20 de Abril de 1923",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 166.97168873,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 21 del 20 de Abril de 1923"
+        "year": 2025
       }
     },
     {
@@ -2157,18 +2157,18 @@
         "name": "CALIMA",
         "originalCode": "126",
         "originalName": "CALIMA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 793.84176127,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 49 de Junio 23 de 1939",
         "areaName": 793.84176127,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 49 de Junio 23 de 1939",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 793.84176127,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 49 de Junio 23 de 1939"
+        "year": 2025
       }
     },
     {
@@ -2243,18 +2243,18 @@
         "name": "CANDELARIA",
         "originalCode": "130",
         "originalName": "CANDELARIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 296.5582478,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1797",
         "areaName": 296.5582478,
         "creationYear": 2024,
         "creationResolution": "1797",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 296.5582478,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1797"
+        "year": 2025
       }
     },
     {
@@ -2349,18 +2349,18 @@
         "name": "CARTAGO",
         "originalCode": "147",
         "originalName": "CARTAGO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 248.21459818,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1863",
         "areaName": 248.21459818,
         "creationYear": 2024,
         "creationResolution": "1863",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 248.21459818,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1863"
+        "year": 2025
       }
     },
     {
@@ -2491,18 +2491,18 @@
         "name": "DAGUA",
         "originalCode": "233",
         "originalName": "DAGUA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 917.03825286,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 23 de 1918",
         "areaName": 917.03825286,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 23 de 1918",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 917.03825286,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 23 de 1918"
+        "year": 2025
       }
     },
     {
@@ -2577,18 +2577,18 @@
         "name": "EL ÁGUILA",
         "originalCode": "243",
         "originalName": "EL ÁGUILA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 187.82409344,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1950",
         "areaName": 187.82409344,
         "creationYear": 2024,
         "creationResolution": "1950",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 187.82409344,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1950"
+        "year": 2025
       }
     },
     {
@@ -2659,18 +2659,18 @@
         "name": "EL CAIRO",
         "originalCode": "246",
         "originalName": "EL CAIRO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 214.23701935,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1947",
         "areaName": 214.23701935,
         "creationYear": 2024,
         "creationResolution": "1947",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 214.23701935,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1947"
+        "year": 2025
       }
     },
     {
@@ -2761,18 +2761,18 @@
         "name": "EL CERRITO",
         "originalCode": "248",
         "originalName": "EL CERRITO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 441.95851057,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 01 del 30 de Agosto de 1864",
         "areaName": 441.95851057,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 01 del 30 de Agosto de 1864",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 441.95851057,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 01 del 30 de Agosto de 1864"
+        "year": 2025
       }
     },
     {
@@ -2871,18 +2871,18 @@
         "name": "EL DOVIO",
         "originalCode": "250",
         "originalName": "EL DOVIO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 236.23675598,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 14 Diciembre 19 de 1956",
         "areaName": 236.23675598,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 14 Diciembre 19 de 1956",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 236.23675598,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 14 Diciembre 19 de 1956"
+        "year": 2025
       }
     },
     {
@@ -2973,18 +2973,18 @@
         "name": "FLORIDA",
         "originalCode": "275",
         "originalName": "FLORIDA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 401.60796655,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1630",
         "areaName": 401.60796655,
         "creationYear": 2024,
         "creationResolution": "1630",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 401.60796655,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1630"
+        "year": 2025
       }
     },
     {
@@ -3055,18 +3055,18 @@
         "name": "GINEBRA",
         "originalCode": "306",
         "originalName": "GINEBRA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 268.78350514,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 9 de Diciembre 1954",
         "areaName": 268.78350514,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 9 de Diciembre 1954",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 268.78350514,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 9 de Diciembre 1954"
+        "year": 2025
       }
     },
     {
@@ -3141,18 +3141,18 @@
         "name": "GUACARÍ",
         "originalCode": "318",
         "originalName": "GUACARÍ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 162.52193118,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1864",
         "areaName": 162.52193118,
         "creationYear": 2024,
         "creationResolution": "1864",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 162.52193118,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1864"
+        "year": 2025
       }
     },
     {
@@ -3327,18 +3327,18 @@
         "name": "JAMUNDÍ",
         "originalCode": "364",
         "originalName": "JAMUNDÍ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 629.35683806,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1536",
         "areaName": 629.35683806,
         "creationYear": 2025,
         "creationResolution": "1536",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 629.35683806,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1536"
+        "year": 2025
       }
     },
     {
@@ -3421,18 +3421,18 @@
         "name": "LA CUMBRE",
         "originalCode": "377",
         "originalName": "LA CUMBRE",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 255.51104607,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1913",
         "areaName": 255.51104607,
         "creationYear": 2025,
         "creationResolution": "1913",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 255.51104607,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1913"
+        "year": 2025
       }
     },
     {
@@ -3487,18 +3487,18 @@
         "name": "LA UNIÓN",
         "originalCode": "400",
         "originalName": "LA UNIÓN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 120.88518843,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 15 de 1890",
         "areaName": 120.88518843,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 15 de 1890",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 120.88518843,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 15 de 1890"
+        "year": 2025
       }
     },
     {
@@ -3601,18 +3601,18 @@
         "name": "LA VICTORIA",
         "originalCode": "403",
         "originalName": "LA VICTORIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 264.69651508,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1835",
         "areaName": 264.69651508,
         "creationYear": 2024,
         "creationResolution": "1835",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 264.69651508,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1835"
+        "year": 2025
       }
     },
     {
@@ -3687,18 +3687,18 @@
         "name": "OBANDO",
         "originalCode": "497",
         "originalName": "OBANDO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 214.67338111,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 21 de 1928",
         "areaName": 214.67338111,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 21 de 1928",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 214.67338111,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 21 de 1928"
+        "year": 2025
       }
     },
     {
@@ -3833,18 +3833,18 @@
         "name": "PALMIRA",
         "originalCode": "520",
         "originalName": "PALMIRA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1005.31673518,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1824",
         "areaName": 1005.31673518,
         "creationYear": 2024,
         "creationResolution": "1824",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1005.31673518,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1824"
+        "year": 2025
       }
     },
     {
@@ -3919,18 +3919,18 @@
         "name": "PRADERA",
         "originalCode": "563",
         "originalName": "PRADERA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 356.78156959,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1870",
         "areaName": 356.78156959,
         "creationYear": 2024,
         "creationResolution": "1870",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 356.78156959,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1870"
+        "year": 2025
       }
     },
     {
@@ -3985,18 +3985,18 @@
         "name": "RESTREPO",
         "originalCode": "606",
         "originalName": "RESTREPO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 137.26966359,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 30  del 1 de Abril de 1925",
         "areaName": 137.26966359,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 30  del 1 de Abril de 1925",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 137.26966359,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 30  del 1 de Abril de 1925"
+        "year": 2025
       }
     },
     {
@@ -4095,18 +4095,18 @@
         "name": "RIOFRÍO",
         "originalCode": "616",
         "originalName": "RIOFRÍO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 308.16605893,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 31 del 3 de Abril de 1923",
         "areaName": 308.16605893,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 31 del 3 de Abril de 1923",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 308.16605893,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 31 del 3 de Abril de 1923"
+        "year": 2025
       }
     },
     {
@@ -4201,18 +4201,18 @@
         "name": "ROLDANILLO",
         "originalCode": "622",
         "originalName": "ROLDANILLO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 234.97866975,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1576",
         "areaName": 234.97866975,
         "creationYear": 2024,
         "creationResolution": "1576",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 234.97866975,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1576"
+        "year": 2025
       }
     },
     {
@@ -4303,18 +4303,18 @@
         "name": "SAN PEDRO",
         "originalCode": "670",
         "originalName": "SAN PEDRO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 202.16022377,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 33 de 1988",
         "areaName": 202.16022377,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 33 de 1988",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 202.16022377,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 33 de 1988"
+        "year": 2025
       }
     },
     {
@@ -4461,18 +4461,18 @@
         "name": "SEVILLA",
         "originalCode": "736",
         "originalName": "SEVILLA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 537.14458836,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 26 del 2 de Abril de 1914",
         "areaName": 537.14458836,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 26 del 2 de Abril de 1914",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 537.14458836,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 26 del 2 de Abril de 1914"
+        "year": 2025
       }
     },
     {
@@ -4535,18 +4535,18 @@
         "name": "TORO",
         "originalCode": "823",
         "originalName": "TORO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 175.77588792,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1632",
         "areaName": 175.77588792,
         "creationYear": 2024,
         "creationResolution": "1632",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 175.77588792,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1632"
+        "year": 2025
       }
     },
     {
@@ -4629,18 +4629,18 @@
         "name": "TRUJILLO",
         "originalCode": "828",
         "originalName": "TRUJILLO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 307.72048822,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 39 de Mayo 3 de 1932",
         "areaName": 307.72048822,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 39 de Mayo 3 de 1932",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 307.72048822,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 39 de Mayo 3 de 1932"
+        "year": 2025
       }
     },
     {
@@ -4779,18 +4779,18 @@
         "name": "TULUÁ",
         "originalCode": "834",
         "originalName": "TULUÁ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 909.3956597,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1824",
         "areaName": 909.3956597,
         "creationYear": 2024,
         "creationResolution": "1824",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 909.3956597,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1824"
+        "year": 2025
       }
     },
     {
@@ -4845,18 +4845,18 @@
         "name": "ULLOA",
         "originalCode": "845",
         "originalName": "ULLOA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 41.8585262,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 20 de Abril 26 de 1928",
         "areaName": 41.8585262,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 20 de Abril 26 de 1928",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 41.8585262,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 20 de Abril 26 de 1928"
+        "year": 2025
       }
     },
     {
@@ -4943,18 +4943,18 @@
         "name": "VERSALLES",
         "originalCode": "863",
         "originalName": "VERSALLES",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 200.62929946,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 418 de Mayo 7 de 1909",
         "areaName": 200.62929946,
         "creationYear": 2024,
         "creationResolution": "Decreto 418 de Mayo 7 de 1909",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 200.62929946,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 418 de Mayo 7 de 1909"
+        "year": 2025
       }
     },
     {
@@ -5017,18 +5017,18 @@
         "name": "VIJES",
         "originalCode": "869",
         "originalName": "VIJES",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 112.97110681,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 30 de 1925",
         "areaName": 112.97110681,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 30 de 1925",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 112.97110681,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 30 de 1925"
+        "year": 2025
       }
     },
     {
@@ -5175,18 +5175,18 @@
         "name": "YOTOCO",
         "originalCode": "890",
         "originalName": "YOTOCO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 327.77719146,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1912",
         "areaName": 327.77719146,
         "creationYear": 2024,
         "creationResolution": "1912",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 327.77719146,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1912"
+        "year": 2025
       }
     },
     {
@@ -5257,18 +5257,18 @@
         "name": "YUMBO",
         "originalCode": "892",
         "originalName": "YUMBO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 230.67219602,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1864",
         "areaName": 230.67219602,
         "creationYear": 2024,
         "creationResolution": "1864",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 230.67219602,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "1864"
+        "year": 2025
       }
     },
     {
@@ -5399,18 +5399,18 @@
         "name": "ZARZAL",
         "originalCode": "895",
         "originalName": "ZARZAL",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 367.96563913,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Decreto 155 de 1909",
         "areaName": 367.96563913,
         "creationYear": 2025,
         "creationResolution": "Decreto 155 de 1909",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 367.96563913,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Decreto 155 de 1909"
+        "year": 2025
       }
     }
   ]

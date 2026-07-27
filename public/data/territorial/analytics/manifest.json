@@ -1,16 +1,36 @@
 {
   "version": "4.0.0",
-  "generatedAt": "2026-07-27T02:09:36Z",
+  "generatedAt": "2026-07-27T05:42:59Z",
   "files": [
     {
       "path": "catalog.parquet",
-      "bytes": 18029,
-      "sha256": "d57a83b3f5de6a5d29bb23a8c942c375538a15e042033ed240b03401f9a17adf"
+      "bytes": 19137,
+      "sha256": "1f1035496ca2c8165628c4c4b9cc56d36ee69974525def8de5200b6b41c9f3a3"
     },
     {
       "path": "indicators.parquet",
-      "bytes": 1631028,
-      "sha256": "14e749b6ae2483065167e2905f718d14d7b9679cd27b2906f24ea49ad7c9d60e"
+      "bytes": 1559917,
+      "sha256": "b81b782cdaf0a99b6f45107cf38de9f6f9c943f4137ea945a23270f65bbb71da"
+    },
+    {
+      "path": "series.parquet",
+      "bytes": 147135,
+      "sha256": "2b7400f9e2bc396f534ed8c28ccf8e9e979d7f1ceaac4bedef4110bf0813690a"
+    },
+    {
+      "path": "entities.parquet",
+      "bytes": 18037,
+      "sha256": "c08b93db0005d3183e19ddbc8f944e9a9a8a81c053e9e4136b98390dcab06bbc"
+    },
+    {
+      "path": "sgr-aggregates.parquet",
+      "bytes": 191320,
+      "sha256": "ce1bda82d1aeb42c885b57a30ea33fcba23909f50f5e450d7a2abae7470b3e77"
+    },
+    {
+      "path": "secop-aggregates.parquet",
+      "bytes": 14571215,
+      "sha256": "39c9b5ca49f9ba195f3f955f2c3bc8cc9dc008748d68ed542bdf3d34bc5bbd34"
     },
     {
       "path": "departments.geoparquet",

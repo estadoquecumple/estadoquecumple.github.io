@@ -1,7 +1,7966 @@
 {
   "source": "dnp-idf-2024",
-  "status": "manual-required",
-  "updatedAt": "2026-07-27T01:51:31Z",
-  "records": [],
-  "message": "Importe data/manual/dnp_idf_2024.xlsx; consulte data/manual/README.md"
+  "status": "current",
+  "updatedAt": "2026-07-27T05:11:22Z",
+  "dataPeriod": "2024",
+  "sourceUrl": "https://colaboracion.dnp.gov.co/CDT/Desarrollo%20Territorial/2026_Descentral%C3%ADzacion/01_ResultadosTipologias2026.xlsx",
+  "inputFile": "data/manual/dnp_typologies_2026.xlsx",
+  "inputHash": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e",
+  "valueKind": "index",
+  "coverage": {
+    "municipalities": 1103,
+    "departments": 32,
+    "complete": true
+  },
+  "records": [
+    {
+      "territoryCode": "68276",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "FLORIDABLANCA",
+      "value": 60.9378
+    },
+    {
+      "territoryCode": "05360",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ITAGÜÍ",
+      "value": 75.0502
+    },
+    {
+      "territoryCode": "05001",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MEDELLÍN",
+      "value": 69.7283
+    },
+    {
+      "territoryCode": "08001",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "BARRANQUILLA",
+      "value": 75.5418
+    },
+    {
+      "territoryCode": "08758",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SOLEDAD",
+      "value": 58.3034
+    },
+    {
+      "territoryCode": "05631",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SABANETA",
+      "value": 73.0764
+    },
+    {
+      "territoryCode": "05088",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BELLO",
+      "value": 68.3925
+    },
+    {
+      "territoryCode": "05266",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ENVIGADO",
+      "value": 70.4562
+    },
+    {
+      "territoryCode": "76001",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "CALI",
+      "value": 58.2917
+    },
+    {
+      "territoryCode": "11001",
+      "territoryLevel": "municipality",
+      "department": "BOGOTÁ. D.C.",
+      "name": "BOGOTÁ. D.C.",
+      "value": 77.0385
+    },
+    {
+      "territoryCode": "25754",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SOACHA",
+      "value": 56.0427
+    },
+    {
+      "territoryCode": "68001",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BUCARAMANGA",
+      "value": 62.8612
+    },
+    {
+      "territoryCode": "66170",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "DOSQUEBRADAS",
+      "value": 49.8694
+    },
+    {
+      "territoryCode": "05380",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "LA ESTRELLA",
+      "value": 64.322
+    },
+    {
+      "territoryCode": "63001",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "ARMENIA",
+      "value": 62.2297
+    },
+    {
+      "territoryCode": "05212",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "COPACABANA",
+      "value": 75.3408
+    },
+    {
+      "territoryCode": "13001",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CARTAGENA",
+      "value": 63.3575
+    },
+    {
+      "territoryCode": "25175",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CHÍA",
+      "value": 59.2705
+    },
+    {
+      "territoryCode": "08433",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "MALAMBO",
+      "value": 43.3694
+    },
+    {
+      "territoryCode": "25126",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CAJICÁ",
+      "value": 61.3119
+    },
+    {
+      "territoryCode": "25286",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FUNZA",
+      "value": 68.3653
+    },
+    {
+      "territoryCode": "25473",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "MOSQUERA",
+      "value": 62.3255
+    },
+    {
+      "territoryCode": "70001",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SINCELEJO",
+      "value": 54.1145
+    },
+    {
+      "territoryCode": "15001",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TUNJA",
+      "value": 60.8262
+    },
+    {
+      "territoryCode": "25430",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "MADRID",
+      "value": 59.8044
+    },
+    {
+      "territoryCode": "05615",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "RIONEGRO",
+      "value": 74.4797
+    },
+    {
+      "territoryCode": "17001",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "MANIZALES",
+      "value": 59.5914
+    },
+    {
+      "territoryCode": "08634",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SABANAGRANDE",
+      "value": 57.6801
+    },
+    {
+      "territoryCode": "25269",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FACATATIVÁ",
+      "value": 59.6941
+    },
+    {
+      "territoryCode": "66001",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "PEREIRA",
+      "value": 62.1495
+    },
+    {
+      "territoryCode": "05129",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CALDAS",
+      "value": 55.7069
+    },
+    {
+      "territoryCode": "54874",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "VILLA DEL ROSARIO",
+      "value": 58.0113
+    },
+    {
+      "territoryCode": "66400",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "LA VIRGINIA",
+      "value": 62.2977
+    },
+    {
+      "territoryCode": "05308",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GIRARDOTA",
+      "value": 56.5914
+    },
+    {
+      "territoryCode": "25307",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GIRARDOT",
+      "value": 58.4423
+    },
+    {
+      "territoryCode": "08573",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "PUERTO COLOMBIA",
+      "value": 62.7303
+    },
+    {
+      "territoryCode": "25290",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FUSAGASUGÁ",
+      "value": 58.1439
+    },
+    {
+      "territoryCode": "08296",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "GALAPA",
+      "value": 61.301
+    },
+    {
+      "territoryCode": "05440",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MARINILLA",
+      "value": 63.6309
+    },
+    {
+      "territoryCode": "25899",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ZIPAQUIRÁ",
+      "value": 74.041
+    },
+    {
+      "territoryCode": "76147",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "CARTAGO",
+      "value": 57.36
+    },
+    {
+      "territoryCode": "05376",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "LA CEJA",
+      "value": 68.2409
+    },
+    {
+      "territoryCode": "25214",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "COTA",
+      "value": 65.8302
+    },
+    {
+      "territoryCode": "08078",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "BARANOA",
+      "value": 60.5284
+    },
+    {
+      "territoryCode": "13836",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "TURBACO",
+      "value": 65.0877
+    },
+    {
+      "territoryCode": "08685",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SANTO TOMÁS",
+      "value": 56.7714
+    },
+    {
+      "territoryCode": "54405",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "LOS PATIOS",
+      "value": 61.7336
+    },
+    {
+      "territoryCode": "76892",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "YUMBO",
+      "value": 61.1387
+    },
+    {
+      "territoryCode": "25817",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TOCANCIPÁ",
+      "value": 69.6107
+    },
+    {
+      "territoryCode": "05318",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GUARNE",
+      "value": 64.4138
+    },
+    {
+      "territoryCode": "19001",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "POPAYÁN",
+      "value": 66.2404
+    },
+    {
+      "territoryCode": "17174",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "CHINCHINÁ",
+      "value": 57.1529
+    },
+    {
+      "territoryCode": "68077",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BARBOSA",
+      "value": 66.1014
+    },
+    {
+      "territoryCode": "54001",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SAN JOSÉ DE CÚCUTA",
+      "value": 60.2927
+    },
+    {
+      "territoryCode": "23815",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "TUCHÍN",
+      "value": 54.4847
+    },
+    {
+      "territoryCode": "05030",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "AMAGÁ",
+      "value": 65.2518
+    },
+    {
+      "territoryCode": "05697",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "EL SANTUARIO",
+      "value": 61.523
+    },
+    {
+      "territoryCode": "76520",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "PALMIRA",
+      "value": 63.8666
+    },
+    {
+      "territoryCode": "15759",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOGAMOSO",
+      "value": 75.7224
+    },
+    {
+      "territoryCode": "19573",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PUERTO TEJADA",
+      "value": 48.5494
+    },
+    {
+      "territoryCode": "08520",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "PALMAR DE VARELA",
+      "value": 61.9861
+    },
+    {
+      "territoryCode": "25843",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VILLA DE SAN DIEGO DE UBATÉ",
+      "value": 66.8612
+    },
+    {
+      "territoryCode": "23162",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "CERETÉ",
+      "value": 70.7552
+    },
+    {
+      "territoryCode": "25295",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GACHANCIPÁ",
+      "value": 61.9949
+    },
+    {
+      "territoryCode": "63401",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "LA TEBAIDA",
+      "value": 54.8124
+    },
+    {
+      "territoryCode": "68547",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PIEDECUESTA",
+      "value": 59.9692
+    },
+    {
+      "territoryCode": "15238",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "DUITAMA",
+      "value": 57.7858
+    },
+    {
+      "territoryCode": "73001",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "IBAGUÉ",
+      "value": 52.4165
+    },
+    {
+      "territoryCode": "70221",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "COVEÑAS",
+      "value": 69.795
+    },
+    {
+      "territoryCode": "68307",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GIRÓN",
+      "value": 64.7795
+    },
+    {
+      "territoryCode": "63130",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "CALARCÁ",
+      "value": 56.0074
+    },
+    {
+      "territoryCode": "50001",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "VILLAVICENCIO",
+      "value": 60.6714
+    },
+    {
+      "territoryCode": "76130",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "CANDELARIA",
+      "value": 63.3378
+    },
+    {
+      "territoryCode": "63190",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "CIRCASIA",
+      "value": 65.5788
+    },
+    {
+      "territoryCode": "68679",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN GIL",
+      "value": 59.1587
+    },
+    {
+      "territoryCode": "25740",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SIBATÉ",
+      "value": 60.1688
+    },
+    {
+      "territoryCode": "73268",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ESPINAL",
+      "value": 64.952
+    },
+    {
+      "territoryCode": "05079",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BARBOSA",
+      "value": 57.9845
+    },
+    {
+      "territoryCode": "76834",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "TULUÁ",
+      "value": 60.7929
+    },
+    {
+      "territoryCode": "08770",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SUAN",
+      "value": 51.5914
+    },
+    {
+      "territoryCode": "76364",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "JAMUNDÍ",
+      "value": 53.7418
+    },
+    {
+      "territoryCode": "08558",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "POLONUEVO",
+      "value": 42.6203
+    },
+    {
+      "territoryCode": "76400",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "LA UNIÓN",
+      "value": 54.835
+    },
+    {
+      "territoryCode": "25785",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TABIO",
+      "value": 63.58
+    },
+    {
+      "territoryCode": "73275",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "FLANDES",
+      "value": 54.2642
+    },
+    {
+      "territoryCode": "08638",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SABANALARGA",
+      "value": 69.303
+    },
+    {
+      "territoryCode": "08675",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "SANTA LUCÍA",
+      "value": 59.8246
+    },
+    {
+      "territoryCode": "47001",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SANTA MARTA",
+      "value": 61.9438
+    },
+    {
+      "territoryCode": "15176",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHIQUINQUIRÁ",
+      "value": 67.9736
+    },
+    {
+      "territoryCode": "70670",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAMPUÉS",
+      "value": 56.8315
+    },
+    {
+      "territoryCode": "25260",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "EL ROSAL",
+      "value": 73.4978
+    },
+    {
+      "territoryCode": "19845",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "VILLA RICA",
+      "value": 58.9206
+    },
+    {
+      "territoryCode": "63470",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "MONTENEGRO",
+      "value": 56.299
+    },
+    {
+      "territoryCode": "70215",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "COROZAL",
+      "value": 44.5515
+    },
+    {
+      "territoryCode": "76318",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "GUACARÍ",
+      "value": 66.6558
+    },
+    {
+      "territoryCode": "76020",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ALCALÁ",
+      "value": 44.1378
+    },
+    {
+      "territoryCode": "08137",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "CAMPO DE LA CRUZ",
+      "value": 51.474
+    },
+    {
+      "territoryCode": "76036",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ANDALUCÍA",
+      "value": 54.8992
+    },
+    {
+      "territoryCode": "63594",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "QUIMBAYA",
+      "value": 55.3487
+    },
+    {
+      "territoryCode": "68432",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "MÁLAGA",
+      "value": 57.9514
+    },
+    {
+      "territoryCode": "23670",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN ANDRÉS DE SOTAVENTO",
+      "value": 54.6147
+    },
+    {
+      "territoryCode": "25386",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LA MESA",
+      "value": 60.671
+    },
+    {
+      "territoryCode": "25758",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SOPÓ",
+      "value": 61.393
+    },
+    {
+      "territoryCode": "52001",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "PASTO",
+      "value": 61.8637
+    },
+    {
+      "territoryCode": "41001",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "NEIVA",
+      "value": 50.6346
+    },
+    {
+      "territoryCode": "23300",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "COTORRA",
+      "value": 48.2746
+    },
+    {
+      "territoryCode": "17777",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "SUPÍA",
+      "value": 59.2699
+    },
+    {
+      "territoryCode": "19698",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SANTANDER DE QUILICHAO",
+      "value": 48.4964
+    },
+    {
+      "territoryCode": "17442",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "MARMATO",
+      "value": 58.1038
+    },
+    {
+      "territoryCode": "25245",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "EL COLEGIO",
+      "value": 63.5876
+    },
+    {
+      "territoryCode": "68755",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SOCORRO",
+      "value": 56.3862
+    },
+    {
+      "territoryCode": "05190",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CISNEROS",
+      "value": 54.0118
+    },
+    {
+      "territoryCode": "15322",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GUATEQUE",
+      "value": 60.3129
+    },
+    {
+      "territoryCode": "25797",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TENA",
+      "value": 54.1883
+    },
+    {
+      "territoryCode": "25799",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TENJO",
+      "value": 70.6919
+    },
+    {
+      "territoryCode": "76111",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "GUADALAJARA DE BUGA",
+      "value": 53.2606
+    },
+    {
+      "territoryCode": "15491",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "NOBSA",
+      "value": 63.0877
+    },
+    {
+      "territoryCode": "13222",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CLEMENCIA",
+      "value": 49.023
+    },
+    {
+      "territoryCode": "25123",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CACHIPAY",
+      "value": 65.6003
+    },
+    {
+      "territoryCode": "19548",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PIENDAMÓ - TUNÍA",
+      "value": 50.7091
+    },
+    {
+      "territoryCode": "19300",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "GUACHENÉ",
+      "value": 64.5111
+    },
+    {
+      "territoryCode": "25875",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VILLETA",
+      "value": 63.0924
+    },
+    {
+      "territoryCode": "05148",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "EL CARMEN DE VIBORAL",
+      "value": 54.5732
+    },
+    {
+      "territoryCode": "05541",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PEÑOL",
+      "value": 62.4611
+    },
+    {
+      "territoryCode": "13620",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN CRISTÓBAL",
+      "value": 51.9408
+    },
+    {
+      "territoryCode": "13873",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "VILLANUEVA",
+      "value": 50.4163
+    },
+    {
+      "territoryCode": "23672",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN ANTERO",
+      "value": 56.0289
+    },
+    {
+      "territoryCode": "05045",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "APARTADÓ",
+      "value": 51.3837
+    },
+    {
+      "territoryCode": "54498",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "OCAÑA",
+      "value": 43.7107
+    },
+    {
+      "territoryCode": "19455",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "MIRANDA",
+      "value": 50.9555
+    },
+    {
+      "territoryCode": "66594",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "QUINCHÍA",
+      "value": 56.1468
+    },
+    {
+      "territoryCode": "25200",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "COGUA",
+      "value": 67.2421
+    },
+    {
+      "territoryCode": "73449",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "MELGAR",
+      "value": 66.971
+    },
+    {
+      "territoryCode": "47980",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "ZONA BANANERA",
+      "value": 54.3174
+    },
+    {
+      "territoryCode": "76622",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ROLDANILLO",
+      "value": 60.4153
+    },
+    {
+      "territoryCode": "23001",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "MONTERÍA",
+      "value": 66.7822
+    },
+    {
+      "territoryCode": "66682",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "SANTA ROSA DE CABAL",
+      "value": 50.4838
+    },
+    {
+      "territoryCode": "76122",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "CAICEDONIA",
+      "value": 40.5065
+    },
+    {
+      "territoryCode": "23586",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "PURÍSIMA DE LA CONCEPCIÓN",
+      "value": 50.4617
+    },
+    {
+      "territoryCode": "17042",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "ANSERMA",
+      "value": 57.9993
+    },
+    {
+      "territoryCode": "05400",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "LA UNIÓN",
+      "value": 65.9111
+    },
+    {
+      "territoryCode": "13683",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SANTA ROSA",
+      "value": 61.5862
+    },
+    {
+      "territoryCode": "76248",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "EL CERRITO",
+      "value": 69.4236
+    },
+    {
+      "territoryCode": "25743",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SILVANIA",
+      "value": 64.7123
+    },
+    {
+      "territoryCode": "25151",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CÁQUEZA",
+      "value": 54.8493
+    },
+    {
+      "territoryCode": "52019",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ALBÁN",
+      "value": 44.4258
+    },
+    {
+      "territoryCode": "17873",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "VILLAMARÍA",
+      "value": 63.1819
+    },
+    {
+      "territoryCode": "52323",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "GUALMATÁN",
+      "value": 61.1866
+    },
+    {
+      "territoryCode": "17524",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "PALESTINA",
+      "value": 50.7595
+    },
+    {
+      "territoryCode": "19513",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PADILLA",
+      "value": 42.0634
+    },
+    {
+      "territoryCode": "76845",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ULLOA",
+      "value": 53.8651
+    },
+    {
+      "territoryCode": "76563",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "PRADERA",
+      "value": 43.4249
+    },
+    {
+      "territoryCode": "76275",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "FLORIDA",
+      "value": 57.7128
+    },
+    {
+      "territoryCode": "08560",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "PONEDERA",
+      "value": 60.3397
+    },
+    {
+      "territoryCode": "08421",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "LURUACO",
+      "value": 51.9086
+    },
+    {
+      "territoryCode": "08849",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "USIACURÍ",
+      "value": 71.5955
+    },
+    {
+      "territoryCode": "05607",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "RETIRO",
+      "value": 72.3483
+    },
+    {
+      "territoryCode": "25645",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SAN ANTONIO DEL TEQUENDAMA",
+      "value": 62.5055
+    },
+    {
+      "territoryCode": "68081",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BARRANCABERMEJA",
+      "value": 60.6926
+    },
+    {
+      "territoryCode": "25001",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "AGUA DE DIOS",
+      "value": 53.3085
+    },
+    {
+      "territoryCode": "54553",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "PUERTO SANTANDER",
+      "value": 52.1979
+    },
+    {
+      "territoryCode": "13052",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ARJONA",
+      "value": 53.8331
+    },
+    {
+      "territoryCode": "52399",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LA UNIÓN",
+      "value": 66.1281
+    },
+    {
+      "territoryCode": "05390",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "LA PINTADA",
+      "value": 60.6653
+    },
+    {
+      "territoryCode": "41551",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "PITALITO",
+      "value": 55.2161
+    },
+    {
+      "territoryCode": "54518",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "PAMPLONA",
+      "value": 43.925
+    },
+    {
+      "territoryCode": "08372",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "JUAN DE ACOSTA",
+      "value": 63.7837
+    },
+    {
+      "territoryCode": "50313",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "GRANADA",
+      "value": 55.8526
+    },
+    {
+      "territoryCode": "25019",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ALBÁN",
+      "value": 54.2279
+    },
+    {
+      "territoryCode": "25486",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "NEMOCÓN",
+      "value": 52.83
+    },
+    {
+      "territoryCode": "23660",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAHAGÚN",
+      "value": 52.9496
+    },
+    {
+      "territoryCode": "25312",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GRANADA",
+      "value": 69.7582
+    },
+    {
+      "territoryCode": "23464",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "MOMIL",
+      "value": 48.2239
+    },
+    {
+      "territoryCode": "19807",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "TIMBÍO",
+      "value": 54.9493
+    },
+    {
+      "territoryCode": "76895",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ZARZAL",
+      "value": 60.9147
+    },
+    {
+      "territoryCode": "52838",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "TÚQUERRES",
+      "value": 48.3058
+    },
+    {
+      "territoryCode": "70418",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "LOS PALMITOS",
+      "value": 53.1023
+    },
+    {
+      "territoryCode": "08141",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "CANDELARIA",
+      "value": 33.4814
+    },
+    {
+      "territoryCode": "68327",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GÜEPSA",
+      "value": 56.3512
+    },
+    {
+      "territoryCode": "76869",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "VIJES",
+      "value": 53.6751
+    },
+    {
+      "territoryCode": "23417",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "LORICA",
+      "value": 48.1106
+    },
+    {
+      "territoryCode": "23500",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "MOÑITOS",
+      "value": 49.6533
+    },
+    {
+      "territoryCode": "05679",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SANTA BÁRBARA",
+      "value": 49.3079
+    },
+    {
+      "territoryCode": "05656",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN JERÓNIMO",
+      "value": 76.716
+    },
+    {
+      "territoryCode": "05664",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN PEDRO DE LOS MILAGROS",
+      "value": 56.9014
+    },
+    {
+      "territoryCode": "66088",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "BELÉN DE UMBRÍA",
+      "value": 53.6509
+    },
+    {
+      "territoryCode": "76606",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "RESTREPO",
+      "value": 47.6777
+    },
+    {
+      "territoryCode": "23686",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN PELAYO",
+      "value": 56.1048
+    },
+    {
+      "territoryCode": "25035",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ANAPOIMA",
+      "value": 60.7946
+    },
+    {
+      "territoryCode": "25745",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SIMIJACA",
+      "value": 51.2773
+    },
+    {
+      "territoryCode": "05674",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN VICENTE",
+      "value": 60.3221
+    },
+    {
+      "territoryCode": "52683",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SANDONÁ",
+      "value": 54.9713
+    },
+    {
+      "territoryCode": "13430",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MAGANGUÉ",
+      "value": 65.0486
+    },
+    {
+      "territoryCode": "47189",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "CIÉNAGA",
+      "value": 54.3956
+    },
+    {
+      "territoryCode": "63272",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "FILANDIA",
+      "value": 52.382
+    },
+    {
+      "territoryCode": "17614",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "RIOSUCIO",
+      "value": 61.1118
+    },
+    {
+      "territoryCode": "17616",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "RISARALDA",
+      "value": 60.0022
+    },
+    {
+      "territoryCode": "23675",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN BERNARDO DEL VIENTO",
+      "value": 57.8495
+    },
+    {
+      "territoryCode": "70820",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SANTIAGO DE TOLÚ",
+      "value": 53.5329
+    },
+    {
+      "territoryCode": "25612",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "RICAURTE",
+      "value": 56.064
+    },
+    {
+      "territoryCode": "25040",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ANOLAIMA",
+      "value": 57.4759
+    },
+    {
+      "territoryCode": "66440",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "MARSELLA",
+      "value": 48.4799
+    },
+    {
+      "territoryCode": "76670",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "SAN PEDRO",
+      "value": 59.0179
+    },
+    {
+      "territoryCode": "13760",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SOPLAVIENTO",
+      "value": 65.9551
+    },
+    {
+      "territoryCode": "17877",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "VITERBO",
+      "value": 58.7112
+    },
+    {
+      "territoryCode": "05237",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "DON MATÍAS",
+      "value": 59.3966
+    },
+    {
+      "territoryCode": "25402",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LA VEGA",
+      "value": 66.6204
+    },
+    {
+      "territoryCode": "05282",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "FREDONIA",
+      "value": 51.2529
+    },
+    {
+      "territoryCode": "73520",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "PALOCABILDO",
+      "value": 54.5514
+    },
+    {
+      "territoryCode": "19142",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "CALOTO",
+      "value": 48.2099
+    },
+    {
+      "territoryCode": "25099",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "BOJACÁ",
+      "value": 59.5409
+    },
+    {
+      "territoryCode": "52480",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "NARIÑO",
+      "value": 79.986
+    },
+    {
+      "territoryCode": "08832",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "TUBARÁ",
+      "value": 71.211
+    },
+    {
+      "territoryCode": "52210",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CONTADERO",
+      "value": 58.7725
+    },
+    {
+      "territoryCode": "73443",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SAN SEBASTIÁN DE MARIQUITA",
+      "value": 55.4436
+    },
+    {
+      "territoryCode": "20001",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "VALLEDUPAR",
+      "value": 62.0407
+    },
+    {
+      "territoryCode": "73283",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "FRESNO",
+      "value": 50.4247
+    },
+    {
+      "territoryCode": "66318",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "GUÁTICA",
+      "value": 56.2069
+    },
+    {
+      "territoryCode": "20011",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "AGUACHICA",
+      "value": 52.2236
+    },
+    {
+      "territoryCode": "76306",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "GINEBRA",
+      "value": 57.1684
+    },
+    {
+      "territoryCode": "70473",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "MORROA",
+      "value": 53.816
+    },
+    {
+      "territoryCode": "08436",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "MANATÍ",
+      "value": 51.7683
+    },
+    {
+      "territoryCode": "23189",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "CIÉNAGA DE ORO",
+      "value": 62.8984
+    },
+    {
+      "territoryCode": "52224",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CUASPUD CARLOSAMA",
+      "value": 52.4639
+    },
+    {
+      "territoryCode": "13838",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "TURBANÁ",
+      "value": 51.5591
+    },
+    {
+      "territoryCode": "17444",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "MARQUETALIA",
+      "value": 62.1176
+    },
+    {
+      "territoryCode": "73411",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "LÍBANO",
+      "value": 47.8738
+    },
+    {
+      "territoryCode": "17380",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "LA DORADA",
+      "value": 63.5096
+    },
+    {
+      "territoryCode": "52022",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ALDANA",
+      "value": 54.0111
+    },
+    {
+      "territoryCode": "15407",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "VILLA DE LEYVA",
+      "value": 64.1485
+    },
+    {
+      "territoryCode": "15806",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TIBASOSA",
+      "value": 64.8925
+    },
+    {
+      "territoryCode": "13140",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CALAMAR",
+      "value": 59.7685
+    },
+    {
+      "territoryCode": "05576",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PUEBLORRICO",
+      "value": 50.9715
+    },
+    {
+      "territoryCode": "25718",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SASAIMA",
+      "value": 58.4448
+    },
+    {
+      "territoryCode": "44430",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "MAICAO",
+      "value": 30.821
+    },
+    {
+      "territoryCode": "05147",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAREPA",
+      "value": 49.1813
+    },
+    {
+      "territoryCode": "13673",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SANTA CATALINA",
+      "value": 46.779
+    },
+    {
+      "territoryCode": "19137",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "CALDONO",
+      "value": 50.5773
+    },
+    {
+      "territoryCode": "86749",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "SIBUNDOY",
+      "value": 51.4993
+    },
+    {
+      "territoryCode": "05321",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GUATAPÉ",
+      "value": 67.8083
+    },
+    {
+      "territoryCode": "25772",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SUESCA",
+      "value": 59.841
+    },
+    {
+      "territoryCode": "13188",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CICUCO",
+      "value": 56.4706
+    },
+    {
+      "territoryCode": "05861",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "VENECIA",
+      "value": 49.5812
+    },
+    {
+      "territoryCode": "70717",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN PEDRO",
+      "value": 53.0424
+    },
+    {
+      "territoryCode": "44874",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "VILLANUEVA",
+      "value": 59.4646
+    },
+    {
+      "territoryCode": "05467",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MONTEBELLO",
+      "value": 47.3279
+    },
+    {
+      "territoryCode": "15367",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "JENESANO",
+      "value": 63.2089
+    },
+    {
+      "territoryCode": "25898",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ZIPACÓN",
+      "value": 56.6057
+    },
+    {
+      "territoryCode": "70523",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "PALMITO",
+      "value": 43.7527
+    },
+    {
+      "territoryCode": "17088",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "BELALCÁZAR",
+      "value": 52.9561
+    },
+    {
+      "territoryCode": "25377",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LA CALERA",
+      "value": 61.0326
+    },
+    {
+      "territoryCode": "23182",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "CHINÚ",
+      "value": 60.7598
+    },
+    {
+      "territoryCode": "05034",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ANDES",
+      "value": 63.1569
+    },
+    {
+      "territoryCode": "44378",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "HATONUEVO",
+      "value": 76.3308
+    },
+    {
+      "territoryCode": "25658",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SAN FRANCISCO",
+      "value": 57.8871
+    },
+    {
+      "territoryCode": "25781",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SUTATAUSA",
+      "value": 64.6868
+    },
+    {
+      "territoryCode": "05101",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CIUDAD BOLÍVAR",
+      "value": 53.3514
+    },
+    {
+      "territoryCode": "05809",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TITIRIBÍ",
+      "value": 40.6988
+    },
+    {
+      "territoryCode": "52051",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ARBOLEDA",
+      "value": 61.4483
+    },
+    {
+      "territoryCode": "05353",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "HISPANIA",
+      "value": 43.8747
+    },
+    {
+      "territoryCode": "15686",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SANTANA",
+      "value": 59.327
+    },
+    {
+      "territoryCode": "05036",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ANGELÓPOLIS",
+      "value": 42.9232
+    },
+    {
+      "territoryCode": "15646",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAMACÁ",
+      "value": 81.0961
+    },
+    {
+      "territoryCode": "70702",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN JUAN DE BETULIA",
+      "value": 51.682
+    },
+    {
+      "territoryCode": "13442",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MARÍA LA BAJA",
+      "value": 57.7294
+    },
+    {
+      "territoryCode": "52083",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "BELÉN",
+      "value": 56.5455
+    },
+    {
+      "territoryCode": "15764",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SORACÁ",
+      "value": 57.8289
+    },
+    {
+      "territoryCode": "13647",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN ESTANISLAO",
+      "value": 62.4546
+    },
+    {
+      "territoryCode": "52585",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "PUPIALES",
+      "value": 58.5819
+    },
+    {
+      "territoryCode": "76823",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "TORO",
+      "value": 51.2413
+    },
+    {
+      "territoryCode": "25491",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "NOCAIMA",
+      "value": 49.1995
+    },
+    {
+      "territoryCode": "41298",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "GARZÓN",
+      "value": 63.1488
+    },
+    {
+      "territoryCode": "52685",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAN BERNARDO",
+      "value": 46.7299
+    },
+    {
+      "territoryCode": "44279",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "FONSECA",
+      "value": 66.813
+    },
+    {
+      "territoryCode": "54172",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CHINÁCOTA",
+      "value": 56.839
+    },
+    {
+      "territoryCode": "15104",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BOYACÁ",
+      "value": 67.407
+    },
+    {
+      "territoryCode": "15516",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PAIPA",
+      "value": 63.5331
+    },
+    {
+      "territoryCode": "68406",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "LEBRÍJA",
+      "value": 60.3933
+    },
+    {
+      "territoryCode": "70823",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN JOSÉ DE TOLUVIEJO",
+      "value": 53.225
+    },
+    {
+      "territoryCode": "41807",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "TIMANÁ",
+      "value": 50.6751
+    },
+    {
+      "territoryCode": "15469",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MONIQUIRÁ",
+      "value": 68.956
+    },
+    {
+      "territoryCode": "52565",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "PROVIDENCIA",
+      "value": 59.368
+    },
+    {
+      "territoryCode": "15861",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "VENTAQUEMADA",
+      "value": 62.6748
+    },
+    {
+      "territoryCode": "52693",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAN PABLO",
+      "value": 63.2933
+    },
+    {
+      "territoryCode": "15693",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SANTA ROSA DE VITERBO",
+      "value": 58.4402
+    },
+    {
+      "territoryCode": "05761",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SOPETRÁN",
+      "value": 55.9728
+    },
+    {
+      "territoryCode": "52317",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "GUACHUCAL",
+      "value": 59.6452
+    },
+    {
+      "territoryCode": "52203",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "COLÓN",
+      "value": 55.5521
+    },
+    {
+      "territoryCode": "13244",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "EL CARMEN DE BOLÍVAR",
+      "value": 66.3812
+    },
+    {
+      "territoryCode": "25736",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SESQUILÉ",
+      "value": 66.2469
+    },
+    {
+      "territoryCode": "15494",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "NUEVO COLÓN",
+      "value": 57.5975
+    },
+    {
+      "territoryCode": "76113",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "BUGALAGRANDE",
+      "value": 61.8461
+    },
+    {
+      "territoryCode": "19212",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "CORINTO",
+      "value": 47.2529
+    },
+    {
+      "territoryCode": "25053",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ARBELÁEZ",
+      "value": 53.3516
+    },
+    {
+      "territoryCode": "76736",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "SEVILLA",
+      "value": 50.6159
+    },
+    {
+      "territoryCode": "68549",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PINCHOTE",
+      "value": 69.6642
+    },
+    {
+      "territoryCode": "52694",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAN PEDRO DE CARTAGO",
+      "value": 57.1159
+    },
+    {
+      "territoryCode": "41615",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "RIVERA",
+      "value": 59.9833
+    },
+    {
+      "territoryCode": "66045",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "APÍA",
+      "value": 47.8546
+    },
+    {
+      "territoryCode": "63111",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "BUENAVISTA",
+      "value": 42.9498
+    },
+    {
+      "territoryCode": "15476",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MOTAVITA",
+      "value": 67.0019
+    },
+    {
+      "territoryCode": "17665",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "SAN JOSÉ",
+      "value": 55.9332
+    },
+    {
+      "territoryCode": "70742",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN LUIS DE SINCÉ",
+      "value": 54.2182
+    },
+    {
+      "territoryCode": "52036",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ANCUYÁ",
+      "value": 63.5226
+    },
+    {
+      "territoryCode": "08606",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "REPELÓN",
+      "value": 53.6142
+    },
+    {
+      "territoryCode": "05209",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CONCORDIA",
+      "value": 46.7582
+    },
+    {
+      "territoryCode": "25328",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUAYABAL DE SÍQUIMA",
+      "value": 51.3472
+    },
+    {
+      "territoryCode": "66383",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "LA CELIA",
+      "value": 52.6444
+    },
+    {
+      "territoryCode": "15820",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TÓPAGA",
+      "value": 53.5834
+    },
+    {
+      "territoryCode": "47205",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "CONCORDIA",
+      "value": 55.2881
+    },
+    {
+      "territoryCode": "25769",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SUBACHOQUE",
+      "value": 74.3258
+    },
+    {
+      "territoryCode": "19780",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SUÁREZ",
+      "value": 51.084
+    },
+    {
+      "territoryCode": "15778",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SUTATENZA",
+      "value": 62.2901
+    },
+    {
+      "territoryCode": "70110",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "BUENAVISTA",
+      "value": 59.1313
+    },
+    {
+      "territoryCode": "15204",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CÓMBITA",
+      "value": 58.7322
+    },
+    {
+      "territoryCode": "52207",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CONSACÁ",
+      "value": 69.9601
+    },
+    {
+      "territoryCode": "25599",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "APULO",
+      "value": 57.7621
+    },
+    {
+      "territoryCode": "47268",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "EL RETÉN",
+      "value": 53.9509
+    },
+    {
+      "territoryCode": "19110",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "BUENOS AIRES",
+      "value": 51.114
+    },
+    {
+      "territoryCode": "73671",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SALDAÑA",
+      "value": 46.4108
+    },
+    {
+      "territoryCode": "52885",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "YACUANQUER",
+      "value": 57.6422
+    },
+    {
+      "territoryCode": "25317",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUACHETÁ",
+      "value": 64.5759
+    },
+    {
+      "territoryCode": "76377",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "LA CUMBRE",
+      "value": 61.1928
+    },
+    {
+      "territoryCode": "15224",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CUCAITA",
+      "value": 48.6763
+    },
+    {
+      "territoryCode": "70204",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "COLOSÓ",
+      "value": 51.0697
+    },
+    {
+      "territoryCode": "73349",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "HONDA",
+      "value": 45.4372
+    },
+    {
+      "territoryCode": "13433",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MAHATES",
+      "value": 52.5176
+    },
+    {
+      "territoryCode": "52506",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "OSPINA",
+      "value": 42.1491
+    },
+    {
+      "territoryCode": "25524",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PANDI",
+      "value": 57.1559
+    },
+    {
+      "territoryCode": "76497",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "OBANDO",
+      "value": 50.61
+    },
+    {
+      "territoryCode": "25873",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VILLAPINZÓN",
+      "value": 64.0691
+    },
+    {
+      "territoryCode": "25878",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VIOTÁ",
+      "value": 69.2764
+    },
+    {
+      "territoryCode": "76041",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ANSERMANUEVO",
+      "value": 52.373
+    },
+    {
+      "territoryCode": "70235",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "GALERAS",
+      "value": 51.4362
+    },
+    {
+      "territoryCode": "13657",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN JUAN NEPOMUCENO",
+      "value": 53.8837
+    },
+    {
+      "territoryCode": "15638",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SÁCHICA",
+      "value": 68.2616
+    },
+    {
+      "territoryCode": "25815",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TOCAIMA",
+      "value": 55.6746
+    },
+    {
+      "territoryCode": "47288",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "FUNDACIÓN",
+      "value": 54.4334
+    },
+    {
+      "territoryCode": "25178",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CHIPAQUE",
+      "value": 58.4545
+    },
+    {
+      "territoryCode": "76828",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "TRUJILLO",
+      "value": 59.9947
+    },
+    {
+      "territoryCode": "25224",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CUCUNUBÁ",
+      "value": 65.3219
+    },
+    {
+      "territoryCode": "20060",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "BOSCONIA",
+      "value": 39.7035
+    },
+    {
+      "territoryCode": "05659",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN JUAN DE URABÁ",
+      "value": 60.6907
+    },
+    {
+      "territoryCode": "05197",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "COCORNÁ",
+      "value": 53.8319
+    },
+    {
+      "territoryCode": "52240",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CHACHAGÜÍ",
+      "value": 56.0335
+    },
+    {
+      "territoryCode": "68872",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "VILLANUEVA",
+      "value": 61.4967
+    },
+    {
+      "territoryCode": "25867",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VIANÍ",
+      "value": 53.1175
+    },
+    {
+      "territoryCode": "19473",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "MORALES",
+      "value": 43.7297
+    },
+    {
+      "territoryCode": "19130",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "CAJIBÍO",
+      "value": 52.0934
+    },
+    {
+      "territoryCode": "15189",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CIÉNEGA",
+      "value": 57.0811
+    },
+    {
+      "territoryCode": "73319",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "GUAMO",
+      "value": 62.7546
+    },
+    {
+      "territoryCode": "44001",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "RIOHACHA",
+      "value": 51.0293
+    },
+    {
+      "territoryCode": "25183",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CHOCONTÁ",
+      "value": 58.3018
+    },
+    {
+      "territoryCode": "17433",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "MANZANARES",
+      "value": 58.516
+    },
+    {
+      "territoryCode": "23678",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN CARLOS",
+      "value": 56.739
+    },
+    {
+      "territoryCode": "15299",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GARAGOA",
+      "value": 52.5414
+    },
+    {
+      "territoryCode": "47245",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "EL BANCO",
+      "value": 50.8662
+    },
+    {
+      "territoryCode": "05172",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CHIGORODÓ",
+      "value": 62.0041
+    },
+    {
+      "territoryCode": "50006",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "ACACÍAS",
+      "value": 62.1283
+    },
+    {
+      "territoryCode": "52320",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "GUAITARILLA",
+      "value": 62.8457
+    },
+    {
+      "territoryCode": "17388",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "LA MERCED",
+      "value": 52.3672
+    },
+    {
+      "territoryCode": "19821",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "TORIBÍO",
+      "value": 56.4039
+    },
+    {
+      "territoryCode": "17050",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "ARANZAZU",
+      "value": 51.7463
+    },
+    {
+      "territoryCode": "52354",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "IMUÉS",
+      "value": 46.8551
+    },
+    {
+      "territoryCode": "15599",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "RAMIRIQUÍ",
+      "value": 55.8198
+    },
+    {
+      "territoryCode": "20443",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "MANAURE",
+      "value": 57.008
+    },
+    {
+      "territoryCode": "52352",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ILES",
+      "value": 54.6195
+    },
+    {
+      "territoryCode": "66687",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "SANTUARIO",
+      "value": 56.7041
+    },
+    {
+      "territoryCode": "15835",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TURMEQUÉ",
+      "value": 59.5386
+    },
+    {
+      "territoryCode": "76890",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "YOTOCO",
+      "value": 72.1329
+    },
+    {
+      "territoryCode": "47570",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "PUEBLOVIEJO",
+      "value": 51.9505
+    },
+    {
+      "territoryCode": "68855",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "VALLE DE SAN JOSÉ",
+      "value": 63.4074
+    },
+    {
+      "territoryCode": "13654",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN JACINTO",
+      "value": 54.5415
+    },
+    {
+      "territoryCode": "05042",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SANTAFÉ DE ANTIOQUIA",
+      "value": 65.2724
+    },
+    {
+      "territoryCode": "19364",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "JAMBALÓ",
+      "value": 57.8207
+    },
+    {
+      "territoryCode": "05306",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GIRALDO",
+      "value": 52.511
+    },
+    {
+      "territoryCode": "68498",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "OCAMONTE",
+      "value": 58.7465
+    },
+    {
+      "territoryCode": "13468",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SANTA CRUZ DE MOMPOX",
+      "value": 42.0773
+    },
+    {
+      "territoryCode": "05642",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SALGAR",
+      "value": 51.0292
+    },
+    {
+      "territoryCode": "05364",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "JARDÍN",
+      "value": 47.0435
+    },
+    {
+      "territoryCode": "05240",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "EBÉJICO",
+      "value": 49.5308
+    },
+    {
+      "territoryCode": "25288",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FÚQUENE",
+      "value": 64.3463
+    },
+    {
+      "territoryCode": "63212",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "CÓRDOBA",
+      "value": 48.5873
+    },
+    {
+      "territoryCode": "25779",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SUSA",
+      "value": 48.8683
+    },
+    {
+      "territoryCode": "76616",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "RIOFRÍO",
+      "value": 58.1736
+    },
+    {
+      "territoryCode": "25841",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "UBAQUE",
+      "value": 56.5347
+    },
+    {
+      "territoryCode": "05368",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "JERICÓ",
+      "value": 50.3356
+    },
+    {
+      "territoryCode": "76054",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "ARGELIA",
+      "value": 48.6108
+    },
+    {
+      "territoryCode": "25407",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LENGUAZAQUE",
+      "value": 64.7924
+    },
+    {
+      "territoryCode": "73408",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "LÉRIDA",
+      "value": 56.1173
+    },
+    {
+      "territoryCode": "05264",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ENTRERRIOS",
+      "value": 71.0052
+    },
+    {
+      "territoryCode": "68079",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BARICHARA",
+      "value": 63.7566
+    },
+    {
+      "territoryCode": "19290",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "FLORENCIA",
+      "value": 56.021
+    },
+    {
+      "territoryCode": "15798",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TENZA",
+      "value": 57.1526
+    },
+    {
+      "territoryCode": "15804",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TIBANÁ",
+      "value": 62.9736
+    },
+    {
+      "territoryCode": "70400",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "LA UNIÓN",
+      "value": 58.1757
+    },
+    {
+      "territoryCode": "25805",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TIBACUY",
+      "value": 60.5609
+    },
+    {
+      "territoryCode": "05313",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GRANADA",
+      "value": 56.0676
+    },
+    {
+      "territoryCode": "68522",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PALMAR",
+      "value": 55.9851
+    },
+    {
+      "territoryCode": "17486",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "NEIRA",
+      "value": 56.546
+    },
+    {
+      "territoryCode": "05789",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TÁMESIS",
+      "value": 48.2516
+    },
+    {
+      "territoryCode": "25489",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "NIMAIMA",
+      "value": 54.6846
+    },
+    {
+      "territoryCode": "70230",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "CHALÁN",
+      "value": 39.8367
+    },
+    {
+      "territoryCode": "23168",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "CHIMÁ",
+      "value": 42.0619
+    },
+    {
+      "territoryCode": "44035",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "ALBANIA",
+      "value": 64.7269
+    },
+    {
+      "territoryCode": "70508",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "OVEJAS",
+      "value": 55.4066
+    },
+    {
+      "territoryCode": "17272",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "FILADELFIA",
+      "value": 63.5153
+    },
+    {
+      "territoryCode": "05347",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "HELICONIA",
+      "value": 48.9256
+    },
+    {
+      "territoryCode": "76403",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "LA VICTORIA",
+      "value": 56.5656
+    },
+    {
+      "territoryCode": "47675",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SALAMINA",
+      "value": 55.6958
+    },
+    {
+      "territoryCode": "23555",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "PLANETA RICA",
+      "value": 50.1328
+    },
+    {
+      "territoryCode": "73148",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "CARMEN DE APICALÁ",
+      "value": 64.0085
+    },
+    {
+      "territoryCode": "25592",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "QUEBRADANEGRA",
+      "value": 49.4111
+    },
+    {
+      "territoryCode": "25513",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PACHO",
+      "value": 58.7541
+    },
+    {
+      "territoryCode": "15664",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN JOSÉ DE PARE",
+      "value": 51.9412
+    },
+    {
+      "territoryCode": "44098",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "DISTRACCIÓN",
+      "value": 54.8072
+    },
+    {
+      "territoryCode": "41132",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "CAMPOALEGRE",
+      "value": 46.1524
+    },
+    {
+      "territoryCode": "76233",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "DAGUA",
+      "value": 61.5033
+    },
+    {
+      "territoryCode": "05154",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAUCASIA",
+      "value": 57.9385
+    },
+    {
+      "territoryCode": "41396",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "LA PLATA",
+      "value": 62.7565
+    },
+    {
+      "territoryCode": "86219",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "COLÓN",
+      "value": 52.4026
+    },
+    {
+      "territoryCode": "66075",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "BALBOA",
+      "value": 50.546
+    },
+    {
+      "territoryCode": "05887",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "YARUMAL",
+      "value": 41.7308
+    },
+    {
+      "territoryCode": "70713",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN ONOFRE",
+      "value": 45.2796
+    },
+    {
+      "territoryCode": "73585",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "PURIFICACIÓN",
+      "value": 64.4869
+    },
+    {
+      "territoryCode": "13062",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ARROYOHONDO",
+      "value": 56.3244
+    },
+    {
+      "territoryCode": "68533",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PÁRAMO",
+      "value": 59.2902
+    },
+    {
+      "territoryCode": "15753",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOATÁ",
+      "value": 62.0327
+    },
+    {
+      "territoryCode": "15762",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SORA",
+      "value": 63.6019
+    },
+    {
+      "territoryCode": "41503",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "OPORAPA",
+      "value": 54.109
+    },
+    {
+      "territoryCode": "23574",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "PUERTO ESCONDIDO",
+      "value": 64.8305
+    },
+    {
+      "territoryCode": "41548",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "PITAL",
+      "value": 56.109
+    },
+    {
+      "territoryCode": "41319",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "GUADALUPE",
+      "value": 49.0478
+    },
+    {
+      "territoryCode": "19622",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "ROSAS",
+      "value": 44.0286
+    },
+    {
+      "territoryCode": "25488",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "NILO",
+      "value": 65.3077
+    },
+    {
+      "territoryCode": "70708",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN MARCOS",
+      "value": 61.9581
+    },
+    {
+      "territoryCode": "05690",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SANTO DOMINGO",
+      "value": 60.0945
+    },
+    {
+      "territoryCode": "20400",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "LA JAGUA DE IBIRICO",
+      "value": 73.552
+    },
+    {
+      "territoryCode": "73352",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ICONONZO",
+      "value": 45.7107
+    },
+    {
+      "territoryCode": "52356",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "IPIALES",
+      "value": 48.9006
+    },
+    {
+      "territoryCode": "05792",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TARSO",
+      "value": 46.1365
+    },
+    {
+      "territoryCode": "70233",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "EL ROBLE",
+      "value": 53.5066
+    },
+    {
+      "territoryCode": "05670",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN ROQUE",
+      "value": 53.9835
+    },
+    {
+      "territoryCode": "05091",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BETANIA",
+      "value": 58.4419
+    },
+    {
+      "territoryCode": "19824",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "TOTORÓ",
+      "value": 41.9962
+    },
+    {
+      "territoryCode": "13780",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "TALAIGUA NUEVO",
+      "value": 39.0452
+    },
+    {
+      "territoryCode": "85001",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "YOPAL",
+      "value": 59.6714
+    },
+    {
+      "territoryCode": "25281",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FOSCA",
+      "value": 55.9026
+    },
+    {
+      "territoryCode": "15776",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SUTAMARCHÁN",
+      "value": 58.3679
+    },
+    {
+      "territoryCode": "05093",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BETULIA",
+      "value": 51.4907
+    },
+    {
+      "territoryCode": "41359",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ISNOS",
+      "value": 64.9376
+    },
+    {
+      "territoryCode": "25181",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CHOACHÍ",
+      "value": 56.4902
+    },
+    {
+      "territoryCode": "76109",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "BUENAVENTURA",
+      "value": 46.6429
+    },
+    {
+      "territoryCode": "52381",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LA FLORIDA",
+      "value": 57.3015
+    },
+    {
+      "territoryCode": "68572",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PUENTE NACIONAL",
+      "value": 61.8439
+    },
+    {
+      "territoryCode": "25596",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "QUIPILE",
+      "value": 45.3207
+    },
+    {
+      "territoryCode": "05059",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ARMENIA",
+      "value": 40.6109
+    },
+    {
+      "territoryCode": "17513",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "PÁCORA",
+      "value": 61.1474
+    },
+    {
+      "territoryCode": "05686",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SANTA ROSA DE OSOS",
+      "value": 62.9946
+    },
+    {
+      "territoryCode": "54347",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "HERRÁN",
+      "value": 55.9155
+    },
+    {
+      "territoryCode": "23419",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "LOS CÓRDOBAS",
+      "value": 73.7402
+    },
+    {
+      "territoryCode": "47161",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "CERRO DE SAN ANTONIO",
+      "value": 44.3773
+    },
+    {
+      "territoryCode": "05315",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GUADALUPE",
+      "value": 55.4159
+    },
+    {
+      "territoryCode": "25483",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "NARIÑO",
+      "value": 54.7578
+    },
+    {
+      "territoryCode": "25807",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TIBIRITA",
+      "value": 52.6818
+    },
+    {
+      "territoryCode": "52378",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LA CRUZ",
+      "value": 61.3172
+    },
+    {
+      "territoryCode": "44560",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "MANAURE",
+      "value": 46.1267
+    },
+    {
+      "territoryCode": "15632",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SABOYÁ",
+      "value": 49.4953
+    },
+    {
+      "territoryCode": "76243",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "EL ÁGUILA",
+      "value": 41.9211
+    },
+    {
+      "territoryCode": "52786",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "TAMINANGO",
+      "value": 61.2278
+    },
+    {
+      "territoryCode": "05856",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "VALPARAÍSO",
+      "value": 47.2425
+    },
+    {
+      "territoryCode": "19743",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SILVIA",
+      "value": 49.5439
+    },
+    {
+      "territoryCode": "15187",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHIVATÁ",
+      "value": 60.9095
+    },
+    {
+      "territoryCode": "13300",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "HATILLO DE LOBA",
+      "value": 55.396
+    },
+    {
+      "territoryCode": "68147",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CAPITANEJO",
+      "value": 56.3448
+    },
+    {
+      "territoryCode": "19785",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SUCRE",
+      "value": 48.7868
+    },
+    {
+      "territoryCode": "23350",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "LA APARTADA",
+      "value": 64.349
+    },
+    {
+      "territoryCode": "68229",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CURITÍ",
+      "value": 62.2476
+    },
+    {
+      "territoryCode": "15740",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SIACHOQUE",
+      "value": 61.1912
+    },
+    {
+      "territoryCode": "44078",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "BARRANCAS",
+      "value": 52.1857
+    },
+    {
+      "territoryCode": "52687",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAN LORENZO",
+      "value": 57.8158
+    },
+    {
+      "territoryCode": "41530",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "PALESTINA",
+      "value": 58.5701
+    },
+    {
+      "territoryCode": "52411",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LINARES",
+      "value": 61.5571
+    },
+    {
+      "territoryCode": "19022",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "ALMAGUER",
+      "value": 46.5038
+    },
+    {
+      "territoryCode": "54261",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "EL ZULIA",
+      "value": 62.0807
+    },
+    {
+      "territoryCode": "20710",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "SAN ALBERTO",
+      "value": 58.8964
+    },
+    {
+      "territoryCode": "68051",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ARATOCA",
+      "value": 69.8362
+    },
+    {
+      "territoryCode": "20310",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "GONZÁLEZ",
+      "value": 39.6803
+    },
+    {
+      "territoryCode": "15272",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "FIRAVITOBA",
+      "value": 66.9312
+    },
+    {
+      "territoryCode": "68861",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "VÉLEZ",
+      "value": 56.6533
+    },
+    {
+      "territoryCode": "25862",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VERGARA",
+      "value": 67.6747
+    },
+    {
+      "territoryCode": "54599",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "RAGONVALIA",
+      "value": 60.02
+    },
+    {
+      "territoryCode": "23466",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "MONTELÍBANO",
+      "value": 60.1568
+    },
+    {
+      "territoryCode": "05411",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "LIBORINA",
+      "value": 38.5449
+    },
+    {
+      "territoryCode": "05145",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CARAMANTA",
+      "value": 41.748
+    },
+    {
+      "territoryCode": "68418",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "LOS SANTOS",
+      "value": 53.382
+    },
+    {
+      "territoryCode": "15466",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MONGUÍ",
+      "value": 52.9159
+    },
+    {
+      "territoryCode": "47555",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "PLATO",
+      "value": 57.7969
+    },
+    {
+      "territoryCode": "50606",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "RESTREPO",
+      "value": 55.637
+    },
+    {
+      "territoryCode": "25322",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUASCA",
+      "value": 61.6444
+    },
+    {
+      "territoryCode": "23570",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "PUEBLO NUEVO",
+      "value": 56.1976
+    },
+    {
+      "territoryCode": "17653",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "SALAMINA",
+      "value": 54.2452
+    },
+    {
+      "territoryCode": "15162",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CERINZA",
+      "value": 48.0914
+    },
+    {
+      "territoryCode": "52788",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "TANGUA",
+      "value": 55.6578
+    },
+    {
+      "territoryCode": "25793",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TAUSA",
+      "value": 70.0629
+    },
+    {
+      "territoryCode": "18001",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "FLORENCIA",
+      "value": 39.1515
+    },
+    {
+      "territoryCode": "15480",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MUZO",
+      "value": 43.9008
+    },
+    {
+      "territoryCode": "52720",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAPUYES",
+      "value": 54.3454
+    },
+    {
+      "territoryCode": "54673",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SAN CAYETANO",
+      "value": 59.531
+    },
+    {
+      "territoryCode": "25095",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "BITUIMA",
+      "value": 53.48
+    },
+    {
+      "territoryCode": "54099",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "BOCHALEMA",
+      "value": 49.7251
+    },
+    {
+      "territoryCode": "25851",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "ÚTICA",
+      "value": 65.2714
+    },
+    {
+      "territoryCode": "20550",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "PELAYA",
+      "value": 66.4781
+    },
+    {
+      "territoryCode": "05138",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAÑASGORDAS",
+      "value": 59.3494
+    },
+    {
+      "territoryCode": "20250",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "EL PASO",
+      "value": 73.697
+    },
+    {
+      "territoryCode": "15814",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TOCA",
+      "value": 58.8918
+    },
+    {
+      "territoryCode": "05002",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ABEJORRAL",
+      "value": 49.9449
+    },
+    {
+      "territoryCode": "68179",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CHIPATÁ",
+      "value": 50.7463
+    },
+    {
+      "territoryCode": "25398",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LA PEÑA",
+      "value": 54.9514
+    },
+    {
+      "territoryCode": "15362",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "IZA",
+      "value": 58.9988
+    },
+    {
+      "territoryCode": "47703",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SAN ZENÓN",
+      "value": 52.2852
+    },
+    {
+      "territoryCode": "68684",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN JOSÉ DE MIRANDA",
+      "value": 57.763
+    },
+    {
+      "territoryCode": "47318",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "GUAMAL",
+      "value": 45.6765
+    },
+    {
+      "territoryCode": "25320",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUADUAS",
+      "value": 50.2982
+    },
+    {
+      "territoryCode": "52835",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAN ANDRÉS DE TUMACO",
+      "value": 48.9293
+    },
+    {
+      "territoryCode": "15837",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TUTA",
+      "value": 73.1114
+    },
+    {
+      "territoryCode": "44855",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "URUMITA",
+      "value": 54.2338
+    },
+    {
+      "territoryCode": "17013",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "AGUADAS",
+      "value": 54.2597
+    },
+    {
+      "territoryCode": "68324",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GUAVATÁ",
+      "value": 56.223
+    },
+    {
+      "territoryCode": "47692",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SAN SEBASTIÁN DE BUENAVISTA",
+      "value": 50.5445
+    },
+    {
+      "territoryCode": "52254",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "EL PEÑOL",
+      "value": 66.6446
+    },
+    {
+      "territoryCode": "15500",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "OICATÁ",
+      "value": 51.5503
+    },
+    {
+      "territoryCode": "05125",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAICEDO",
+      "value": 46.8983
+    },
+    {
+      "territoryCode": "05665",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN PEDRO DE URABÁ",
+      "value": 54.6526
+    },
+    {
+      "territoryCode": "15842",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "ÚMBITA",
+      "value": 65.0173
+    },
+    {
+      "territoryCode": "15832",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TUNUNGUÁ",
+      "value": 41.9228
+    },
+    {
+      "territoryCode": "05667",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN RAFAEL",
+      "value": 42.1632
+    },
+    {
+      "territoryCode": "76250",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "EL DOVIO",
+      "value": 48.0775
+    },
+    {
+      "territoryCode": "25394",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "LA PALMA",
+      "value": 49.7097
+    },
+    {
+      "territoryCode": "25535",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PASCA",
+      "value": 57.3068
+    },
+    {
+      "territoryCode": "73124",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "CAJAMARCA",
+      "value": 44.8924
+    },
+    {
+      "territoryCode": "68132",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CALIFORNIA",
+      "value": 46.9002
+    },
+    {
+      "territoryCode": "68673",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN BENITO",
+      "value": 59.6059
+    },
+    {
+      "territoryCode": "20295",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "GAMARRA",
+      "value": 54.7171
+    },
+    {
+      "territoryCode": "41306",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "GIGANTE",
+      "value": 45.3506
+    },
+    {
+      "territoryCode": "05134",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAMPAMENTO",
+      "value": 40.371
+    },
+    {
+      "territoryCode": "41244",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ELÍAS",
+      "value": 46.6648
+    },
+    {
+      "territoryCode": "05591",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PUERTO TRIUNFO",
+      "value": 62.2005
+    },
+    {
+      "territoryCode": "05021",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ALEJANDRÍA",
+      "value": 61.3506
+    },
+    {
+      "territoryCode": "25777",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SUPATÁ",
+      "value": 51.9087
+    },
+    {
+      "territoryCode": "13894",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ZAMBRANO",
+      "value": 53.3147
+    },
+    {
+      "territoryCode": "05501",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "OLAYA",
+      "value": 46.8474
+    },
+    {
+      "territoryCode": "52260",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "EL TAMBO",
+      "value": 49.8789
+    },
+    {
+      "territoryCode": "25594",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "QUETAME",
+      "value": 59.8434
+    },
+    {
+      "territoryCode": "41770",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "SUAZA",
+      "value": 54.3064
+    },
+    {
+      "territoryCode": "54313",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "GRAMALOTE",
+      "value": 50.5996
+    },
+    {
+      "territoryCode": "76863",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "VERSALLES",
+      "value": 48.9125
+    },
+    {
+      "territoryCode": "81736",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "SARAVENA",
+      "value": 76.2546
+    },
+    {
+      "territoryCode": "19392",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "LA SIERRA",
+      "value": 54.0464
+    },
+    {
+      "territoryCode": "15879",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "VIRACACHÁ",
+      "value": 46.5163
+    },
+    {
+      "territoryCode": "05051",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ARBOLETES",
+      "value": 58.8385
+    },
+    {
+      "territoryCode": "73270",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "FALAN",
+      "value": 43.9669
+    },
+    {
+      "territoryCode": "47030",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "ALGARROBO",
+      "value": 57.554
+    },
+    {
+      "territoryCode": "47258",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "EL PIÑÓN",
+      "value": 27.4261
+    },
+    {
+      "territoryCode": "68209",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CONFINES",
+      "value": 59.3537
+    },
+    {
+      "territoryCode": "15757",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOCHA",
+      "value": 72.8802
+    },
+    {
+      "territoryCode": "73861",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "VENADILLO",
+      "value": 54.4896
+    },
+    {
+      "territoryCode": "47170",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "CHIVOLO",
+      "value": 63.3624
+    },
+    {
+      "territoryCode": "25845",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "UNE",
+      "value": 62.0705
+    },
+    {
+      "territoryCode": "41791",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "TARQUI",
+      "value": 50.8861
+    },
+    {
+      "territoryCode": "20228",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "CURUMANÍ",
+      "value": 54.9025
+    },
+    {
+      "territoryCode": "05837",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TURBO",
+      "value": 41.94
+    },
+    {
+      "territoryCode": "15761",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOMONDOCO",
+      "value": 53.4591
+    },
+    {
+      "territoryCode": "44650",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "SAN JUAN DEL CESAR",
+      "value": 62.8596
+    },
+    {
+      "territoryCode": "68524",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PALMAS DEL SOCORRO",
+      "value": 54.2689
+    },
+    {
+      "territoryCode": "41483",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "NÁTAGA",
+      "value": 54.674
+    },
+    {
+      "territoryCode": "15051",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "ARCABUCO",
+      "value": 62.0511
+    },
+    {
+      "territoryCode": "13650",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN FERNANDO",
+      "value": 46.1072
+    },
+    {
+      "territoryCode": "70124",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "CAIMITO",
+      "value": 39.5032
+    },
+    {
+      "territoryCode": "19532",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PATÍA",
+      "value": 42.6611
+    },
+    {
+      "territoryCode": "15808",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TINJACÁ",
+      "value": 48.2637
+    },
+    {
+      "territoryCode": "25649",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SAN BERNARDO",
+      "value": 53.2073
+    },
+    {
+      "territoryCode": "15816",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TOGÜÍ",
+      "value": 54.3096
+    },
+    {
+      "territoryCode": "15087",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BELÉN",
+      "value": 58.9619
+    },
+    {
+      "territoryCode": "52215",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CÓRDOBA",
+      "value": 58.5569
+    },
+    {
+      "territoryCode": "15131",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CALDAS",
+      "value": 49.8902
+    },
+    {
+      "territoryCode": "15380",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "LA CAPILLA",
+      "value": 48.8731
+    },
+    {
+      "territoryCode": "15810",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TIPACOQUE",
+      "value": 43.2634
+    },
+    {
+      "territoryCode": "25324",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUATAQUÍ",
+      "value": 51.4394
+    },
+    {
+      "territoryCode": "23090",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "CANALETE",
+      "value": 58.7149
+    },
+    {
+      "territoryCode": "15696",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SANTA SOFÍA",
+      "value": 60.8698
+    },
+    {
+      "territoryCode": "68266",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ENCISO",
+      "value": 56.2499
+    },
+    {
+      "territoryCode": "85440",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "VILLANUEVA",
+      "value": 57.1684
+    },
+    {
+      "territoryCode": "54418",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "LOURDES",
+      "value": 55.2381
+    },
+    {
+      "territoryCode": "15109",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BUENAVISTA",
+      "value": 50.9799
+    },
+    {
+      "territoryCode": "15232",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHÍQUIZA",
+      "value": 57.2606
+    },
+    {
+      "territoryCode": "41006",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ACEVEDO",
+      "value": 63.7678
+    },
+    {
+      "territoryCode": "19075",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "BALBOA",
+      "value": 53.3684
+    },
+    {
+      "territoryCode": "25506",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VENECIA",
+      "value": 52.9375
+    },
+    {
+      "territoryCode": "70265",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "GUARANDA",
+      "value": 64.0072
+    },
+    {
+      "territoryCode": "20238",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "EL COPEY",
+      "value": 60.0932
+    },
+    {
+      "territoryCode": "15114",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BUSBANZÁ",
+      "value": 55.5889
+    },
+    {
+      "territoryCode": "70429",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "MAJAGUAL",
+      "value": 50.7174
+    },
+    {
+      "territoryCode": "47745",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SITIONUEVO",
+      "value": 64.5695
+    },
+    {
+      "territoryCode": "50226",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "CUMARAL",
+      "value": 61.1251
+    },
+    {
+      "territoryCode": "13440",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MARGARITA",
+      "value": 46.0407
+    },
+    {
+      "territoryCode": "68500",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "OIBA",
+      "value": 55.8062
+    },
+    {
+      "territoryCode": "73504",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ORTEGA",
+      "value": 48.4986
+    },
+    {
+      "territoryCode": "23855",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "VALENCIA",
+      "value": 64.7467
+    },
+    {
+      "territoryCode": "05819",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TOLEDO",
+      "value": 47.9133
+    },
+    {
+      "territoryCode": "86001",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "MOCOA",
+      "value": 60.9171
+    },
+    {
+      "territoryCode": "73217",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "COYAIMA",
+      "value": 51.0493
+    },
+    {
+      "territoryCode": "52258",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "EL TABLÓN DE GÓMEZ",
+      "value": 56.6584
+    },
+    {
+      "territoryCode": "63690",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "SALENTO",
+      "value": 59.6318
+    },
+    {
+      "territoryCode": "41349",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "HOBO",
+      "value": 48.6885
+    },
+    {
+      "territoryCode": "15185",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHITARAQUE",
+      "value": 53.4307
+    },
+    {
+      "territoryCode": "52678",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SAMANIEGO",
+      "value": 56.8843
+    },
+    {
+      "territoryCode": "20517",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "PAILITAS",
+      "value": 52.162
+    },
+    {
+      "territoryCode": "20013",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "AGUSTÍN CODAZZI",
+      "value": 69.6023
+    },
+    {
+      "territoryCode": "05044",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ANZÁ",
+      "value": 47.9407
+    },
+    {
+      "territoryCode": "20570",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "PUEBLO BELLO",
+      "value": 40.0361
+    },
+    {
+      "territoryCode": "73678",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SAN LUIS",
+      "value": 44.2658
+    },
+    {
+      "territoryCode": "15215",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CORRALES",
+      "value": 55.0951
+    },
+    {
+      "territoryCode": "41020",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ALGECIRAS",
+      "value": 58.805
+    },
+    {
+      "territoryCode": "19100",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "BOLÍVAR",
+      "value": 48.4793
+    },
+    {
+      "territoryCode": "15600",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "RÁQUIRA",
+      "value": 57.231
+    },
+    {
+      "territoryCode": "05310",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "GÓMEZ PLATA",
+      "value": 68.9558
+    },
+    {
+      "territoryCode": "05038",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ANGOSTURA",
+      "value": 54.1264
+    },
+    {
+      "territoryCode": "08549",
+      "territoryLevel": "municipality",
+      "department": "ATLÁNTICO",
+      "name": "PIOJÓ",
+      "value": 43.5776
+    },
+    {
+      "territoryCode": "19397",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "LA VEGA",
+      "value": 45.6493
+    },
+    {
+      "territoryCode": "05647",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN ANDRÉS DE CUERQUÍA",
+      "value": 34.331
+    },
+    {
+      "territoryCode": "05579",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PUERTO BERRÍO",
+      "value": 54.5326
+    },
+    {
+      "territoryCode": "68370",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "JORDÁN",
+      "value": 43.919
+    },
+    {
+      "territoryCode": "25335",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUAYABETAL",
+      "value": 53.6982
+    },
+    {
+      "territoryCode": "27001",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "QUIBDÓ",
+      "value": 56.7145
+    },
+    {
+      "territoryCode": "68368",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "JESÚS MARÍA",
+      "value": 56.7793
+    },
+    {
+      "territoryCode": "68322",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GUAPOTÁ",
+      "value": 61.1606
+    },
+    {
+      "territoryCode": "25258",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "EL PEÑÓN",
+      "value": 53.4673
+    },
+    {
+      "territoryCode": "25436",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "MANTA",
+      "value": 50.2264
+    },
+    {
+      "territoryCode": "15226",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CUÍTIVA",
+      "value": 65.175
+    },
+    {
+      "territoryCode": "05206",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CONCEPCIÓN",
+      "value": 60.9792
+    },
+    {
+      "territoryCode": "68770",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SUAITA",
+      "value": 51.3075
+    },
+    {
+      "territoryCode": "54520",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "PAMPLONITA",
+      "value": 52.4357
+    },
+    {
+      "territoryCode": "05490",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "NECOCLÍ",
+      "value": 51.2991
+    },
+    {
+      "territoryCode": "15296",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GÁMEZA",
+      "value": 49.6243
+    },
+    {
+      "territoryCode": "13580",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "REGIDOR",
+      "value": 60.2747
+    },
+    {
+      "territoryCode": "27810",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "UNIÓN PANAMERICANA",
+      "value": 42.7769
+    },
+    {
+      "territoryCode": "44110",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "EL MOLINO",
+      "value": 69.7705
+    },
+    {
+      "territoryCode": "15442",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MARIPÍ",
+      "value": 51.168
+    },
+    {
+      "territoryCode": "05113",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BURITICÁ",
+      "value": 55.5005
+    },
+    {
+      "territoryCode": "66456",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "MISTRATÓ",
+      "value": 59.6045
+    },
+    {
+      "territoryCode": "25572",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PUERTO SALGAR",
+      "value": 60.7142
+    },
+    {
+      "territoryCode": "05660",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN LUIS",
+      "value": 61.2149
+    },
+    {
+      "territoryCode": "68689",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN VICENTE DE CHUCURÍ",
+      "value": 50.1389
+    },
+    {
+      "territoryCode": "86757",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "SAN MIGUEL",
+      "value": 59.3284
+    },
+    {
+      "territoryCode": "05628",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SABANALARGA",
+      "value": 40.0142
+    },
+    {
+      "territoryCode": "25297",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GACHETÁ",
+      "value": 55.9554
+    },
+    {
+      "territoryCode": "76246",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "EL CAIRO",
+      "value": 53.602
+    },
+    {
+      "territoryCode": "05483",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "NARIÑO",
+      "value": 49.7548
+    },
+    {
+      "territoryCode": "15676",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN MIGUEL DE SEMA",
+      "value": 55.5237
+    },
+    {
+      "territoryCode": "52227",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CUMBAL",
+      "value": 56.3125
+    },
+    {
+      "territoryCode": "15248",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "EL ESPINO",
+      "value": 47.6422
+    },
+    {
+      "territoryCode": "17541",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "PENSILVANIA",
+      "value": 56.5548
+    },
+    {
+      "territoryCode": "73152",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "CASABIANCA",
+      "value": 54.4868
+    },
+    {
+      "territoryCode": "20750",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "SAN DIEGO",
+      "value": 59.3435
+    },
+    {
+      "territoryCode": "20032",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "ASTREA",
+      "value": 51.9969
+    },
+    {
+      "territoryCode": "73055",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ARMERO",
+      "value": 48.2977
+    },
+    {
+      "territoryCode": "05658",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN JOSÉ DE LA MONTAÑA",
+      "value": 40.6184
+    },
+    {
+      "territoryCode": "73624",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ROVIRA",
+      "value": 57.5127
+    },
+    {
+      "territoryCode": "13212",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CÓRDOBA",
+      "value": 49.0299
+    },
+    {
+      "territoryCode": "05756",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SONSON",
+      "value": 65.2637
+    },
+    {
+      "territoryCode": "73030",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "AMBALEMA",
+      "value": 52.5844
+    },
+    {
+      "territoryCode": "15276",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "FLORESTA",
+      "value": 63.5717
+    },
+    {
+      "territoryCode": "76126",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "CALIMA",
+      "value": 50.5971
+    },
+    {
+      "territoryCode": "47058",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "ARIGUANÍ",
+      "value": 60.3201
+    },
+    {
+      "territoryCode": "15106",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BRICEÑO",
+      "value": 48.6727
+    },
+    {
+      "territoryCode": "25662",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SAN JUAN DE RIOSECO",
+      "value": 62.8678
+    },
+    {
+      "territoryCode": "15511",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PACHAVITA",
+      "value": 44.7944
+    },
+    {
+      "territoryCode": "05055",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ARGELIA",
+      "value": 45.5041
+    },
+    {
+      "territoryCode": "15522",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PANQUEBA",
+      "value": 57.138
+    },
+    {
+      "territoryCode": "68255",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "EL PLAYÓN",
+      "value": 64.3682
+    },
+    {
+      "territoryCode": "47053",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "ARACATACA",
+      "value": 38.3961
+    },
+    {
+      "territoryCode": "52110",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "BUESACO",
+      "value": 67.0291
+    },
+    {
+      "territoryCode": "20614",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "RÍO DE ORO",
+      "value": 64.3937
+    },
+    {
+      "territoryCode": "47798",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "TENERIFE",
+      "value": 36.7135
+    },
+    {
+      "territoryCode": "20787",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "TAMALAMEQUE",
+      "value": 47.1645
+    },
+    {
+      "territoryCode": "73026",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ALVARADO",
+      "value": 53.1845
+    },
+    {
+      "territoryCode": "15681",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN PABLO DE BORBUR",
+      "value": 61.2359
+    },
+    {
+      "territoryCode": "73854",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "VALLE DE SAN JUAN",
+      "value": 50.9668
+    },
+    {
+      "territoryCode": "73200",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "COELLO",
+      "value": 54.7546
+    },
+    {
+      "territoryCode": "41378",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "LA ARGENTINA",
+      "value": 53.1957
+    },
+    {
+      "territoryCode": "25326",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUATAVITA",
+      "value": 55.9756
+    },
+    {
+      "territoryCode": "50270",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "EL DORADO",
+      "value": 53.2138
+    },
+    {
+      "territoryCode": "05842",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "URAMITA",
+      "value": 41.1042
+    },
+    {
+      "territoryCode": "41524",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "PALERMO",
+      "value": 58.7687
+    },
+    {
+      "territoryCode": "20770",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "SAN MARTÍN",
+      "value": 56.8168
+    },
+    {
+      "territoryCode": "15293",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GACHANTIVÁ",
+      "value": 55.0619
+    },
+    {
+      "territoryCode": "73870",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "VILLAHERMOSA",
+      "value": 64.0933
+    },
+    {
+      "territoryCode": "76100",
+      "territoryLevel": "municipality",
+      "department": "VALLE DEL CAUCA",
+      "name": "BOLÍVAR",
+      "value": 47.8662
+    },
+    {
+      "territoryCode": "25426",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "MACHETÁ",
+      "value": 61.4001
+    },
+    {
+      "territoryCode": "15401",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "LA VICTORIA",
+      "value": 55.6191
+    },
+    {
+      "territoryCode": "25279",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "FÓMEQUE",
+      "value": 51.2125
+    },
+    {
+      "territoryCode": "54398",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "LA PLAYA",
+      "value": 49.341
+    },
+    {
+      "territoryCode": "05150",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CAROLINA",
+      "value": 56.0211
+    },
+    {
+      "territoryCode": "44090",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "DIBULLA",
+      "value": 60.5003
+    },
+    {
+      "territoryCode": "15325",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GUAYATÁ",
+      "value": 51.355
+    },
+    {
+      "territoryCode": "15537",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PAZ DE RÍO",
+      "value": 67.2978
+    },
+    {
+      "territoryCode": "25154",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CARMEN DE CARUPA",
+      "value": 53.3154
+    },
+    {
+      "territoryCode": "15572",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PUERTO BOYACÁ",
+      "value": 66.7681
+    },
+    {
+      "territoryCode": "68686",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN MIGUEL",
+      "value": 36.8349
+    },
+    {
+      "territoryCode": "73675",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SAN ANTONIO",
+      "value": 54.6969
+    },
+    {
+      "territoryCode": "20621",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "LA PAZ",
+      "value": 58.9506
+    },
+    {
+      "territoryCode": "23079",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "BUENAVISTA",
+      "value": 62.1633
+    },
+    {
+      "territoryCode": "05736",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SEGOVIA",
+      "value": 46.8046
+    },
+    {
+      "territoryCode": "66572",
+      "territoryLevel": "municipality",
+      "department": "RISARALDA",
+      "name": "PUEBLO RICO",
+      "value": 55.1221
+    },
+    {
+      "territoryCode": "41013",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "AGRADO",
+      "value": 56.3763
+    },
+    {
+      "territoryCode": "15097",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BOAVITA",
+      "value": 53.5311
+    },
+    {
+      "territoryCode": "54480",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "MUTISCUA",
+      "value": 49.1835
+    },
+    {
+      "territoryCode": "05250",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "EL BAGRE",
+      "value": 62.409
+    },
+    {
+      "territoryCode": "68669",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN ANDRÉS",
+      "value": 52.4738
+    },
+    {
+      "territoryCode": "19355",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "INZÁ",
+      "value": 44.7772
+    },
+    {
+      "territoryCode": "47541",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "PEDRAZA",
+      "value": 50.8177
+    },
+    {
+      "territoryCode": "15455",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MIRAFLORES",
+      "value": 70.4051
+    },
+    {
+      "territoryCode": "68320",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GUADALUPE",
+      "value": 52.8317
+    },
+    {
+      "territoryCode": "68167",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CHARALÁ",
+      "value": 58.7834
+    },
+    {
+      "territoryCode": "47460",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "NUEVA GRANADA",
+      "value": 52.9989
+    },
+    {
+      "territoryCode": "15022",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "ALMEIDA",
+      "value": 44.8297
+    },
+    {
+      "territoryCode": "68271",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "FLORIÁN",
+      "value": 70.4067
+    },
+    {
+      "territoryCode": "41676",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "SANTA MARÍA",
+      "value": 56.7227
+    },
+    {
+      "territoryCode": "25299",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GAMA",
+      "value": 49.6084
+    },
+    {
+      "territoryCode": "19450",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "MERCADERES",
+      "value": 54.1942
+    },
+    {
+      "territoryCode": "13248",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "EL GUAMO",
+      "value": 49.651
+    },
+    {
+      "territoryCode": "68121",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CABRERA",
+      "value": 55.1058
+    },
+    {
+      "territoryCode": "15763",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOTAQUIRÁ",
+      "value": 64.6426
+    },
+    {
+      "territoryCode": "25168",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CHAGUANÍ",
+      "value": 56.0155
+    },
+    {
+      "territoryCode": "15531",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PAUNA",
+      "value": 51.3032
+    },
+    {
+      "territoryCode": "68895",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ZAPATOCA",
+      "value": 50.0368
+    },
+    {
+      "territoryCode": "13030",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ALTOS DEL ROSARIO",
+      "value": 55.9836
+    },
+    {
+      "territoryCode": "47707",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SANTA ANA",
+      "value": 46.774
+    },
+    {
+      "territoryCode": "05890",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "YOLOMBÓ",
+      "value": 55.3835
+    },
+    {
+      "territoryCode": "68615",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "RIONEGRO",
+      "value": 69.6363
+    },
+    {
+      "territoryCode": "63302",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "GÉNOVA",
+      "value": 46.6621
+    },
+    {
+      "territoryCode": "54670",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SAN CALIXTO",
+      "value": 57.8918
+    },
+    {
+      "territoryCode": "41797",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "TESALIA",
+      "value": 56.5556
+    },
+    {
+      "territoryCode": "50150",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "CASTILLA LA NUEVA",
+      "value": 63.6231
+    },
+    {
+      "territoryCode": "05086",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BELMIRA",
+      "value": 47.9546
+    },
+    {
+      "territoryCode": "86865",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "VALLE DEL GUAMUEZ",
+      "value": 64.5527
+    },
+    {
+      "territoryCode": "47960",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "ZAPAYÁN",
+      "value": 65.2562
+    },
+    {
+      "territoryCode": "25871",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "VILLAGÓMEZ",
+      "value": 52.2806
+    },
+    {
+      "territoryCode": "54239",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "DURANIA",
+      "value": 54.2023
+    },
+    {
+      "territoryCode": "25823",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "TOPAIPÍ",
+      "value": 54.4792
+    },
+    {
+      "territoryCode": "68655",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SABANA DE TORRES",
+      "value": 63.3851
+    },
+    {
+      "territoryCode": "13074",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "BARRANCO DE LOBA",
+      "value": 47.5672
+    },
+    {
+      "territoryCode": "20178",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "CHIRIGUANÁ",
+      "value": 49.9997
+    },
+    {
+      "territoryCode": "05854",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "VALDIVIA",
+      "value": 54.0542
+    },
+    {
+      "territoryCode": "19760",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SOTARÁ PAISPAMBA",
+      "value": 54.1993
+    },
+    {
+      "territoryCode": "44847",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "URIBIA",
+      "value": 45.5698
+    },
+    {
+      "territoryCode": "13667",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN MARTÍN DE LOBA",
+      "value": 42.5058
+    },
+    {
+      "territoryCode": "20175",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "CHIMICHAGUA",
+      "value": 55.6814
+    },
+    {
+      "territoryCode": "63548",
+      "territoryLevel": "municipality",
+      "department": "QUINDÍO",
+      "name": "PIJAO",
+      "value": 52.7229
+    },
+    {
+      "territoryCode": "23682",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "SAN JOSÉ DE URÉ",
+      "value": 66.8151
+    },
+    {
+      "territoryCode": "47605",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "REMOLINO",
+      "value": 44.8521
+    },
+    {
+      "territoryCode": "05649",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN CARLOS",
+      "value": 64.9328
+    },
+    {
+      "territoryCode": "54377",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "LABATECA",
+      "value": 58.872
+    },
+    {
+      "territoryCode": "05425",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MACEO",
+      "value": 53.8697
+    },
+    {
+      "territoryCode": "17662",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "SAMANÁ",
+      "value": 63.9009
+    },
+    {
+      "territoryCode": "68820",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "TONA",
+      "value": 60.8712
+    },
+    {
+      "territoryCode": "68211",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CONTRATACIÓN",
+      "value": 44.1303
+    },
+    {
+      "territoryCode": "73168",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "CHAPARRAL",
+      "value": 58.0234
+    },
+    {
+      "territoryCode": "47551",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "PIVIJAY",
+      "value": 47.5812
+    },
+    {
+      "territoryCode": "15317",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GUACAMAYAS",
+      "value": 53.554
+    },
+    {
+      "territoryCode": "50318",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "GUAMAL",
+      "value": 59.935
+    },
+    {
+      "territoryCode": "15790",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TASCO",
+      "value": 56.85
+    },
+    {
+      "territoryCode": "41357",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ÍQUIRA",
+      "value": 64.2004
+    },
+    {
+      "territoryCode": "05790",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "TARAZÁ",
+      "value": 49.1518
+    },
+    {
+      "territoryCode": "68169",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CHARTA",
+      "value": 45.6134
+    },
+    {
+      "territoryCode": "05495",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "NECHÍ",
+      "value": 55.8358
+    },
+    {
+      "territoryCode": "54250",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "EL TARRA",
+      "value": 65.2629
+    },
+    {
+      "territoryCode": "73770",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SUÁREZ",
+      "value": 53.0722
+    },
+    {
+      "territoryCode": "52405",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LEIVA",
+      "value": 56.0138
+    },
+    {
+      "territoryCode": "23580",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "PUERTO LIBERTADOR",
+      "value": 66.971
+    },
+    {
+      "territoryCode": "19050",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "ARGELIA",
+      "value": 58.0896
+    },
+    {
+      "territoryCode": "68444",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "MATANZA",
+      "value": 47.8351
+    },
+    {
+      "territoryCode": "68575",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PUERTO WILCHES",
+      "value": 65.0042
+    },
+    {
+      "territoryCode": "68867",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "VETAS",
+      "value": 55.1755
+    },
+    {
+      "territoryCode": "15542",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PESCA",
+      "value": 63.9016
+    },
+    {
+      "territoryCode": "68013",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "AGUADA",
+      "value": 52.8019
+    },
+    {
+      "territoryCode": "27787",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "TADÓ",
+      "value": 61.7064
+    },
+    {
+      "territoryCode": "15822",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TOTA",
+      "value": 59.7489
+    },
+    {
+      "territoryCode": "85010",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "AGUAZUL",
+      "value": 59.1488
+    },
+    {
+      "territoryCode": "15580",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "QUÍPAMA",
+      "value": 48.0126
+    },
+    {
+      "territoryCode": "41016",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "AIPE",
+      "value": 55.7557
+    },
+    {
+      "territoryCode": "68235",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "EL CARMEN DE CHUCURÍ",
+      "value": 61.4771
+    },
+    {
+      "territoryCode": "05858",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "VEGACHÍ",
+      "value": 57.9367
+    },
+    {
+      "territoryCode": "15368",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "JERICÓ",
+      "value": 47.3552
+    },
+    {
+      "territoryCode": "27205",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "CONDOTO",
+      "value": 63.0812
+    },
+    {
+      "territoryCode": "17495",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "NORCASIA",
+      "value": 56.2112
+    },
+    {
+      "territoryCode": "23068",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "AYAPEL",
+      "value": 66.8656
+    },
+    {
+      "territoryCode": "70678",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SAN BENITO ABAD",
+      "value": 47.7532
+    },
+    {
+      "territoryCode": "15090",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BERBEO",
+      "value": 63.5648
+    },
+    {
+      "territoryCode": "73547",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "PIEDRAS",
+      "value": 63.087
+    },
+    {
+      "territoryCode": "68020",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ALBANIA",
+      "value": 55.6544
+    },
+    {
+      "territoryCode": "41885",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "YAGUARÁ",
+      "value": 65.7867
+    },
+    {
+      "territoryCode": "54003",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "ÁBREGO",
+      "value": 52.8564
+    },
+    {
+      "territoryCode": "52560",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "POTOSÍ",
+      "value": 59.5781
+    },
+    {
+      "territoryCode": "44420",
+      "territoryLevel": "municipality",
+      "department": "LA GUAJIRA",
+      "name": "LA JAGUA DEL PILAR",
+      "value": 57.8525
+    },
+    {
+      "territoryCode": "15218",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "COVARACHÍA",
+      "value": 47.718
+    },
+    {
+      "territoryCode": "73347",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "HERVEO",
+      "value": 41.0806
+    },
+    {
+      "territoryCode": "05031",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "AMALFI",
+      "value": 47.8021
+    },
+    {
+      "territoryCode": "73563",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "PRADO",
+      "value": 52.4508
+    },
+    {
+      "territoryCode": "15425",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MACANAL",
+      "value": 63.4459
+    },
+    {
+      "territoryCode": "41518",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "PAICOL",
+      "value": 58.0866
+    },
+    {
+      "territoryCode": "41026",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "ALTAMIRA",
+      "value": 48.4645
+    },
+    {
+      "territoryCode": "15212",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "COPER",
+      "value": 47.1776
+    },
+    {
+      "territoryCode": "13006",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ACHÍ",
+      "value": 44.3309
+    },
+    {
+      "territoryCode": "41799",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "TELLO",
+      "value": 48.2607
+    },
+    {
+      "territoryCode": "19517",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PÁEZ",
+      "value": 54.9535
+    },
+    {
+      "territoryCode": "47720",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SANTA BÁRBARA DE PINTO",
+      "value": 50.5565
+    },
+    {
+      "territoryCode": "47545",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "PIJIÑO DEL CARMEN",
+      "value": 57.5455
+    },
+    {
+      "territoryCode": "25148",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CAPARRAPÍ",
+      "value": 60.4095
+    },
+    {
+      "territoryCode": "20383",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "LA GLORIA",
+      "value": 60.6589
+    },
+    {
+      "territoryCode": "41668",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "SAN AGUSTÍN",
+      "value": 59.2944
+    },
+    {
+      "territoryCode": "15673",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN MATEO",
+      "value": 61.3519
+    },
+    {
+      "territoryCode": "13549",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "PINILLOS",
+      "value": 32.3334
+    },
+    {
+      "territoryCode": "15172",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHINAVITA",
+      "value": 45.339
+    },
+    {
+      "territoryCode": "54109",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "BUCARASICA",
+      "value": 48.9227
+    },
+    {
+      "territoryCode": "73043",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ANZOÁTEGUI",
+      "value": 49.4108
+    },
+    {
+      "territoryCode": "54743",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SILOS",
+      "value": 61.6926
+    },
+    {
+      "territoryCode": "54125",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CÁCOTA",
+      "value": 46.4497
+    },
+    {
+      "territoryCode": "54344",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "HACARÍ",
+      "value": 54.4434
+    },
+    {
+      "territoryCode": "68160",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CEPITÁ",
+      "value": 42.9295
+    },
+    {
+      "territoryCode": "05107",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "BRICEÑO",
+      "value": 55.4313
+    },
+    {
+      "territoryCode": "68245",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "EL GUACAMAYO",
+      "value": 59.9055
+    },
+    {
+      "territoryCode": "25518",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PAIME",
+      "value": 47.2089
+    },
+    {
+      "territoryCode": "85162",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "MONTERREY",
+      "value": 58.2742
+    },
+    {
+      "territoryCode": "52573",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "PUERRES",
+      "value": 46.7466
+    },
+    {
+      "territoryCode": "54223",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CUCUTILLA",
+      "value": 61.0976
+    },
+    {
+      "territoryCode": "68464",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "MOGOTES",
+      "value": 58.1077
+    },
+    {
+      "territoryCode": "52385",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LA LLANADA",
+      "value": 44.5109
+    },
+    {
+      "territoryCode": "68468",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "MOLAGAVITA",
+      "value": 42.9057
+    },
+    {
+      "territoryCode": "41660",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "SALADOBLANCO",
+      "value": 50.5002
+    },
+    {
+      "territoryCode": "73686",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "SANTA ISABEL",
+      "value": 52.0322
+    },
+    {
+      "territoryCode": "54385",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "LA ESPERANZA",
+      "value": 48.2796
+    },
+    {
+      "territoryCode": "54680",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SANTIAGO",
+      "value": 45.22
+    },
+    {
+      "territoryCode": "73483",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "NATAGAIMA",
+      "value": 53.216
+    },
+    {
+      "territoryCode": "54051",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "ARBOLEDAS",
+      "value": 52.5136
+    },
+    {
+      "territoryCode": "25580",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PULÍ",
+      "value": 54.1069
+    },
+    {
+      "territoryCode": "52520",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "FRANCISCO PIZARRO",
+      "value": 54.5351
+    },
+    {
+      "territoryCode": "19585",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PURACÉ",
+      "value": 49.0866
+    },
+    {
+      "territoryCode": "05585",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PUERTO NARE",
+      "value": 54.0642
+    },
+    {
+      "territoryCode": "54660",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SALAZAR",
+      "value": 42.7979
+    },
+    {
+      "territoryCode": "68318",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GUACA",
+      "value": 48.7052
+    },
+    {
+      "territoryCode": "23807",
+      "territoryLevel": "municipality",
+      "department": "CÓRDOBA",
+      "name": "TIERRALTA",
+      "value": 62.234
+    },
+    {
+      "territoryCode": "13490",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "NOROSÍ",
+      "value": 60.955
+    },
+    {
+      "territoryCode": "73226",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "CUNDAY",
+      "value": 43.0008
+    },
+    {
+      "territoryCode": "05652",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "SAN FRANCISCO",
+      "value": 52.051
+    },
+    {
+      "territoryCode": "15236",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHIVOR",
+      "value": 60.0379
+    },
+    {
+      "territoryCode": "19693",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SAN SEBASTIÁN",
+      "value": 48.5276
+    },
+    {
+      "territoryCode": "05895",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ZARAGOZA",
+      "value": 58.1435
+    },
+    {
+      "territoryCode": "54206",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CONVENCIÓN",
+      "value": 50.6404
+    },
+    {
+      "territoryCode": "19256",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "EL TAMBO",
+      "value": 52.4616
+    },
+    {
+      "territoryCode": "05142",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CARACOLÍ",
+      "value": 36.5013
+    },
+    {
+      "territoryCode": "50287",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "FUENTE DE ORO",
+      "value": 59.9681
+    },
+    {
+      "territoryCode": "70771",
+      "territoryLevel": "municipality",
+      "department": "SUCRE",
+      "name": "SUCRE",
+      "value": 45.9209
+    },
+    {
+      "territoryCode": "13268",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "EL PEÑÓN",
+      "value": 52.9863
+    },
+    {
+      "territoryCode": "20045",
+      "territoryLevel": "municipality",
+      "department": "CESAR",
+      "name": "BECERRIL",
+      "value": 73.2961
+    },
+    {
+      "territoryCode": "05885",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "YALÍ",
+      "value": 51.8499
+    },
+    {
+      "territoryCode": "73067",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ATACO",
+      "value": 47.9693
+    },
+    {
+      "territoryCode": "27495",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "NUQUÍ",
+      "value": 56.6305
+    },
+    {
+      "territoryCode": "13810",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "TIQUISIO",
+      "value": 36.0227
+    },
+    {
+      "territoryCode": "52256",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "EL ROSARIO",
+      "value": 63.0825
+    },
+    {
+      "territoryCode": "17867",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "VICTORIA",
+      "value": 56.7489
+    },
+    {
+      "territoryCode": "25653",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "SAN CAYETANO",
+      "value": 51.4324
+    },
+    {
+      "territoryCode": "86760",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "SANTIAGO",
+      "value": 72.3097
+    },
+    {
+      "territoryCode": "54128",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CÁCHIRA",
+      "value": 49.5313
+    },
+    {
+      "territoryCode": "86568",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "PUERTO ASÍS",
+      "value": 49.0741
+    },
+    {
+      "territoryCode": "25372",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "JUNÍN",
+      "value": 52.702
+    },
+    {
+      "territoryCode": "15723",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SATIVASUR",
+      "value": 59.8564
+    },
+    {
+      "territoryCode": "68385",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "LANDÁZURI",
+      "value": 54.5565
+    },
+    {
+      "territoryCode": "05284",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "FRONTINO",
+      "value": 44.1061
+    },
+    {
+      "territoryCode": "15897",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "ZETAQUIRA",
+      "value": 67.5285
+    },
+    {
+      "territoryCode": "68425",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "MACARAVITA",
+      "value": 59.6432
+    },
+    {
+      "territoryCode": "54720",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "SARDINATA",
+      "value": 64.1161
+    },
+    {
+      "territoryCode": "54810",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "TIBÚ",
+      "value": 65.1706
+    },
+    {
+      "territoryCode": "68397",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "LA PAZ",
+      "value": 48.4792
+    },
+    {
+      "territoryCode": "27006",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "ACANDÍ",
+      "value": 56.6948
+    },
+    {
+      "territoryCode": "54800",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "TEORAMA",
+      "value": 52.1525
+    },
+    {
+      "territoryCode": "15092",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "BETÉITIVA",
+      "value": 48.2804
+    },
+    {
+      "territoryCode": "41801",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "TERUEL",
+      "value": 51.1819
+    },
+    {
+      "territoryCode": "68377",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "LA BELLEZA",
+      "value": 57.9767
+    },
+    {
+      "territoryCode": "52540",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "POLICARPA",
+      "value": 58.3195
+    },
+    {
+      "territoryCode": "68176",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CHIMA",
+      "value": 53.2631
+    },
+    {
+      "territoryCode": "52699",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SANTACRUZ",
+      "value": 45.0911
+    },
+    {
+      "territoryCode": "05120",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "CÁCERES",
+      "value": 44.6334
+    },
+    {
+      "territoryCode": "52287",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "FUNES",
+      "value": 48.9502
+    },
+    {
+      "territoryCode": "15403",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "LA UVITA",
+      "value": 50.4271
+    },
+    {
+      "territoryCode": "13655",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN JACINTO DEL CAUCA",
+      "value": 54.8224
+    },
+    {
+      "territoryCode": "50110",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "BARRANCA DE UPÍA",
+      "value": 62.3113
+    },
+    {
+      "territoryCode": "68207",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CONCEPCIÓN",
+      "value": 59.4271
+    },
+    {
+      "territoryCode": "52490",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "OLAYA HERRERA",
+      "value": 62.9247
+    },
+    {
+      "territoryCode": "52612",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "RICAURTE",
+      "value": 59.3133
+    },
+    {
+      "territoryCode": "05543",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "PEQUE",
+      "value": 60.6299
+    },
+    {
+      "territoryCode": "15507",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "OTANCHE",
+      "value": 68.2731
+    },
+    {
+      "territoryCode": "27580",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "RÍO IRÓ",
+      "value": 66.1395
+    },
+    {
+      "territoryCode": "15839",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "TUTAZÁ",
+      "value": 45.8179
+    },
+    {
+      "territoryCode": "86885",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "VILLAGARZÓN",
+      "value": 53.2946
+    },
+    {
+      "territoryCode": "68092",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BETULIA",
+      "value": 71.6283
+    },
+    {
+      "territoryCode": "68162",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CERRITO",
+      "value": 52.9762
+    },
+    {
+      "territoryCode": "05480",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MUTATÁ",
+      "value": 57.9462
+    },
+    {
+      "territoryCode": "25839",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "UBALÁ",
+      "value": 63.1202
+    },
+    {
+      "territoryCode": "27361",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "ISTMINA",
+      "value": 59.7805
+    },
+    {
+      "territoryCode": "41872",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "VILLAVIEJA",
+      "value": 51.2707
+    },
+    {
+      "territoryCode": "52079",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "BARBACOAS",
+      "value": 61.5709
+    },
+    {
+      "territoryCode": "27135",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "EL CANTÓN DEL SAN PABLO",
+      "value": 64.528
+    },
+    {
+      "territoryCode": "68682",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SAN JOAQUÍN",
+      "value": 49.7242
+    },
+    {
+      "territoryCode": "15047",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "AQUITANIA",
+      "value": 55.2154
+    },
+    {
+      "territoryCode": "68152",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CARCASÍ",
+      "value": 44.6215
+    },
+    {
+      "territoryCode": "27450",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "MEDIO SAN JUAN",
+      "value": 58.8414
+    },
+    {
+      "territoryCode": "81300",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "FORTUL",
+      "value": 63.0755
+    },
+    {
+      "territoryCode": "47660",
+      "territoryLevel": "municipality",
+      "department": "MAGDALENA",
+      "name": "SABANAS DE SAN ÁNGEL",
+      "value": 63.1576
+    },
+    {
+      "territoryCode": "05234",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "DABEIBA",
+      "value": 48.3467
+    },
+    {
+      "territoryCode": "27050",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "ATRATO",
+      "value": 52.0736
+    },
+    {
+      "territoryCode": "86320",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "ORITO",
+      "value": 57.6688
+    },
+    {
+      "territoryCode": "15774",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SUSACÓN",
+      "value": 45.0641
+    },
+    {
+      "territoryCode": "68773",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SUCRE",
+      "value": 58.5864
+    },
+    {
+      "territoryCode": "50680",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "SAN CARLOS DE GUAROA",
+      "value": 51.0683
+    },
+    {
+      "territoryCode": "52435",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "MALLAMA",
+      "value": 48.978
+    },
+    {
+      "territoryCode": "68344",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "HATO",
+      "value": 52.5009
+    },
+    {
+      "territoryCode": "25086",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "BELTRÁN",
+      "value": 64.0996
+    },
+    {
+      "territoryCode": "13042",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "ARENAL",
+      "value": 64.7464
+    },
+    {
+      "territoryCode": "68296",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GALÁN",
+      "value": 61.9222
+    },
+    {
+      "territoryCode": "25368",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "JERUSALÉN",
+      "value": 54.6122
+    },
+    {
+      "territoryCode": "86569",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "PUERTO CAICEDO",
+      "value": 58.1026
+    },
+    {
+      "territoryCode": "05604",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "REMEDIOS",
+      "value": 68.1031
+    },
+    {
+      "territoryCode": "15244",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "EL COCUY",
+      "value": 50.4326
+    },
+    {
+      "territoryCode": "81065",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "ARAUQUITA",
+      "value": 68.263
+    },
+    {
+      "territoryCode": "73236",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "DOLORES",
+      "value": 49.0141
+    },
+    {
+      "territoryCode": "13473",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MORALES",
+      "value": 52.1925
+    },
+    {
+      "territoryCode": "18205",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "CURILLO",
+      "value": 56.4988
+    },
+    {
+      "territoryCode": "13670",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SAN PABLO",
+      "value": 54.7839
+    },
+    {
+      "territoryCode": "15660",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN EDUARDO",
+      "value": 61.3867
+    },
+    {
+      "territoryCode": "18247",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "EL DONCELLO",
+      "value": 50.3684
+    },
+    {
+      "territoryCode": "73555",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "PLANADAS",
+      "value": 55.1821
+    },
+    {
+      "territoryCode": "25120",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "CABRERA",
+      "value": 47.7629
+    },
+    {
+      "territoryCode": "27160",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "CÉRTEGUI",
+      "value": 56.1034
+    },
+    {
+      "territoryCode": "68705",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SANTA BÁRBARA",
+      "value": 48.7782
+    },
+    {
+      "territoryCode": "25885",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "YACOPÍ",
+      "value": 53.2692
+    },
+    {
+      "territoryCode": "50251",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "EL CASTILLO",
+      "value": 53.8302
+    },
+    {
+      "territoryCode": "05040",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ANORÍ",
+      "value": 49.569
+    },
+    {
+      "territoryCode": "05847",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "URRAO",
+      "value": 41.7909
+    },
+    {
+      "territoryCode": "15720",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SATIVANORTE",
+      "value": 51.1394
+    },
+    {
+      "territoryCode": "05893",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "YONDÓ",
+      "value": 64.4821
+    },
+    {
+      "territoryCode": "85263",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "PORE",
+      "value": 65.3469
+    },
+    {
+      "territoryCode": "68250",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "EL PEÑÓN",
+      "value": 57.2009
+    },
+    {
+      "territoryCode": "27245",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "EL CARMEN DE ATRATO",
+      "value": 64.5324
+    },
+    {
+      "territoryCode": "73873",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "VILLARRICA",
+      "value": 38.4931
+    },
+    {
+      "territoryCode": "27073",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "BAGADÓ",
+      "value": 52.2764
+    },
+    {
+      "territoryCode": "68780",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SURATÁ",
+      "value": 47.8835
+    },
+    {
+      "territoryCode": "27800",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "UNGUÍA",
+      "value": 44.675
+    },
+    {
+      "territoryCode": "86755",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "SAN FRANCISCO",
+      "value": 53.5952
+    },
+    {
+      "territoryCode": "15464",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "MONGUA",
+      "value": 57.9147
+    },
+    {
+      "territoryCode": "68745",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SIMACOTA",
+      "value": 59.4312
+    },
+    {
+      "territoryCode": "52473",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "MOSQUERA",
+      "value": 52.1319
+    },
+    {
+      "territoryCode": "13600",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "RÍO VIEJO",
+      "value": 41.8635
+    },
+    {
+      "territoryCode": "68190",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "CIMITARRA",
+      "value": 75.5002
+    },
+    {
+      "territoryCode": "50400",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "LEJANÍAS",
+      "value": 56.3846
+    },
+    {
+      "territoryCode": "54871",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "VILLA CARO",
+      "value": 55.683
+    },
+    {
+      "territoryCode": "27025",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "ALTO BAUDÓ",
+      "value": 50.7512
+    },
+    {
+      "territoryCode": "13744",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SIMITÍ",
+      "value": 63.8578
+    },
+    {
+      "territoryCode": "52390",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LA TOLA",
+      "value": 57.5494
+    },
+    {
+      "territoryCode": "18256",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "EL PAUJÍL",
+      "value": 55.5324
+    },
+    {
+      "territoryCode": "13688",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "SANTA ROSA DEL SUR",
+      "value": 62.5288
+    },
+    {
+      "territoryCode": "15621",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "RONDÓN",
+      "value": 55.1622
+    },
+    {
+      "territoryCode": "52233",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "CUMBITARA",
+      "value": 68.7578
+    },
+    {
+      "territoryCode": "68101",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "BOLÍVAR",
+      "value": 52.0156
+    },
+    {
+      "territoryCode": "68573",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "PUERTO PARRA",
+      "value": 66.5612
+    },
+    {
+      "territoryCode": "54820",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "TOLEDO",
+      "value": 60.1783
+    },
+    {
+      "territoryCode": "73461",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "MURILLO",
+      "value": 57.3723
+    },
+    {
+      "territoryCode": "25293",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GACHALÁ",
+      "value": 53.2866
+    },
+    {
+      "territoryCode": "15667",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SAN LUIS DE GACENO",
+      "value": 57.5511
+    },
+    {
+      "territoryCode": "25530",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "PARATEBUENO",
+      "value": 61.9796
+    },
+    {
+      "territoryCode": "54174",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "CHITAGÁ",
+      "value": 59.4019
+    },
+    {
+      "territoryCode": "41078",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "BARAYA",
+      "value": 54.7437
+    },
+    {
+      "territoryCode": "27413",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "LLORÓ",
+      "value": 32.7546
+    },
+    {
+      "territoryCode": "15690",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SANTA MARÍA",
+      "value": 58.4593
+    },
+    {
+      "territoryCode": "81001",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "ARAUCA",
+      "value": 53.5682
+    },
+    {
+      "territoryCode": "05004",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ABRIAQUÍ",
+      "value": 55.8174
+    },
+    {
+      "territoryCode": "27600",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "RÍO QUITO",
+      "value": 51.7509
+    },
+    {
+      "territoryCode": "15755",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "SOCOTÁ",
+      "value": 61.9914
+    },
+    {
+      "territoryCode": "73616",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "RIOBLANCO",
+      "value": 59.146
+    },
+    {
+      "territoryCode": "27075",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "BAHÍA SOLANO",
+      "value": 54.4121
+    },
+    {
+      "territoryCode": "85410",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "TAURAMENA",
+      "value": 62.2454
+    },
+    {
+      "territoryCode": "15183",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHITA",
+      "value": 62.2745
+    },
+    {
+      "territoryCode": "27430",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "MEDIO BAUDÓ",
+      "value": 49.5925
+    },
+    {
+      "territoryCode": "73024",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "ALPUJARRA",
+      "value": 49.8629
+    },
+    {
+      "territoryCode": "52427",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "MAGÜÍ",
+      "value": 56.1254
+    },
+    {
+      "territoryCode": "13160",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "CANTAGALLO",
+      "value": 63.9964
+    },
+    {
+      "territoryCode": "05361",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "ITUANGO",
+      "value": 57.1167
+    },
+    {
+      "territoryCode": "85300",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "SABANALARGA",
+      "value": 61.5369
+    },
+    {
+      "territoryCode": "18785",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "SOLITA",
+      "value": 59.3799
+    },
+    {
+      "territoryCode": "15135",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CAMPOHERMOSO",
+      "value": 68.5742
+    },
+    {
+      "territoryCode": "68217",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "COROMORO",
+      "value": 56.9707
+    },
+    {
+      "territoryCode": "25339",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "GUTIÉRREZ",
+      "value": 66.2995
+    },
+    {
+      "territoryCode": "27491",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "NÓVITA",
+      "value": 61.9842
+    },
+    {
+      "territoryCode": "18029",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "ALBANIA",
+      "value": 53.8389
+    },
+    {
+      "territoryCode": "15514",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PÁEZ",
+      "value": 65.318
+    },
+    {
+      "territoryCode": "19809",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "TIMBIQUÍ",
+      "value": 54.4783
+    },
+    {
+      "territoryCode": "68720",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "SANTA HELENA DEL OPÓN",
+      "value": 47.5441
+    },
+    {
+      "territoryCode": "68502",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ONZAGA",
+      "value": 49.0978
+    },
+    {
+      "territoryCode": "52418",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "LOS ANDES",
+      "value": 68.802
+    },
+    {
+      "territoryCode": "18610",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "SAN JOSÉ DEL FRAGUA",
+      "value": 58.5722
+    },
+    {
+      "territoryCode": "54245",
+      "territoryLevel": "municipality",
+      "department": "NORTE DE SANTANDER",
+      "name": "EL CARMEN",
+      "value": 57.7712
+    },
+    {
+      "territoryCode": "18094",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "BELÉN DE LOS ANDAQUÍES",
+      "value": 57.3291
+    },
+    {
+      "territoryCode": "19318",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "GUAPI",
+      "value": 48.0569
+    },
+    {
+      "territoryCode": "27077",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "BAJO BAUDÓ",
+      "value": 58.8598
+    },
+    {
+      "territoryCode": "85279",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "RECETOR",
+      "value": 54.4131
+    },
+    {
+      "territoryCode": "52696",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "SANTA BÁRBARA",
+      "value": 59.9382
+    },
+    {
+      "territoryCode": "25438",
+      "territoryLevel": "municipality",
+      "department": "CUNDINAMARCA",
+      "name": "MEDINA",
+      "value": 51.6402
+    },
+    {
+      "territoryCode": "18410",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "LA MONTAÑITA",
+      "value": 57.3636
+    },
+    {
+      "territoryCode": "81794",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "TAME",
+      "value": 63.99
+    },
+    {
+      "territoryCode": "50683",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "SAN JUAN DE ARAMA",
+      "value": 50.2282
+    },
+    {
+      "territoryCode": "15223",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CUBARÁ",
+      "value": 64.3992
+    },
+    {
+      "territoryCode": "15518",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PAJARITO",
+      "value": 58.4254
+    },
+    {
+      "territoryCode": "85225",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "NUNCHÍA",
+      "value": 56.6708
+    },
+    {
+      "territoryCode": "68298",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "GÁMBITA",
+      "value": 44.102
+    },
+    {
+      "territoryCode": "17446",
+      "territoryLevel": "municipality",
+      "department": "CALDAS",
+      "name": "MARULANDA",
+      "value": 52.959
+    },
+    {
+      "territoryCode": "73622",
+      "territoryLevel": "municipality",
+      "department": "TOLIMA",
+      "name": "RONCESVALLES",
+      "value": 57.9947
+    },
+    {
+      "territoryCode": "18479",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "MORELIA",
+      "value": 51.6958
+    },
+    {
+      "territoryCode": "27615",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "RIOSUCIO",
+      "value": 56.5563
+    },
+    {
+      "territoryCode": "27425",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "MEDIO ATRATO",
+      "value": 49.0372
+    },
+    {
+      "territoryCode": "19533",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "PIAMONTE",
+      "value": 61.4945
+    },
+    {
+      "territoryCode": "85015",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "CHÁMEZA",
+      "value": 39.6617
+    },
+    {
+      "territoryCode": "13458",
+      "territoryLevel": "municipality",
+      "department": "BOLÍVAR",
+      "name": "MONTECRISTO",
+      "value": 49.2102
+    },
+    {
+      "territoryCode": "68264",
+      "territoryLevel": "municipality",
+      "department": "SANTANDER",
+      "name": "ENCINO",
+      "value": 57.9638
+    },
+    {
+      "territoryCode": "86571",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "PUERTO GUZMÁN",
+      "value": 59.5505
+    },
+    {
+      "territoryCode": "50223",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "CUBARRAL",
+      "value": 54.3738
+    },
+    {
+      "territoryCode": "50124",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "CABUYARO",
+      "value": 64.3554
+    },
+    {
+      "territoryCode": "50245",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "EL CALVARIO",
+      "value": 49.9124
+    },
+    {
+      "territoryCode": "52250",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "EL CHARCO",
+      "value": 51.7692
+    },
+    {
+      "territoryCode": "52621",
+      "territoryLevel": "municipality",
+      "department": "NARIÑO",
+      "name": "ROBERTO PAYÁN",
+      "value": 53.9421
+    },
+    {
+      "territoryCode": "27150",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "CARMEN DEL DARIÉN",
+      "value": 59.9226
+    },
+    {
+      "territoryCode": "18460",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "MILÁN",
+      "value": 54.1325
+    },
+    {
+      "territoryCode": "85315",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "SÁCAMA",
+      "value": 62.2226
+    },
+    {
+      "territoryCode": "15377",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "LABRANZAGRANDE",
+      "value": 59.9849
+    },
+    {
+      "territoryCode": "50686",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "SAN JUANITO",
+      "value": 46.8484
+    },
+    {
+      "territoryCode": "85136",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "LA SALINA",
+      "value": 68.754
+    },
+    {
+      "territoryCode": "50450",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "PUERTO CONCORDIA",
+      "value": 55.1351
+    },
+    {
+      "territoryCode": "15180",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "CHISCAS",
+      "value": 45.3902
+    },
+    {
+      "territoryCode": "05873",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "VIGÍA DEL FUERTE",
+      "value": 46.5503
+    },
+    {
+      "territoryCode": "50689",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "SAN MARTÍN",
+      "value": 53.3336
+    },
+    {
+      "territoryCode": "27372",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "JURADÓ",
+      "value": 57.1792
+    },
+    {
+      "territoryCode": "27250",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "EL LITORAL DEL SAN JUAN",
+      "value": 67.242
+    },
+    {
+      "territoryCode": "85400",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "TÁMARA",
+      "value": 49.5813
+    },
+    {
+      "territoryCode": "18592",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "PUERTO RICO",
+      "value": 59.9104
+    },
+    {
+      "territoryCode": "15533",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PAYA",
+      "value": 58.2355
+    },
+    {
+      "territoryCode": "50573",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "PUERTO LÓPEZ",
+      "value": 57.5596
+    },
+    {
+      "territoryCode": "50330",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "MESETAS",
+      "value": 60.3412
+    },
+    {
+      "territoryCode": "41206",
+      "territoryLevel": "municipality",
+      "department": "HUILA",
+      "name": "COLOMBIA",
+      "value": 47.2836
+    },
+    {
+      "territoryCode": "18860",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "VALPARAÍSO",
+      "value": 57.5431
+    },
+    {
+      "territoryCode": "85139",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "MANÍ",
+      "value": 52.5076
+    },
+    {
+      "territoryCode": "27660",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "SAN JOSÉ DEL PALMAR",
+      "value": 58.5394
+    },
+    {
+      "territoryCode": "50577",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "PUERTO LLERAS",
+      "value": 64.742
+    },
+    {
+      "territoryCode": "15332",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "GÜICÁN DE LA SIERRA",
+      "value": 50.8269
+    },
+    {
+      "territoryCode": "05475",
+      "territoryLevel": "municipality",
+      "department": "ANTIOQUIA",
+      "name": "MURINDÓ",
+      "value": 44.2733
+    },
+    {
+      "territoryCode": "19418",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "LÓPEZ DE MICAY",
+      "value": 50.9476
+    },
+    {
+      "territoryCode": "85430",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "TRINIDAD",
+      "value": 59.3735
+    },
+    {
+      "territoryCode": "50711",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "VISTAHERMOSA",
+      "value": 56.6841
+    },
+    {
+      "territoryCode": "27099",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "BOJAYÁ",
+      "value": 62.7413
+    },
+    {
+      "territoryCode": "15550",
+      "territoryLevel": "municipality",
+      "department": "BOYACÁ",
+      "name": "PISBA",
+      "value": 58.0852
+    },
+    {
+      "territoryCode": "50590",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "PUERTO RICO",
+      "value": 41.4898
+    },
+    {
+      "territoryCode": "85250",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "PAZ DE ARIPORO",
+      "value": 65.9537
+    },
+    {
+      "territoryCode": "95001",
+      "territoryLevel": "municipality",
+      "department": "GUAVIARE",
+      "name": "SAN JOSÉ DEL GUAVIARE",
+      "value": 62.8124
+    },
+    {
+      "territoryCode": "18753",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "SAN VICENTE DEL CAGUÁN",
+      "value": 59.8396
+    },
+    {
+      "territoryCode": "27745",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "SIPÍ",
+      "value": 74.1803
+    },
+    {
+      "territoryCode": "85325",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "SAN LUIS DE PALENQUE",
+      "value": 61.46
+    },
+    {
+      "territoryCode": "50568",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "PUERTO GAITÁN",
+      "value": 58.6466
+    },
+    {
+      "territoryCode": "85125",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "HATO COROZAL",
+      "value": 50.2631
+    },
+    {
+      "territoryCode": "85230",
+      "territoryLevel": "municipality",
+      "department": "CASANARE",
+      "name": "OROCUÉ",
+      "value": 63.7744
+    },
+    {
+      "territoryCode": "86573",
+      "territoryLevel": "municipality",
+      "department": "PUTUMAYO",
+      "name": "PUERTO LEGUÍZAMO",
+      "value": 40.952
+    },
+    {
+      "territoryCode": "18150",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "CARTAGENA DEL CHAIRÁ",
+      "value": 60.7111
+    },
+    {
+      "territoryCode": "50350",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "LA MACARENA",
+      "value": 57.9345
+    },
+    {
+      "territoryCode": "81591",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "PUERTO RONDÓN",
+      "value": 47.9375
+    },
+    {
+      "territoryCode": "50370",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "URIBE",
+      "value": 52.5491
+    },
+    {
+      "territoryCode": "19701",
+      "territoryLevel": "municipality",
+      "department": "CAUCA",
+      "name": "SANTA ROSA",
+      "value": 53.667
+    },
+    {
+      "territoryCode": "97001",
+      "territoryLevel": "municipality",
+      "department": "VAUPÉS",
+      "name": "MITÚ",
+      "value": 48.8889
+    },
+    {
+      "territoryCode": "95025",
+      "territoryLevel": "municipality",
+      "department": "GUAVIARE",
+      "name": "EL RETORNO",
+      "value": 47.7611
+    },
+    {
+      "territoryCode": "99001",
+      "territoryLevel": "municipality",
+      "department": "VICHADA",
+      "name": "PUERTO CARREÑO",
+      "value": 50.9653
+    },
+    {
+      "territoryCode": "99624",
+      "territoryLevel": "municipality",
+      "department": "VICHADA",
+      "name": "SANTA ROSALÍA",
+      "value": 41.8283
+    },
+    {
+      "territoryCode": "99773",
+      "territoryLevel": "municipality",
+      "department": "VICHADA",
+      "name": "CUMARIBO",
+      "value": 45.7899
+    },
+    {
+      "territoryCode": "95015",
+      "territoryLevel": "municipality",
+      "department": "GUAVIARE",
+      "name": "CALAMAR",
+      "value": 57.0378
+    },
+    {
+      "territoryCode": "81220",
+      "territoryLevel": "municipality",
+      "department": "ARAUCA",
+      "name": "CRAVO NORTE",
+      "value": 43.3325
+    },
+    {
+      "territoryCode": "94343",
+      "territoryLevel": "municipality",
+      "department": "GUAINÍA",
+      "name": "BARRANCOMINAS",
+      "value": 40.499
+    },
+    {
+      "territoryCode": "50325",
+      "territoryLevel": "municipality",
+      "department": "META",
+      "name": "MAPIRIPÁN",
+      "value": 49.9977
+    },
+    {
+      "territoryCode": "95200",
+      "territoryLevel": "municipality",
+      "department": "GUAVIARE",
+      "name": "MIRAFLORES",
+      "value": 40.9463
+    },
+    {
+      "territoryCode": "99524",
+      "territoryLevel": "municipality",
+      "department": "VICHADA",
+      "name": "LA PRIMAVERA",
+      "value": 46.2898
+    },
+    {
+      "territoryCode": "97161",
+      "territoryLevel": "municipality",
+      "department": "VAUPÉS",
+      "name": "CARURÚ",
+      "value": 43.958
+    },
+    {
+      "territoryCode": "97666",
+      "territoryLevel": "municipality",
+      "department": "VAUPÉS",
+      "name": "TARAIRA",
+      "value": 47.2907
+    },
+    {
+      "territoryCode": "18756",
+      "territoryLevel": "municipality",
+      "department": "CAQUETÁ",
+      "name": "SOLANO",
+      "value": 50.953
+    },
+    {
+      "territoryCode": "27493",
+      "territoryLevel": "municipality",
+      "department": "CHOCÓ",
+      "name": "NUEVO BELÉN DE BAJIRÁ",
+      "value": 54.0262
+    },
+    {
+      "territoryCode": "88564",
+      "territoryLevel": "municipality",
+      "department": "ARCHIPIÉLAGO DE SAN ANDRÉS. PROVIDENCIA Y SANTA CATALINA",
+      "name": "PROVIDENCIA",
+      "value": 55.2313
+    },
+    {
+      "territoryCode": "91001",
+      "territoryLevel": "municipality",
+      "department": "AMAZONAS",
+      "name": "LETICIA",
+      "value": 50.1963
+    },
+    {
+      "territoryCode": "91540",
+      "territoryLevel": "municipality",
+      "department": "AMAZONAS",
+      "name": "PUERTO NARIÑO",
+      "value": 37.7341
+    },
+    {
+      "territoryCode": "94001",
+      "territoryLevel": "municipality",
+      "department": "GUAINÍA",
+      "name": "INÍRIDA",
+      "value": 53.1877
+    },
+    {
+      "territoryCode": "05000",
+      "territoryLevel": "department",
+      "department": "Antioquia",
+      "name": "Antioquia",
+      "value": 51.7156
+    },
+    {
+      "territoryCode": "08000",
+      "territoryLevel": "department",
+      "department": "Atlántico",
+      "name": "Atlántico",
+      "value": 61.849
+    },
+    {
+      "territoryCode": "13000",
+      "territoryLevel": "department",
+      "department": "Bolívar",
+      "name": "Bolívar",
+      "value": 45.6398
+    },
+    {
+      "territoryCode": "15000",
+      "territoryLevel": "department",
+      "department": "Boyacá",
+      "name": "Boyacá",
+      "value": 50.8305
+    },
+    {
+      "territoryCode": "17000",
+      "territoryLevel": "department",
+      "department": "Caldas",
+      "name": "Caldas",
+      "value": 57.8879
+    },
+    {
+      "territoryCode": "18000",
+      "territoryLevel": "department",
+      "department": "Caquetá",
+      "name": "Caquetá",
+      "value": 47.3893
+    },
+    {
+      "territoryCode": "19000",
+      "territoryLevel": "department",
+      "department": "Cauca",
+      "name": "Cauca",
+      "value": 52.2424
+    },
+    {
+      "territoryCode": "20000",
+      "territoryLevel": "department",
+      "department": "Cesar",
+      "name": "Cesar",
+      "value": 68.7479
+    },
+    {
+      "territoryCode": "23000",
+      "territoryLevel": "department",
+      "department": "Córdoba",
+      "name": "Córdoba",
+      "value": 42.0714
+    },
+    {
+      "territoryCode": "25000",
+      "territoryLevel": "department",
+      "department": "Cundinamarca",
+      "name": "Cundinamarca",
+      "value": 50.2123
+    },
+    {
+      "territoryCode": "27000",
+      "territoryLevel": "department",
+      "department": "Chocó",
+      "name": "Chocó",
+      "value": 52.4472
+    },
+    {
+      "territoryCode": "41000",
+      "territoryLevel": "department",
+      "department": "Huila",
+      "name": "Huila",
+      "value": 60.7428
+    },
+    {
+      "territoryCode": "44000",
+      "territoryLevel": "department",
+      "department": "La Guajira",
+      "name": "La Guajira",
+      "value": 57.4199
+    },
+    {
+      "territoryCode": "47000",
+      "territoryLevel": "department",
+      "department": "Magdalena",
+      "name": "Magdalena",
+      "value": 50.4582
+    },
+    {
+      "territoryCode": "50000",
+      "territoryLevel": "department",
+      "department": "Meta",
+      "name": "Meta",
+      "value": 49.8662
+    },
+    {
+      "territoryCode": "52000",
+      "territoryLevel": "department",
+      "department": "Nariño",
+      "name": "Nariño",
+      "value": 48.9606
+    },
+    {
+      "territoryCode": "54000",
+      "territoryLevel": "department",
+      "department": "Norte de Santander",
+      "name": "Norte de Santander",
+      "value": 49.7488
+    },
+    {
+      "territoryCode": "63000",
+      "territoryLevel": "department",
+      "department": "Quindío",
+      "name": "Quindío",
+      "value": 51.2649
+    },
+    {
+      "territoryCode": "66000",
+      "territoryLevel": "department",
+      "department": "Risaralda",
+      "name": "Risaralda",
+      "value": 54.742
+    },
+    {
+      "territoryCode": "68000",
+      "territoryLevel": "department",
+      "department": "Santander",
+      "name": "Santander",
+      "value": 46.5487
+    },
+    {
+      "territoryCode": "70000",
+      "territoryLevel": "department",
+      "department": "Sucre",
+      "name": "Sucre",
+      "value": 60.5259
+    },
+    {
+      "territoryCode": "73000",
+      "territoryLevel": "department",
+      "department": "Tolima",
+      "name": "Tolima",
+      "value": 51.0184
+    },
+    {
+      "territoryCode": "76000",
+      "territoryLevel": "department",
+      "department": "Valle del Cauca",
+      "name": "Valle del Cauca",
+      "value": 51.3399
+    },
+    {
+      "territoryCode": "81000",
+      "territoryLevel": "department",
+      "department": "Arauca",
+      "name": "Arauca",
+      "value": 59.1891
+    },
+    {
+      "territoryCode": "85000",
+      "territoryLevel": "department",
+      "department": "Casanare",
+      "name": "Casanare",
+      "value": 70.9043
+    },
+    {
+      "territoryCode": "86000",
+      "territoryLevel": "department",
+      "department": "Putumayo",
+      "name": "Putumayo",
+      "value": 56.38
+    },
+    {
+      "territoryCode": "88000",
+      "territoryLevel": "department",
+      "department": "Archipiélago de San Andrés",
+      "name": "Archipiélago de San Andrés",
+      "value": 38.1271
+    },
+    {
+      "territoryCode": "91000",
+      "territoryLevel": "department",
+      "department": "Amazonas",
+      "name": "Amazonas",
+      "value": 47.4821
+    },
+    {
+      "territoryCode": "94000",
+      "territoryLevel": "department",
+      "department": "Guainía",
+      "name": "Guainía",
+      "value": 55.457
+    },
+    {
+      "territoryCode": "95000",
+      "territoryLevel": "department",
+      "department": "Guaviare",
+      "name": "Guaviare",
+      "value": 58.5664
+    },
+    {
+      "territoryCode": "97000",
+      "territoryLevel": "department",
+      "department": "Vaupés",
+      "name": "Vaupés",
+      "value": 52.7853
+    },
+    {
+      "territoryCode": "99000",
+      "territoryLevel": "department",
+      "department": "Vichada",
+      "name": "Vichada",
+      "value": 58.2237
+    }
+  ],
+  "limitations": [
+    "La vigencia del indicador se conserva separada de la fecha de descarga.",
+    "Las tipologías no reemplazan las categorías legales de la Ley 617 de 2000."
+  ]
 }

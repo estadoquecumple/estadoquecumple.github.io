@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "dnp-mdm",
+  "snapshotId": "dnp-mdm-6a75e689e5f25884",
+  "rawHash": "6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa",
+  "normalizedHash": "50839eddb2ab568dec9354bc8fb6277612f8d3259281718c65f1713b054a246a",
+  "createdAt": "2026-07-27T05:37:57Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "dnp_typologies_2026.xlsx",
+      "bytes": 1386512,
+      "sha256": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "municipal-performance.json",
+      "bytes": 210284,
+      "sha256": "0523bad9ec171a0a88e414ff10c51f4e8a5dc70088a8c1836f169d2304e90bc7"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T05:37:57Z",
+    "publishedStatus": "current",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

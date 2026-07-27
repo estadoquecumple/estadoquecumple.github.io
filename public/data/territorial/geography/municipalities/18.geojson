@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -211,18 +211,18 @@
         "name": "FLORENCIA",
         "originalCode": "001",
         "originalName": "FLORENCIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 2546.95197861,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 642 de Junio 17 de 1912",
         "areaName": 2546.95197861,
         "creationYear": 2024,
         "creationResolution": "Decreto 642 de Junio 17 de 1912",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 2546.95197861,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 642 de Junio 17 de 1912"
+        "year": 2025
       }
     },
     {
@@ -297,18 +297,18 @@
         "name": "ALBANIA",
         "originalCode": "029",
         "originalName": "ALBANIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 412.82768889,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 412.82768889,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 412.82768889,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -463,18 +463,18 @@
         "name": "BELÉN DE LOS ANDAQUÍES",
         "originalCode": "094",
         "originalName": "BELÉN DE LOS ANDAQUÍES",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1191.55218303,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 963 de Marzo 14 de 1950",
         "areaName": 1191.55218303,
         "creationYear": 2024,
         "creationResolution": "Decreto 963 de Marzo 14 de 1950",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1191.55218303,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 963 de Marzo 14 de 1950"
+        "year": 2025
       }
     },
     {
@@ -1189,18 +1189,18 @@
         "name": "CARTAGENA DEL CHAIRÁ",
         "originalCode": "150",
         "originalName": "CARTAGENA DEL CHAIRÁ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 12771.36017224,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 12771.36017224,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 12771.36017224,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -1331,18 +1331,18 @@
         "name": "CURILLO",
         "originalCode": "205",
         "originalName": "CURILLO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 399.27948781,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 399.27948781,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 399.27948781,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -1553,18 +1553,18 @@
         "name": "EL DONCELLO",
         "originalCode": "247",
         "originalName": "EL DONCELLO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1105.5148357,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1678 de Septiembre 7 de 1967",
         "areaName": 1105.5148357,
         "creationYear": 2024,
         "creationResolution": "Decreto 1678 de Septiembre 7 de 1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1105.5148357,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1678 de Septiembre 7 de 1967"
+        "year": 2025
       }
     },
     {
@@ -1747,18 +1747,18 @@
         "name": "EL PAUJÍL",
         "originalCode": "256",
         "originalName": "EL PAUJÍL",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1234.1406452,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1678 de Septiembret 7 de 1967",
         "areaName": 1234.1406452,
         "creationYear": 2024,
         "creationResolution": "Decreto 1678 de Septiembret 7 de 1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1234.1406452,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1678 de Septiembret 7 de 1967"
+        "year": 2025
       }
     },
     {
@@ -1925,18 +1925,18 @@
         "name": "LA MONTAÑITA",
         "originalCode": "410",
         "originalName": "LA MONTAÑITA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1700.25242613,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 83 de Julio 6 de 1955",
         "areaName": 1700.25242613,
         "creationYear": 2024,
         "creationResolution": "Decreto 83 de Julio 6 de 1955",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1700.25242613,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 83 de Julio 6 de 1955"
+        "year": 2025
       }
     },
     {
@@ -2043,18 +2043,18 @@
         "name": "MILÁN",
         "originalCode": "460",
         "originalName": "MILÁN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1220.11327787,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 1220.11327787,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1220.11327787,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -2169,18 +2169,18 @@
         "name": "MORELIA",
         "originalCode": "479",
         "originalName": "MORELIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 462.39187447,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 462.39187447,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 462.39187447,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -2531,18 +2531,18 @@
         "name": "PUERTO RICO",
         "originalCode": "592",
         "originalName": "PUERTO RICO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 4143.96121053,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1678 de Septiembretiembre 7 de 1967",
         "areaName": 4143.96121053,
         "creationYear": 2024,
         "creationResolution": "Decreto 1678 de Septiembretiembre 7 de 1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 4143.96121053,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1678 de Septiembretiembre 7 de 1967"
+        "year": 2025
       }
     },
     {
@@ -2693,18 +2693,18 @@
         "name": "SAN JOSÉ DEL FRAGUA",
         "originalCode": "610",
         "originalName": "SAN JOSÉ DEL FRAGUA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1310.24596747,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 1310.24596747,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1310.24596747,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -3359,18 +3359,18 @@
         "name": "SAN VICENTE DEL CAGUÁN",
         "originalCode": "753",
         "originalName": "SAN VICENTE DEL CAGUÁN",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 20170.12860757,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 963 de Marzo 14 de 1950",
         "areaName": 20170.12860757,
         "creationYear": 2024,
         "creationResolution": "Decreto 963 de Marzo 14 de 1950",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 20170.12860757,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 963 de Marzo 14 de 1950"
+        "year": 2025
       }
     },
     {
@@ -4909,18 +4909,18 @@
         "name": "SOLANO",
         "originalCode": "756",
         "originalName": "SOLANO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 42233.52504309,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 42233.52504309,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 42233.52504309,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     },
     {
@@ -5023,18 +5023,18 @@
         "name": "SOLITA",
         "originalCode": "785",
         "originalName": "SOLITA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 476.83003907,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "ORD 28 DE NOVIEMBRE 27 DE 1996",
         "areaName": 476.83003907,
         "creationYear": 2024,
         "creationResolution": "ORD 28 DE NOVIEMBRE 27 DE 1996",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 476.83003907,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "ORD 28 DE NOVIEMBRE 27 DE 1996"
+        "year": 2025
       }
     },
     {
@@ -5185,18 +5185,18 @@
         "name": "VALPARAÍSO",
         "originalCode": "860",
         "originalName": "VALPARAÍSO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1329.91700229,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985",
         "areaName": 1329.91700229,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 3 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 1329.91700229,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 3 de Noviembre 12 de 1985"
+        "year": 2025
       }
     }
   ]

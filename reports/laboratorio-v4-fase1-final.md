@@ -1,104 +1,119 @@
-# Laboratorio Territorial V4 — cierre de Fase 1
+# Informe final — Laboratorio Territorial V4, Fase 1
 
-Fecha de verificación: 2026-07-26 (America/Bogota)
+Fecha de ejecución: 2026-07-27  
+Rama de trabajo: `laboratorio-territorial-v4-datos`
 
-## Resultado
+## Alcance
 
-La Fase 1 queda implementada sobre una arquitectura local, gratuita, de código
-abierto y autoalojable. La aplicación no utiliza OpenAI API ni servicios con
-tarjeta, suscripción o pago por consumo. Los proveedores de LLM y embeddings
-permanecen configurados en `none`.
+Se ejecutó únicamente la Fase 1 estática. Se conservó la funcionalidad V3 y no
+se instalaron ni implementaron Docker, PostgreSQL/PostGIS, SeaweedFS, FastAPI,
+OR-Tools, MLflow, ONNX, modelos neuronales ni componentes de las fases 2 y 3.
 
-## Entorno y dependencias
+## Dependencias instaladas
 
-- Entorno conservado: `.venv`, Python 3.12.10.
-- Importaciones verificadas: DuckDB, PyArrow, H3, Great Expectations,
-  NetworkX, RapidFuzz y Pandera.
-- Pandera reemplaza a Great Expectations en el código y los requisitos de la
-  plataforma después de implementar y aprobar las validaciones equivalentes.
-- Great Expectations no fue desinstalado del entorno existente.
-- `requirements-platform-core.txt` coincide con
-  `requirements-platform-core-free.txt`.
-- No se instalaron Docker, PostGIS, SeaweedFS, Valhalla, OSRM,
-  OpenTripPlanner, Ollama, modelos locales, embeddings, MLflow ni ONNX. Sus
-  usos previstos permanecen documentados para fases posteriores.
+- Web: DuckDB-Wasm 1.29.0, Apache Arrow 21.2.0, H3 4.5.0, PMTiles 4.4.1,
+  Observable Plot 0.6.17 y módulos Turf 7.3.5.
+- Python 3.12.10: DuckDB 1.5.5, PyArrow 22.0.0, H3 4.5.0, Pandera 0.32.1,
+  NetworkX 3.6.1, RapidFuzz 3.14.5, pytest 8.4.2, ruff 0.16.0,
+  pandas 2.3.3, GeoPandas 1.1.4, Shapely 2.1.2 y Pydantic 2.13.4.
+- `npm install`, instalación de `requirements-data.txt` y
+  `requirements-platform-core.txt`, `npm ls --depth=0` y `pip check`: correctos.
 
-## Datos, catálogo y trazabilidad
+## Fuentes, cobertura y calidad
 
-- Catálogo validado con Pydantic, Pandera y JSON Schema; registra fuente
-  oficial, licencia, cobertura, granularidad, periodicidad, transformación,
-  limitaciones, estado, calidad y política de actualización.
-- Snapshots inmutables con originales preservados, productos normalizados,
-  SHA-256, manifiesto, resultados de calidad, puntero `current` e historial.
-- Una actualización defectuosa no promociona ni sustituye la última versión
-  válida.
-- DANE: 1.122 unidades territoriales con los campos oficiales `MPIO_TIPO`,
-  `MPIO_NAREA`, `MPIO_NANO` y `MPIO_CRSLCION`: 1.103 municipios, 18 áreas no
-  municipalizadas y 1 isla. Los puntos se calculan con geometría
-  representativa, no con promedio de vértices.
-- SGR: descarga completa de 35.006 filas; 33.252 BPIN únicos y 1.754
-  duplicados identificados. El snapshot vigente está marcado completo.
-- SECOP II: agregaciones oficiales por territorio contratante, entidad,
-  sector, modalidad, estado, proveedor y UNSPSC; 25.147 filas agregadas y
-  5.876.030 registros contabilizados en dimensiones completas. El resultado
-  se publica explícitamente como parcial por los topes de entidad/proveedor y
-  la indisponibilidad temporal de la dimensión anual.
-- DNP: adaptadores para descubrir descargas públicas oficiales en formatos
-  abiertos. Tipologías, IDF y MDM quedan en `manual-required` mientras no
-  exista un original oficial conservado; no se fabrican datos ni snapshots.
+| Fuente | Estado | Cobertura comprobada | Control principal |
+|---|---:|---:|---|
+| DANE DIVIPOLA/MGN 2025 | current | 33 departamentos; 1.122 unidades | 1.103 municipios, 18 áreas no municipalizadas y 1 isla; `MPIO_TIPO`, `MPIO_NAREA`, `MPIO_NANO` y `MPIO_CRSLCION` conservados |
+| SECOP II | current | 1.244.978 filas agregadas | 10 dimensiones; entidad y ejecución separadas; sin contratos crudos en navegador |
+| SGR | current | 35.006/35.006 filas | 33.252 BPIN únicos; 1.754 duplicados descartados; cobertura 1,0 |
+| DNP Tipologías | current | 1.103 municipios + 32 departamentos | vigencia 2026; XLSX oficial archivado |
+| DNP IDF | current | 1.103 municipios + 32 departamentos | vigencia real 2024 |
+| DNP MDM | current | 1.103 municipios + 32 departamentos | vigencia real 2024 |
+| DANE población | manual-required | sin original estable importado | no se inventaron ni promovieron registros |
 
-## Productos técnicos
+SECOP conserva conteos por año, territorio de la entidad, entidad, sector,
+modalidad, estado, proveedor, UNSPSC, ubicación de ejecución y modificación.
+Los totales contractuales por las dimensiones principales son 5.876.030; las
+ubicaciones de ejecución suman 6.137.726 registros y las modificaciones
+24.995.248 eventos. La procedencia territorial del proveedor no está
+estructurada en los conjuntos oficiales consultados y no se infiere.
 
-- Parquet de catálogo e indicadores.
-- GeoParquet de departamentos con CRS.
-- Índice H3/DIVIPOLA en Parquet y respaldo JSON para el navegador.
-- DuckDB-Wasm autocontenido y cargado de forma diferida, sin CDN, con tiempo
-  máximo, cancelación, límite de bytes y respaldo JSON.
-- Operaciones Turf reales para unión, diferencia, intersección, limpieza,
-  validación, solapamiento, contacto y separación de geometrías; las
-  operaciones grandes se derivan explícitamente al backend futuro.
-- Compilador de escenarios con validaciones territoriales, financieras,
-  jurídicas, de gobernanza y transición.
-- Cápsula reproducible con hashes de datos, commit base, reglas, supuestos,
-  restricciones, semilla, entradas, salidas, validaciones y proveedores.
-- Selector guiado/experto, catálogo público consultable, exportación e
-  importación de escenarios V4 y capa H3 marcada como analítica, no jurídica.
+## Snapshots promovidos
 
-## Huellas de los productos analíticos
+| Fuente | Snapshot | SHA-256 combinado del original |
+|---|---|---|
+| DANE | `dane-divipola-mgn-2025-fd80363ddd2c754a` | `5751e0404554be2d7928a37824a715d3087706a163e38da322fc0589b2a91832` |
+| SGR | `dnp-sgr-mzgh-shtp-cb36ce84588ac238` | `c8255f8852b8a229e71f34799d76b832b6bfc9c09fa3e63c3c8e87a64f32cecd` |
+| SECOP | `secop-ii-a602739aa1712d21` | `4e426631bc06549752225194d21a0543fd716e309ded169cc25b3a4d46b7fb51` |
+| Tipologías | `dnp-typologies-2026-33cad88b6d05269e` | `6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa` |
+| IDF | `dnp-idf-2024-4dd54028af0292f4` | `6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa` |
+| MDM | `dnp-mdm-6a75e689e5f25884` | `6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa` |
 
-| Producto | Bytes | SHA-256 |
+El original DNP común tiene SHA-256
+`20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e`.
+Cada manifiesto marca el snapshot como inmutable. Una actualización incompleta
+de SECOP, SGR o DNP escribe evidencia de fallo en caché y conserva la última
+versión publicada.
+
+## Productos analíticos
+
+| Archivo | Bytes | SHA-256 |
 |---|---:|---|
-| `catalog.parquet` | 18.029 | `d57a83b3f5de6a5d29bb23a8c942c375538a15e042033ed240b03401f9a17adf` |
-| `indicators.parquet` | 1.631.028 | `14e749b6ae2483065167e2905f718d14d7b9679cd27b2906f24ea49ad7c9d60e` |
+| `catalog.parquet` | 19.137 | `1f1035496ca2c8165628c4c4b9cc56d36ee69974525def8de5200b6b41c9f3a3` |
+| `indicators.parquet` | 1.559.917 | `b81b782cdaf0a99b6f45107cf38de9f6f9c943f4137ea945a23270f65bbb71da` |
+| `series.parquet` | 147.135 | `2b7400f9e2bc396f534ed8c28ccf8e9e979d7f1ceaac4bedef4110bf0813690a` |
+| `entities.parquet` | 18.037 | `c08b93db0005d3183e19ddbc8f944e9a9a8a81c053e9e4136b98390dcab06bbc` |
+| `sgr-aggregates.parquet` | 191.320 | `ce1bda82d1aeb42c885b57a30ea33fcba23909f50f5e450d7a2abae7470b3e77` |
+| `secop-aggregates.parquet` | 14.571.215 | `39c9b5ca49f9ba195f3f955f2c3bc8cc9dc008748d68ed542bdf3d34bc5bbd34` |
 | `departments.geoparquet` | 115.485 | `9296dbf9bc72f6021c62b15ce704c444ecd044a388b13ef065ab6c918c4d00cb` |
 | `h3-divipola.parquet` | 16.737 | `5a6e1d58e8bdab8695a509f4517e0054e3aaa7c02c0988fa0cb1267dd9e6571e` |
 
-La regla `scenario-compiler-v4` versión 4.0.0 tiene SHA-256
-`ae021ff81012a3f504dc7f5de4e73d11a85ac30d52289475c58af7dba93ae0a1`.
+DuckDB-Wasm se inicializa de forma diferida en Web Worker y conserva fallback
+JSON. El detalle SECOP de alta cardinalidad queda solo en Parquet. H3 es una
+capa analítica optativa y no una división legal. Turf realiza unión,
+diferencia, intersección, validez, limpieza, solape y contacto; las operaciones
+que superan el umbral se marcan como requeridas por backend.
 
-## Verificación
+## Compilador y reproducibilidad
 
-- 7 pruebas Python aprobadas.
-- Ruff aprobado.
-- Validación de catálogo, snapshots, hashes, Parquet, GeoParquet, CRS y H3
-  aprobada.
-- 48 pruebas Vitest aprobadas.
-- Astro Check aprobado sin errores ni advertencias.
-- Construcción de producción y auditorías de rutas, SEO, contratos de botones
-  y controles funcionales aprobadas.
-- 38 ejecuciones Playwright aprobadas en los proyectos configurados.
-- `npm run validate`: aprobado.
-- `npm run lab:e2e`: aprobado.
-- `git diff --check`: aprobado.
+La cápsula registra ejecución, commit, contrato, registro legal, datasets,
+hashes, reglas, modelos, supuestos, restricciones, semilla, entradas, salidas,
+validaciones y advertencias. El compilador bloquea incoherencias de jerarquía,
+geometría, cobertura, duplicados, competencias, financiación, autoridad,
+control, ruta jurídica y transición.
 
-## Limitaciones declaradas
+## Resultados exactos de pruebas
 
-- SECOP II no se presenta como descarga contractual exhaustiva en el cliente:
-  solo se publican agregados; entidad y proveedor están limitados y la
-  dimensión anual requiere una futura actualización cuando el servicio
-  oficial responda de forma estable.
-- Los productos DNP sin original descargable conservado no se promocionan.
-- H3 es una malla analítica y no sustituye límites oficiales.
-- El cálculo pesado, el ruteo avanzado, la infraestructura espacial, los
-  modelos locales y MLOps pertenecen a fases posteriores y no fueron
-  instalados en esta fase.
+- `npm run data:refresh`: adquisición oficial ejecutada; el primer intento
+  Socrata falló por timeout y no fue promovido; el reintento completo terminó
+  con SECOP `current`.
+- pytest: **10 passed**.
+- ruff: **All checks passed**.
+- validación de datos: **26 archivos obligatorios verificados**.
+- Vitest: **5 archivos, 50 pruebas aprobadas**.
+- Astro check: **127 archivos, 0 errores, 0 advertencias, 0 hints**.
+- Astro build: **31 páginas**.
+- auditoría de distribución: **32 HTML, 31 rutas obligatorias**.
+- SEO: **29 indexables, 2 noindex, 0 errores, 0 avisos**.
+- auditorías territorial, legal, botones y funcional: aprobadas.
+- Playwright: **44 ejecuciones aprobadas** en escritorio y móvil.
+- `git diff --check`: sin errores.
+
+## Rendimiento y limitaciones
+
+- `secop-aggregates.parquet` pesa 14.571.215 bytes y activa la advertencia
+  informativa de archivo analítico mayor de 8 MB. No se carga en portada; usa
+  DuckDB-Wasm diferido y fallback JSON de 5.362.273 bytes.
+- La actualización SECOP completa tardó 12 min 47 s sin token Socrata.
+- DANE población continúa `manual-required`; no se declara conectada.
+- Socrata puede agotar tiempo sin `SOCRATA_APP_TOKEN`; el token es opcional y
+  nunca se expone al bundle.
+- pytest termina correctamente, pero Windows emite al salir un
+  `PermissionError` no fatal al limpiar `pytest-current`.
+- El build conserva una advertencia informativa de chunk mayor de 500 kB; la
+  analítica pesada continúa en carga diferida.
+
+## Commits e integración
+
+Los hashes de commit y publicación se completan después de crear los commits
+locales y fusionar en `main`.

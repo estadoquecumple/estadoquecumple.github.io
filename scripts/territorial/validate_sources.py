@@ -6,7 +6,7 @@ from platform_v4 import load_catalog
 ALLOWED={"current","stale","partial","manual-required","unavailable"}
 def run():
     errors=[]; warnings=[]
-    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","government/entities-by-territory.json","official-sources.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","catalog/sources.json","catalog/snapshot-status.json","analytics/catalog.parquet","analytics/indicators.parquet","analytics/departments.geoparquet","analytics/h3-divipola.parquet","analytics/manifest.json","current/foundation-v4.json","manifest.json"]
+    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","government/entities-by-territory.json","official-sources.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","catalog/sources.json","catalog/snapshot-status.json","analytics/catalog.parquet","analytics/indicators.parquet","analytics/series.parquet","analytics/entities.parquet","analytics/secop-aggregates.parquet","analytics/sgr-aggregates.parquet","analytics/departments.geoparquet","analytics/h3-divipola.parquet","analytics/manifest.json","current/foundation-v4.json","manifest.json"]
     for rel in required:
         path=PUBLIC/rel
         if not path.exists(): errors.append(f"falta {rel}"); continue
@@ -30,6 +30,16 @@ def run():
         geo=gpd.read_parquet(PUBLIC/"analytics"/"departments.geoparquet")
         if geo.crs is None or geo.empty: errors.append("GeoParquet sin CRS o geometrías")
         h3_frame=pd.read_parquet(PUBLIC/"analytics"/"h3-divipola.parquet")
+        secop_frame=pd.read_parquet(PUBLIC/"analytics"/"secop-aggregates.parquet")
+        secop_doc=read_json(PUBLIC/"indicators"/"secop-aggregates.json")
+        if len(secop_frame)!=secop_doc.get("quality",{}).get("aggregatedRows"):
+            errors.append("SECOP Parquet no conserva todos los agregados")
+        if secop_doc.get("status")!="current":
+            errors.append("SECOP no tiene una versión completa publicable")
+        sgr_frame=pd.read_parquet(PUBLIC/"analytics"/"sgr-aggregates.parquet")
+        sgr_doc=read_json(PUBLIC/"indicators"/"sgr-aggregates.json")
+        if len(sgr_frame)!=len(sgr_doc.get("records",[])) or not sgr_doc.get("complete"):
+            errors.append("SGR Parquet o cobertura incompletos")
         if h3_frame.empty or h3_frame["h3"].duplicated().all(): errors.append("H3 sin asociaciones útiles")
     except Exception as exc:
         errors.append(f"productos Parquet/GeoParquet inválidos ({exc})")

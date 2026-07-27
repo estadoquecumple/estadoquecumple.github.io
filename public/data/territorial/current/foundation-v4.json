@@ -1,21 +1,41 @@
 {
   "version": "4.0.0",
-  "generatedAt": "2026-07-27T02:09:36Z",
-  "commit": "f1caf9f79bcb060f6f1b44a1b0fcbbac05b7231c",
+  "generatedAt": "2026-07-27T05:42:59Z",
+  "commit": "948e462a28b6875aa7d530a3fe5a9ad0f1e3cd31",
   "catalog": {
     "path": "data/territorial/catalog/sources.json",
-    "sha256": "bbf22bf04033ce435ce2365b6bef6202947bf6189b92adb457fc23c302a0ac1b"
+    "sha256": "18891ec411cfe8562e6d2fc014a5bdcbfbc929ce05e295764fddabc24cc01d25"
   },
   "analytics": [
     {
       "path": "data/territorial/analytics/catalog.parquet",
-      "sha256": "d57a83b3f5de6a5d29bb23a8c942c375538a15e042033ed240b03401f9a17adf",
-      "bytes": 18029
+      "sha256": "1f1035496ca2c8165628c4c4b9cc56d36ee69974525def8de5200b6b41c9f3a3",
+      "bytes": 19137
     },
     {
       "path": "data/territorial/analytics/indicators.parquet",
-      "sha256": "14e749b6ae2483065167e2905f718d14d7b9679cd27b2906f24ea49ad7c9d60e",
-      "bytes": 1631028
+      "sha256": "b81b782cdaf0a99b6f45107cf38de9f6f9c943f4137ea945a23270f65bbb71da",
+      "bytes": 1559917
+    },
+    {
+      "path": "data/territorial/analytics/series.parquet",
+      "sha256": "2b7400f9e2bc396f534ed8c28ccf8e9e979d7f1ceaac4bedef4110bf0813690a",
+      "bytes": 147135
+    },
+    {
+      "path": "data/territorial/analytics/entities.parquet",
+      "sha256": "c08b93db0005d3183e19ddbc8f944e9a9a8a81c053e9e4136b98390dcab06bbc",
+      "bytes": 18037
+    },
+    {
+      "path": "data/territorial/analytics/sgr-aggregates.parquet",
+      "sha256": "ce1bda82d1aeb42c885b57a30ea33fcba23909f50f5e450d7a2abae7470b3e77",
+      "bytes": 191320
+    },
+    {
+      "path": "data/territorial/analytics/secop-aggregates.parquet",
+      "sha256": "39c9b5ca49f9ba195f3f955f2c3bc8cc9dc008748d68ed542bdf3d34bc5bbd34",
+      "bytes": 14571215
     },
     {
       "path": "data/territorial/analytics/departments.geoparquet",
@@ -32,7 +52,7 @@
     {
       "id": "scenario-compiler-v4",
       "version": "4.0.0",
-      "sha256": "ae021ff81012a3f504dc7f5de4e73d11a85ac30d52289475c58af7dba93ae0a1"
+      "sha256": "15af089624760ebe2758c1624eb72aff270472b3147a98dbd0e5302db27f339e"
     }
   ],
   "providers": {

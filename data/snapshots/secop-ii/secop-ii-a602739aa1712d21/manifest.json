@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "secop-ii",
+  "snapshotId": "secop-ii-a602739aa1712d21",
+  "rawHash": "4e426631bc06549752225194d21a0543fd716e309ded169cc25b3a4d46b7fb51",
+  "normalizedHash": "0d2af2dbc76a9d3a6bc2bdfeb3325cf9c12bb8412d1601351a0484f002ecd71d",
+  "createdAt": "2026-07-27T05:39:22Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "secop-jbjy-vk9h-contracting-entity-raw-aggregate.json",
+      "bytes": 635944,
+      "sha256": "ad85665f802b78f6360f9a626d38f4288eccfb0d7f58334cd0a07b0384346b68"
+    },
+    {
+      "path": "secop-jbjy-vk9h-contracting-territory-raw-aggregate.json",
+      "bytes": 140571,
+      "sha256": "fc06e724c564668031fa564303b2ab8a9e0ec1d56805517f202efac0f00ed759"
+    },
+    {
+      "path": "secop-jbjy-vk9h-metadata.json",
+      "bytes": 35256,
+      "sha256": "b3b0fb362160d8395c6d682701a9b8f49f6324c041f79ebfbb12b6949b39a2d5"
+    },
+    {
+      "path": "secop-jbjy-vk9h-modality-raw-aggregate.json",
+      "bytes": 2147,
+      "sha256": "60c31bbfa3ad09484071f0a842d9c41fb4d137cce910eebe69917bddc50c2f8b"
+    },
+    {
+      "path": "secop-jbjy-vk9h-sector-raw-aggregate.json",
+      "bytes": 3183,
+      "sha256": "c6a091ae65d85ecf93bf61180650bf206c6b7ad9fc2a6eaf24b52398faffe542"
+    },
+    {
+      "path": "secop-jbjy-vk9h-status-raw-aggregate.json",
+      "bytes": 1444,
+      "sha256": "fc927ad330e8f9525fe03526c435ed5caac1849b4eb847382bd304a8403e121a"
+    },
+    {
+      "path": "secop-jbjy-vk9h-supplier-raw-aggregate.json",
+      "bytes": 106006972,
+      "sha256": "e9807fd9e4e919095584ee1958f53b5a71d12861502e752f9c800de89b643a18"
+    },
+    {
+      "path": "secop-jbjy-vk9h-unspsc-raw-aggregate.json",
+      "bytes": 1391232,
+      "sha256": "3e1298a89bbfcb016caf9c763c222f2170698c8ae2306f333aab93d37a3329b7"
+    },
+    {
+      "path": "secop-jbjy-vk9h-year-raw-aggregate.json",
+      "bytes": 1318,
+      "sha256": "0d078dcb71cfbb45cae1e3c52430d954488c0634269ac62a072f395d4b829e23"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "secop-aggregates.json",
+      "bytes": 5362273,
+      "sha256": "b16b1e0e45b569d78b493e30d16148796179a7e0a6201a99f9999845b0a68218"
+    },
+    {
+      "path": "secop-aggregates.parquet",
+      "bytes": 14571215,
+      "sha256": "39c9b5ca49f9ba195f3f955f2c3bc8cc9dc008748d68ed542bdf3d34bc5bbd34"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T05:39:22Z",
+    "publishedStatus": "current",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

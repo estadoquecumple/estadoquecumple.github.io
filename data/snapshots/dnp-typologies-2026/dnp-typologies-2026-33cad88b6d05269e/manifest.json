@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "dnp-typologies-2026",
+  "snapshotId": "dnp-typologies-2026-33cad88b6d05269e",
+  "rawHash": "6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa",
+  "normalizedHash": "ec64833c4f9f85a21b0ea67c35bd5e364dc4097f48c9cae0dfe792f09681d61a",
+  "createdAt": "2026-07-27T05:37:57Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "dnp_typologies_2026.xlsx",
+      "bytes": 1386512,
+      "sha256": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "typologies.json",
+      "bytes": 192378,
+      "sha256": "8c3cca4e50d1243eea08be001fae2679926a6270deec48cfeb646c211c8e76bd"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T05:37:57Z",
+    "publishedStatus": "current",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

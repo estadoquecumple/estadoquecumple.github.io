@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "dnp-idf-2024",
+  "snapshotId": "dnp-idf-2024-4dd54028af0292f4",
+  "rawHash": "6d6b2e17bbb1cb05cb8dfbfbfa45f9992f452f17e97829871b1f240dc77b05aa",
+  "normalizedHash": "942d0d2f0aabbbc935b6339594e13874045fe4e2893ca451197cb5d7fe618acb",
+  "createdAt": "2026-07-27T05:37:57Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "dnp_typologies_2026.xlsx",
+      "bytes": 1386512,
+      "sha256": "20f602065a120fa354dc1d6fdf72e16335eee73b2776e1e09cdb910545ec139e"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "fiscal.json",
+      "bytes": 198956,
+      "sha256": "40830da37a41f2ba874f64e1a40ff9f90c6233fc005a97c77c0d09b275983eaa"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T05:37:57Z",
+    "publishedStatus": "current",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

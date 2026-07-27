@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -343,18 +343,18 @@
         "name": "PUERTO CARREÑO",
         "originalCode": "001",
         "originalName": "PUERTO CARREÑO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 12142.32335203,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1594 de Ago 5  de 1974",
         "areaName": 12142.32335203,
         "creationYear": 2024,
         "creationResolution": "Decreto 1594 de Ago 5  de 1974",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 12142.32335203,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 1594 de Ago 5  de 1974"
+        "year": 2025
       }
     },
     {
@@ -965,18 +965,18 @@
         "name": "LA PRIMAVERA",
         "originalCode": "524",
         "originalName": "LA PRIMAVERA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 18492.10724139,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 676 de Abril13 de 1987",
         "areaName": 18492.10724139,
         "creationYear": 2024,
         "creationResolution": "Decreto 676 de Abril13 de 1987",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 18492.10724139,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Decreto 676 de Abril13 de 1987"
+        "year": 2025
       }
     },
     {
@@ -1251,18 +1251,18 @@
         "name": "SANTA ROSALÍA",
         "originalCode": "624",
         "originalName": "SANTA ROSALÍA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 3679.00502084,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 19 de Noviembre 26 de 1993",
         "areaName": 3679.00502084,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 19 de Noviembre 26 de 1993",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 3679.00502084,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 19 de Noviembre 26 de 1993"
+        "year": 2025
       }
     },
     {
@@ -2693,18 +2693,18 @@
         "name": "CUMARIBO",
         "originalCode": "773",
         "originalName": "CUMARIBO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 65319.28513659,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 66 de Noviembre 22 de 1996",
         "areaName": 65319.28513659,
         "creationYear": 2024,
         "creationResolution": "Ordenanza 66 de Noviembre 22 de 1996",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 65319.28513659,
-        "MPIO_NANO": 2024,
-        "MPIO_CRSLCION": "Ordenanza 66 de Noviembre 22 de 1996"
+        "year": 2025
       }
     }
   ]

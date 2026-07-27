@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-27T01:49:40Z",
+    "downloadedAt": "2026-07-27T05:06:31Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -75,18 +75,18 @@
         "name": "ARMENIA",
         "originalCode": "001",
         "originalName": "ARMENIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 121.24894658,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1889",
         "areaName": 121.24894658,
         "creationYear": 2025,
         "creationResolution": "1889",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 121.24894658,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1889"
+        "year": 2025
       }
     },
     {
@@ -129,18 +129,18 @@
         "name": "BUENAVISTA",
         "originalCode": "111",
         "originalName": "BUENAVISTA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 38.26465713,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 29 de Diciembre 10 de 1966",
         "areaName": 38.26465713,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 29 de Diciembre 10 de 1966",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 38.26465713,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 29 de Diciembre 10 de 1966"
+        "year": 2025
       }
     },
     {
@@ -219,18 +219,18 @@
         "name": "CALARCÁ",
         "originalCode": "130",
         "originalName": "CALARCÁ",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 220.04465041,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1905",
         "areaName": 220.04465041,
         "creationYear": 2025,
         "creationResolution": "1905",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 220.04465041,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1905"
+        "year": 2025
       }
     },
     {
@@ -281,18 +281,18 @@
         "name": "CIRCASIA",
         "originalCode": "190",
         "originalName": "CIRCASIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 90.68949358,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1907",
         "areaName": 90.68949358,
         "creationYear": 2025,
         "creationResolution": "1907",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 90.68949358,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1907"
+        "year": 2025
       }
     },
     {
@@ -347,18 +347,18 @@
         "name": "CÓRDOBA",
         "originalCode": "212",
         "originalName": "CÓRDOBA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 93.8003141,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 22 de 1966",
         "areaName": 93.8003141,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 22 de 1966",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 93.8003141,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 22 de 1966"
+        "year": 2025
       }
     },
     {
@@ -425,18 +425,18 @@
         "name": "FILANDIA",
         "originalCode": "272",
         "originalName": "FILANDIA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 106.55858967,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1878",
         "areaName": 106.55858967,
         "creationYear": 2025,
         "creationResolution": "1878",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 106.55858967,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "1878"
+        "year": 2025
       }
     },
     {
@@ -515,18 +515,18 @@
         "name": "GÉNOVA",
         "originalCode": "302",
         "originalName": "GÉNOVA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 295.69497441,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 10 de Junio 16 de 1937",
         "areaName": 295.69497441,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 10 de Junio 16 de 1937",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 295.69497441,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 10 de Junio 16 de 1937"
+        "year": 2025
       }
     },
     {
@@ -593,18 +593,18 @@
         "name": "LA TEBAIDA",
         "originalCode": "401",
         "originalName": "LA TEBAIDA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 89.38531537,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Decreto 547 de Julio 23 de 1954",
         "areaName": 89.38531537,
         "creationYear": 2025,
         "creationResolution": "Decreto 547 de Julio 23 de 1954",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 89.38531537,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Decreto 547 de Julio 23 de 1954"
+        "year": 2025
       }
     },
     {
@@ -671,18 +671,18 @@
         "name": "MONTENEGRO",
         "originalCode": "470",
         "originalName": "MONTENEGRO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 149.26024283,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 14 de Abril 4 de 1914",
         "areaName": 149.26024283,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 14 de Abril 4 de 1914",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 149.26024283,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 14 de Abril 4 de 1914"
+        "year": 2025
       }
     },
     {
@@ -765,18 +765,18 @@
         "name": "PIJAO",
         "originalCode": "548",
         "originalName": "PIJAO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 247.92998586,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 11 de 1926",
         "areaName": 247.92998586,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 11 de 1926",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 247.92998586,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 11 de 1926"
+        "year": 2025
       }
     },
     {
@@ -827,18 +827,18 @@
         "name": "QUIMBAYA",
         "originalCode": "594",
         "originalName": "QUIMBAYA",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 133.28299445,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Ordenanza 26 del 5 de Abril de 1922",
         "areaName": 133.28299445,
         "creationYear": 2025,
         "creationResolution": "Ordenanza 26 del 5 de Abril de 1922",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 133.28299445,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Ordenanza 26 del 5 de Abril de 1922"
+        "year": 2025
       }
     },
     {
@@ -921,18 +921,18 @@
         "name": "SALENTO",
         "originalCode": "690",
         "originalName": "SALENTO",
+        "MPIO_TIPO": "MUNICIPIO",
         "type": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 346.99889646,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Decreto 995 de 1908",
         "areaName": 346.99889646,
         "creationYear": 2025,
         "creationResolution": "Decreto 995 de 1908",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025,
-        "MPIO_TIPO": "MUNICIPIO",
-        "unitType": "municipio",
-        "MPIO_NAREA": 346.99889646,
-        "MPIO_NANO": 2025,
-        "MPIO_CRSLCION": "Decreto 995 de 1908"
+        "year": 2025
       }
     }
   ]
