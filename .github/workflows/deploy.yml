@@ -14,16 +14,14 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: 22, cache: npm }
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: |
-            requirements-data.txt
-            requirements-platform-core-free.txt
+          cache-dependency-path: requirements-*.txt
       - name: Install free data validation platform
         run: |
           "$pythonLocation/bin/python" -m pip install -r requirements-data.txt
@@ -37,16 +35,14 @@ jobs:
     needs: validate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: 22, cache: npm }
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: |
-            requirements-data.txt
-            requirements-platform-core-free.txt
+          cache-dependency-path: requirements-*.txt
       - name: Install free build dependencies
         run: |
           "$pythonLocation/bin/python" -m pip install -r requirements-data.txt

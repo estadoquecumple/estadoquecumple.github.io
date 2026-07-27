@@ -14,15 +14,13 @@ jobs:
       LLM_PROVIDER: none
       EMBEDDING_PROVIDER: none
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: |
-            requirements-data.txt
-            requirements-platform-core-free.txt
-      - uses: actions/setup-node@v4
+          cache-dependency-path: requirements-*.txt
+      - uses: actions/setup-node@v7
         with: { node-version: 22, cache: npm }
       - name: Install free data platform
         run: |
@@ -33,7 +31,7 @@ jobs:
       - run: npm run validate
       - name: Package immutable snapshots and published products
         run: tar -czf territorial-data-refresh.tar.gz public/data/territorial data/sources.yml data/snapshots data/schemas
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: territorial-data-refresh-${{ github.run_id }}
           path: |
