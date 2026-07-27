@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "dane-divipola-mgn-2025",
+  "snapshotId": "dane-divipola-mgn-2025-5751e0404554be2d",
+  "rawHash": "5751e0404554be2d7928a37824a715d3087706a163e38da322fc0589b2a91832",
+  "createdAt": "2026-07-27T02:05:17Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "05.geojson",
+      "bytes": 72044561,
+      "sha256": "914897ecc05e66008c51a6bca7a7c1b829e20d529eedfc1980fbb4b7dc2d9033"
+    },
+    {
+      "path": "08.geojson",
+      "bytes": 5850649,
+      "sha256": "82c39e94ecec90758713d24f9e75f1e99cf14412640be4e95027c7a12e875a4b"
+    },
+    {
+      "path": "11.geojson",
+      "bytes": 2415942,
+      "sha256": "eb9c46021fa88b92b60fa4bf9e2e62952d5e07e1cca9a17b78cc7d16cbc8081e"
+    },
+    {
+      "path": "13.geojson",
+      "bytes": 24962342,
+      "sha256": "c09c0319034504b3989ca5994c07160fe946d105256030b2038dcc0bb554518d"
+    },
+    {
+      "path": "15.geojson",
+      "bytes": 31197938,
+      "sha256": "47c11c431054fbd95bfe0c0469f5b2630a187b1c10a8fc1018cecf8c78ddad5a"
+    },
+    {
+      "path": "17.geojson",
+      "bytes": 13458482,
+      "sha256": "9186eff413f4716db9665dc92283fe453183e188e945911b411a5d895024e639"
+    },
+    {
+      "path": "18.geojson",
+      "bytes": 28533701,
+      "sha256": "4bd54370eb5da59c3919ceffc4816b66b7f023226f3e3469667f9583e3c6ebb3"
+    },
+    {
+      "path": "19.geojson",
+      "bytes": 19847285,
+      "sha256": "050be426b8e6a50a82567e328f9b75c1f4fe5e22546675f43c6d460038446826"
+    },
+    {
+      "path": "20.geojson",
+      "bytes": 20738876,
+      "sha256": "324560dec3ea23a0cb4e42d53a37907e415cad3789ff31655f90eff78db9de4c"
+    },
+    {
+      "path": "23.geojson",
+      "bytes": 13069301,
+      "sha256": "7d4dae42e6b2170fa18181356842dfb70fe274f43997d882ddc740764bf1a7d9"
+    },
+    {
+      "path": "25.geojson",
+      "bytes": 42340986,
+      "sha256": "f5fbdb177e99569286c59bdeba36df49d90fc4c87bd5a90347803ca2fd47d118"
+    },
+    {
+      "path": "27.geojson",
+      "bytes": 26730146,
+      "sha256": "7de2c6a9342ea0b8baa9482d3b2c0d46452ce47126fe9e9011bed6e3f9ec3219"
+    },
+    {
+      "path": "41.geojson",
+      "bytes": 12085403,
+      "sha256": "1b942d56bda2400516971af4bd9f0177744534a83940559096bd39e85b0758df"
+    },
+    {
+      "path": "44.geojson",
+      "bytes": 10430747,
+      "sha256": "92d94d72dfdee47b6a89fabfbc2a1bced44406e0c3194a49f928352a37db7d92"
+    },
+    {
+      "path": "47.geojson",
+      "bytes": 22947193,
+      "sha256": "af115e7b8d7df8705bc2f7574e2089d4e303ccf6724a35a5fd1859dc4c3cd191"
+    },
+    {
+      "path": "50.geojson",
+      "bytes": 37247484,
+      "sha256": "751b2006a4664ef090bfbf47a707a810202b1b996e963059fcdbd700de3488f7"
+    },
+    {
+      "path": "52.geojson",
+      "bytes": 25368554,
+      "sha256": "3b4ed97457229ade8808298e05436fa9e29e101d6e280bdfa69f316b83b35f98"
+    },
+    {
+      "path": "54.geojson",
+      "bytes": 18869605,
+      "sha256": "5c2b764d8d3305ea73a996405918066b79a3d47040905bb4085565f149110140"
+    },
+    {
+      "path": "63.geojson",
+      "bytes": 18606892,
+      "sha256": "82619fbab22339f5678800a3350fd3a3aab992edda4e06efd4e0159b36f21b57"
+    },
+    {
+      "path": "66.geojson",
+      "bytes": 3515144,
+      "sha256": "b2ba3eb48ff8169056a7f835f0ffd010aa1b572ac885d07a62e19560894b500e"
+    },
+    {
+      "path": "68.geojson",
+      "bytes": 23913666,
+      "sha256": "32422a64e641901e5baa6f4b2560e84ee71b3161051102463e9a3f4f79f84ce7"
+    },
+    {
+      "path": "70.geojson",
+      "bytes": 7668385,
+      "sha256": "79e424dc93eeb4f0a9a9a4344be74a95eb9f8d54c0c6b1f1018d432fc175a94b"
+    },
+    {
+      "path": "73.geojson",
+      "bytes": 26995720,
+      "sha256": "7d630a52b46730191313959ccda037f179adf0de58af7356fd6cf8ea67a515e3"
+    },
+    {
+      "path": "76.geojson",
+      "bytes": 17185357,
+      "sha256": "8fda411d1ee867bac419ee0bf221d0e47a0866dee0bf9afad1c26ce5f4364f6d"
+    },
+    {
+      "path": "81.geojson",
+      "bytes": 3125131,
+      "sha256": "a2ed5ffb3f0f9003f4fb7467af891661e5ac26b965e86b521ffed3fac1f8bbef"
+    },
+    {
+      "path": "85.geojson",
+      "bytes": 11740761,
+      "sha256": "f5d63409a628b4f8dbb287c7498344f73f47edd6af05f1fb457fecabe911f8e9"
+    },
+    {
+      "path": "86.geojson",
+      "bytes": 5388653,
+      "sha256": "a6b1e5cbc64554e4fa8a71e148b5191fc6283c61562faabf7e4651662bb37d9f"
+    },
+    {
+      "path": "88.geojson",
+      "bytes": 3089054,
+      "sha256": "3513545a3f8127f41ffaadc48297e38016620f24829bf8bfdad07b7322e4bd7b"
+    },
+    {
+      "path": "91.geojson",
+      "bytes": 23328757,
+      "sha256": "13fc41f695549a47f5c16a1b38753c252dd78404b58f37afa6c63fac74e1836c"
+    },
+    {
+      "path": "94.geojson",
+      "bytes": 12976440,
+      "sha256": "0726b93d20c23fc807829279a19fbd44a6e78870ebc8c9b467c69b1bace12cc6"
+    },
+    {
+      "path": "95.geojson",
+      "bytes": 8159816,
+      "sha256": "e20b2397989b8fc69f08c72e7c71588390b0c9b705114c6ad6bd59aab7d2de9a"
+    },
+    {
+      "path": "97.geojson",
+      "bytes": 16094645,
+      "sha256": "f0e6cfb0c9480ea5903565a70434604b9ed7a09c4236621899b414860af8ca54"
+    },
+    {
+      "path": "99.geojson",
+      "bytes": 7778011,
+      "sha256": "7edb9ab4bc036391d004973f6ffcf8446944b7e0ce1ed6763fa92571c1ae6965"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "departments.geojson",
+      "bytes": 594183,
+      "sha256": "815de80bb96c2f487e55af4da42fe01f916d3a97621e6c51cacd2d370827330a"
+    },
+    {
+      "path": "municipalities-index.json",
+      "bytes": 418999,
+      "sha256": "0f20574ed58d7f3b12846f90e0f1cf4fead9275d074fdef402a8b4a64a3d11fb"
+    },
+    {
+      "path": "municipality-centroids.json",
+      "bytes": 162032,
+      "sha256": "fe0dfad97f2892b99b3511c66b19de07245a13259a3566f7627e6e6892f812c8"
+    },
+    {
+      "path": "territorial-unit-types.json",
+      "bytes": 367,
+      "sha256": "9a8a7abbecd31a18710c9e1f5703f0af2c9c0d66c4bae23983a74b37669b2821"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T02:05:15Z",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

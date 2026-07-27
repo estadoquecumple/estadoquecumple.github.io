@@ -1,11 +1,17 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-07-25T07:39:10Z",
+  "generatedAt": "2026-07-27T02:09:38Z",
   "sources": [
     {
       "id": "dnp-idf-2024",
       "status": "manual-required",
       "file": "fiscal.json",
+      "records": 0
+    },
+    {
+      "id": null,
+      "status": null,
+      "file": "index.json",
       "records": 0
     },
     {
@@ -22,15 +28,15 @@
     },
     {
       "id": "secop-ii",
-      "status": "current",
+      "status": "partial",
       "file": "secop-aggregates.json",
-      "records": 4
+      "records": 25147
     },
     {
       "id": "dnp-sgr-mzgh-shtp",
-      "status": "partial",
+      "status": "current",
       "file": "sgr-aggregates.json",
-      "records": 34
+      "records": 12841
     },
     {
       "id": "dnp-typologies-2026",

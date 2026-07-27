@@ -44,7 +44,11 @@ for (const url of sitemapUrls) {
   if (!url.startsWith(`${origin}/`) && url !== `${origin}/`) failures.push(`Sitemap: host incorrecto en ${url}.`);
   if (!existsSync(routeFile(new URL(url).pathname))) failures.push(`Sitemap: URL no compilada ${url}.`);
 }
-const allOutput = existsSync(root) ? readdirSync(root,{recursive:true}).filter((name)=>typeof name==='string').map((name)=>{const file=join(root,name);try{return readFileSync(file,'utf8')}catch{return ''}}).join('\n') : '';
+const textualExtensions = /\.(?:html|js|mjs|css|json|xml|txt|webmanifest|svg)$/i;
+const allOutput = existsSync(root) ? readdirSync(root,{recursive:true})
+  .filter((name)=>typeof name==='string' && textualExtensions.test(name))
+  .map((name)=>{const file=join(root,name);try{return readFileSync(file,'utf8')}catch{return ''}})
+  .join('\n') : '';
 if (allOutput.includes('camscarlosmartinez.github.io')) failures.push('La salida contiene el dominio público anterior.');
 if (/https:\/\/estadoquecumple\.(?:co|com\.co)(?:\/|["'])/.test(allOutput)) failures.push('La salida usa prematuramente un dominio futuro.');
 if (allOutput.includes('localhost')) failures.push('La salida contiene localhost.');

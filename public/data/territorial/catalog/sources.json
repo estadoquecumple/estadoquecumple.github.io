@@ -1,0 +1,348 @@
+{
+  "version": "4.0.0",
+  "updated": "2026-07-26",
+  "sources": [
+    {
+      "id": "dane-divipola-mgn-2025",
+      "entity": "Departamento Administrativo Nacional de Estadística (DANE)",
+      "url": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer",
+      "access": "ArcGIS REST público",
+      "frequency": "anual",
+      "data_date": "2025-01-01",
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "nacional, departamental y municipal/distrital",
+      "granularity": "unidad territorial",
+      "key": "DIVIPOLA",
+      "license": "Condiciones de uso de información pública del DANE",
+      "fields": [
+        "DPTO_CCDGO",
+        "DPTO_CNMBRE",
+        "MPIO_CCDGO",
+        "MPIO_CNMBR",
+        "MPIO_TIPO",
+        "MPIO_NAREA",
+        "MPIO_NANO",
+        "MPIO_CRSLCION"
+      ],
+      "transformations": [
+        "reproyección EPSG:4326",
+        "preservación de atributos originales",
+        "producto oficial",
+        "simplificación web separada",
+        "punto representativo"
+      ],
+      "limitations": [
+        "la geometría web no sustituye cartografía oficial",
+        "MPIO_TIPO se conserva literalmente"
+      ],
+      "update_policy": "promover sólo si esquema, conteos, geometría y hashes son válidos",
+      "status": "current",
+      "quality_status": "current",
+      "hash": null,
+      "snapshot": null,
+      "published_version": "2025",
+      "last_valid_version": "2025"
+    },
+    {
+      "id": "dane-population-projections",
+      "entity": "Departamento Administrativo Nacional de Estadística (DANE)",
+      "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion",
+      "access": "descarga manual reproducible",
+      "frequency": "según publicación",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "municipal 2018–2042",
+      "granularity": "municipio, año y área",
+      "key": "DIVIPOLA, año, área",
+      "license": "Condiciones de uso del DANE",
+      "fields": [
+        "DIVIPOLA",
+        "año",
+        "área",
+        "población"
+      ],
+      "transformations": [
+        "normalización de columnas",
+        "validación DIVIPOLA",
+        "conservación del original"
+      ],
+      "limitations": [
+        "la URL directa cambia entre publicaciones"
+      ],
+      "update_policy": "descubrimiento desde página oficial o importación manual con hash",
+      "status": "manual-required",
+      "quality_status": "manual-required",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    },
+    {
+      "id": "dnp-typologies-2026",
+      "entity": "Departamento Nacional de Planeación (DNP)",
+      "url": "https://www.dnp.gov.co/LaEntidad_/subdireccion-general-descentralizacion-desarrollo-territorial/direccion-descentralizacion-fortalecimiento-fiscal/Paginas/tipologias-territoriales.aspx",
+      "access": "descubrimiento HTML oficial o importación manual reproducible",
+      "frequency": "por edición",
+      "data_date": "2026-01-01",
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "municipal/distrital y departamental",
+      "granularity": "unidad territorial",
+      "key": "DIVIPOLA",
+      "license": "Condiciones de uso del DNP",
+      "fields": [
+        "DIVIPOLA",
+        "tipología",
+        "vigencia"
+      ],
+      "transformations": [
+        "validación de siete tipologías municipales y tres departamentales"
+      ],
+      "limitations": [
+        "no reemplaza categorías legales",
+        "no asigna recursos"
+      ],
+      "update_policy": "archivar descarga oficial; respaldo manual con plantilla y SHA-256",
+      "status": "manual-required",
+      "quality_status": "manual-required",
+      "hash": null,
+      "snapshot": null,
+      "published_version": "2026",
+      "last_valid_version": null
+    },
+    {
+      "id": "dnp-idf-2024",
+      "entity": "Departamento Nacional de Planeación (DNP)",
+      "url": "https://www.dnp.gov.co/LaEntidad_/subdireccion-general-descentralizacion-desarrollo-territorial/direccion-descentralizacion-fortalecimiento-fiscal/Paginas/desempeno-fiscal.aspx",
+      "access": "descubrimiento HTML oficial o importación manual reproducible",
+      "frequency": "anual",
+      "data_date": "2024-12-31",
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "entidades territoriales",
+      "granularity": "entidad territorial y vigencia",
+      "key": "DIVIPOLA",
+      "license": "Condiciones de uso del DNP",
+      "fields": [
+        "DIVIPOLA",
+        "vigencia",
+        "resultado IDF"
+      ],
+      "transformations": [
+        "normalización de vigencia",
+        "validación de resultados"
+      ],
+      "limitations": [
+        "la vigencia del indicador difiere de la fecha de publicación"
+      ],
+      "update_policy": "archivar descarga oficial; respaldo manual con plantilla y SHA-256",
+      "status": "manual-required",
+      "quality_status": "manual-required",
+      "hash": null,
+      "snapshot": null,
+      "published_version": "2024",
+      "last_valid_version": null
+    },
+    {
+      "id": "dnp-mdm",
+      "entity": "Departamento Nacional de Planeación (DNP)",
+      "url": "https://portalterritorial.dnp.gov.co/AdmInfoTerritorial/MenuInfoTerrEstMDM",
+      "access": "descarga oficial estable o importación manual reproducible",
+      "frequency": "anual",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "municipal",
+      "granularity": "municipio y vigencia",
+      "key": "DIVIPOLA",
+      "license": "Condiciones de uso del DNP",
+      "fields": [
+        "DIVIPOLA",
+        "vigencia",
+        "resultado MDM"
+      ],
+      "transformations": [
+        "normalización DIVIPOLA",
+        "conservación de vigencia real"
+      ],
+      "limitations": [
+        "sólo se compara la edición oficial disponible"
+      ],
+      "update_policy": "no automatizar Power BI; archivar archivo descargable o importación manual con hash",
+      "status": "manual-required",
+      "quality_status": "manual-required",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    },
+    {
+      "id": "dnp-sgr-mzgh-shtp",
+      "entity": "Departamento Nacional de Planeación / Datos Abiertos Colombia",
+      "url": "https://www.datos.gov.co/resource/mzgh-shtp.json",
+      "access": "API Socrata pública",
+      "frequency": "según actualización del portal",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "proyectos del Sistema General de Regalías",
+      "granularity": "proyecto y territorio informado",
+      "key": "BPIN y código territorial de la fuente",
+      "license": "Datos Abiertos Colombia",
+      "fields": [
+        "BPIN",
+        "nombre",
+        "estado",
+        "valor",
+        "sector",
+        "ejecutor",
+        "código territorial",
+        "fecha"
+      ],
+      "transformations": [
+        "paginación completa",
+        "deduplicación BPIN",
+        "agregación",
+        "controles de cobertura"
+      ],
+      "limitations": [
+        "la cobertura depende de campos publicados",
+        "no se extrapolan ausencias"
+      ],
+      "update_policy": "promover sólo si paginación, deduplicación y totales son consistentes",
+      "status": "partial",
+      "quality_status": "partial",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    },
+    {
+      "id": "secop-ii",
+      "entity": "Agencia Nacional de Contratación Pública – Colombia Compra Eficiente",
+      "url": "https://www.datos.gov.co/",
+      "access": "API Socrata pública con token opcional gratuito",
+      "frequency": "continua",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "SECOP II",
+      "granularity": "contrato, proceso, entidad y lugar de ejecución",
+      "key": "identificador contractual, DIVIPOLA y año",
+      "license": "Datos Abiertos Colombia",
+      "fields": [
+        "año",
+        "departamento",
+        "municipio",
+        "entidad",
+        "lugar de ejecución",
+        "sector",
+        "modalidad",
+        "estado",
+        "proveedor",
+        "UNSPSC",
+        "valor",
+        "duración",
+        "adiciones",
+        "modificaciones"
+      ],
+      "transformations": [
+        "SoQL agregado",
+        "paginación",
+        "caché",
+        "reintentos",
+        "separación de dimensiones territoriales"
+      ],
+      "limitations": [
+        "ubicación de entidad y lugar de ejecución no son equivalentes",
+        "no se publica SECOP crudo"
+      ],
+      "update_policy": "promover agregados sólo con campos confirmados y controles de totales",
+      "status": "partial",
+      "quality_status": "partial",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    },
+    {
+      "id": "sigep-entities-kqut-4h4r",
+      "entity": "Departamento Administrativo de la Función Pública",
+      "url": "https://www.datos.gov.co/resource/kqut-4h4r.json",
+      "access": "API Socrata pública",
+      "frequency": "según actualización del portal",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "entidades públicas registradas",
+      "granularity": "entidad y territorio",
+      "key": "entidad y DIVIPOLA",
+      "license": "Datos Abiertos Colombia",
+      "fields": [
+        "entidad",
+        "orden",
+        "sector",
+        "departamento",
+        "municipio"
+      ],
+      "transformations": [
+        "normalización territorial",
+        "agregado por DIVIPOLA"
+      ],
+      "limitations": [
+        "cobertura conforme al registro publicado"
+      ],
+      "update_policy": "promover tras validar códigos y duplicados",
+      "status": "current",
+      "quality_status": "current",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    },
+    {
+      "id": "sispt-terridata",
+      "entity": "Departamento Nacional de Planeación",
+      "url": "https://terridata.dnp.gov.co/",
+      "access": "descargas públicas estables",
+      "frequency": "variable",
+      "data_date": null,
+      "published_at": null,
+      "downloaded_at": null,
+      "coverage": "territorial",
+      "granularity": "indicador y territorio",
+      "key": "DIVIPOLA",
+      "license": "Condiciones de uso del DNP",
+      "fields": [
+        "DIVIPOLA",
+        "indicador",
+        "vigencia",
+        "valor"
+      ],
+      "transformations": [
+        "pendiente de adaptador por archivo"
+      ],
+      "limitations": [
+        "no se automatiza Power BI",
+        "no se realiza scraping visual"
+      ],
+      "update_policy": "conservar URL oficial y original descargable con hash",
+      "status": "manual-required",
+      "quality_status": "manual-required",
+      "hash": null,
+      "snapshot": null,
+      "published_version": null,
+      "last_valid_version": null
+    }
+  ],
+  "generatedAt": "2026-07-27T02:09:35Z",
+  "policy": {
+    "pricing": "100 % gratuito; sin tarjeta, suscripción ni pago por consumo",
+    "defaultProviders": {
+      "llm": "none",
+      "embeddings": "none"
+    }
+  }
+}

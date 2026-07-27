@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -249,9 +249,20 @@
         "code": "97001",
         "departmentCode": "97",
         "name": "MITÚ",
+        "originalCode": "001",
+        "originalName": "MITÚ",
+        "type": "MUNICIPIO",
+        "areaName": 16156.41901943,
+        "creationYear": 2024,
+        "creationResolution": "Decreto Nal 1666 del 6 de Agosto de 1974",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 16156.41901943,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto Nal 1666 del 6 de Agosto de 1974"
       }
     },
     {
@@ -472,9 +483,20 @@
         "code": "97161",
         "departmentCode": "97",
         "name": "CARURÚ",
+        "originalCode": "161",
+        "originalName": "CARURÚ",
+        "type": "MUNICIPIO",
+        "areaName": 6349.03726449,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 003 del 7 de Agosto de 1993",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 6349.03726449,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 003 del 7 de Agosto de 1993"
       }
     },
     {
@@ -1103,9 +1125,20 @@
         "code": "97511",
         "departmentCode": "97",
         "name": "PACOA",
+        "originalCode": "511",
+        "originalName": "PACOA",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 13946.84218491,
+        "creationYear": 2025,
+        "creationResolution": "1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 13946.84218491,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "1967"
       }
     },
     {
@@ -1578,9 +1611,20 @@
         "code": "97666",
         "departmentCode": "97",
         "name": "TARAIRA",
+        "originalCode": "666",
+        "originalName": "TARAIRA",
+        "type": "MUNICIPIO",
+        "areaName": 6484.23610285,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 22 del 27 de Noviembre de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 6484.23610285,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 22 del 27 de Noviembre de 1992"
       }
     },
     {
@@ -1825,9 +1869,20 @@
         "code": "97777",
         "departmentCode": "97",
         "name": "PAPUNAHUA",
+        "originalCode": "777",
+        "originalName": "PAPUNAHUA",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 5531.90876233,
+        "creationYear": 2024,
+        "creationResolution": "1977",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 5531.90876233,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1977"
       }
     },
     {
@@ -2120,9 +2175,20 @@
         "code": "97889",
         "departmentCode": "97",
         "name": "YAVARATÉ",
+        "originalCode": "889",
+        "originalName": "YAVARATÉ",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 4640.89460877,
+        "creationYear": 2024,
+        "creationResolution": "Decreto Nacional 1510 del 29 de Diciembre de 1914",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 4640.89460877,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto Nacional 1510 del 29 de Diciembre de 1914"
       }
     }
   ]

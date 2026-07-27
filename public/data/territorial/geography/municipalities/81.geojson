@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -245,9 +245,20 @@
         "code": "81001",
         "departmentCode": "81",
         "name": "ARAUCA",
+        "originalCode": "001",
+        "originalName": "ARAUCA",
+        "type": "MUNICIPIO",
+        "areaName": 5767.22611123,
+        "creationYear": 2024,
+        "creationResolution": "1959",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 5767.22611123,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1959"
       }
     },
     {
@@ -436,9 +447,20 @@
         "code": "81065",
         "departmentCode": "81",
         "name": "ARAUQUITA",
+        "originalCode": "065",
+        "originalName": "ARAUQUITA",
+        "type": "MUNICIPIO",
+        "areaName": 3037.58298726,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 1447 del 28 de Julio de 1971",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 3037.58298726,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1447 del 28 de Julio de 1971"
       }
     },
     {
@@ -651,9 +673,20 @@
         "code": "81220",
         "departmentCode": "81",
         "name": "CRAVO NORTE",
+        "originalCode": "220",
+        "originalName": "CRAVO NORTE",
+        "type": "MUNICIPIO",
+        "areaName": 5192.41327615,
+        "creationYear": 2025,
+        "creationResolution": "Decreto Nal 677 de Abril 13 de  1987",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 5192.41327615,
+        "MPIO_NANO": 2025,
+        "MPIO_CRSLCION": "Decreto Nal 677 de Abril 13 de  1987"
       }
     },
     {
@@ -790,9 +823,20 @@
         "code": "81300",
         "departmentCode": "81",
         "name": "FORTUL",
+        "originalCode": "300",
+        "originalName": "FORTUL",
+        "type": "MUNICIPIO",
+        "areaName": 1155.45461563,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 2926 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1155.45461563,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2926 de 1989"
       }
     },
     {
@@ -965,9 +1009,20 @@
         "code": "81591",
         "departmentCode": "81",
         "name": "PUERTO RONDÓN",
+        "originalCode": "591",
+        "originalName": "PUERTO RONDÓN",
+        "type": "MUNICIPIO",
+        "areaName": 2273.98869923,
+        "creationYear": 2024,
+        "creationResolution": "Decreto Nal 677 de Abril 13 de  1987",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 2273.98869923,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto Nal 677 de Abril 13 de  1987"
       }
     },
     {
@@ -1032,9 +1087,20 @@
         "code": "81736",
         "departmentCode": "81",
         "name": "SARAVENA",
+        "originalCode": "736",
+        "originalName": "SARAVENA",
+        "type": "MUNICIPIO",
+        "areaName": 942.58736174,
+        "creationYear": 2024,
+        "creationResolution": "Decreto Nal 204 de Feb 3 de 1976",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 942.58736174,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto Nal 204 de Feb 3 de 1976"
       }
     },
     {
@@ -1347,9 +1413,20 @@
         "code": "81794",
         "departmentCode": "81",
         "name": "TAME",
+        "originalCode": "794",
+        "originalName": "TAME",
+        "type": "MUNICIPIO",
+        "areaName": 5403.8756577,
+        "creationYear": 2024,
+        "creationResolution": "1959",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 5403.8756577,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1959"
       }
     }
   ]

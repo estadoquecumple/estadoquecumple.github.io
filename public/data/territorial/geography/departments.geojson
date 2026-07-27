@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -1348,6 +1348,8 @@
       "properties": {
         "code": "05",
         "name": "ANTIOQUIA",
+        "originalCode": "05",
+        "originalName": "ANTIOQUIA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -1538,6 +1540,8 @@
       "properties": {
         "code": "08",
         "name": "ATLÁNTICO",
+        "originalCode": "08",
+        "originalName": "ATLÁNTICO",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -1800,6 +1804,8 @@
       "properties": {
         "code": "11",
         "name": "BOGOTÁ, D.C.",
+        "originalCode": "11",
+        "originalName": "BOGOTÁ, D.C.",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -3812,6 +3818,8 @@
       "properties": {
         "code": "13",
         "name": "BOLÍVAR",
+        "originalCode": "13",
+        "originalName": "BOLÍVAR",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -4862,6 +4870,8 @@
       "properties": {
         "code": "15",
         "name": "BOYACÁ",
+        "originalCode": "15",
+        "originalName": "BOYACÁ",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -5300,6 +5310,8 @@
       "properties": {
         "code": "17",
         "name": "CALDAS",
+        "originalCode": "17",
+        "originalName": "CALDAS",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -6858,6 +6870,8 @@
       "properties": {
         "code": "18",
         "name": "CAQUETÁ",
+        "originalCode": "18",
+        "originalName": "CAQUETÁ",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -7824,6 +7838,8 @@
       "properties": {
         "code": "19",
         "name": "CAUCA",
+        "originalCode": "19",
+        "originalName": "CAUCA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -8542,6 +8558,8 @@
       "properties": {
         "code": "20",
         "name": "CESAR",
+        "originalCode": "20",
+        "originalName": "CESAR",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -9200,6 +9218,8 @@
       "properties": {
         "code": "23",
         "name": "CÓRDOBA",
+        "originalCode": "23",
+        "originalName": "CÓRDOBA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -10074,6 +10094,8 @@
       "properties": {
         "code": "25",
         "name": "CUNDINAMARCA",
+        "originalCode": "25",
+        "originalName": "CUNDINAMARCA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -11352,6 +11374,8 @@
       "properties": {
         "code": "27",
         "name": "CHOCÓ",
+        "originalCode": "27",
+        "originalName": "CHOCÓ",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -12030,6 +12054,8 @@
       "properties": {
         "code": "41",
         "name": "HUILA",
+        "originalCode": "41",
+        "originalName": "HUILA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -12648,6 +12674,8 @@
       "properties": {
         "code": "44",
         "name": "LA GUAJIRA",
+        "originalCode": "44",
+        "originalName": "LA GUAJIRA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -13302,6 +13330,8 @@
       "properties": {
         "code": "47",
         "name": "MAGDALENA",
+        "originalCode": "47",
+        "originalName": "MAGDALENA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -14416,6 +14446,8 @@
       "properties": {
         "code": "50",
         "name": "META",
+        "originalCode": "50",
+        "originalName": "META",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -15324,6 +15356,8 @@
       "properties": {
         "code": "52",
         "name": "NARIÑO",
+        "originalCode": "52",
+        "originalName": "NARIÑO",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -15998,6 +16032,8 @@
       "properties": {
         "code": "54",
         "name": "NORTE DE SANTANDER",
+        "originalCode": "54",
+        "originalName": "NORTE DE SANTANDER",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -16136,6 +16172,8 @@
       "properties": {
         "code": "63",
         "name": "QUINDÍO",
+        "originalCode": "63",
+        "originalName": "QUINDÍO",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -16462,6 +16500,8 @@
       "properties": {
         "code": "66",
         "name": "RISARALDA",
+        "originalCode": "66",
+        "originalName": "RISARALDA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -17212,6 +17252,8 @@
       "properties": {
         "code": "68",
         "name": "SANTANDER",
+        "originalCode": "68",
+        "originalName": "SANTANDER",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -17842,6 +17884,8 @@
       "properties": {
         "code": "70",
         "name": "SUCRE",
+        "originalCode": "70",
+        "originalName": "SUCRE",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -18480,6 +18524,8 @@
       "properties": {
         "code": "73",
         "name": "TOLIMA",
+        "originalCode": "73",
+        "originalName": "TOLIMA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -19944,6 +19990,8 @@
       "properties": {
         "code": "76",
         "name": "VALLE DEL CAUCA",
+        "originalCode": "76",
+        "originalName": "VALLE DEL CAUCA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -20530,6 +20578,8 @@
       "properties": {
         "code": "81",
         "name": "ARAUCA",
+        "originalCode": "81",
+        "originalName": "ARAUCA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -21316,6 +21366,8 @@
       "properties": {
         "code": "85",
         "name": "CASANARE",
+        "originalCode": "85",
+        "originalName": "CASANARE",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -22278,6 +22330,8 @@
       "properties": {
         "code": "86",
         "name": "PUTUMAYO",
+        "originalCode": "86",
+        "originalName": "PUTUMAYO",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -22430,6 +22484,8 @@
       "properties": {
         "code": "88",
         "name": "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",
+        "originalCode": "88",
+        "originalName": "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -24012,6 +24068,8 @@
       "properties": {
         "code": "91",
         "name": "AMAZONAS",
+        "originalCode": "91",
+        "originalName": "AMAZONAS",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -25358,6 +25416,8 @@
       "properties": {
         "code": "94",
         "name": "GUAINÍA",
+        "originalCode": "94",
+        "originalName": "GUAINÍA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -26860,6 +26920,8 @@
       "properties": {
         "code": "95",
         "name": "GUAVIARE",
+        "originalCode": "95",
+        "originalName": "GUAVIARE",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -28230,6 +28292,8 @@
       "properties": {
         "code": "97",
         "name": "VAUPÉS",
+        "originalCode": "97",
+        "originalName": "VAUPÉS",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025
@@ -29280,6 +29344,8 @@
       "properties": {
         "code": "99",
         "name": "VICHADA",
+        "originalCode": "99",
+        "originalName": "VICHADA",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
         "year": 2025

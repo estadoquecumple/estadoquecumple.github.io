@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -1169,9 +1169,20 @@
         "code": "95001",
         "departmentCode": "95",
         "name": "SAN JOSÉ DEL GUAVIARE",
+        "originalCode": "001",
+        "originalName": "SAN JOSÉ DEL GUAVIARE",
+        "type": "MUNICIPIO",
+        "areaName": 16712.39397507,
+        "creationYear": 2024,
+        "creationResolution": "Decreto Nal 1165 del 7 de Junio de 1976",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 16712.39397507,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto Nal 1165 del 7 de Junio de 1976"
       }
     },
     {
@@ -1680,9 +1691,20 @@
         "code": "95015",
         "departmentCode": "95",
         "name": "CALAMAR",
+        "originalCode": "015",
+        "originalName": "CALAMAR",
+        "type": "MUNICIPIO",
+        "areaName": 13510.32024683,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 001 del 7 de Agosto de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 13510.32024683,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 001 del 7 de Agosto de 1992"
       }
     },
     {
@@ -2623,9 +2645,20 @@
         "code": "95025",
         "departmentCode": "95",
         "name": "EL RETORNO",
+        "originalCode": "025",
+        "originalName": "EL RETORNO",
+        "type": "MUNICIPIO",
+        "areaName": 12405.90549982,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 001 del 7 de Agosto de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 12405.90549982,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 001 del 7 de Agosto de 1992"
       }
     },
     {
@@ -3090,9 +3123,20 @@
         "code": "95200",
         "departmentCode": "95",
         "name": "MIRAFLORES",
+        "originalCode": "200",
+        "originalName": "MIRAFLORES",
+        "type": "MUNICIPIO",
+        "areaName": 12774.74386678,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 001 del 7 de Agosto de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 12774.74386678,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 001 del 7 de Agosto de 1992"
       }
     }
   ]

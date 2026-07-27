@@ -37,9 +37,23 @@ import TerritoryMap from './TerritoryMap.astro';
   </table></div>
 </section>
 <section class="lab-lower" data-panel="method">
+  <label>Profundidad de trabajo
+    <select data-experience-mode>
+      <option value="guided">Modo guiado</option>
+      <option value="expert">Modo experto</option>
+    </select>
+  </label>
   <details open><summary>Escenario e historial</summary><p data-scenario-summary>Estado actual bloqueado; no contiene operaciones editables.</p></details>
   <details><summary>Metodología</summary><p>RAÍCES consulta datos observados; SAVIA calcula perfiles condicionados por pesos; SEMILLAS registra hipótesis y operaciones sin alterar cartografía oficial. Las divisiones geométricas no estiman población ni finanzas sin datos granulares.</p></details>
-  <details><summary>Fuentes</summary><ul><li>DANE DIVIPOLA y MGN 2025.</li><li>DNP: indicadores disponibles y adaptadores manual-required.</li><li>Constitución Política, Título XI.</li><li>Ley 1454 de 2011, ordenamiento territorial.</li></ul></details>
+  <details data-v4-catalog><summary>Catálogo, vigencia y evidencia V4</summary>
+    <p data-catalog-summary>Cargando catálogo validado…</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Fuente</th><th>Vigencia</th><th>Calidad</th><th>Evidencia</th></tr></thead>
+      <tbody data-source-catalog><tr><td colspan="4">Pendiente de carga.</td></tr></tbody>
+    </table></div>
+    <p data-analytics-status>DuckDB-Wasm permanece diferido; se inicializa sólo al abrir este catálogo.</p>
+    <p>H3 es una malla analítica y no constituye división administrativa o legal.</p>
+  </details>
   <details><summary>Descargas e intercambio</summary>
     <div class="download-actions">
       <button type="button" data-export-json disabled>Exportar JSON</button>
@@ -86,8 +100,10 @@ import TerritoryMap from './TerritoryMap.astro';
   import { scenarioToMapCollections } from '../../data/territorial/scenario-map';
   import { scenarioCsv } from '../../data/territorial/security';
   import { metricsForSelection } from '../../data/territorial/official-metrics';
+  import { TerritorialAnalytics } from '../../data/territorial/analytics-v4';
+  import { compileScenario, createCapsule } from '../../data/territorial/scenario-v4';
 
-  type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; geometry?: unknown };
+  type Selection = { id: string; code: string; name: string; level: 'department' | 'municipality'; unitType?: string; geometry?: unknown };
   const $ = <T extends Element>(selector: string) => document.querySelector<T>(selector);
   const $$ = <T extends Element>(selector: string) => [...document.querySelectorAll<T>(selector)];
   const appendText = (parent: Element, tag: string, text: string) => {
@@ -124,6 +140,8 @@ import TerritoryMap from './TerritoryMap.astro';
   let governmentMetrics: Array<{code:string;entityCount:number}> = [];
   let sgrMetrics: Array<{territoryLabel:string;projectCount:number}> = [];
   let secopMetrics: Array<{kind:string;recordCount:number|null}> = [];
+  let foundation: any = null;
+  let catalogLoaded = false;
   const polygonRings=(geometry:any):number[][][]=>geometry.type==='Polygon'?geometry.coordinates:geometry.coordinates.flat();
   const inside=(point:number[],ring:number[][])=>{let result=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const [xi,yi]=ring[i],[xj,yj]=ring[j];if(((yi>point[1])!==(yj>point[1]))&&(point[0]<(xj-xi)*(point[1]-yi)/(yj-yi)+xi))result=!result;}return result;};
   const orientation=(a:number[],b:number[],c:number[])=>Math.sign((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]));
@@ -164,7 +182,7 @@ import TerritoryMap from './TerritoryMap.astro';
       const dl = document.createElement('dl');
       const entries = [
         ['Código', unit.code],
-        ['Naturaleza', unit.level === 'department' ? (unit.code === '11' ? 'Distrito Capital / entidad territorial' : 'Departamento / entidad territorial') : 'Tipo territorial no suministrado por el índice incorporado'],
+        ['Naturaleza', unit.level === 'department' ? (unit.code === '11' ? 'Distrito Capital / entidad territorial' : 'Departamento / entidad territorial') : (unit.unitType ?? 'Tipo territorial no suministrado por la fuente')],
         ['Unidad superior', unit.level === 'department' ? 'Nación' : `Departamento ${unit.code.slice(0, 2)}`],
         ['Autoridades y competencias', 'Régimen vigente; detalle territorial no conectado.'],
         ['Ingresos, transferencias e indicadores', 'Fuente pendiente; no disponible.'],
@@ -189,12 +207,12 @@ import TerritoryMap from './TerritoryMap.astro';
       const input = document.createElement('input'); input.type = 'checkbox'; input.value = `${level}:${feature.properties.code}`; input.dataset.territoryCheck = '';
       input.setAttribute('aria-label', `Seleccionar ${feature.properties.name}`);
       input.addEventListener('change', () => {
-        const unit = { id: input.value, code: feature.properties.code, name: feature.properties.name, level, geometry: feature.geometry };
+        const unit = { id: input.value, code: feature.properties.code, name: feature.properties.name, level, unitType: feature.properties.MPIO_TIPO, geometry: feature.geometry };
         if (input.checked) selected.set(input.value, unit); else selected.delete(input.value);
         renderSelection();
       });
       cell.append(input); row.append(cell);
-      for (const value of [feature.properties.code, feature.properties.name, level === 'department' ? 'Departamento' : 'Municipio', 'observed', 'DANE DIVIPOLA MGN 2025']) {
+      for (const value of [feature.properties.code, feature.properties.name, level === 'department' ? 'Departamento' : 'Unidad territorial', level === 'department' ? 'DEPARTAMENTO' : (feature.properties.MPIO_TIPO ?? 'Sin dato disponible'), 'DANE DIVIPOLA MGN 2025']) {
         const td = document.createElement('td'); td.textContent = value; row.append(td);
       }
       table.append(row);
@@ -458,7 +476,22 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-change-planning]')?.addEventListener('click', () => { if (!editable()) return; apply(changePlanning(timeline!.current, { levelId: 'scenario-wide', horizonYears: Number($<HTMLInputElement>('[data-planning-horizon]')!.value), instruments: ['plan estratégico', 'programas de misión'], review: 'evaluación cuatrienal' })); });
   $('[data-undo]')?.addEventListener('click', () => { timeline?.undo(); void renderScenario(); });
   $('[data-redo]')?.addEventListener('click', () => { timeline?.redo(); void renderScenario(); });
-  $('[data-export-json]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.json`, 'application/json', exportScenario(timeline.current)));
+  $('[data-export-json]')?.addEventListener('click', async () => {
+    if (!timeline) return;
+    foundation ??= await fetch('/data/territorial/current/foundation-v4.json').then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    });
+    const capsule = createCapsule(timeline.current, {
+      commit: foundation.commit,
+      contractVersion: '4.0.0',
+      legalRegistryVersion: '3.0.0',
+      datasets: [foundation.catalog, ...foundation.analytics].map((item:any) => ({ id:item.path, version:'4.0.0', sha256:item.sha256 })),
+      rules: foundation.rules,
+      models: [],
+    }, { compilation: compileScenario(timeline.current) });
+    download(`${timeline.current.id}.json`, 'application/json', JSON.stringify({ schemaVersion:4, scenario:timeline.current, capsule }, null, 2));
+  });
   $('[data-export-geojson]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.geojson`, 'application/geo+json', JSON.stringify({ type: 'FeatureCollection', features: timeline.current.units.filter((unit) => unit.geometry).map((unit) => ({ type: 'Feature', id: unit.id, properties: { name: unit.name, state: unit.state, resultKind: 'assumption' }, geometry: unit.geometry })) }, null, 2)));
   $('[data-export-csv]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}.csv`, 'text/csv', scenarioCsv(timeline.current.units.map((unit)=>({id:unit.id,nombre:unit.name,estado:unit.state,tipo:'assumption'})),['id','nombre','estado','tipo'])));
   $('[data-export-method]')?.addEventListener('click', () => timeline && download(`${timeline.current.id}-metodologia.txt`, 'text/plain', `${timeline.current.name}\nBase: ${timeline.current.baseScenarioId}\nOperaciones: ${timeline.current.history.length}\nTodo resultado se clasifica como observed, calculated, assumption o unavailable.\nNo constituye concepto jurídico.`));
@@ -466,7 +499,7 @@ import TerritoryMap from './TerritoryMap.astro';
   $('[data-print]')?.addEventListener('click', () => window.print());
   $<HTMLInputElement>('[data-import-json]')?.addEventListener('change', async (event) => {
     const file = (event.currentTarget as HTMLInputElement).files?.[0]; if (!file) return;
-    try { const scenario = importScenario(JSON.parse(await file.text())); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); await renderScenario(); announce('Escenario importado y validado.'); } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
+    try { const parsed=JSON.parse(await file.text()); const scenario = importScenario(parsed.scenario ?? parsed); scenarios.set(scenario.id, scenario); timeline = new ScenarioTimeline(scenario); await renderScenario(); announce('Escenario importado y validado.'); } catch (error) { announce(error instanceof Error ? error.message : String(error)); }
   });
   const comparison = (a: TerritorialScenario | undefined, b: TerritorialScenario | undefined) => {
     const output = $('[data-comparison-output]'); if (!output || !a) return;
@@ -495,6 +528,36 @@ import TerritoryMap from './TerritoryMap.astro';
     }
   } catch { announce('No fue posible revisar preferencias locales antiguas.'); }
   store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
+  $<HTMLSelectElement>('[data-experience-mode]')?.addEventListener('change', (event) => {
+    const value=(event.currentTarget as HTMLSelectElement).value;
+    document.body.dataset.experienceMode=value;
+    announce(value==='expert'?'Modo experto: se muestran trazabilidad y restricciones completas.':'Modo guiado: se priorizan pasos y explicaciones.');
+  });
+  $<HTMLInputElement>('[data-layer-h3]')?.addEventListener('change', async (event) => {
+    const enabled=(event.currentTarget as HTMLInputElement).checked;
+    const status=$('[data-h3-status]');
+    if(!enabled){document.dispatchEvent(new CustomEvent('territorial:h3',{detail:{enabled:false,records:[]}}));if(status)status.textContent='Malla H3 oculta; no reemplaza límites administrativos o legales.';return;}
+    try{
+      const documentV4=await fetch('/data/territorial/analytics/h3-divipola.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();});
+      document.dispatchEvent(new CustomEvent('territorial:h3',{detail:{enabled:true,records:documentV4.records}}));
+      if(status)status.textContent=`${documentV4.records.length} asociaciones DIVIPOLA–H3 · resolución ${documentV4.resolution}. ${documentV4.warning}`;
+    }catch(error){(event.currentTarget as HTMLInputElement).checked=false;if(status)status.textContent=`H3 no disponible: ${error instanceof Error?error.message:String(error)}`;}
+  });
+  $('[data-v4-catalog]')?.addEventListener('toggle', async (event) => {
+    if (!(event.currentTarget as HTMLDetailsElement).open || catalogLoaded) return;
+    const summary=$('[data-catalog-summary]'); const body=$('[data-source-catalog]');
+    try {
+      const catalog=await fetch('/data/territorial/catalog/sources.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();});
+      foundation=await fetch('/data/territorial/current/foundation-v4.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();});
+      if(summary)summary.textContent=`${catalog.sources.length} fuentes · catálogo ${catalog.version} · ${catalog.policy.pricing}.`;
+      if(body){body.textContent='';for(const source of catalog.sources){const row=document.createElement('tr');appendText(row,'td',source.entity);appendText(row,'td',source.data_date??'Vigencia no publicada');appendText(row,'td',source.quality_status);const cell=document.createElement('td');const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noreferrer';link.textContent=`Abrir ${source.id}`;cell.append(link);row.append(cell);body.append(row);}}
+      const analytics=new TerritorialAnalytics();
+      const result=await analytics.query({sql:'SELECT count(*) AS records FROM territorial.parquet',parquetUrl:'/data/territorial/analytics/catalog.parquet',fallbackUrl:'/data/territorial/catalog/sources.json',maxBytes:10_000_000});
+      analytics.cancelAll();
+      catalogLoaded=true;
+      const status=$('[data-analytics-status]');if(status)status.textContent=result.ok?`Motor ${result.engine}: catálogo analítico disponible.`:`Motor analítico no disponible: ${result.error}`;
+    } catch(error) { if(summary)summary.textContent=`Catálogo no disponible: ${error instanceof Error?error.message:String(error)}`; }
+  });
   Promise.all([
     fetch('/data/territorial/government/entities-by-territory.json').then((response)=>response.json()),
     fetch('/data/territorial/indicators/sgr-aggregates.json').then((response)=>response.json()),

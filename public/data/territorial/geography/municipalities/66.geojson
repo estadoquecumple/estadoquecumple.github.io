@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -149,9 +149,20 @@
         "code": "66001",
         "departmentCode": "66",
         "name": "PEREIRA",
+        "originalCode": "001",
+        "originalName": "PEREIRA",
+        "type": "MUNICIPIO",
+        "areaName": 607.90289836,
+        "creationYear": 2024,
+        "creationResolution": "1863",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 607.90289836,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1863"
       }
     },
     {
@@ -228,9 +239,20 @@
         "code": "66045",
         "departmentCode": "66",
         "name": "APÍA",
+        "originalCode": "045",
+        "originalName": "APÍA",
+        "type": "MUNICIPIO",
+        "areaName": 149.97852767,
+        "creationYear": 2024,
+        "creationResolution": "1893",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 149.97852767,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1893"
       }
     },
     {
@@ -283,9 +305,20 @@
         "code": "66075",
         "departmentCode": "66",
         "name": "BALBOA",
+        "originalCode": "075",
+        "originalName": "BALBOA",
+        "type": "MUNICIPIO",
+        "areaName": 119.48327607,
+        "creationYear": 2024,
+        "creationResolution": "1923",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 119.48327607,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1923"
       }
     },
     {
@@ -338,9 +371,20 @@
         "code": "66088",
         "departmentCode": "66",
         "name": "BELÉN DE UMBRÍA",
+        "originalCode": "088",
+        "originalName": "BELÉN DE UMBRÍA",
+        "type": "MUNICIPIO",
+        "areaName": 180.58722332,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 27 de 1911",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 180.58722332,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 27 de 1911"
       }
     },
     {
@@ -385,9 +429,20 @@
         "code": "66170",
         "departmentCode": "66",
         "name": "DOSQUEBRADAS",
+        "originalCode": "170",
+        "originalName": "DOSQUEBRADAS",
+        "type": "MUNICIPIO",
+        "areaName": 70.11514942,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 12 de Diciembre 6 de 1972",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 70.11514942,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 12 de Diciembre 6 de 1972"
       }
     },
     {
@@ -436,9 +491,20 @@
         "code": "66318",
         "departmentCode": "66",
         "name": "GUÁTICA",
+        "originalCode": "318",
+        "originalName": "GUÁTICA",
+        "type": "MUNICIPIO",
+        "areaName": 100.80899614,
+        "creationYear": 2024,
+        "creationResolution": "1921",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 100.80899614,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1921"
       }
     },
     {
@@ -511,9 +577,20 @@
         "code": "66383",
         "departmentCode": "66",
         "name": "LA CELIA",
+        "originalCode": "383",
+        "originalName": "LA CELIA",
+        "type": "MUNICIPIO",
+        "areaName": 92.47551204,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 96 de Noviembre 30 de 1959",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 92.47551204,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 96 de Noviembre 30 de 1959"
       }
     },
     {
@@ -550,9 +627,20 @@
         "code": "66400",
         "departmentCode": "66",
         "name": "LA VIRGINIA",
+        "originalCode": "400",
+        "originalName": "LA VIRGINIA",
+        "type": "MUNICIPIO",
+        "areaName": 32.93886241,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 57 de 1959",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 32.93886241,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 57 de 1959"
       }
     },
     {
@@ -621,9 +709,20 @@
         "code": "66440",
         "departmentCode": "66",
         "name": "MARSELLA",
+        "originalCode": "440",
+        "originalName": "MARSELLA",
+        "type": "MUNICIPIO",
+        "areaName": 149.29714096,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 24 de 1915",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 149.29714096,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 24 de 1915"
       }
     },
     {
@@ -724,9 +823,20 @@
         "code": "66456",
         "departmentCode": "66",
         "name": "MISTRATÓ",
+        "originalCode": "456",
+        "originalName": "MISTRATÓ",
+        "type": "MUNICIPIO",
+        "areaName": 564.73616071,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 11 del 18 de Mayo de 1925",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 564.73616071,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 11 del 18 de Mayo de 1925"
       }
     },
     {
@@ -823,9 +933,20 @@
         "code": "66572",
         "departmentCode": "66",
         "name": "PUEBLO RICO",
+        "originalCode": "572",
+        "originalName": "PUEBLO RICO",
+        "type": "MUNICIPIO",
+        "areaName": 613.80549631,
+        "creationYear": 2024,
+        "creationResolution": "1912",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 613.80549631,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1912"
       }
     },
     {
@@ -874,9 +995,20 @@
         "code": "66594",
         "departmentCode": "66",
         "name": "QUINCHÍA",
+        "originalCode": "594",
+        "originalName": "QUINCHÍA",
+        "type": "MUNICIPIO",
+        "areaName": 140.11841615,
+        "creationYear": 2024,
+        "creationResolution": "1917",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 140.11841615,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1917"
       }
     },
     {
@@ -977,9 +1109,20 @@
         "code": "66682",
         "departmentCode": "66",
         "name": "SANTA ROSA DE CABAL",
+        "originalCode": "682",
+        "originalName": "SANTA ROSA DE CABAL",
+        "type": "MUNICIPIO",
+        "areaName": 543.34323359,
+        "creationYear": 2024,
+        "creationResolution": "1844",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 543.34323359,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1844"
       }
     },
     {
@@ -1048,9 +1191,20 @@
         "code": "66687",
         "departmentCode": "66",
         "name": "SANTUARIO",
+        "originalCode": "687",
+        "originalName": "SANTUARIO",
+        "type": "MUNICIPIO",
+        "areaName": 190.84271702,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 1488 del 14 de Diciembre de 1906",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 190.84271702,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1488 del 14 de Diciembre de 1906"
       }
     }
   ]

@@ -1,20 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "4.0.0",
   "status": "current",
   "source": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer",
-  "downloadedAt": "2026-07-25T07:50:10Z",
+  "downloadedAt": "2026-07-27T01:49:40Z",
   "layers": {
     "departments": 319,
     "municipalities": 317
   },
   "departmentCount": 33,
-  "municipalityCount": 1122,
+  "territorialUnitCount": 1122,
+  "municipalityCount": 1103,
+  "typeCounts": {
+    "MUNICIPIO": 1103,
+    "ISLA": 1,
+    "ÁREA NO MUNICIPALIZADA": 18
+  },
   "crs": "EPSG:4326",
-  "partition": "municipalities by department",
+  "partition": "unidades territoriales por departamento",
+  "officialGeometry": "data/cache/dane-geography-official; sin simplificación, destinada a snapshot/GeoParquet",
   "simplification": {
     "method": "ArcGIS maxAllowableOffset and geometryPrecision",
     "toleranceDegrees": 0.01,
     "precisionDecimals": 5,
     "purpose": "visualización web; no sustituye cartografía oficial"
-  }
+  },
+  "representativePoint": "Shapely representative_point; no promedio de vértices",
+  "nonMunicipalizedAreaCount": 18
 }

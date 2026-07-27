@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "dnp-sgr-mzgh-shtp",
+  "snapshotId": "dnp-sgr-mzgh-shtp-c8255f8852b8a229",
+  "rawHash": "c8255f8852b8a229e71f34799d76b832b6bfc9c09fa3e63c3c8e87a64f32cecd",
+  "createdAt": "2026-07-27T02:05:18Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "sgr-mzgh-shtp-raw.json",
+      "bytes": 24510692,
+      "sha256": "d0ee6a061065a8deb0a7f07028f36aa3d44ca3fb0c7b18c5fecc365b3851bf1e"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "sgr-aggregates.json",
+      "bytes": 5194499,
+      "sha256": "97c874f3a4485efcffdafd2d86229bb341662c3ac9332a0e2b6600de9e160aa3"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T02:05:17Z",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

@@ -1,20 +1,43 @@
 from __future__ import annotations
-import json, re, sys
-from pathlib import Path
-from common import PUBLIC, ROOT, read_json
+import json, re
+from common import PUBLIC, read_json
+from platform_v4 import load_catalog
 
 ALLOWED={"current","stale","partial","manual-required","unavailable"}
 def run():
     errors=[]; warnings=[]
-    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","government/entities-by-territory.json","official-sources.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","manifest.json"]
+    required=["geography/departments.geojson","geography/municipalities-index.json","geography/municipality-centroids.json","geography/geography-manifest.json","indicators/population.json","indicators/fiscal.json","indicators/sgr-aggregates.json","indicators/secop-aggregates.json","government/entities-by-territory.json","official-sources.json","scenarios/current.json","scenarios/regional-exploratory.json","scenarios/shared-services.json","catalog/sources.json","catalog/snapshot-status.json","analytics/catalog.parquet","analytics/indicators.parquet","analytics/departments.geoparquet","analytics/h3-divipola.parquet","analytics/manifest.json","current/foundation-v4.json","manifest.json"]
     for rel in required:
         path=PUBLIC/rel
         if not path.exists(): errors.append(f"falta {rel}"); continue
+        if path.suffix in (".parquet", ".geoparquet"):
+            continue
         try:
             text=path.read_text(encoding="utf-8")
             json.loads(text)
             if re.search(r"\b(?:NaN|Infinity|-Infinity)\b",text): errors.append(f"{rel}: valor no finito")
         except Exception as exc: errors.append(f"{rel}: JSON inválido ({exc})")
+    try:
+        catalog=load_catalog()
+        if len(catalog.sources)<8: errors.append("catálogo V4: cobertura de fuentes insuficiente")
+    except Exception as exc:
+        errors.append(f"catálogo V4 inválido ({exc})")
+    try:
+        import geopandas as gpd
+        import pandas as pd
+        catalog_parquet=pd.read_parquet(PUBLIC/"analytics"/"catalog.parquet")
+        if catalog_parquet.empty: errors.append("catalog.parquet vacío")
+        geo=gpd.read_parquet(PUBLIC/"analytics"/"departments.geoparquet")
+        if geo.crs is None or geo.empty: errors.append("GeoParquet sin CRS o geometrías")
+        h3_frame=pd.read_parquet(PUBLIC/"analytics"/"h3-divipola.parquet")
+        if h3_frame.empty or h3_frame["h3"].duplicated().all(): errors.append("H3 sin asociaciones útiles")
+    except Exception as exc:
+        errors.append(f"productos Parquet/GeoParquet inválidos ({exc})")
+    snapshot_status=PUBLIC/"catalog"/"snapshot-status.json"
+    if snapshot_status.exists():
+        for item in read_json(snapshot_status).get("sources",[]):
+            if item.get("promoted") and not re.fullmatch(r"[a-f0-9]{64}",item.get("rawHash","")):
+                errors.append(f"snapshot {item.get('sourceId')}: hash inválido")
     idx=PUBLIC/"geography"/"municipalities-index.json"
     if idx.exists():
         rows=read_json(idx); codes=[x.get("code","") for x in rows]
@@ -41,6 +64,6 @@ def run():
     if errors:
         print("DATA VALIDATE: ERROR")
         print("\n".join(f"- {x}" for x in errors)); raise SystemExit(1)
-    print(f"DATA VALIDATE OK: {len(required)} archivos obligatorios; DIVIPOLA, escenarios, JSON, estados y valores finitos verificados.")
+    print(f"DATA VALIDATE OK: {len(required)} archivos obligatorios; catálogo, Pandera, Parquet, GeoParquet, H3, snapshots, DIVIPOLA y escenarios verificados.")
     for item in warnings: print(f"AVISO: {item}")
 if __name__=="__main__": run()

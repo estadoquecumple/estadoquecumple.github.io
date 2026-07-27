@@ -13,4 +13,4 @@ if __name__=="__main__":
         run("fetch_sgr.py","--offline"); run("fetch_secop.py","--offline"); run("fetch_government_entities.py","--offline")
     else:
         run("fetch_sgr.py"); run("fetch_secop.py"); run("fetch_government_entities.py")
-    for name in ("normalize_divipola.py","build_geography.py","build_scenarios.py","build_indicators.py","build_manifest.py","validate_sources.py"): run(name)
+    for name in ("normalize_divipola.py","build_geography.py","build_scenarios.py","build_indicators.py","build_manifest.py","build_v4_foundation.py","snapshot_v4.py","validate_sources.py"): run(name)

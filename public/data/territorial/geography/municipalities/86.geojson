@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -173,9 +173,20 @@
         "code": "86001",
         "departmentCode": "86",
         "name": "MOCOA",
+        "originalCode": "001",
+        "originalName": "MOCOA",
+        "type": "MUNICIPIO",
+        "areaName": 1305.26361705,
+        "creationYear": 2024,
+        "creationResolution": "1958",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1305.26361705,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1958"
       }
     },
     {
@@ -232,9 +243,20 @@
         "code": "86219",
         "departmentCode": "86",
         "name": "COLÓN",
+        "originalCode": "219",
+        "originalName": "COLÓN",
+        "type": "MUNICIPIO",
+        "areaName": 64.31747923,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 64.31747923,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
       }
     },
     {
@@ -363,9 +385,20 @@
         "code": "86320",
         "departmentCode": "86",
         "name": "ORITO",
+        "originalCode": "320",
+        "originalName": "ORITO",
+        "type": "MUNICIPIO",
+        "areaName": 1940.59417359,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 2891 de Diciembre 28 de 1978",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1940.59417359,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2891 de Diciembre 28 de 1978"
       }
     },
     {
@@ -618,9 +651,20 @@
         "code": "86568",
         "departmentCode": "86",
         "name": "PUERTO ASÍS",
+        "originalCode": "568",
+        "originalName": "PUERTO ASÍS",
+        "type": "MUNICIPIO",
+        "areaName": 2819.84374964,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 1951 de Octubre 24 de 1967",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 2819.84374964,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1951 de Octubre 24 de 1967"
       }
     },
     {
@@ -713,9 +757,20 @@
         "code": "86569",
         "departmentCode": "86",
         "name": "PUERTO CAICEDO",
+        "originalCode": "569",
+        "originalName": "PUERTO CAICEDO",
+        "type": "MUNICIPIO",
+        "areaName": 926.84282756,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 12 de Noviembre 24 de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 926.84282756,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 12 de Noviembre 24 de 1992"
       }
     },
     {
@@ -1060,9 +1115,20 @@
         "code": "86571",
         "departmentCode": "86",
         "name": "PUERTO GUZMÁN",
+        "originalCode": "571",
+        "originalName": "PUERTO GUZMÁN",
+        "type": "MUNICIPIO",
+        "areaName": 4576.35166237,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 13 de Noviembre 24 de 1992",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 4576.35166237,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 13 de Noviembre 24 de 1992"
       }
     },
     {
@@ -1559,9 +1625,20 @@
         "code": "86573",
         "departmentCode": "86",
         "name": "PUERTO LEGUÍZAMO",
+        "originalCode": "573",
+        "originalName": "PUERTO LEGUÍZAMO",
+        "type": "MUNICIPIO",
+        "areaName": 10900.42598581,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 698 de Noviembre 13 de 1953",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 10900.42598581,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 698 de Noviembre 13 de 1953"
       }
     },
     {
@@ -1618,9 +1695,20 @@
         "code": "86749",
         "departmentCode": "86",
         "name": "SIBUNDOY",
+        "originalCode": "749",
+        "originalName": "SIBUNDOY",
+        "type": "MUNICIPIO",
+        "areaName": 97.79631883,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 1871 de Julio 1 de 1982",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 97.79631883,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1871 de Julio 1 de 1982"
       }
     },
     {
@@ -1705,9 +1793,20 @@
         "code": "86755",
         "departmentCode": "86",
         "name": "SAN FRANCISCO",
+        "originalCode": "755",
+        "originalName": "SAN FRANCISCO",
+        "type": "MUNICIPIO",
+        "areaName": 407.59616234,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 407.59616234,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
       }
     },
     {
@@ -1852,9 +1951,20 @@
         "code": "86757",
         "departmentCode": "86",
         "name": "SAN MIGUEL",
+        "originalCode": "757",
+        "originalName": "SAN MIGUEL",
+        "type": "MUNICIPIO",
+        "areaName": 379.96831073,
+        "creationYear": 2024,
+        "creationResolution": "Ordenanza 45 de Abril 29 de 1994",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 379.96831073,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Ordenanza 45 de Abril 29 de 1994"
       }
     },
     {
@@ -1939,9 +2049,20 @@
         "code": "86760",
         "departmentCode": "86",
         "name": "SANTIAGO",
+        "originalCode": "760",
+        "originalName": "SANTIAGO",
+        "type": "MUNICIPIO",
+        "areaName": 342.16073335,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 2830 de Diciembre 2 de 1989",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 342.16073335,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 2830 de Diciembre 2 de 1989"
       }
     },
     {
@@ -2058,9 +2179,20 @@
         "code": "86865",
         "departmentCode": "86",
         "name": "VALLE DEL GUAMUEZ",
+        "originalCode": "865",
+        "originalName": "VALLE DEL GUAMUEZ",
+        "type": "MUNICIPIO",
+        "areaName": 815.66121418,
+        "creationYear": 2024,
+        "creationResolution": "Decreto DAINCO 3293 de Noviembre 12 de 1985",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 815.66121418,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto DAINCO 3293 de Noviembre 12 de 1985"
       }
     },
     {
@@ -2161,9 +2293,20 @@
         "code": "86885",
         "departmentCode": "86",
         "name": "VILLAGARZÓN",
+        "originalCode": "885",
+        "originalName": "VILLAGARZÓN",
+        "type": "MUNICIPIO",
+        "areaName": 1397.70273326,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 574 de Marzo 14 de 1977",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 1397.70273326,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 574 de Marzo 14 de 1977"
       }
     }
   ]

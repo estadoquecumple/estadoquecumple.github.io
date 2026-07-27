@@ -1,0 +1,21 @@
+{
+  "source": "dane-divipola-mgn-2025",
+  "status": "current",
+  "updatedAt": "2026-07-27T01:49:40Z",
+  "field": "MPIO_TIPO",
+  "total": 1122,
+  "counts": [
+    {
+      "type": "ISLA",
+      "count": 1
+    },
+    {
+      "type": "MUNICIPIO",
+      "count": 1103
+    },
+    {
+      "type": "ÁREA NO MUNICIPALIZADA",
+      "count": 18
+    }
+  ]
+}

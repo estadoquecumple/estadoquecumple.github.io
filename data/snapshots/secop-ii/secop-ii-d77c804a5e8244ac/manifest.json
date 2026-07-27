@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "secop-ii",
+  "snapshotId": "secop-ii-d77c804a5e8244ac",
+  "rawHash": "d77c804a5e8244ac376a52e3e181a7183dd434428b83dc2d3ce76d8921d3abfb",
+  "createdAt": "2026-07-27T02:05:18Z",
+  "immutable": true,
+  "raw": [
+    {
+      "path": "secop-jbjy-vk9h-contracting-entity-raw-aggregate.json",
+      "bytes": 646525,
+      "sha256": "99f49c368036252b4a4f84347a3b08a84a1aa83a01d4a513375fbd6bc65dcc3a"
+    },
+    {
+      "path": "secop-jbjy-vk9h-contracting-territory-raw-aggregate.json",
+      "bytes": 140571,
+      "sha256": "d9dd1a3acf0d84d047b87982e9330cf10e347b562709def11e3c937c6d9d41f1"
+    },
+    {
+      "path": "secop-jbjy-vk9h-metadata.json",
+      "bytes": 35256,
+      "sha256": "8d186975417829b2a710a34aa111f32b71dd8222fac0695aaa24bad51a0c71b4"
+    },
+    {
+      "path": "secop-jbjy-vk9h-modality-raw-aggregate.json",
+      "bytes": 2147,
+      "sha256": "07838670099542a310b8226873e6df9aee7ded63338acb967093c0ce206d1e2b"
+    },
+    {
+      "path": "secop-jbjy-vk9h-sector-raw-aggregate.json",
+      "bytes": 3183,
+      "sha256": "3a3b5bd5080e49519c3c1da1e80189751d3ae1485ee9959d0386504d79267aff"
+    },
+    {
+      "path": "secop-jbjy-vk9h-status-raw-aggregate.json",
+      "bytes": 1444,
+      "sha256": "558580d143e3ab11081aca789867c0ac057c145140a42ef1c96e25c4382a2413"
+    },
+    {
+      "path": "secop-jbjy-vk9h-supplier-raw-aggregate.json",
+      "bytes": 531913,
+      "sha256": "ffc6a9b926ef7fb83057bec0f1a6f231ecfeb55d67376b17d680f70847811b1b"
+    },
+    {
+      "path": "secop-jbjy-vk9h-unspsc-raw-aggregate.json",
+      "bytes": 1391232,
+      "sha256": "ca016f3ac696994b8f9388d86937f0329dc27ab3eebbc5af3dea225e826f745b"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "secop-aggregates.json",
+      "bytes": 5895814,
+      "sha256": "a3effa8133f3c6c923f3d1ef619b4320bd70a69e6bf759e2c0ba32734cfc9323"
+    }
+  ],
+  "quality": {
+    "valid": true,
+    "checkedAt": "2026-07-27T02:05:18Z",
+    "checks": [
+      "original-presente",
+      "sha256",
+      "producto-normalizado-presente"
+    ]
+  }
+}

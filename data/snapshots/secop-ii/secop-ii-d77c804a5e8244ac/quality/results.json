@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "checkedAt": "2026-07-27T02:05:18Z",
+  "checks": [
+    "original-presente",
+    "sha256",
+    "producto-normalizado-presente"
+  ]
+}

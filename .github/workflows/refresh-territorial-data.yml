@@ -8,22 +8,30 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
+    env:
+      SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+      LLM_PROVIDER: none
+      EMBEDDING_PROVIDER: none
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12', cache: pip }
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
-      - run: pip install -r requirements-data.txt
+      - name: Install free data platform
+        run: |
+          "$pythonLocation/bin/python" -m pip install -r requirements-data.txt
+          "$pythonLocation/bin/python" -m pip install -r requirements-platform-core-free.txt
       - run: npm ci
       - run: npm run data:refresh
       - run: npm run validate
-      - run: tar -czf territorial-data-refresh.tar.gz public/data/territorial data/sources.yml
+      - name: Package immutable snapshots and published products
+        run: tar -czf territorial-data-refresh.tar.gz public/data/territorial data/sources.yml data/snapshots data/schemas
       - uses: actions/upload-artifact@v4
         with:
           name: territorial-data-refresh-${{ github.run_id }}
           path: |
             territorial-data-refresh.tar.gz
             public/data/territorial/manifest.json
-          retention-days: 14
+          retention-days: 30

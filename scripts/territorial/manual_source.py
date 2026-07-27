@@ -1,5 +1,4 @@
 """Adaptador conservador de fuentes tabulares oficiales suministradas manualmente."""
-from pathlib import Path
 from common import ROOT, PUBLIC, now, sha256, write_json
 
 def process(source_id: str, filename: str, output: str):

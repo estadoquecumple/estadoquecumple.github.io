@@ -1,0 +1,28 @@
+{
+  "version": "4.0.0",
+  "generatedAt": "2026-07-27T02:09:36Z",
+  "files": [
+    {
+      "path": "catalog.parquet",
+      "bytes": 18029,
+      "sha256": "d57a83b3f5de6a5d29bb23a8c942c375538a15e042033ed240b03401f9a17adf"
+    },
+    {
+      "path": "indicators.parquet",
+      "bytes": 1631028,
+      "sha256": "14e749b6ae2483065167e2905f718d14d7b9679cd27b2906f24ea49ad7c9d60e"
+    },
+    {
+      "path": "departments.geoparquet",
+      "bytes": 115485,
+      "sha256": "9296dbf9bc72f6021c62b15ce704c444ecd044a388b13ef065ab6c918c4d00cb"
+    },
+    {
+      "path": "h3-divipola.parquet",
+      "bytes": 16737,
+      "sha256": "5a6e1d58e8bdab8695a509f4517e0054e3aaa7c02c0988fa0cb1267dd9e6571e"
+    }
+  ],
+  "fallback": "../geography/municipalities-index.json",
+  "h3Warning": "H3 es una malla analítica y no reemplaza límites administrativos o legales."
+}

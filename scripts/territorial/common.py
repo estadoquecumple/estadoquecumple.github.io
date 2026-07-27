@@ -1,6 +1,6 @@
 """Utilidades reproducibles del pipeline territorial CAMS (solo fuentes públicas)."""
 from __future__ import annotations
-import hashlib, json, time, urllib.parse, urllib.request
+import hashlib, json, os, time, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -26,13 +26,16 @@ def sha256(path: Path) -> str:
             digest.update(chunk)
     return digest.hexdigest()
 
-def get_json(url: str, params: dict | None = None, retries: int = 4):
+def get_json(url: str, params: dict | None = None, retries: int = 4, timeout: int = 90):
     if params:
         url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
+    if os.getenv("SOCRATA_APP_TOKEN") and "datos.gov.co" in url:
+        headers["X-App-Token"] = os.environ["SOCRATA_APP_TOKEN"]
+    request = urllib.request.Request(url, headers=headers)
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(request, timeout=90) as response:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
                 return json.load(response)
         except Exception:
             if attempt == retries - 1:

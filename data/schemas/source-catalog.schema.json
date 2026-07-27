@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estadoquecumple.github.io/schemas/source-catalog-v4.json",
+  "title": "Catálogo de fuentes territoriales V4",
+  "type": "object",
+  "required": ["version", "updated", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string" },
+    "updated": { "type": "string", "format": "date" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id", "entity", "url", "access", "frequency", "data_date",
+          "published_at", "downloaded_at", "coverage", "granularity", "key",
+          "license", "fields", "transformations", "limitations", "update_policy",
+          "status", "quality_status", "hash", "snapshot", "published_version",
+          "last_valid_version"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+          "entity": { "type": "string", "minLength": 2 },
+          "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+          "access": { "type": "string" },
+          "frequency": { "type": "string" },
+          "data_date": { "type": ["string", "null"] },
+          "published_at": { "type": ["string", "null"] },
+          "downloaded_at": { "type": ["string", "null"] },
+          "coverage": { "type": "string" },
+          "granularity": { "type": "string" },
+          "key": { "type": "string" },
+          "license": { "type": "string" },
+          "fields": { "type": "array", "items": { "type": "string" } },
+          "transformations": { "type": "array", "items": { "type": "string" } },
+          "limitations": { "type": "array", "items": { "type": "string" } },
+          "update_policy": { "type": "string" },
+          "status": { "enum": ["current", "stale", "partial", "manual-required", "unavailable"] },
+          "quality_status": { "enum": ["current", "stale", "partial", "manual-required", "unavailable"] },
+          "hash": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+          "snapshot": { "type": ["string", "null"] },
+          "published_version": { "type": ["string", "null"] },
+          "last_valid_version": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

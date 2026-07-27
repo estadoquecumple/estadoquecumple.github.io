@@ -1,4 +1,4 @@
-from common import PUBLIC, ROOT, now, sha256, write_json
+from common import PUBLIC, now, sha256, write_json
 def run():
     files=[]
     for path in sorted(PUBLIC.rglob("*")):

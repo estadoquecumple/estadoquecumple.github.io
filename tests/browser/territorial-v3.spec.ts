@@ -43,6 +43,17 @@ test('mapa contiene contexto local, selección diferenciada y cámaras',async({p
   await expect(page.locator('.context-warning')).toContainText('solo como contexto');
 });
 
+test('catálogo V4 activa DuckDB con fallback y malla H3 no legal',async({page},testInfo)=>{
+  if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="method"]').click();
+  await page.locator('[data-v4-catalog] summary').click();
+  await expect(page.locator('[data-catalog-summary]')).toContainText('fuentes');
+  await expect(page.locator('[data-analytics-status]')).toContainText(/Motor (duckdb-wasm|json-fallback)/,{timeout:30_000});
+  if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="controls"]').click();
+  await page.locator('[data-layer-h3]').check();
+  await expect(page.locator('[data-h3-status]')).toContainText('1122 asociaciones');
+  await expect.poll(()=>page.evaluate(()=>((window as any).__territorialMap.querySourceFeatures('h3-analytics').length))).toBeGreaterThan(0);
+});
+
 test('topología selecciona vecinos y contiguos con razón',async({page})=>{
   await page.getByRole('button',{name:/SEMILLAS/}).click();
   await page.locator('[data-territory-check]').first().check();

@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "DANE DIVIPOLA MGN 2025",
-    "downloadedAt": "2026-07-25T07:50:10Z",
+    "downloadedAt": "2026-07-27T01:49:40Z",
     "crs": "EPSG:4326",
     "simplification": "ArcGIS maxAllowableOffset=0.01 grados y geometryPrecision=5; solo visualización web"
   },
@@ -561,9 +561,20 @@
         "code": "94001",
         "departmentCode": "94",
         "name": "INÍRIDA",
+        "originalCode": "001",
+        "originalName": "INÍRIDA",
+        "type": "MUNICIPIO",
+        "areaName": 15891.23252904,
+        "creationYear": 2024,
+        "creationResolution": "Decreto 1593 de Agosto 5 de 1974",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 15891.23252904,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Decreto 1593 de Agosto 5 de 1974"
       }
     },
     {
@@ -1252,9 +1263,20 @@
         "code": "94343",
         "departmentCode": "94",
         "name": "BARRANCOMINAS",
+        "originalCode": "343",
+        "originalName": "BARRANCOMINAS",
+        "type": "MUNICIPIO",
+        "areaName": 14342.99540854,
+        "creationYear": 2024,
+        "creationResolution": "Modificado por la Ordenanza No. 261 de 18 de Marzo de 2020",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "MUNICIPIO",
+        "unitType": "municipio",
+        "MPIO_NAREA": 14342.99540854,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Modificado por la Ordenanza No. 261 de 18 de Marzo de 2020"
       }
     },
     {
@@ -1523,9 +1545,20 @@
         "code": "94883",
         "departmentCode": "94",
         "name": "SAN FELIPE",
+        "originalCode": "883",
+        "originalName": "SAN FELIPE",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 2909.7089526,
+        "creationYear": 2024,
+        "creationResolution": "Resolución 83",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 2909.7089526,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Resolución 83"
       }
     },
     {
@@ -2050,9 +2083,20 @@
         "code": "94884",
         "departmentCode": "94",
         "name": "PUERTO COLOMBIA",
+        "originalCode": "884",
+        "originalName": "PUERTO COLOMBIA",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 15620.4227989,
+        "creationYear": 2024,
+        "creationResolution": "Resolución 83",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 15620.4227989,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Resolución 83"
       }
     },
     {
@@ -2161,9 +2205,20 @@
         "code": "94885",
         "departmentCode": "94",
         "name": "LA GUADALUPE",
+        "originalCode": "885",
+        "originalName": "LA GUADALUPE",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 1171.89173176,
+        "creationYear": 2024,
+        "creationResolution": "Resolución 83",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 1171.89173176,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Resolución 83"
       }
     },
     {
@@ -2332,9 +2387,20 @@
         "code": "94886",
         "departmentCode": "94",
         "name": "CACAHUAL",
+        "originalCode": "886",
+        "originalName": "CACAHUAL",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 2322.43228063,
+        "creationYear": 2024,
+        "creationResolution": "Resolución 83",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 2322.43228063,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Resolución 83"
       }
     },
     {
@@ -2711,9 +2777,20 @@
         "code": "94887",
         "departmentCode": "94",
         "name": "PANA PANA",
+        "originalCode": "887",
+        "originalName": "PANA PANA",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 10180.94665364,
+        "creationYear": 2024,
+        "creationResolution": "Resolución 83 de 1988",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 10180.94665364,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "Resolución 83 de 1988"
       }
     },
     {
@@ -3158,9 +3235,20 @@
         "code": "94888",
         "departmentCode": "94",
         "name": "MORICHAL",
+        "originalCode": "888",
+        "originalName": "MORICHAL",
+        "type": "ÁREA NO MUNICIPALIZADA",
+        "areaName": 8513.7919055,
+        "creationYear": 2024,
+        "creationResolution": "1988",
         "resultType": "observed",
         "source": "dane-divipola-mgn-2025",
-        "year": 2025
+        "year": 2025,
+        "MPIO_TIPO": "ÁREA NO MUNICIPALIZADA",
+        "unitType": "área no municipalizada",
+        "MPIO_NAREA": 8513.7919055,
+        "MPIO_NANO": 2024,
+        "MPIO_CRSLCION": "1988"
       }
     }
   ]

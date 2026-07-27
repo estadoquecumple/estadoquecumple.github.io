@@ -23,9 +23,13 @@ yarn-error.log*
 artifacts/
 data/cache/
 data/rejected/
+data/snapshots/*/*/raw/
+data/snapshots/*/*/normalized/
 playwright-report/
 test-results/
 
 # Python cache
 __pycache__/
 *.py[cod]
+.venv/
+.venv-*/

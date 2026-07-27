@@ -40,6 +40,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
     setWorkerUrl,
     type GeoJSONSource,
   } from 'maplibre-gl';
+  import { cellToBoundary } from 'h3-js';
   import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
   type FeatureCollection = GeoJSON.FeatureCollection<GeoJSON.Polygon | GeoJSON.MultiPolygon, { code: string; name: string }>;
@@ -202,6 +203,9 @@ import 'maplibre-gl/dist/maplibre-gl.css';
       map.addSource('drawing-selection', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       map.addLayer({ id: 'drawing-selection-fill', type: 'fill', source: 'drawing-selection', filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': '#7b3fb4', 'fill-opacity': 0.2 } });
       map.addLayer({ id: 'drawing-selection-line', type: 'line', source: 'drawing-selection', paint: { 'line-color': '#7b3fb4', 'line-width': 3, 'line-dasharray': [2, 1] } });
+      map.addSource('h3-analytics', { type:'geojson', data:{type:'FeatureCollection',features:[]} });
+      map.addLayer({ id:'h3-analytics-fill', type:'fill', source:'h3-analytics', paint:{'fill-color':'#2b7a78','fill-opacity':0.12} });
+      map.addLayer({ id:'h3-analytics-line', type:'line', source:'h3-analytics', paint:{'line-color':'#1d5b59','line-width':0.8} });
       map.addSource('context-labels', { type:'geojson', data:labels });
       map.addLayer({ id:'context-labels', type:'symbol', source:'context-labels', layout:{'text-field':['get','name'],'text-size':12}, paint:{'text-color':'#52636b','text-halo-color':'#fff','text-halo-width':1} });
       map.addSource('context-capitals', { type:'geojson', data:capitals });
@@ -269,6 +273,18 @@ import 'maplibre-gl/dist/maplibre-gl.css';
     (map?.getSource('selected-departments') as GeoJSONSource | undefined)?.setData(event.detail.departments);
     (map?.getSource('selected-municipalities') as GeoJSONSource | undefined)?.setData(event.detail.municipalities);
     lastSelection = { type:'FeatureCollection', features:[...event.detail.departments.features, ...event.detail.municipalities.features] };
+  }) as EventListener);
+  document.addEventListener('territorial:h3', ((event:CustomEvent<{enabled:boolean;records:Array<{h3:string;code:string;resolution:number}>}>)=>{
+    const unique=new Map(event.detail.records.map((item)=>[item.h3,item]));
+    const features=event.detail.enabled?[...unique.values()].map((item)=>{
+      const boundary=cellToBoundary(item.h3,true) as Array<[number,number]>;
+      return {
+        type:'Feature' as const,
+        properties:{h3:item.h3,resolution:item.resolution,association:'punto representativo; no es límite legal'},
+        geometry:{type:'Polygon' as const,coordinates:[[...boundary,boundary[0]]]},
+      };
+    }):[];
+    (map?.getSource('h3-analytics') as GeoJSONSource|undefined)?.setData({type:'FeatureCollection',features});
   }) as EventListener);
   document.querySelector<HTMLSelectElement>('[data-basemap]')?.addEventListener('change', (event) => {
     const value = (event.currentTarget as HTMLSelectElement).value;
