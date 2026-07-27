@@ -1,0 +1,5 @@
+ortools>=9.12,<10
+scikit-learn>=1.6,<2
+sentence-transformers>=5,<6
+transformers>=4.53,<5
+safetensors>=0.5,<1
