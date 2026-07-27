@@ -43,6 +43,19 @@ describe('compilador y cápsula V4', () => {
     expect(result.valid).toBe(false);
     expect(result.validations.map((item) => item.code)).toEqual(expect.arrayContaining(['missing-parent', 'responsibility-without-finance']));
   });
+  it('no declara geometrically-valid sin geometría verificada', () => {
+    const result = compileScenario(createScenario('Sin geometría'));
+    expect(result.state).toBe('draft');
+    expect(result.validations.map((item) => item.code)).toContain('geometry-unverified');
+  });
+  it('integra la validación Turf y rechaza geometría inválida', () => {
+    const scenario = createScenario('Geometría inválida');
+    scenario.units = [scenario.units[0]];
+    scenario.units[0].geometry = { type: 'Polygon', coordinates: [[[0, 0], [1, 1], [0, 0]]] };
+    const result = compileScenario(scenario);
+    expect(result.state).toBe('draft');
+    expect(result.validations.map((item) => item.code)).toContain('invalid-geometry');
+  });
   it('crea expediente reproducible con proveedores desactivados', () => {
     const scenario = createScenario('Base');
     const hash = 'a'.repeat(64);

@@ -172,14 +172,20 @@ import 'maplibre-gl/dist/maplibre-gl.css';
       setStatus('Cargando cartografía DANE');
       const departments = await fetchCollection('/data/territorial/geography/departments.geojson');
       departmentData = departments;
-      const [ocean, countries, coast, borders, labels, capitals] = await Promise.all([
-        fetchGeoJSON('/data/territorial/context/ocean.geojson'),
-        fetchGeoJSON('/data/territorial/context/countries-near-colombia.geojson'),
-        fetchGeoJSON('/data/territorial/context/coastline.geojson'),
-        fetchGeoJSON('/data/territorial/context/country-borders.geojson'),
-        fetchGeoJSON('/data/territorial/context/geographic-labels.geojson'),
-        fetchGeoJSON('/data/territorial/context/capital-cities.geojson'),
-      ]);
+      const emptyCollection = (): GeoJSON.FeatureCollection => ({ type:'FeatureCollection', features:[] });
+      const optionalContext = (url:string) => fetchGeoJSON(url).catch(() => emptyCollection());
+      const oceanRequest=optionalContext('/data/territorial/context/ocean.geojson');
+      const countriesRequest=optionalContext('/data/territorial/context/countries-near-colombia.geojson');
+      const coastRequest=optionalContext('/data/territorial/context/coastline.geojson');
+      const bordersRequest=optionalContext('/data/territorial/context/country-borders.geojson');
+      const labelsRequest=optionalContext('/data/territorial/context/geographic-labels.geojson');
+      const capitalsRequest=optionalContext('/data/territorial/context/capital-cities.geojson');
+      const ocean=await oceanRequest;
+      const countries=await countriesRequest;
+      const coast=await coastRequest;
+      const borders=await bordersRequest;
+      const labels=await labelsRequest;
+      const capitals=await capitalsRequest;
       map.addSource('context-ocean', { type:'geojson', data:ocean });
       map.addLayer({ id:'context-ocean', type:'fill', source:'context-ocean', paint:{'fill-color':'#dcecf2','fill-opacity':0.85} });
       map.addSource('context-countries', { type:'geojson', data:countries });

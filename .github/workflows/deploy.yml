@@ -33,7 +33,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: withastro/action@v3
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12', cache: pip }
+      - name: Install free build dependencies
+        run: |
+          "$pythonLocation/bin/python" -m pip install -r requirements-data.txt
+          "$pythonLocation/bin/python" -m pip install -r requirements-platform-core-free.txt
+      - run: npm ci
+      - name: Stamp the publication commit in foundation-v4.json
+        run: npm run data:v4
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
   deploy:
     needs: build
     environment:

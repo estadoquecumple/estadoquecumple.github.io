@@ -78,3 +78,11 @@ Instale Python con `pip install -r requirements-data.txt` y ejecute `npm run dat
 Para agregar variables declare fuente, esquema, tipo, año y corte, añada un adaptador y pruebe cobertura. Para escenarios o territorios edite `data/scenarios/`, documente supuestos, riesgos, requisitos jurídicos, incertidumbre e historial y regenere; no codifique agrupaciones en componentes.
 
 `refresh-territorial-data.yml` corre manualmente y los martes a las 08:23 UTC, genera un artefacto de revisión y no fusiona ni despliega. No se procesan datos personales ni secretos. La reutilización depende de las condiciones de DANE, DNP y Datos Abiertos Colombia. Los escenarios no predicen, prueban causalidad ni calculan ahorros exactos.
+
+### Límites de conservación y publicación de la Fase 1
+
+Los originales `raw` descargados no están versionados en Git. Los artefactos producidos por GitHub Actions se conservan durante 30 días y sirven para revisión, no como bóveda durable. El workflow de `refresh` valida y empaqueta datos, pero no publica, fusiona ni despliega automáticamente. Una bóveda durable y su operación pertenecen a la Fase 2 y no forman parte de este cierre.
+
+La migración de seguridad actualiza explícitamente Astro 5.18.2 a 7.1.3, junto con `sharp` 0.35.3, `esbuild` 0.28.1, `@astrojs/check` 0.9.9 y `@astrojs/sitemap` 3.7.3. El sitio ya usaba configuración estática compatible; no fue necesario cambiar rutas, colecciones, adaptadores ni APIs de componentes. La única incompatibilidad encontrada fue la retirada del ejecutable interno `astro/astro.js`: el lanzador E2E ahora usa el binario público declarado por Astro en `bin/astro.mjs`.
+
+DuckDB-Wasm queda fijado en la versión estable 1.29.0. La extensión oficial libre de Parquet se sirve desde `public/assets/duckdb/` para que una consulta válida no dependa de `extensions.duckdb.org`; el fallback JSON se reserva para fallos reales y se prueba por separado.

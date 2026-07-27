@@ -43,13 +43,18 @@ import TerritoryMap from './TerritoryMap.astro';
       <option value="expert">Modo experto</option>
     </select>
   </label>
+  <div data-guided-only class="guided-route">
+    <strong>Recorrido guiado</strong>
+    <ol><li>Seleccione RAÍCES, SAVIA o SEMILLAS.</li><li>Elija un territorio.</li><li>Revise el resultado y sus advertencias antes de exportar.</li></ol>
+  </div>
+  <p data-expert-only hidden><strong>Vista experta:</strong> se exponen metodología, procedencia, restricciones analíticas y metadatos completos del catálogo.</p>
   <details open><summary>Escenario e historial</summary><p data-scenario-summary>Estado actual bloqueado; no contiene operaciones editables.</p></details>
-  <details><summary>Metodología</summary><p>RAÍCES consulta datos observados; SAVIA calcula perfiles condicionados por pesos; SEMILLAS registra hipótesis y operaciones sin alterar cartografía oficial. Las divisiones geométricas no estiman población ni finanzas sin datos granulares.</p></details>
-  <details data-v4-catalog><summary>Catálogo, vigencia y evidencia V4</summary>
+  <details data-expert-only hidden><summary>Metodología</summary><p>RAÍCES consulta datos observados; SAVIA calcula perfiles condicionados por pesos; SEMILLAS registra hipótesis y operaciones sin alterar cartografía oficial. Las divisiones geométricas no estiman población ni finanzas sin datos granulares.</p></details>
+  <details data-v4-catalog data-expert-only hidden><summary>Catálogo, vigencia y evidencia V4</summary>
     <p data-catalog-summary>Cargando catálogo validado…</p>
     <div class="table-scroll"><table>
-      <thead><tr><th>Fuente</th><th>Vigencia</th><th>Calidad</th><th>Evidencia</th></tr></thead>
-      <tbody data-source-catalog><tr><td colspan="4">Pendiente de carga.</td></tr></tbody>
+      <thead><tr><th>Fuente</th><th>Snapshot</th><th>Hash</th><th>Fecha</th><th>Cobertura</th><th>Transformación</th><th>Limitaciones</th><th>Calidad</th><th>Evidencia</th></tr></thead>
+      <tbody data-source-catalog><tr><td colspan="9">Pendiente de carga.</td></tr></tbody>
     </table></div>
     <p data-analytics-status>DuckDB-Wasm permanece diferido; se inicializa sólo al abrir este catálogo.</p>
     <p>H3 es una malla analítica y no constituye división administrativa o legal.</p>
@@ -530,7 +535,9 @@ import TerritoryMap from './TerritoryMap.astro';
   store.list().then((items) => { items.forEach((scenario) => scenarios.set(scenario.id, scenario)); refreshScenarioLists(); }).catch((error) => announce(`IndexedDB no disponible: ${error.message}`));
   $<HTMLSelectElement>('[data-experience-mode]')?.addEventListener('change', (event) => {
     const value=(event.currentTarget as HTMLSelectElement).value;
-    document.body.dataset.experienceMode=value;
+    document.body.dataset.experienceLevel=value;
+    $$<HTMLElement>('[data-expert-only]').forEach((element)=>{element.hidden=value!=='expert';});
+    $$<HTMLElement>('[data-guided-only]').forEach((element)=>{element.hidden=value==='expert';});
     announce(value==='expert'?'Modo experto: se muestran trazabilidad y restricciones completas.':'Modo guiado: se priorizan pasos y explicaciones.');
   });
   $<HTMLInputElement>('[data-layer-h3]')?.addEventListener('change', async (event) => {
@@ -550,23 +557,21 @@ import TerritoryMap from './TerritoryMap.astro';
       const catalog=await fetch('/data/territorial/catalog/sources.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();});
       foundation=await fetch('/data/territorial/current/foundation-v4.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();});
       if(summary)summary.textContent=`${catalog.sources.length} fuentes · catálogo ${catalog.version} · ${catalog.policy.pricing}.`;
-      if(body){body.textContent='';for(const source of catalog.sources){const row=document.createElement('tr');appendText(row,'td',source.entity);appendText(row,'td',source.data_date??'Vigencia no publicada');appendText(row,'td',source.quality_status);const cell=document.createElement('td');const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noreferrer';link.textContent=`Abrir ${source.id}`;cell.append(link);row.append(cell);body.append(row);}}
+      if(body){body.textContent='';for(const source of catalog.sources){const row=document.createElement('tr');appendText(row,'td',source.entity);appendText(row,'td',source.snapshot??'Sin snapshot publicado');appendText(row,'td',source.hash??'Sin hash de original');appendText(row,'td',source.data_date??source.downloaded_at??'Fecha no publicada');appendText(row,'td',source.coverage);appendText(row,'td',(source.transformations??[]).join('; '));appendText(row,'td',(source.limitations??[]).join('; '));appendText(row,'td',source.quality_status);const cell=document.createElement('td');const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noreferrer';link.textContent=`Abrir ${source.id}`;cell.append(link);row.append(cell);body.append(row);}}
       const analytics=new TerritorialAnalytics();
       const result=await analytics.query({sql:'SELECT count(*) AS records FROM territorial.parquet',parquetUrl:'/data/territorial/analytics/catalog.parquet',fallbackUrl:'/data/territorial/catalog/sources.json',maxBytes:10_000_000});
       analytics.cancelAll();
       catalogLoaded=true;
-      const status=$('[data-analytics-status]');if(status)status.textContent=result.ok?`Motor ${result.engine}: catálogo analítico disponible.`:`Motor analítico no disponible: ${result.error}`;
+      const status=$('[data-analytics-status]');if(status)status.textContent=result.ok?`Motor ${result.engine}: catálogo analítico disponible.${result.engine==='json-fallback'&&result.error?` DuckDB no pudo consultar: ${result.error}`:''}`:`Motor analítico no disponible: ${result.error}`;
     } catch(error) { if(summary)summary.textContent=`Catálogo no disponible: ${error instanceof Error?error.message:String(error)}`; }
   });
-  Promise.all([
-    fetch('/data/territorial/government/entities-by-territory.json').then((response)=>response.json()),
-    fetch('/data/territorial/indicators/sgr-aggregates.json').then((response)=>response.json()),
-    fetch('/data/territorial/indicators/secop-aggregates.json').then((response)=>response.json()),
-    fetch('/data/territorial/official-sources.json').then((response)=>response.json()),
-  ]).then(([government,sgr,secop,registry])=>{
-    governmentMetrics=government.records??[];sgrMetrics=sgr.records??[];secopMetrics=secop.records??[];
+  const loadRecords=(url:string,assign:(records:any[])=>void,label:string)=>fetch(url).then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();}).then((document)=>assign(document.records??[])).catch((error)=>announce(`${label} no disponible; los demás datos siguen operativos: ${error instanceof Error?error.message:String(error)}`));
+  void loadRecords('/data/territorial/government/entities-by-territory.json',(records)=>{governmentMetrics=records;},'Entidades públicas');
+  void loadRecords('/data/territorial/indicators/sgr-aggregates.json',(records)=>{sgrMetrics=records;},'SGR');
+  void loadRecords('/data/territorial/indicators/secop-aggregates.json',(records)=>{secopMetrics=records;},'SECOP II');
+  void fetch('/data/territorial/official-sources.json').then((response)=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json();}).then((registry)=>{
     const host=$('[data-official-sources]');if(host){host.textContent='';for(const source of registry.sources??[]){const li=document.createElement('li');const link=document.createElement('a');link.textContent=`${source.topic} — ${source.authority}`;link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';li.append(link,` · ${source.integration} · ${source.coverage}`);host.append(li);}}
-  }).catch((error)=>{const host=$('[data-official-sources]');if(host)host.textContent=`No fue posible cargar el registro local de fuentes: ${error instanceof Error?error.message:String(error)}`;});
+  }).catch((error)=>{const host=$('[data-official-sources]');if(host)host.textContent=`Registro de fuentes no disponible; los indicadores cargados conservan su estado: ${error instanceof Error?error.message:String(error)}`;});
   const initialParams = new URLSearchParams(location.search);
   const shared = initialParams.get('share');
   if (shared) try {
@@ -587,5 +592,6 @@ import TerritoryMap from './TerritoryMap.astro';
     ? aliases[requestedMode]
     : canonicalModes.includes(requestedMode as LabMode) ? requestedMode as LabMode : 'raices';
   setMode(initialMode);
+  document.body.dataset.experienceLevel='guided';
   void loadTableFallback();
 </script>

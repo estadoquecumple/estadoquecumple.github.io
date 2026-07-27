@@ -1,12 +1,13 @@
 import { z } from 'zod';
 import type { TerritorialScenario } from './scenario-v2';
+import { inspectGeometry } from './geometry-v4';
 
 export const compilationStateSchema = z.enum([
   'draft',
   'geometrically-valid',
   'institutionally-complete',
-  'fiscally-evaluated',
-  'legally-classified',
+  'financing-defined',
+  'legally-preclassified',
   'ready-for-deliberation',
 ]);
 
@@ -61,8 +62,23 @@ export function compileScenario(scenario: TerritorialScenario) {
     if (unit.parentId && !ids.has(unit.parentId)) {
       error('unknown-parent', `units.${unit.id}.parentId`, `El padre ${unit.parentId} no existe.`, 'Corrija la referencia o cree la unidad.');
     }
-    if (unit.geometry && typeof unit.geometry === 'object' && !('type' in unit.geometry)) {
-      error('invalid-geometry', `units.${unit.id}.geometry`, 'La geometría no declara tipo GeoJSON.', 'Use Polygon o MultiPolygon válido.');
+    if (unit.state !== 'active') continue;
+    if (!unit.geometry) {
+      error('geometry-unverified', `units.${unit.id}.geometry`, `La geometría de ${unit.name} no fue verificada.`, 'Cargue y valide una geometría Polygon o MultiPolygon.');
+    } else if (
+      typeof unit.geometry !== 'object'
+      || !('type' in unit.geometry)
+      || !['Polygon', 'MultiPolygon'].includes(String(unit.geometry.type))
+    ) {
+      error('invalid-geometry', `units.${unit.id}.geometry`, 'La geometría no es Polygon o MultiPolygon GeoJSON.', 'Use una geometría territorial válida.');
+    } else {
+      try {
+        if (!inspectGeometry(unit.geometry as GeoJSON.Polygon | GeoJSON.MultiPolygon).valid) {
+          error('invalid-geometry', `units.${unit.id}.geometry`, `La geometría de ${unit.name} no superó la validación Turf.`, 'Corrija anillos y coordenadas antes de compilar.');
+        }
+      } catch {
+        error('invalid-geometry', `units.${unit.id}.geometry`, `La geometría de ${unit.name} no pudo verificarse.`, 'Corrija el GeoJSON antes de compilar.');
+      }
     }
   }
   for (const unit of scenario.units) {
@@ -97,17 +113,17 @@ export function compileScenario(scenario: TerritorialScenario) {
   if (scenario.history.length && !scenario.transitions.length) {
     error('missing-transition', 'transitions', 'El escenario modificado no tiene ruta de transición.', 'Defina hitos, responsables y controles.');
   }
-  if (!scenario.units.some((unit) => unit.geometry)) {
-    warning('geometry-not-loaded', 'units', 'La compilación no pudo verificar cobertura o solapes sin geometrías.', 'Cargue las geometrías oficiales antes de deliberar.');
+  if (validations.some((item) => item.code === 'geometry-unverified')) {
+    warning('geometry-coverage-incomplete', 'units', 'La compilación no verificó cobertura ni solapes de todas las unidades activas.', 'Cargue las geometrías oficiales antes de deliberar.');
   }
 
   const errors = validations.filter((item) => item.severity === 'error');
   let state: z.infer<typeof compilationStateSchema> = 'draft';
-  if (!errors.some((item) => ['duplicate-unit', 'missing-parent', 'unknown-parent', 'hierarchy-cycle', 'invalid-geometry'].includes(item.code))) state = 'geometrically-valid';
+  if (!errors.some((item) => ['duplicate-unit', 'missing-parent', 'unknown-parent', 'hierarchy-cycle', 'invalid-geometry', 'geometry-unverified'].includes(item.code))) state = 'geometrically-valid';
   if (!errors.some((item) => ['competence-without-owner', 'authority-without-selection', 'authority-without-control'].includes(item.code)) && state === 'geometrically-valid') state = 'institutionally-complete';
-  if (!errors.some((item) => item.code === 'responsibility-without-finance') && state === 'institutionally-complete') state = 'fiscally-evaluated';
-  if (!errors.some((item) => item.code === 'missing-legal-path') && state === 'fiscally-evaluated') state = 'legally-classified';
-  if (!errors.length && scenario.transitions.length) state = 'ready-for-deliberation';
+  if (!errors.some((item) => item.code === 'responsibility-without-finance') && state === 'institutionally-complete') state = 'financing-defined';
+  if (!errors.some((item) => item.code === 'missing-legal-path') && state === 'financing-defined') state = 'legally-preclassified';
+  if (!errors.length && scenario.transitions.length && state === 'legally-preclassified') state = 'ready-for-deliberation';
   return { valid: !errors.length, state, validations };
 }
 

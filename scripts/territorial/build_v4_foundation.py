@@ -2,19 +2,20 @@
 from __future__ import annotations
 
 import subprocess
+import os
 
 from common import PUBLIC, ROOT, now, sha256, write_json
 from platform_v4 import environment_policy, load_catalog, write_analytics, write_public_catalog
 
 
-def run() -> None:
-    commit = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
+def publication_commit() -> str:
+    return os.environ.get("GITHUB_SHA") or subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, capture_output=True, text=True
     ).stdout.strip()
+
+
+def run() -> None:
+    commit = publication_commit()
     compiler = ROOT / "src" / "data" / "territorial" / "scenario-v4.ts"
     catalog = load_catalog()
     catalog_path = write_public_catalog(catalog)

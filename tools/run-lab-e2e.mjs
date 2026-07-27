@@ -1,7 +1,9 @@
 import { spawn } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const server = spawn(process.execPath, ['node_modules/astro/astro.js', 'preview', '--host', '127.0.0.1', '--port', '4321'], { stdio: ['ignore', 'pipe', 'pipe'] });
+const astroCli = fileURLToPath(new URL('../node_modules/astro/bin/astro.mjs', import.meta.url));
+const server = spawn(process.execPath, [astroCli, 'preview', '--host', '127.0.0.1', '--port', '4321'], { stdio: ['ignore', 'pipe', 'pipe'] });
 let serverOutput = '';
 server.stdout.on('data', (chunk) => serverOutput += chunk);
 server.stderr.on('data', (chunk) => serverOutput += chunk);

@@ -17,6 +17,13 @@ const route='/observatorio/laboratorio-territorial/';
 
 test.beforeEach(async({page})=>{await page.goto(route,{waitUntil:'networkidle'});});
 
+test('HTML publicado conserva los contratos V4',async({request})=>{
+  const response=await request.get(route);
+  expect(response.ok()).toBe(true);
+  const html=await response.text();
+  for(const contract of ['data-v4-catalog','data-experience-mode','data-layer-h3','Catálogo, vigencia y evidencia V4'])expect(html).toContain(contract);
+});
+
 test('RAÍCES busca municipio nacional, cambia capas, función y comparación',async({page},testInfo)=>{
   await expect(page.locator('[data-map-status]')).toHaveAttribute('data-state','ready');
   if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="controls"]').click();
@@ -43,17 +50,35 @@ test('mapa contiene contexto local, selección diferenciada y cámaras',async({p
   await expect(page.locator('.context-warning')).toContainText('solo como contexto');
 });
 
-test('catálogo V4 activa DuckDB con fallback y malla H3 no legal',async({page},testInfo)=>{
+test('Parquet válido exige duckdb-wasm y la malla H3 no es legal',async({page},testInfo)=>{
   if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="method"]').click();
+  await page.locator('[data-experience-mode]').selectOption('expert');
   await page.locator('[data-v4-catalog] summary').click();
   await expect(page.locator('[data-catalog-summary]')).toContainText('fuentes');
-  await expect(page.locator('[data-analytics-status]')).toContainText(/Motor (duckdb-wasm|json-fallback)/,{timeout:30_000});
+  await expect(page.locator('[data-analytics-status]')).toContainText('Motor duckdb-wasm',{timeout:30_000});
   if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="controls"]').click();
   await page.locator('[data-layer-h3]').check();
   await expect(page.locator('[data-h3-status]')).toContainText('1122 asociaciones');
   await expect.poll(()=>page.evaluate(()=>((window as any).__territorialMap.querySourceFeatures('h3-analytics').length))).toBeGreaterThan(0);
 });
 
+test('fallo provocado de Parquet exige json-fallback',async({page},testInfo)=>{
+  await page.route('**/analytics/catalog.parquet',route=>route.abort('failed'));
+  if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="method"]').click();
+  await page.locator('[data-experience-mode]').selectOption('expert');
+  await page.locator('[data-v4-catalog] summary').click();
+  await expect(page.locator('[data-analytics-status]')).toContainText('Motor json-fallback',{timeout:30_000});
+});
+
+test('modo guiado y experto muestran niveles de detalle distintos',async({page},testInfo)=>{
+  if(testInfo.project.name==='mobile')await page.locator('[data-mobile-tab="method"]').click();
+  await expect(page.locator('[data-guided-only]')).toBeVisible();
+  await expect(page.locator('[data-v4-catalog]')).toBeHidden();
+  await page.locator('[data-experience-mode]').selectOption('expert');
+  await expect(page.locator('[data-guided-only]')).toBeHidden();
+  await expect(page.locator('[data-v4-catalog]')).toBeVisible();
+  await expect(page.locator('[data-expert-only]').filter({hasText:'Vista experta'})).toBeVisible();
+});
 test('topología selecciona vecinos y contiguos con razón',async({page})=>{
   await page.getByRole('button',{name:/SEMILLAS/}).click();
   await page.locator('[data-territory-check]').first().check();

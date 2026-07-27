@@ -5,6 +5,7 @@ import json
 import pytest
 
 from scripts.territorial import platform_v4
+from scripts.territorial.build_v4_foundation import publication_commit
 from scripts.territorial.fetch_secop import aggregate_query, metadata_fields, normalize_aggregate, resolve_fields
 from scripts.territorial.fetch_sgr import aggregate_rows
 from scripts.territorial.platform_v4 import (
@@ -43,6 +44,12 @@ def test_catalog_rejects_duplicate_ids():
     }
     with pytest.raises(ValueError, match="duplicados"):
         SourceCatalog.model_validate({"version": "4", "updated": "2026-07-26", "sources": [source, source]})
+
+
+def test_foundation_prefers_github_publication_sha(monkeypatch):
+    commit = "1234567890abcdef1234567890abcdef12345678"
+    monkeypatch.setenv("GITHUB_SHA", commit)
+    assert publication_commit() == commit
 
 
 def test_pandera_validates_equivalent_catalog_aggregates_and_types():

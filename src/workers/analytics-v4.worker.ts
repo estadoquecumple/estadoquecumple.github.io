@@ -40,13 +40,19 @@ async function fallback(request: AnalyticsRequest, error: unknown): Promise<Anal
 self.onmessage = async (event: MessageEvent<AnalyticsRequest>) => {
   const request = event.data;
   try {
-    const head = await fetch(request.parquetUrl, { method: 'HEAD' });
-    const bytes = Number(head.headers.get('content-length') ?? 0);
+    const response = await fetch(request.parquetUrl);
+    if (!response.ok) throw new Error(`Parquet HTTP ${response.status}`);
+    const bytes = Number(response.headers.get('content-length') ?? 0);
     if (bytes && bytes > (request.maxBytes ?? 25_000_000)) throw new Error(`Parquet de ${bytes} bytes excede el límite.`);
+    const parquet = new Uint8Array(await response.arrayBuffer());
+    if (parquet.byteLength > (request.maxBytes ?? 25_000_000)) throw new Error(`Parquet de ${parquet.byteLength} bytes excede el límite.`);
     const engine = await db();
-    await engine.registerFileURL('territorial.parquet', request.parquetUrl, duckdb.DuckDBDataProtocol.HTTP, false);
+    await engine.dropFile('territorial.parquet').catch(() => undefined);
+    await engine.registerFileBuffer('territorial.parquet', parquet);
     const connection = await engine.connect();
     try {
+      const extensionRepository = new URL('/assets/duckdb', self.location.origin).href.replace(/\/$/, '');
+      await connection.query(`SET custom_extension_repository='${extensionRepository}'`);
       const table = await connection.query(request.sql);
       const rows = table.toArray().map((row) => row.toJSON());
       self.postMessage({ id: request.id, ok: true, engine: 'duckdb-wasm', rows } satisfies AnalyticsResponse);
