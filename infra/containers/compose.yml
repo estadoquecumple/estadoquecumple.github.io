@@ -1,0 +1,109 @@
+name: estadoquecumple-territorial-v4
+services:
+  db:
+    build:
+      context: ../..
+      dockerfile: infra/containers/postgres.Containerfile
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_ADMIN_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD}
+      POSTGRES_APP_USER: ${POSTGRES_APP_USER}
+      POSTGRES_APP_PASSWORD: ${POSTGRES_APP_PASSWORD}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../scripts/init-users.sh:/docker-entrypoint-initdb.d/01-users.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_ADMIN_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    mem_limit: 1536m
+    cpus: 2
+    restart: unless-stopped
+  api:
+    build:
+      context: ../..
+      dockerfile: infra/containers/api.Containerfile
+    env_file: ../../.env.lab
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      LAB_VAULT_PATH: /vault
+    command: ["uvicorn", "services.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:${API_PORT:-8001}:8000"
+    volumes:
+      - ../../data/vault:/vault
+      - ../../data:/app/data:ro
+      - ../../public/data/territorial:/app/public/data/territorial:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 512m
+    cpus: 1
+    restart: unless-stopped
+  worker:
+    build:
+      context: ../..
+      dockerfile: infra/containers/api.Containerfile
+    env_file: ../../.env.lab
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      LAB_VAULT_PATH: /vault
+    command: ["python", "-m", "services.worker.main"]
+    volumes:
+      - ../../data/vault:/vault
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 512m
+    cpus: 1
+    restart: unless-stopped
+  migrate:
+    build:
+      context: ../..
+      dockerfile: infra/containers/api.Containerfile
+    profiles: ["tools"]
+    env_file: ../../.env.lab
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_ADMIN_USER}:${POSTGRES_ADMIN_PASSWORD}@db:5432/${POSTGRES_DB}
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 384m
+    cpus: 1
+  backup:
+    build:
+      context: ../..
+      dockerfile: infra/containers/postgres.Containerfile
+    profiles: ["tools"]
+    env_file: ../../.env.lab
+    environment:
+      PGHOST: db
+      PGPORT: 5432
+      PGDATABASE: ${POSTGRES_DB}
+      PGUSER: ${POSTGRES_ADMIN_USER}
+      PGPASSWORD: ${POSTGRES_ADMIN_PASSWORD}
+      BACKUP_ROOT: /backups
+      VAULT_ROOT: /vault
+    entrypoint: ["/bin/sh", "/scripts/backup.sh"]
+    volumes:
+      - ../../infra/backups/runtime:/backups
+      - ../../data/vault:/vault:ro
+      - ../scripts:/scripts:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 384m
+    cpus: 1
+volumes:
+  postgres_data:
+    name: estadoquecumple-territorial-v4-postgres

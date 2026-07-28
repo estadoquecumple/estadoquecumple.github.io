@@ -5,6 +5,8 @@ dist/
 .env
 .env.*
 !.env.example
+!.env.lab.example
+!.env.lab.phase2.example
 
 .vscode/
 .idea/
@@ -27,9 +29,13 @@ data/snapshots/*/*/raw/
 data/snapshots/*/*/normalized/
 playwright-report/
 test-results/
+infra/backups/runtime/
+data/vault/
 
 # Python cache
 __pycache__/
+.pytest_cache/
+.pytest-tmp/
 *.py[cod]
 .venv/
 .venv-*/

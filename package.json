@@ -28,6 +28,15 @@
     "lab:audit": "node tools/audit-territorial.mjs",
     "lab:legacy-audit": "node tools/audit-legacy.mjs",
     "lab:e2e": "node tools/run-lab-e2e.mjs",
+    "backend:up": "node tools/backend.mjs up",
+    "backend:down": "node tools/backend.mjs down",
+    "backend:logs": "node tools/backend.mjs logs",
+    "backend:migrate": "node tools/backend.mjs migrate",
+    "backend:seed": "node tools/backend.mjs seed",
+    "backend:health": "node tools/backend.mjs health",
+    "backend:test": "node tools/backend.mjs test",
+    "backend:backup": "node tools/backend.mjs backup",
+    "backend:restore-test": "node tools/backend.mjs restore-test",
     "validate": "npm run data:test && npm run data:lint && npm run data:validate && npm run lab:reports && npm run lab:legacy-audit && npm run lab:test && npm run check && npm run build && npm run audit && npm run seo:audit && npm run lab:audit && npm run lab:legal-audit && npm run lab:button-contract && npm run lab:functional-audit"
   },
   "dependencies": {

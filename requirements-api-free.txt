@@ -13,3 +13,4 @@ python-multipart>=0.0.20,<1
 structlog>=25,<26
 prometheus-client>=0.22,<1
 slowapi>=0.1.9,<1
+pytest>=8.4,<9

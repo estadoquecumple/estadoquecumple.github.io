@@ -12,308 +12,308 @@
       "title": "renderiza 33 departamentos y permite selección departamental y municipal",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 5947
+      "durationMs": 8259
     },
     {
       "file": "territorial-map.spec.ts",
       "title": "expone error HTTP, reintento y acceso a la tabla alternativa",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 3777
+      "durationMs": 4143
     },
     {
       "file": "territorial-map.spec.ts",
       "title": "renderiza 33 departamentos y permite selección departamental y municipal",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 19827
+      "durationMs": 14752
     },
     {
       "file": "territorial-map.spec.ts",
       "title": "expone error HTTP, reintento y acceso a la tabla alternativa",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 4077
+      "durationMs": 2637
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "normaliza aliases históricos a parámetros canónicos",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 9433
+      "durationMs": 12224
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "RAÍCES abre en mapa y mantiene tabla",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 6045
+      "durationMs": 6741
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "SAVIA cambia y restablece pesos con advertencia metodológica",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 10486
+      "durationMs": 15172
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 18652
+      "durationMs": 24965
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "fallo GeoJSON muestra error y conserva alternativa textual",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 6281
+      "durationMs": 7816
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "fallo IndexedDB no bloquea RAÍCES ni el mapa",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 5152
+      "durationMs": 6837
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "captura comparación en todos los proyectos",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4902
+      "durationMs": 5878
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "normaliza aliases históricos a parámetros canónicos",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 30306
+      "durationMs": 22701
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "RAÍCES abre en mapa y mantiene tabla",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 20775
+      "durationMs": 21371
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "SAVIA cambia y restablece pesos con advertencia metodológica",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 25225
+      "durationMs": 20799
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "SEMILLAS crea, une, modifica instituciones, deshace, guarda y exporta",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 48958
+      "durationMs": 44441
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "fallo GeoJSON muestra error y conserva alternativa textual",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 20844
+      "durationMs": 18827
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "fallo IndexedDB no bloquea RAÍCES ni el mapa",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 14738
+      "durationMs": 15053
     },
     {
       "file": "territorial-v2.spec.ts",
       "title": "captura comparación en todos los proyectos",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 8513
+      "durationMs": 9949
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "HTML publicado conserva los contratos V4",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 3702
+      "durationMs": 4231
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "RAÍCES busca municipio nacional, cambia capas, función y comparación",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4292
+      "durationMs": 5771
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "mapa contiene contexto local, selección diferenciada y cámaras",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4501
+      "durationMs": 6298
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "Parquet válido exige duckdb-wasm y la malla H3 no es legal",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 6171
+      "durationMs": 8975
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "fallo provocado de Parquet exige json-fallback",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 5162
+      "durationMs": 6717
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "modo guiado y experto muestran niveles de detalle distintos",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4880
+      "durationMs": 5823
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "topología selecciona vecinos y contiguos con razón",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 5566
+      "durationMs": 7405
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "SEMILLAS materializa base, carga ejemplo, modela y calcula consecuencias",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 6677
+      "durationMs": 6869
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "editor de nivel valida y crea sin prompt",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4685
+      "durationMs": 4525
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "SAVIA declara fuentes manual-required como ausentes",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 4400
+      "durationMs": 4339
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "exportación, comparación, compartir completo y undo/redo",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 5473
+      "durationMs": 6218
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "ejemplos Bogotá–Sabana, RAP Caribe y Colombia sin departamentos son funcionales",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 7919
+      "durationMs": 4439
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "contratos restantes producen resultados o errores controlados",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 15347
+      "durationMs": 12104
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "HTML publicado conserva los contratos V4",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 5527
+      "durationMs": 5438
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "RAÍCES busca municipio nacional, cambia capas, función y comparación",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 13915
+      "durationMs": 15575
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "mapa contiene contexto local, selección diferenciada y cámaras",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 11705
+      "durationMs": 7187
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "Parquet válido exige duckdb-wasm y la malla H3 no es legal",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 18701
+      "durationMs": 14040
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "fallo provocado de Parquet exige json-fallback",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 8302
+      "durationMs": 6568
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "modo guiado y experto muestran niveles de detalle distintos",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 8531
+      "durationMs": 9075
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "topología selecciona vecinos y contiguos con razón",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 7653
+      "durationMs": 9051
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "SEMILLAS materializa base, carga ejemplo, modela y calcula consecuencias",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 29235
+      "durationMs": 22228
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "editor de nivel valida y crea sin prompt",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 12636
+      "durationMs": 12426
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "SAVIA declara fuentes manual-required como ausentes",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 7474
+      "durationMs": 6497
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "exportación, comparación, compartir completo y undo/redo",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 12789
+      "durationMs": 11258
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "ejemplos Bogotá–Sabana, RAP Caribe y Colombia sin departamentos son funcionales",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 9254
+      "durationMs": 9722
     },
     {
       "file": "territorial-v3.spec.ts",
       "title": "contratos restantes producen resultados o errores controlados",
       "project": "mobile",
       "status": "passed",
-      "durationMs": 15530
+      "durationMs": 15778
     }
   ]
 }
