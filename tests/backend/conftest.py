@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 import pytest
+import anyio
+import httpx
 from dotenv import dotenv_values
 from sqlalchemy import text
 
@@ -20,7 +22,23 @@ def db():
 
 @pytest.fixture
 def api():
-    from fastapi.testclient import TestClient
     from services.api.main import app
-    with TestClient(app) as client:
-        yield client
+
+    class APIClient:
+        def request(self, method, url, **kwargs):
+            async def send():
+                transport = httpx.ASGITransport(app=app)
+                async with httpx.AsyncClient(transport=transport, base_url="http://testserver") as client:
+                    return await client.request(method, url, **kwargs)
+            return anyio.run(send)
+
+        def get(self, url, **kwargs):
+            return self.request("GET", url, **kwargs)
+
+        def post(self, url, **kwargs):
+            return self.request("POST", url, **kwargs)
+
+        def options(self, url, **kwargs):
+            return self.request("OPTIONS", url, **kwargs)
+
+    yield APIClient()
