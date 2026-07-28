@@ -29,11 +29,61 @@ def test_seed_is_idempotent(db):
     main()
     before = db.execute(text("SELECT count(*) FROM source_snapshots")).scalar()
     products_before = db.execute(text("SELECT count(*) FROM dataset_versions")).scalar()
+    territories_before = db.execute(text("SELECT count(*) FROM territorial_units")).scalar()
+    territory_versions_before = db.execute(text("SELECT count(*) FROM territorial_unit_versions")).scalar()
     main()
     after = db.execute(text("SELECT count(*) FROM source_snapshots")).scalar()
     products_after = db.execute(text("SELECT count(*) FROM dataset_versions")).scalar()
+    territories_after = db.execute(text("SELECT count(*) FROM territorial_units")).scalar()
+    territory_versions_after = db.execute(text("SELECT count(*) FROM territorial_unit_versions")).scalar()
     assert before == after and before > 0
     assert products_before == products_after and products_before > 0
+    assert territories_before == territories_after == 1155
+    assert territory_versions_before == territory_versions_after == 1122
+
+
+def test_complete_territorial_coverage_and_provenance(db):
+    levels = dict(db.execute(text(
+        "SELECT level,count(*) FROM territorial_units GROUP BY level"
+    )).all())
+    assert levels == {"department": 33, "local": 1122}
+    types = dict(db.execute(text(
+        """SELECT literal_type,count(*) FROM territorial_units
+        WHERE level='local' GROUP BY literal_type"""
+    )).all())
+    assert types == {"MUNICIPIO": 1103, "ÁREA NO MUNICIPALIZADA": 18, "ISLA": 1}
+    assert db.execute(text(
+        "SELECT count(*) FROM territorial_units WHERE level='local' AND department_id IS NULL"
+    )).scalar() == 0
+    assert db.execute(text(
+        """SELECT count(*)-count(DISTINCT canonical_code) FROM territorial_units"""
+    )).scalar() == 0
+    assert db.execute(text(
+        """SELECT count(*) FROM territorial_units WHERE source_id IS NULL OR content_hash IS NULL
+        OR geometry_reference IS NULL OR geom IS NULL"""
+    )).scalar() == 0
+    assert db.execute(text(
+        "SELECT count(*) FROM sources WHERE source_key='index'"
+    )).scalar() == 0
+
+
+def test_territory_api_filters_and_utf8(api):
+    quindio = api.get("/v1/territories", params={"divipola": "63"})
+    assert quindio.status_code == 200
+    assert quindio.content.decode("utf-8")
+    assert quindio.json()["items"][0]["name"] == "QUINDÍO"
+    assert quindio.json()["items"][0]["level"] == "department"
+
+    municipalities = api.get("/v1/territories", params={
+        "level": "local", "type": "municipio", "department": "05", "limit": 200
+    }).json()["items"]
+    assert municipalities
+    assert all(item["canonical_code"].startswith("05") for item in municipalities)
+    assert all(item["normalized_type"] == "municipio" for item in municipalities)
+
+    islands = api.get("/v1/territories", params={"type": "ISLA"}).json()["items"]
+    assert len(islands) == 1
+    assert islands[0]["literal_type"] == "ISLA"
 
 def test_vault_immutable_integrity_and_traversal(tmp_path):
     vault = LocalFilesystemVault(str(tmp_path))

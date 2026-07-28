@@ -5,7 +5,7 @@ from collections import defaultdict, deque
 from contextlib import asynccontextmanager
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import ORJSONResponse
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 from sqlalchemy import text
 from sqlalchemy.orm import Session
@@ -25,7 +25,7 @@ class ScenarioInput(BaseModel):
 async def lifespan(app: FastAPI):
     yield
 
-app = FastAPI(title="Laboratorio Territorial V4 API", version="2.0.0", default_response_class=ORJSONResponse, lifespan=lifespan)
+app = FastAPI(title="Laboratorio Territorial V4 API", version="2.0.0", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=cfg.origins, allow_credentials=False, allow_methods=["GET", "POST"], allow_headers=["Content-Type", "X-Request-ID"])
 
 @app.middleware("http")
@@ -33,14 +33,14 @@ async def security(request: Request, call_next):
     request_id = request.headers.get("x-request-id", str(uuid.uuid4()))[:80]
     content_length = request.headers.get("content-length")
     if content_length and int(content_length) > cfg.lab_max_upload_bytes:
-        return ORJSONResponse({"error": {"code": "payload_too_large", "request_id": request_id}}, status_code=413)
+        return JSONResponse({"error": {"code": "payload_too_large", "request_id": request_id}}, status_code=413)
     client = request.client.host if request.client else "unknown"
     now = time.monotonic()
     recent = requests_by_client[client]
     while recent and recent[0] < now - 60:
         recent.popleft()
     if len(recent) >= 120:
-        return ORJSONResponse({"error": {"code": "rate_limited", "request_id": request_id}}, status_code=429)
+        return JSONResponse({"error": {"code": "rate_limited", "request_id": request_id}}, status_code=429)
     recent.append(now)
     response = await call_next(request)
     response.headers["X-Request-ID"] = request_id
@@ -82,7 +82,38 @@ def sources(paging=Depends(page), db: Session = Depends(db_session)): return lis
 @app.get("/v1/catalog/datasets")
 def datasets(paging=Depends(page), db: Session = Depends(db_session)): return listing(db, "datasets", "id,dataset_key,name,quality_status", paging)
 @app.get("/v1/territories")
-def territories(q: str | None = Query(None, max_length=100), paging=Depends(page), db: Session = Depends(db_session)): return listing(db, "territorial_units", "id,canonical_code,name,unit_type,quality_status", paging, q)
+def territories(
+    q: str | None = Query(None, max_length=100),
+    name: str | None = Query(None, max_length=100),
+    level: str | None = Query(None, pattern="^(department|local)$"),
+    type: str | None = Query(None, max_length=80),
+    department: str | None = Query(None, pattern=r"^\d{2}$"),
+    divipola: str | None = Query(None, pattern=r"^\d{2,5}$"),
+    paging=Depends(page),
+    db: Session = Depends(db_session),
+):
+    limit, offset = paging
+    clauses, params = [], {"limit": limit, "offset": offset}
+    if q or name:
+        clauses.append("lower(name) LIKE lower(:name)")
+        params["name"] = f"%{name or q}%"
+    if level:
+        clauses.append("level=:level")
+        params["level"] = level
+    if type:
+        clauses.append("(lower(normalized_type)=lower(:type) OR lower(literal_type)=lower(:type))")
+        params["type"] = type
+    if department:
+        clauses.append("(canonical_code=:department OR (level='local' AND left(canonical_code,2)=:department))")
+        params["department"] = department
+    if divipola:
+        clauses.append("canonical_code=:divipola")
+        params["divipola"] = divipola
+    where = f" WHERE {' AND '.join(clauses)}" if clauses else ""
+    rows = db.execute(text(f"""SELECT id,canonical_code,name,unit_type,level,literal_type,
+      normalized_type,department_id,quality_status
+      FROM territorial_units{where} ORDER BY canonical_code LIMIT :limit OFFSET :offset"""), params).mappings()
+    return {"items": [dict(row) for row in rows], "limit": limit, "offset": offset}
 @app.get("/v1/entities")
 def entities(q: str | None = Query(None, max_length=100), paging=Depends(page), db: Session = Depends(db_session)): return listing(db, "entities", "id,name,quality_status,metadata", paging, q)
 @app.get("/v1/indicators")
@@ -90,7 +121,8 @@ def indicators(paging=Depends(page), db: Session = Depends(db_session)): return 
 
 @app.get("/v1/territories/{territory_id}")
 def territory(territory_id: uuid.UUID, db: Session = Depends(db_session)):
-    row = db.execute(text("SELECT id,canonical_code,name,unit_type,quality_status FROM territorial_units WHERE id=:id"), {"id": territory_id}).mappings().first()
+    row = db.execute(text("""SELECT id,canonical_code,name,unit_type,level,literal_type,
+      normalized_type,department_id,quality_status FROM territorial_units WHERE id=:id"""), {"id": territory_id}).mappings().first()
     if not row: raise HTTPException(404, detail={"code": "not_found", "message": "Territorio no encontrado"})
     return dict(row)
 
