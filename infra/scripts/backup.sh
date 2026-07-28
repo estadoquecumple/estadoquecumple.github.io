@@ -2,7 +2,7 @@
 set -eu
 
 latest_file="$BACKUP_ROOT/latest"
-tables="alembic_version sources source_snapshots datasets dataset_versions territorial_units territorial_unit_versions indicators quality_results jobs"
+tables="alembic_version sources source_snapshots datasets dataset_versions territorial_units territorial_unit_versions indicators quality_results jobs graph_nodes graph_edges entity_resolution_candidates entity_resolution_decisions optimization_runs review_cases documents document_fragments citations"
 
 database_counts() {
   database_name="$1"

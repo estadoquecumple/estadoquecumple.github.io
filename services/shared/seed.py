@@ -193,6 +193,46 @@ def main():
                 )
                 local_count += 1
 
+        db.execute(text("""
+          INSERT INTO graph_nodes(node_type,canonical_key,name,properties,source_id,quality_status)
+          SELECT 'territory',canonical_code,name,
+            jsonb_build_object('level',level,'literal_type',literal_type,'identifiers',
+              jsonb_build_object('divipola',canonical_code),'result_kind','observed'),
+            source_id,'valid'
+          FROM territorial_units
+          ON CONFLICT(node_type,canonical_key) DO UPDATE SET
+            name=excluded.name,properties=excluded.properties,source_id=excluded.source_id,updated_at=now()
+        """))
+        db.execute(text("""
+          INSERT INTO graph_nodes(node_type,canonical_key,name,properties,source_id,quality_status)
+          SELECT 'entity',id::text,name,
+            jsonb_build_object('identifiers',coalesce(metadata->'identifiers','{}'::jsonb),
+              'result_kind','observed'),NULL,'valid'
+          FROM entities WHERE name IS NOT NULL
+          ON CONFLICT(node_type,canonical_key) DO UPDATE SET name=excluded.name,properties=excluded.properties
+        """))
+        db.execute(text("""
+          INSERT INTO graph_nodes(node_type,canonical_key,name,properties,source_id,quality_status)
+          SELECT 'source',source_key,name,
+            jsonb_build_object('identifiers',jsonb_build_object('source_key',source_key),
+              'result_kind','observed'),id,'valid'
+          FROM sources
+          ON CONFLICT(node_type,canonical_key) DO UPDATE SET name=excluded.name,properties=excluded.properties
+        """))
+        db.execute(text("""
+          INSERT INTO graph_edges(source_node_id,target_node_id,relation_type,valid_from,source_id,
+            evidence,confidence,method,review_status)
+          SELECT parent.id,child.id,'contains',now(),:source,
+            jsonb_build_object('basis','DIVIPOLA parent code','result_kind','calculated'),
+            1.0,'deterministic_divipola','approved'
+          FROM graph_nodes child
+          JOIN graph_nodes parent ON parent.node_type='territory'
+            AND parent.canonical_key=left(child.canonical_key,2)
+          WHERE child.node_type='territory' AND length(child.canonical_key)=5
+            AND NOT EXISTS(SELECT 1 FROM graph_edges e WHERE e.source_node_id=parent.id
+              AND e.target_node_id=child.id AND e.relation_type='contains' AND e.valid_to IS NULL)
+        """), {"source": source_id})
+
         db.execute(
             text("""INSERT INTO lineage_events(event_type,payload,commit_sha,quality_status)
               SELECT 'phase1_import',

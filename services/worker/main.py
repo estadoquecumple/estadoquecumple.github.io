@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 from sqlalchemy import text
 from services.shared.db import engine
+from services.shared.optimization import optimize
 
 WORKER = f"{socket.gethostname()}-{os.getpid()}"
 
@@ -35,6 +36,32 @@ def execute(job):
         payload = dict(job["payload"])
         if payload.get("force_failure"):
             raise RuntimeError("fallo controlado para comprobar reintentos")
+        if payload.get("optimization_type"):
+            result = optimize(payload["optimization_type"], payload.get("inputs", {}))
+            optimization_id = db.execute(text("""INSERT INTO optimization_runs(
+              optimization_type,state,input,formulation,solver,solver_version,seed,duration_ms,
+              solution,alternatives,infeasibility,sensitivity,result_kind)
+              VALUES(:type,:state,CAST(:input AS jsonb),CAST(:formulation AS jsonb),:solver,:version,
+              :seed,:duration,CAST(:solution AS jsonb),CAST(:alternatives AS jsonb),
+              CAST(:infeasibility AS jsonb),CAST(:sensitivity AS jsonb),:kind) RETURNING id"""),
+              {"type": payload["optimization_type"], "state": result["status"],
+               "input": json.dumps(payload.get("inputs", {})),
+               "formulation": json.dumps(result.get("formulation", {})),
+               "solver": result.get("solver", "OR-Tools CP-SAT"),
+               "version": result.get("solver_version", "unknown"), "seed": result.get("seed", 42),
+               "duration": result.get("duration_ms"), "solution": json.dumps(result.get("solution")),
+               "alternatives": json.dumps(result.get("alternatives", [])),
+               "infeasibility": json.dumps(result.get("infeasibility")),
+               "sensitivity": json.dumps(result.get("sensitivity", {})),
+               "kind": result["result_kind"]}).scalar_one()
+            db.execute(text("""UPDATE jobs SET state='succeeded',progress=100,
+              result=jsonb_build_object('optimization_run_id',CAST(:run AS text),'status',CAST(:status AS text)),
+              updated_at=now() WHERE id=:id"""),
+              {"id": job["id"], "run": optimization_id, "status": result["status"]})
+            db.execute(text("""INSERT INTO job_events(job_id,event_type,payload,quality_status)
+              VALUES(:id,'optimization_succeeded',jsonb_build_object('worker',CAST(:worker AS text)),'valid')"""),
+              {"id": job["id"], "worker": WORKER})
+            return
         artifact = json.dumps({"status": "succeeded", "scenario": payload}, ensure_ascii=False).encode()
         vault = Path(os.getenv("LAB_VAULT_PATH", "/vault")) / "scenarios" / str(run_id)
         vault.mkdir(parents=True, exist_ok=True)

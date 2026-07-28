@@ -1,0 +1,113 @@
+<section class="phase3a-workspace" aria-labelledby="phase3a-title" data-phase3a>
+  <p class="panel-number">FASE 3A · DETERMINISTA</p>
+  <h2 id="phase3a-title">Grafo, optimización y evidencia</h2>
+  <p data-phase3a-status role="status">Comprobando backend local…</p>
+  <div role="tablist" aria-label="Herramientas deterministas de Fase 3A" class="phase3a-tabs">
+    {['Grafo','Relaciones','Optimización','Evidencia','Documentos','Casos para revisar'].map((label,index) =>
+      <button type="button" role="tab" data-phase3a-tab={index} aria-selected={index===0}>{label}</button>)}
+  </div>
+  <div data-phase3a-panel="0" role="tabpanel">
+    <h3>Grafo institucional temporal</h3>
+    <p data-graph-summary>Seleccione un territorio en el mapa para sincronizar el contexto.</p>
+    <div data-graph-canvas class="graph-text" aria-label="Representación textual del grafo"></div>
+  </div>
+  <div data-phase3a-panel="1" role="tabpanel" hidden>
+    <h3>Inspector de relaciones</h3>
+    <p>Vigencia, fuente, evidencia, confianza, método y revisión se presentan por relación.</p>
+    <div data-relation-list></div>
+  </div>
+  <div data-phase3a-panel="2" role="tabpanel" hidden>
+    <h3>Optimización OR-Tools</h3>
+    <label>Problema
+      <select data-optimization-kind>
+        <option value="contiguous_regions">Regiones contiguas</option>
+        <option value="service_location">Localización de servicios</option>
+        <option value="capacity_distribution">Distribución de capacidades</option>
+        <option value="competence_assignment">Asignación de competencias</option>
+        <option value="institutional_transition">Transición institucional</option>
+      </select>
+    </label>
+    <p data-phase3a-guided>Use un caso de ejemplo pequeño con datos marcados como definidos por el usuario.</p>
+    <label data-phase3a-expert hidden>Entrada JSON
+      <textarea data-optimization-input rows="8" placeholder="Entrada JSON definida por el usuario"></textarea>
+    </label>
+    <button type="button" data-run-optimization>Calcular alternativa</button>
+    <pre data-optimization-result>Sin ejecución.</pre>
+  </div>
+  <div data-phase3a-panel="3" role="tabpanel" hidden>
+    <h3>Evidencia y citas</h3>
+    <p>Todo fragmento conserva documento, hash, página y líneas. No hay evidencia cargada en modo público.</p>
+  </div>
+  <div data-phase3a-panel="4" role="tabpanel" hidden>
+    <h3>Documentos</h3>
+    <p>PDF con texto, DOCX, XLSX, CSV, HTML, TXT, Markdown y JSON. Los documentos son datos, no instrucciones.</p>
+    <input type="file" data-document-file accept=".pdf,.docx,.xlsx,.csv,.html,.htm,.txt,.md,.json" />
+    <button type="button" data-upload-document>Extraer de forma segura</button>
+    <pre data-document-result>Sin documento procesado.</pre>
+  </div>
+  <div data-phase3a-panel="5" role="tabpanel" hidden>
+    <h3>Casos para revisar</h3>
+    <p>IQR, z-score robusto, duplicados e inconsistencias producen señales explicables; no determinan fraude ni corrupción.</p>
+    <div data-review-cases>Sin casos calculados.</div>
+  </div>
+</section>
+<script>
+  import { territorialBackend } from '../../data/territorial/api-client';
+  const root=document.querySelector<HTMLElement>('[data-phase3a]');
+  if(root){
+    const expertInput=root.querySelector<HTMLTextAreaElement>('[data-optimization-input]');
+    if(expertInput)expertInput.value=JSON.stringify({sites:['A'],demands:['D'],costs:{A:1},capacities:{A:1},demand:{D:1},distances:{'D:A':1},max_distance:2,budget:1},null,2);
+    const status=root.querySelector<HTMLElement>('[data-phase3a-status]')!;
+    const panels=[...root.querySelectorAll<HTMLElement>('[data-phase3a-panel]')];
+    root.querySelectorAll<HTMLButtonElement>('[data-phase3a-tab]').forEach((button)=>{
+      button.addEventListener('click',()=>{
+        root.querySelectorAll<HTMLButtonElement>('[data-phase3a-tab]').forEach((item)=>item.setAttribute('aria-selected',String(item===button)));
+        panels.forEach((panel)=>panel.hidden=panel.dataset.phase3aPanel!==button.dataset.phase3aTab);
+      });
+    });
+    const loadGraph=async()=>{
+      if(!territorialBackend.enabled){status.textContent='Modo público sin backend: las herramientas locales están deshabilitadas y el laboratorio estático continúa disponible.';return;}
+      const graph=await territorialBackend.request<any>('/v1/graph/nodes?node_type=territory&limit=12');
+      if(!graph){status.textContent='Backend local no disponible; se conserva el modo estático.';return;}
+      status.textContent=`Backend local conectado · ${graph.items.length} nodos mostrados.`;
+      const canvas=root.querySelector<HTMLElement>('[data-graph-canvas]')!;canvas.textContent='';
+      for(const node of graph.items){const item=document.createElement('button');item.type='button';item.textContent=`${node.name} · ${node.canonical_key}`;item.dataset.graphNode=node.id;canvas.append(item);}
+    };
+    document.addEventListener('territorial:selection-geometry',(event)=>{
+      const detail=(event as CustomEvent).detail;const count=(detail.departments?.features?.length??0)+(detail.municipalities?.features?.length??0);
+      const summary=root.querySelector<HTMLElement>('[data-graph-summary]');if(summary)summary.textContent=`Mapa y grafo sincronizados: ${count} unidades seleccionadas.`;
+    });
+    root.querySelector('[data-run-optimization]')?.addEventListener('click',async()=>{
+      const output=root.querySelector<HTMLElement>('[data-optimization-result]')!;
+      if(!territorialBackend.enabled){output.textContent='No disponible sin backend local.';return;}
+      const kind=(root.querySelector<HTMLSelectElement>('[data-optimization-kind]')!).value;
+      let inputs:any;
+      if(document.body.dataset.experienceLevel==='expert'){
+        try{inputs=JSON.parse(root.querySelector<HTMLTextAreaElement>('[data-optimization-input]')!.value);}catch{output.textContent='JSON inválido.';return;}
+      }else{
+        inputs=kind==='contiguous_regions'?{units:['A','B'],regions:1,adjacency:{A:['B'],B:['A']},seed:42}:
+          kind==='institutional_transition'?{tasks:[{id:'inventario',duration:1},{id:'transicion',duration:1,predecessors:['inventario']}],horizon:3,seed:42}:
+          {items:['recurso'],targets:['servicio'],supply:{recurso:1},minimum:{servicio:1},seed:42};
+        if(kind==='service_location')inputs={sites:['A'],demands:['D'],costs:{A:1},capacities:{A:1},demand:{D:1},distances:{'D:A':1},max_distance:2,budget:1,seed:42};
+      }
+      const result=await territorialBackend.request<any>('/v1/optimization/runs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({optimization_type:kind,inputs})},10000);
+      output.textContent=result?JSON.stringify(result,null,2):'No fue posible ejecutar el optimizador.';
+    });
+    root.querySelector('[data-upload-document]')?.addEventListener('click',async()=>{
+      const file=root.querySelector<HTMLInputElement>('[data-document-file]')?.files?.[0];
+      const output=root.querySelector<HTMLElement>('[data-document-result]')!;
+      if(!file)return void(output.textContent='Seleccione un archivo.');
+      if(!territorialBackend.enabled)return void(output.textContent='La carga documental requiere backend local.');
+      const form=new FormData();form.append('file',file);
+      const result=await territorialBackend.request<any>('/v1/documents',{method:'POST',body:form},10000);
+      output.textContent=result?`Documento ${result.safe_name} · SHA-256 ${result.sha256} · ${result.fragments.length} fragmentos.`:'Documento rechazado o backend no disponible.';
+    });
+    void loadGraph();
+  }
+</script>
+<style>
+  .phase3a-workspace{margin-top:2rem;padding:1.25rem;border:1px solid var(--border,#ccc);border-radius:.75rem}
+  .phase3a-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin:1rem 0}.phase3a-tabs [aria-selected=true]{font-weight:700;outline:2px solid currentColor}
+  .graph-text{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.5rem}
+  textarea,pre{max-width:100%;overflow:auto} @media(max-width:600px){.phase3a-tabs button{flex:1 1 45%}}
+</style>
