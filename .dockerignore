@@ -1,0 +1,15 @@
+.git
+.venv*
+node_modules
+dist
+.astro
+.pytest_cache
+artifacts
+data
+public
+reports
+docs
+src
+tools
+test-results
+*.log
