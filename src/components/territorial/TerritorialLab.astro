@@ -4,6 +4,7 @@ import SaviaWorkspace from './SaviaWorkspace.astro';
 import SeedsWorkspace from './SeedsWorkspace.astro';
 import ScenarioOutputs from './ScenarioOutputs.astro';
 import TerritoryMap from './TerritoryMap.astro';
+import Phase3AWorkspace from './Phase3AWorkspace.astro';
 ---
 <div class="migration-notice" data-migration-notice hidden role="status">El Laboratorio fue actualizado. Los escenarios incompatibles de la versión anterior no se reutilizaron.</div>
 <nav class="mode-navigation" aria-label="Instrumentos del Laboratorio" data-mode-navigation>
@@ -76,6 +77,7 @@ import TerritoryMap from './TerritoryMap.astro';
     <div data-comparison-output><p>Cree escenarios para comparar estructura, competencias, gobierno, financiación, riesgos y cobertura.</p></div>
   </details>
 </section>
+<Phase3AWorkspace />
 <div class="operation-announcer" data-operation-status role="status" aria-live="polite"></div>
 <script>
   import {
@@ -538,6 +540,8 @@ import TerritoryMap from './TerritoryMap.astro';
     document.body.dataset.experienceLevel=value;
     $$<HTMLElement>('[data-expert-only]').forEach((element)=>{element.hidden=value!=='expert';});
     $$<HTMLElement>('[data-guided-only]').forEach((element)=>{element.hidden=value==='expert';});
+    $$<HTMLElement>('[data-phase3a-expert]').forEach((element)=>{element.hidden=value!=='expert';});
+    $$<HTMLElement>('[data-phase3a-guided]').forEach((element)=>{element.hidden=value==='expert';});
     announce(value==='expert'?'Modo experto: se muestran trazabilidad y restricciones completas.':'Modo guiado: se priorizan pasos y explicaciones.');
   });
   $<HTMLInputElement>('[data-layer-h3]')?.addEventListener('change', async (event) => {

@@ -38,6 +38,7 @@ services:
       - ../../data/vault:/vault
       - ../../data:/app/data:ro
       - ../../public/data/territorial:/app/public/data/territorial:ro
+      - ../../public/assets:/app/public/assets:ro
     depends_on:
       db:
         condition: service_healthy
